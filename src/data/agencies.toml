@@ -1,0 +1,30 @@
+# Trein
+[nsb_fu]
+name = "Ferrovie Urbignesi"
+abbreviation = "FU"
+url = "https://arloheim.nl/wiki/ArlOV"
+
+[nsb_is]
+name = "Ihlaanse Spoorwegen"
+abbreviation = "IS"
+url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
+
+
+# Overige modaliteiten
+[arlov]
+name = "ArlOV"
+url = "https://arloheim.nl/wiki/ArlOV"
+
+[vara]
+name = "Vara"
+url = "https://arloheim.nl/wiki/Vara"
+
+[gvd]
+name = "Giedrechtse Vervoersdienst"
+abbreviation = "GVD"
+
+[hyp]
+name = "Hyperloop"
+
+[equual]
+name = "Equual"

@@ -1,0 +1,21 @@
+[modalities]
+rail = "Trein"
+metro = "Metro"
+tram = "Tram"
+hyperloop = "Hyperloop"
+funicular = "Funiculaire"
+lift = "Lift"
+ferry = "Veerboot"
+eqh = "Flexpaard"
+
+[modalities_node]
+rail = "Treinstation"
+metro = "Metrostation"
+tram = "Tramhalte"
+hyperloop = "Hyperloopstation"
+funicular = "Funiculaire"
+lift = "Lift"
+ferry = "Veerhaven"
+eqh = "Flexpaardhub"
+eqd = "Plaats"
+poi = "Bezienswaardigheid"

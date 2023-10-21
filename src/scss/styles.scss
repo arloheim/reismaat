@@ -1,0 +1,136 @@
+// Import custom variables
+@import 'variables';
+
+// Import the Bulma framework
+@import 'bulma';
+
+
+// Html layout
+html {
+  overflow-y: auto;
+}
+
+// Body layout
+body {
+  background: $background;
+  min-height: 100vh;
+}
+
+// Link styling
+a:not(.button, .dropdown-item) {
+  border-bottom: 1px $link dotted;
+
+  transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+
+  &:hover, &:focus {
+    border-bottom-color: $link-hover;
+  }
+
+  &.icon, &.is-overlay {
+    border-bottom: none;
+  }
+}
+
+// Navbar styling
+.navbar {
+  @extend .mt-5;
+  @extend .mb-6;
+  padding: 0 1.5rem;
+
+  background-color: transparent;
+
+  .navbar-item {
+    @extend .is-uppercase;
+    @extend .is-size-5;
+    @extend .has-text-weight-light;
+
+    a {
+      padding: 4px 0px;
+      color: $text;
+      border-bottom: 1px transparent solid;
+
+      &:hover, &:focus {
+        border-bottom-color: $text;
+      }
+
+      &.active {
+        color: $link;
+        border-bottom-color: $link;
+      }
+    }
+  }
+
+  .navbar-brand {
+    @extend .ml-0;
+  }
+
+  .navbar-logo {
+    @extend .mr-3;
+    @extend .px-0;
+    @extend .py-0;
+  }
+
+  .navbar-burger {
+    border-bottom: none;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+// Content styling
+.content {
+  // Headings
+  @for $i from 1 through 6 {
+    h#{$i} {
+      @if $i <= 2 {
+        @extend .has-text-weight-light;
+        @extend .has-text-primary;
+      }
+      @if $i > 2 {
+        @extend .has-text-weight-normal;
+      }
+    }
+  }
+
+  // Figure
+  figure {
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Lead text
+  .lead {
+    @extend .is-size-5;
+    @extend .has-text-weight-light;
+
+    b, strong {
+      @extend .has-text-weight-medium;
+    }
+  }
+}
+
+// Dropdown styling
+.dropdown {
+  &.is-fullwidth {
+    @extend .is-flex;
+
+    .dropdown-trigger, .dropdown-menu {
+      width: 100%;
+    }
+  }
+
+  .dropdown-item {
+    @extend .is-flex;
+    @extend .is-flex-direction-row;
+    @extend .is-align-items-center;
+  }
+}

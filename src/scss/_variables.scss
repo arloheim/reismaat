@@ -1,0 +1,24 @@
+// Import the fonts
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
+
+// Import the initial variables
+@import "bulma/sass/utilities/initial-variables";
+
+
+// Custom fonts
+$family-primary: 'Ubuntu', sans-serif;
+
+// Custom colors
+$primary: rgb(137, 44, 160);
+
+// Custom layout colors
+$link: $primary;
+$link-visited: $primary;
+$link-hover: $primary;
+
+// Custom section padding
+$section-padding: 1.5rem 1.5rem;
+$section-padding-desktop: 2rem 2rem;
+
+// Custom navbar breakpoint
+$navbar-breakpoint: $tablet;
