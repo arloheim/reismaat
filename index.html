@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Reismaat | reis op maat met jouw maat op reis</title>
+
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Reismaat</h1>
+
+        <p class="mb-3">
+          <input class="input" type="text" placeholder="station, halte of bezienswaardigheid" id="node">
+        </p>
+
+        <table class="table is-narrow is-fullwidth">
+          <thead>
+            <tr>
+              <th style="width: 20%;">Code</th>
+              <th style="width: 50%;">Naam</th>
+              <th style="width: 30%;">Type</th>
+            </tr>
+          </thead>
+
+          <tbody id="node-results">
+            <tr>
+              <td colspan="3" class="has-text-grey">Geen resultaten gevonden</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/minisearch/dist/umd/index.js"></script>
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+
+    <script src="assets/js/jquery.throttle.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

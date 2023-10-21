@@ -1,0 +1,13 @@
+{
+  "name": "reismaat",
+  "version": "1.0.0",
+  "description": "",
+  "author": "danae",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "bulma": "^0.9.4",
+    "jquery": "^3.7.1",
+    "minisearch": "^6.1.0"
+  }
+}
