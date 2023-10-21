@@ -52,7 +52,7 @@ class Node
   {
     return $('<span class="icon-text">')
       .data('id', this.id)
-      .append($('<span class="icon">').html(`<i class="fas fa-${this.icon}"></i>`))
+      .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
       .append($('<span>').html(this.name));
   }
 
@@ -62,7 +62,7 @@ class Node
     return $('<a class="dropdown-item">')
       .data('id', this.id)
       .append($('<div class="icon is-medium mr-2">')
-        .append($('<i class="fas fa-xl">').addClass(`fa-${this.icon}`)))
+        .append($('<i class="fas fa-fw fa-xl">').addClass(`fa-${this.icon}`)))
       .append($('<div class="is-flex is-flex-direction-column">')
         .append($('<span>').html(this.name))
         .append($('<span class="is-size-7 has-text-grey">').html(this.getDescription(data))));

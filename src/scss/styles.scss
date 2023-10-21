@@ -107,6 +107,11 @@ a:not(.button, .dropdown-item) {
     }
   }
 
+  ul {
+    @extend .mt-0;
+    @extend .ml-5;
+  }
+
   // Lead text
   .lead {
     @extend .is-size-5;
@@ -116,6 +121,11 @@ a:not(.button, .dropdown-item) {
       @extend .has-text-weight-medium;
     }
   }
+}
+
+// Box styling
+.box {
+  @extend .is-shadowless;
 }
 
 // Dropdown styling
@@ -132,5 +142,9 @@ a:not(.button, .dropdown-item) {
     @extend .is-flex;
     @extend .is-flex-direction-row;
     @extend .is-align-items-center;
+
+    * {
+      overflow: hidden;
+    }
   }
 }
