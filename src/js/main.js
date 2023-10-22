@@ -12,11 +12,11 @@ require('@fortawesome/fontawesome-free/js/all.js');
 
 modalities = {
   rail: 'train',
-  metro: 'train-subway',
+  subway: 'train-subway',
   tram: 'train-tram',
   ferry: 'ferry',
   funicular: 'cable-car',
-  lift: 'elevator',
+  elevator: 'elevator',
   hyperloop: 'bolt',
   eqh: 'horse-head'
 };
@@ -74,6 +74,35 @@ class Node
   }
 }
 
+
+// Class that defines a route
+class Route
+{
+  // Constructor
+  constructor(props, agencies, nodes) {
+    Object.assign(this, props);
+
+    if (this.agency !== undefined)
+      this.agency = agencies[this.agency] ?? null;
+    if (this.stops !== undefined)
+      this.stops = Object.values(underscore.mapObject(this.stops, (s, id) => (new Stop({id, ...s}, nodes)))).toSorted((a, b) => );
+  }
+}
+
+
+// Class that defines a stop
+class Stop
+{
+  // Constructor
+  constructor(props, nodes) {
+    Object.assign(this, props);
+
+    if (this.node !== undefined)
+      this.node = nodes[this.node] ?? null;
+  }
+}
+
+
 // Class for data
 class Data
 {
@@ -85,14 +114,12 @@ class Data
     };
 
     this.agencies = underscore.mapObject(toml.parse(fs.readFileSync('src/data/agencies.toml', 'utf-8')), (a, id) => (new Agency({id, ...a})));
-    this.agenciesIndex = new MiniSearch({fields: ['name', 'abbr'], searchOptions: {...this.options.searchOptions}});
-    this.agenciesIndex.addAll(Object.keys(this.agencies).map(id => ({id, ...this.agencies[id]})))
-
     this.nodes = underscore.mapObject(toml.parse(fs.readFileSync('src/data/nodes.toml', 'utf-8')), (n, id) => (new Node({id, ...n})));
+    this.routes = underscore.mapObject(toml.parse(fs.readFileSync('src/data/routes.toml', 'utf-8')), (r, id) => (new Route({id, ...r}, this.agencies, this.nodes)));
+    this.translations = toml.parse(fs.readFileSync('src/data/translations.toml', 'utf-8'));
+
     this.nodesIndex = new MiniSearch({fields: ['name', 'location', 'code'], storeFields: ['type'], searchOptions: {...this.options.searchOptions, boost: {name: 2}, boostDocument: this._boostNodeDocument}});
     this.nodesIndex.addAll(Object.values(this.nodes));
-
-    this.translations = toml.parse(fs.readFileSync('src/data/translations.toml', 'utf-8'));
   }
 
   // Translate
@@ -120,6 +147,7 @@ class Data
 $(function() {
   // Load the data
   let data = new Data();
+  console.log(data);
 
   // Event handler for when a node input changes
   $('.node-input').on('input change', underscore.debounce(function() {

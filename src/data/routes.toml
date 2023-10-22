@@ -1,0 +1,1405 @@
+# Trein (D-treinen)
+[nsb_d1_a]
+agency = "nsb_fu"
+type = "rail"
+name = "D1 (Arloheim Campus ⟶ Amsvorde Centraal)"
+headsign = "Amsvorde Centraal"
+abbr = "D1"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d1_a.stops]
+01 = {node = "nsb_arc", halts = true, time = 0, platform = "3"}
+02 = {node = "nsb_arfo", halts = true, time = 0, platform = "6"}
+03 = {node = "nsb_ar", halts = true, time = 0, platform = "3"}
+04 = {node = "nsb_av", halts = true, time = 0, platform = "6"}
+
+[nsb_d1_b]
+agency = "nsb_fu"
+type = "rail"
+name = "D1 (Amsvorde Centraal ⟶ Arloheim Campus)"
+headsign = "Arloheim Campus"
+abbr = "D1"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d1_b.stops]
+01 = {node = "nsb_av", halts = true, time = 0, platform = "6"}
+02 = {node = "nsb_ar", halts = true, time = 0, platform = "6"}
+03 = {node = "nsb_arfo", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_arc", halts = true, time = 0, platform = "3"}
+
+[nsb_d2_a]
+agency = "nsb_fu"
+type = "rail"
+name = "D2 (Arloheim Campus ⟶ Ockholm)"
+headsign = "Ockholm"
+abbr = "D2"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d2_a.stops]
+01 = {node = "nsb_arc", halts = true, time = 0, platform = "3"}
+02 = {node = "nsb_arfo", halts = true, time = 0, platform = "6"}
+03 = {node = "nsb_ar", halts = true, time = 0, platform = "3"}
+04 = {node = "nsb_uh", halts = true, time = 0, platform = "2"}
+05 = {node = "nsb_oh", halts = true, time = 0, platform = "2"}
+
+[nsb_d2_b]
+agency = "nsb_fu"
+type = "rail"
+name = "D2 (Ockholm ⟶ Arloheim Campus)"
+headsign = "Arloheim Campus"
+abbr = "D2"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d2_b.stops]
+01 = {node = "nsb_oh", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_uh", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_ar", halts = true, time = 0, platform = "6"}
+04 = {node = "nsb_arfo", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_arc", halts = true, time = 0, platform = "3"}
+
+[nsb_d7_a]
+agency = "nsb_is"
+type = "rail"
+name = "D7 (Arloheim Centraal ⟶ Giedrecht Zuid)"
+headsign = "Giedrecht Zuid"
+abbr = "D7"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d7_a.stops]
+01 = {node = "nsb_ar", halts = true, time = 0, platform = "4"}
+02 = {node = "nsb_arfo", halts = true, time = 0, platform = "6"}
+03 = {node = "nsb_arc", halts = true, time = 0, platform = "6"}
+04 = {node = "nsb_wl", halts = true, time = 0, platform = "2"}
+05 = {node = "nsb_gd", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_gdz", halts = true, time = 0, platform = "2"}
+
+[nsb_d7_b]
+agency = "nsb_is"
+type = "rail"
+name = "D7 (Giedrecht Zuid ⟶ Arloheim Centraal)"
+headsign = "Giedrecht Zuid"
+abbr = "D7"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d7_b.stops]
+01 = {node = "nsb_gdz", halts = true, time = 0, platform = "2"}
+02 = {node = "nsb_gd", halts = true, time = 0, platform = "2"}
+03 = {node = "nsb_wl", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_arc", halts = true, time = 0, platform = "3"}
+05 = {node = "nsb_arfo", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_ar", halts = true, time = 0, platform = "4"}
+
+[nsb_d8_a]
+agency = "nsb_is"
+type = "rail"
+name = "D8 (Arloheim Centraal ⟶ Danewolde)"
+headsign = "Danewolde"
+abbr = "D8"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d8_a.stops]
+01 = {node = "nsb_ar", halts = true, time = 0, platform = "4"}
+02 = {node = "nsb_arfo", halts = true, time = 0, platform = "6"}
+03 = {node = "nsb_arc", halts = true, time = 0, platform = "6"}
+04 = {node = "nsb_bkh", halts = true, time = 0, platform = "4"}
+05 = {node = "nsb_dw", halts = true, time = 0, platform = "1"}
+
+[nsb_d8_b]
+agency = "nsb_is"
+type = "rail"
+name = "D8 (Danewolde ⟶ Arloheim Centraal)"
+headsign = "Arloheim Centraal"
+abbr = "D8"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d8_b.stops]
+01 = {node = "nsb_dw", halts = true, time = 0, platform = "4"}
+02 = {node = "nsb_bkh", halts = true, time = 0, platform = "3"}
+03 = {node = "nsb_arc", halts = true, time = 0, platform = "3"}
+04 = {node = "nsb_arfo", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_ar", halts = true, time = 0, platform = "4"}
+
+[nsb_d9_a]
+agency = "nsb_is"
+type = "rail"
+name = "D9 (Arloheim Centraal ⟶ Gaterade Haven)"
+headsign = "Gaterade Haven"
+abbr = "D9"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d9_a.stops]
+01 = {node = "nsb_ar", halts = true, time = 0, platform = "4"}
+02 = {node = "nsb_arfo", halts = true, time = 0, platform = "6"}
+03 = {node = "nsb_arc", halts = true, time = 0, platform = "6"}
+04 = {node = "nsb_bkh", halts = true, time = 0, platform = "2"}
+05 = {node = "nsb_gt", halts = true, time = 0, platform = "3A"}
+06 = {node = "nsb_gth", halts = true, time = 0, platform = "1"}
+
+[nsb_d9_b]
+agency = "nsb_is"
+type = "rail"
+name = "D9 (Gaterade Haven ⟶ Arloheim Centraal)"
+headsign = "Arloheim Centraal"
+abbr = "D9"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d9_b.stops]
+01 = {node = "nsb_gth", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_gt", halts = true, time = 0, platform = "2A"}
+03 = {node = "nsb_bkh", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_arc", halts = true, time = 0, platform = "3"}
+05 = {node = "nsb_arfo", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_ar", halts = true, time = 0, platform = "4"}
+
+
+# Trein (S-treinen)
+[nsb_s10_a]
+agency = "nsb_fu"
+type = "rail"
+name = "S10 (Arloheim Centraal ⟶ Urbigno)"
+headsign = "Urbigno"
+abbr = "S10"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s10_a.stops]
+01 = {node = "nsb_ar", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_qs", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_wh", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_db", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_avi", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_av", halts = true, time = 0, platform = "3"}
+07 = {node = "nsb_avo", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_avv", halts = true, time = 0, platform = "3"}
+09 = {node = "nsb_vt", halts = true, time = 0, platform = "1"}
+10 = {node = "nsb_vv", halts = true, time = 0, platform = "1"}
+11 = {node = "nsb_sti", halts = true, time = 0, platform = "1"}
+12 = {node = "nsb_ub", halts = true, time = 0, platform = "2"}
+
+[nsb_s10_b]
+agency = "nsb_fu"
+type = "rail"
+name = "S10 (Urbigno ⟶ Arloheim Centraal)"
+headsign = "Arloheim Centraal"
+abbr = "S10"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s10_b.stops]
+01 = {node = "nsb_ub", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_sti", halts = true, time = 0, platform = "2"}
+03 = {node = "nsb_vv", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_vt", halts = true, time = 0, platform = "2"}
+05 = {node = "nsb_avv", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_avo", halts = true, time = 0, platform = "1"}
+07 = {node = "nsb_av", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_avi", halts = true, time = 0, platform = "1"}
+09 = {node = "nsb_db", halts = true, time = 0, platform = "2"}
+10 = {node = "nsb_wh", halts = true, time = 0, platform = "1"}
+11 = {node = "nsb_qs", halts = true, time = 0, platform = "2"}
+12 = {node = "nsb_ar", halts = true, time = 0, platform = "2"}
+
+[nsb_s11_a]
+agency = "nsb_fu"
+type = "rail"
+name = "S11 (Nedelrand ⟶ Ockholm)"
+headsign = "Ockholm"
+abbr = "S11"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s11_a.stops]
+01 = {node = "nsb_ndr", halts = true, time = 0, platform = "3B"}
+02 = {node = "nsb_arc", halts = true, time = 0, platform = "4"}
+03 = {node = "nsb_arfo", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_arp", halts = true, time = 0, platform = "3"}
+05 = {node = "nsb_ar", halts = true, time = 0, platform = "4"}
+06 = {node = "nsb_qs", halts = true, time = 0, platform = "3"}
+07 = {node = "nsb_wh", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_uhz", halts = true, time = 0, platform = "2"}
+09 = {node = "nsb_uh", halts = true, time = 0, platform = "2"}
+10 = {node = "nsb_oh", halts = true, time = 0, platform = "2"}
+
+[nsb_s11_b]
+agency = "nsb_fu"
+type = "rail"
+name = "S11 (Ockholm ⟶ Nedelrand)"
+headsign = "Nedelrand"
+abbr = "S11"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s11_b.stops]
+01 = {node = "nsb_oh", halts = true, time = 0, platform = "2"}
+02 = {node = "nsb_uh", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_uhz", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_wh", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_qs", halts = true, time = 0, platform = "3"}
+06 = {node = "nsb_ar", halts = true, time = 0, platform = "5"}
+07 = {node = "nsb_arp", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_arfo", halts = true, time = 0, platform = "2"}
+09 = {node = "nsb_arc", halts = true, time = 0, platform = "5"}
+10 = {node = "nsb_ndr", halts = true, time = 0, platform = "3B"}
+
+[nsb_s12_a]
+agency = "nsb_fu"
+type = "rail"
+name = "S12 (Arloheim  Campus ⟶ Amsvorde Venpoort)"
+headsign = "Amsvorde Venpoort"
+abbr = "S12"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s12_a.stops]
+01 = {node = "nsb_arc", halts = true, time = 0, platform = "4"}
+02 = {node = "nsb_arfo", halts = true, time = 0, platform = "2"}
+03 = {node = "nsb_arp", halts = true, time = 0, platform = "3"}
+04 = {node = "nsb_ar", halts = true, time = 0, platform = "4"}
+05 = {node = "nsb_qs", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_wh", halts = true, time = 0, platform = "2"}
+07 = {node = "nsb_db", halts = true, time = 0, platform = "1"}
+08 = {node = "nsb_avi", halts = true, time = 0, platform = "2"}
+09 = {node = "nsb_av", halts = true, time = 0, platform = "7"}
+10 = {node = "nsb_avo", halts = true, time = 0, platform = "2"}
+11 = {node = "nsb_avv", halts = true, time = 0, platform = "1"}
+
+[nsb_s12_b]
+agency = "nsb_fu"
+type = "rail"
+name = "S12 (Amsvorde Venpoort ⟶ Arloheim  Campus)"
+headsign = "Arloheim  Campus"
+abbr = "S12"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s12_b.stops]
+01 = {node = "nsb_avv", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_avo", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_av", halts = true, time = 0, platform = "3"}
+04 = {node = "nsb_avi", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_db", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_wh", halts = true, time = 0, platform = "2"}
+07 = {node = "nsb_qs", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_ar", halts = true, time = 0, platform = "5"}
+09 = {node = "nsb_arp", halts = true, time = 0, platform = "2"}
+10 = {node = "nsb_arfo", halts = true, time = 0, platform = "2"}
+11 = {node = "nsb_arc", halts = true, time = 0, platform = "4"}
+
+[nsb_s15_a]
+agency = "nsb_fu"
+type = "rail"
+name = "S15 (Amsvorde Venpoort ⟶ Ulstheim)"
+headsign = "Ulstheim"
+abbr = "S15"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s15_a.stops]
+01 = {node = "nsb_avv", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_avo", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_av", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_avi", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_db", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_uhz", halts = true, time = 0, platform = "2"}
+07 = {node = "nsb_uh", halts = true, time = 0, platform = "5"}
+
+[nsb_s15_b]
+agency = "nsb_fu"
+type = "rail"
+name = "S15 (Ulstheim ⟶ Amsvorde Venpoort)"
+headsign = "Amsvorde Venpoort"
+abbr = "S15"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s15_b.stops]
+01 = {node = "nsb_uh", halts = true, time = 0, platform = "5"}
+02 = {node = "nsb_uhz", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_db", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_avi", halts = true, time = 0, platform = "2"}
+05 = {node = "nsb_av", halts = true, time = 0, platform = "7"}
+06 = {node = "nsb_avo", halts = true, time = 0, platform = "2"}
+07 = {node = "nsb_avv", halts = true, time = 0, platform = "1"}
+
+[nsb_s16_a]
+agency = "nsb_fu"
+type = "rail"
+name = "S16 (Amsvorde Venpoort ⟶ Lavijn)"
+headsign = "Lavijn"
+abbr = "S16"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s16_a.stops]
+01 = {node = "nsb_avv", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_avo", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_av", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_avi", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_db", halts = true, time = 0, platform = "3"}
+06 = {node = "nsb_lv", halts = true, time = 0, platform = "1"}
+
+[nsb_s16_b]
+agency = "nsb_fu"
+type = "rail"
+name = "S16 (Lavijn ⟶ Amsvorde Venpoort)"
+headsign = "Amsvorde Venpoort"
+abbr = "S16"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s16_b.stops]
+01 = {node = "nsb_lv", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_db", halts = true, time = 0, platform = "3"}
+03 = {node = "nsb_avi", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_av", halts = true, time = 0, platform = "7"}
+05 = {node = "nsb_avo", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_avv", halts = true, time = 0, platform = "1"}
+
+[nsb_s17_a]
+agency = "nsb_fu"
+type = "rail"
+name = "S17 (Amsvorde Centraal ⟶ Finiterra)"
+headsign = "Finiterra"
+abbr = "S17"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s17_a.stops]
+01 = {node = "nsb_av", halts = true, time = 0, platform = "3"}
+02 = {node = "nsb_avo", halts = true, time = 0, platform = "2"}
+03 = {node = "nsb_avv", halts = true, time = 0, platform = "3"}
+04 = {node = "nsb_vt", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_sb", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_tp", halts = true, time = 0, platform = "1"}
+07 = {node = "nsb_mso", halts = true, time = 0, platform = "1"}
+08 = {node = "nsb_css", halts = true, time = 0, platform = "", cancelled = "true"}
+09 = {node = "nsb_fta", halts = true, time = 0, platform = "", cancelled = "true"}
+
+[nsb_s17_b]
+agency = "nsb_fu"
+type = "rail"
+name = "S17 (Finiterra ⟶ Amsvorde Centraal)"
+headsign = "Amsvorde Centraal"
+abbr = "S17"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s17_b.stops]
+01 = {node = "nsb_fta", halts = true, time = 0, platform = "", cancelled = "true"}
+02 = {node = "nsb_css", halts = true, time = 0, platform = "", cancelled = "true"}
+03 = {node = "nsb_mso", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_tp", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_sb", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_vt", halts = true, time = 0, platform = "2"}
+07 = {node = "nsb_avv", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_avo", halts = true, time = 0, platform = "1"}
+09 = {node = "nsb_av", halts = true, time = 0, platform = "2"}
+
+[nsb_s97_a]
+agency = "nsb_fu"
+type = "rail"
+name = "S97 (Vittoria ⟶ Greneylant)"
+headsign = "Greneylant"
+abbr = "S97"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s97_a.stops]
+01 = {node = "nsb_vt", halts = true, time = 0, platform = "3"}
+02 = {node = "nsb_vd", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_snz", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_snn", halts = true, time = 0, platform = "", cancelled = "true"}
+05 = {node = "nsb_lr", halts = true, time = 0, platform = "", cancelled = "true"}
+06 = {node = "nsb_gnl", halts = true, time = 0, platform = "", cancelled = "true"}
+
+[nsb_s97_b]
+agency = "nsb_fu"
+type = "rail"
+name = "S97 (Greneylant ⟶ Vittoria)"
+headsign = "Vittoria"
+abbr = "S97"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s97_b.stops]
+01 = {node = "nsb_gnl", halts = true, time = 0, platform = "", cancelled = "true"}
+02 = {node = "nsb_lr", halts = true, time = 0, platform = "", cancelled = "true"}
+03 = {node = "nsb_snn", halts = true, time = 0, platform = "", cancelled = "true"}
+04 = {node = "nsb_snz", halts = true, time = 0, platform = "2"}
+05 = {node = "nsb_vd", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_vt", halts = true, time = 0, platform = "3"}
+
+[nsb_s20_a]
+agency = "nsb_is"
+type = "rail"
+name = "S20 (Arloheim Forum ⟶ Gaterade Haven)"
+headsign = "Gaterade Haven"
+abbr = "S20"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s20_a.stops]
+01 = {node = "nsb_arfo", halts = true, time = 0, platform = "3B"}
+02 = {node = "nsb_arc", halts = true, time = 0, platform = "5"}
+03 = {node = "nsb_ndr", halts = true, time = 0, platform = "3A"}
+04 = {node = "nsb_bw", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_gbk", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_gn", halts = true, time = 0, platform = "1"}
+07 = {node = "nsb_lvl", halts = true, time = 0, platform = "1"}
+08 = {node = "nsb_bkh", halts = true, time = 0, platform = "2"}
+09 = {node = "nsb_gtp", halts = true, time = 0, platform = "1"}
+10 = {node = "nsb_gt", halts = true, time = 0, platform = "3A"}
+11 = {node = "nsb_gth", halts = true, time = 0, platform = "1"}
+
+[nsb_s20_b]
+agency = "nsb_is"
+type = "rail"
+name = "S20 (Gaterade Haven ⟶ Arloheim Forum)"
+headsign = "Arloheim Forum"
+abbr = "S20"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s20_b.stops]
+01 = {node = "nsb_gth", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_gt", halts = true, time = 0, platform = "2A"}
+03 = {node = "nsb_gtp", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_bkh", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_lvl", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_gn", halts = true, time = 0, platform = "2"}
+07 = {node = "nsb_gbk", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_bw", halts = true, time = 0, platform = "2"}
+09 = {node = "nsb_ndr", halts = true, time = 0, platform = "1A"}
+10 = {node = "nsb_arc", halts = true, time = 0, platform = "4"}
+11 = {node = "nsb_arfo", halts = true, time = 0, platform = "3B"}
+
+[nsb_s21_a]
+agency = "nsb_is"
+type = "rail"
+name = "S21 (Arloheim Forum ⟶ Zonnemarsen)"
+headsign = "Zonnemarsen"
+abbr = "S21"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s21_a.stops]
+01 = {node = "nsb_arfo", halts = true, time = 0, platform = "3B"}
+02 = {node = "nsb_arc", halts = true, time = 0, platform = "5"}
+03 = {node = "nsb_ndr", halts = true, time = 0, platform = "3A"}
+04 = {node = "nsb_bw", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_gbk", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_gn", halts = true, time = 0, platform = "1"}
+07 = {node = "nsb_lvl", halts = true, time = 0, platform = "1"}
+08 = {node = "nsb_bkh", halts = true, time = 0, platform = "4"}
+09 = {node = "nsb_hak", halts = true, time = 0, platform = "1"}
+10 = {node = "nsb_vkh", halts = true, time = 0, platform = "2"}
+11 = {node = "nsb_bg", halts = true, time = 0, platform = "1"}
+12 = {node = "nsb_dw", halts = true, time = 0, platform = "2"}
+# [...]
+13 = {node = "nsb_zms", halts = true, time = 0, platform = "", cancelled = "true"}
+
+[nsb_s21_b]
+agency = "nsb_is"
+type = "rail"
+name = "S21 (Zonnemarsen ⟶ Arloheim Forum)"
+headsign = "Arloheim Forum"
+abbr = "S21"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s21_b.stops]
+01 = {node = "nsb_zms", halts = true, time = 0, platform = "", cancelled = "true"}
+# [...]
+02 = {node = "nsb_dw", halts = true, time = 0, platform = "3"}
+03 = {node = "nsb_bg", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_vkh", halts = true, time = 0, platform = "5"}
+05 = {node = "nsb_hak", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_bkh", halts = true, time = 0, platform = "3"}
+07 = {node = "nsb_lvl", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_gn", halts = true, time = 0, platform = "2"}
+09 = {node = "nsb_gbk", halts = true, time = 0, platform = "2"}
+10 = {node = "nsb_bw", halts = true, time = 0, platform = "2"}
+11 = {node = "nsb_ndr", halts = true, time = 0, platform = "1A"}
+12 = {node = "nsb_arc", halts = true, time = 0, platform = "4"}
+13 = {node = "nsb_arfo", halts = true, time = 0, platform = "3B"}
+
+[nsb_s22_a]
+agency = "nsb_is"
+type = "rail"
+name = "S22 (Arloheim Campus ⟶ 's-Groevenisse)"
+headsign = "'s-Groevenisse"
+abbr = "S22"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s22_a.stops]
+01 = {node = "nsb_arc", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_ndr", halts = true, time = 0, platform = "3A"}
+03 = {node = "nsb_bw", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_afv", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_pry", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_kdk", halts = true, time = 0, platform = "1"}
+07 = {node = "nsb_wl", halts = true, time = 0, platform = "1"}
+08 = {node = "nsb_hmr", halts = true, time = 0, platform = "", cancelled = "true"}
+09 = {node = "nsb_whk", halts = true, time = 0, platform = "", cancelled = "true"}
+10 = {node = "nsb_gvn", halts = true, time = 0, platform = "", cancelled = "true"}
+
+[nsb_s22_b]
+agency = "nsb_is"
+type = "rail"
+name = "S22 ('s-Groevenisse ⟶ Arloheim Campus)"
+headsign = "Arloheim Campus"
+abbr = "S22"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s22_b.stops]
+01 = {node = "nsb_gvn", halts = true, time = 0, platform = "", cancelled = "true"}
+02 = {node = "nsb_whk", halts = true, time = 0, platform = "", cancelled = "true"}
+03 = {node = "nsb_hmr", halts = true, time = 0, platform = "", cancelled = "true"}
+04 = {node = "nsb_wl", halts = true, time = 0, platform = "2"}
+05 = {node = "nsb_kdk", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_pry", halts = true, time = 0, platform = "1"}
+07 = {node = "nsb_afv", halts = true, time = 0, platform = "1"}
+08 = {node = "nsb_bw", halts = true, time = 0, platform = "2"}
+09 = {node = "nsb_ndr", halts = true, time = 0, platform = "1A"}
+10 = {node = "nsb_arc", halts = true, time = 0, platform = "2"}
+
+[nsb_s23_a]
+agency = "nsb_is"
+type = "rail"
+name = "S23 (Arloheim Campus ⟶ Stachteren)"
+headsign = "Stachteren"
+abbr = "S23"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s23_a.stops]
+01 = {node = "nsb_arc", halts = true, time = 0, platform = "1"}
+02 = {node = "nsb_ndr", halts = true, time = 0, platform = "3A"}
+03 = {node = "nsb_sg", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_np", halts = true, time = 0, platform = "2"}
+05 = {node = "nsb_str", halts = true, time = 0, platform = "2"}
+
+[nsb_s23_b]
+agency = "nsb_is"
+type = "rail"
+name = "S23 (Stachteren ⟶ Arloheim Campus)"
+headsign = "Arloheim Campus"
+abbr = "S23"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s23_b.stops]
+01 = {node = "nsb_str", halts = true, time = 0, platform = "2"}
+02 = {node = "nsb_np", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_sg", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_ndr", halts = true, time = 0, platform = "1A"}
+05 = {node = "nsb_arc", halts = true, time = 0, platform = "2"}
+
+[nsb_s30_a]
+agency = "nsb_is"
+type = "rail"
+name = "S30 (Malmen Zuid ⟶ Woenslaken)"
+headsign = "Woenslaken"
+abbr = "S30"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s30_a.stops]
+01 = {node = "nsb_mmz", halts = true, time = 0, platform = "", cancelled = "true"}
+02 = {node = "nsb_mm", halts = true, time = 0, platform = "", cancelled = "true"}
+03 = {node = "nsb_hk", halts = true, time = 0, platform = "", cancelled = "true"}
+04 = {node = "nsb_dw", halts = true, time = 0, platform = "6"}
+05 = {node = "nsb_dwo", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_aur", halts = true, time = 0, platform = "2"}
+07 = {node = "nsb_rks", halts = true, time = 0, platform = "2"}
+08 = {node = "nsb_md", halts = true, time = 0, platform = "2"}
+09 = {node = "nsb_akh", halts = true, time = 0, platform = "1"}
+10 = {node = "nsb_gdz", halts = true, time = 0, platform = "2"}
+11 = {node = "nsb_gd", halts = true, time = 0, platform = "2"}
+12 = {node = "nsb_dd", halts = true, time = 0, platform = "2"}
+13 = {node = "nsb_rdk", halts = true, time = 0, platform = "", cancelled = "true"}
+14 = {node = "nsb_wl", halts = true, time = 0, platform = "1"}
+
+[nsb_s30_b]
+agency = "nsb_is"
+type = "rail"
+name = "S30 (Woenslaken ⟶ Malmen Zuid)"
+headsign = "Malmen Zuid"
+abbr = "S30"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s30_b.stops]
+01 = {node = "nsb_wl", halts = true, time = 0, platform = "2"}
+02 = {node = "nsb_rdk", halts = true, time = 0, platform = "", cancelled = "true"}
+03 = {node = "nsb_dd", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_gd", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_gdz", halts = true, time = 0, platform = "1"}
+06 = {node = "nsb_akh", halts = true, time = 0, platform = "1"}
+07 = {node = "nsb_md", halts = true, time = 0, platform = "1"}
+08 = {node = "nsb_rks", halts = true, time = 0, platform = "1"}
+09 = {node = "nsb_aur", halts = true, time = 0, platform = "1"}
+10 = {node = "nsb_dwo", halts = true, time = 0, platform = "1"}
+11 = {node = "nsb_dw", halts = true, time = 0, platform = "5"}
+12 = {node = "nsb_hk", halts = true, time = 0, platform = "", cancelled = "true"}
+13 = {node = "nsb_mm", halts = true, time = 0, platform = "", cancelled = "true"}
+14 = {node = "nsb_mmz", halts = true, time = 0, platform = "", cancelled = "true"}
+
+[nsb_s31_a]
+agency = "nsb_is"
+type = "rail"
+name = "S31 (Fremond ⟶ Berkenhoven)"
+headsign = "Berkenhoven"
+abbr = "S31"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s31_a.stops]
+01 = {node = "nsb_fm", halts = true, time = 0, platform = "", cancelled = "true"}
+# [...]
+02 = {node = "nsb_rks", halts = true, time = 0, platform = "2"}
+03 = {node = "nsb_md", halts = true, time = 0, platform = "2"}
+04 = {node = "nsb_vkh", halts = true, time = 0, platform = "6"}
+05 = {node = "nsb_hak", halts = true, time = 0, platform = "2"}
+06 = {node = "nsb_bkh", halts = true, time = 0, platform = "34"}
+
+[nsb_s31_b]
+agency = "nsb_is"
+type = "rail"
+name = "S31 (Berkenhoven ⟶ Fremond)"
+headsign = "Fremond"
+abbr = "S31"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[nsb_s31_b.stops]
+01 = {node = "nsb_bkh", halts = true, time = 0, platform = "34"}
+02 = {node = "nsb_hak", halts = true, time = 0, platform = "1"}
+03 = {node = "nsb_vkh", halts = true, time = 0, platform = "1"}
+04 = {node = "nsb_md", halts = true, time = 0, platform = "1"}
+05 = {node = "nsb_rks", halts = true, time = 0, platform = "1"}
+# [...]
+06 = {node = "nsb_fm", halts = true, time = 0, platform = "", cancelled = "true"}
+
+
+# Metro Arloheim
+[arm_a_a]
+agency = "arlov"
+type = "subway"
+name = "Metro A (Nedersalwey ⟶ Al-Qusur)"
+headsign = "Al-Qusur"
+abbr = "A"
+color = {background = "#ff2a2a", text = "#ffffff"}
+
+[arm_a_a.stops]
+01 = {node = "arm_nsw", halts = true, time = 0, platform = "1", headsign = "Al-Qusur via Forum"}
+02 = {node = "arm_wss", halts = true, time = 0, platform = "2"}
+03 = {node = "arm_wdk", halts = true, time = 0, platform = "2"}
+04 = {node = "arm_for", halts = true, time = 0, platform = "10", headsign = "Al-Qusur via Nieuwedal"}
+05 = {node = "arm_nwd", halts = true, time = 0, platform = "4", headsign = "Al-Qusur"}
+06 = {node = "arm_trc", halts = true, time = 0, platform = "2"}
+07 = {node = "arm_psw", halts = true, time = 0, platform = "2"}
+08 = {node = "arm_qsr", halts = true, time = 0, platform = "12"}
+
+[arm_a_b]
+agency = "arlov"
+type = "subway"
+name = "Metro A (Al-Qusur ⟶ Nedersalwey)"
+headsign = "Nedersalwey"
+abbr = "A"
+color = {background = "#ff2a2a", text = "#ffffff"}
+
+[arm_a_b.stops]
+01 = {node = "arm_qsr", halts = true, time = 0, platform = "12", headsign = "Nedersalwey via Nieuwedal"}
+02 = {node = "arm_psw", halts = true, time = 0, platform = "1"}
+03 = {node = "arm_trc", halts = true, time = 0, platform = "1"}
+04 = {node = "arm_nwd", halts = true, time = 0, platform = "3", headsign = "Nedersalwey via Forum"}
+05 = {node = "arm_for", halts = true, time = 0, platform = "9", headsign = "Nedersalwey"}
+06 = {node = "arm_wdk", halts = true, time = 0, platform = "1"}
+07 = {node = "arm_wss", halts = true, time = 0, platform = "1"}
+08 = {node = "arm_nsw", halts = true, time = 0, platform = "1"}
+
+[arm_b_a]
+agency = "arlov"
+type = "subway"
+name = "Metro B (Negenaar ⟶ Fort van Raduyn)"
+headsign = "Fort van Raduyn"
+abbr = "B"
+color = {background = "#0066ff", text = "#ffffff"}
+
+[arm_b_a.stops]
+01 = {node = "arm_ng", halts = true, time = 0, platform = "2", headsign = "Fort van Raduyn via Elfshaven"}
+02 = {node = "arm_ngd", halts = true, time = 0, platform = "2"}
+03 = {node = "arm_ehv", halts = true, time = 0, platform = "2", headsign = "Fort van Raduyn via Halenz"}
+04 = {node = "arm_wbg", halts = true, time = 0, platform = "2"}
+05 = {node = "arm_hz", halts = true, time = 0, platform = "3", headsign = "Fort van Raduyn via Nieuwedal"}
+06 = {node = "arm_pdb", halts = true, time = 0, platform = "6"}
+07 = {node = "arm_nwd", halts = true, time = 0, platform = "2", headsign = "Fort van Raduyn"}
+08 = {node = "arm_hvk", halts = true, time = 0, platform = "3"}
+09 = {node = "arm_vhf", halts = true, time = 0, platform = "2"}
+10 = {node = "arm_zb", halts = true, time = 0, platform = "2"}
+11 = {node = "arm_knz", halts = true, time = 0, platform = "2"}
+12 = {node = "arm_rdn", halts = true, time = 0, platform = "1"}
+
+[arm_b_b]
+agency = "arlov"
+type = "subway"
+name = "Metro B (Fort van Raduyn ⟶ Negenaar)"
+headsign = "Negenaar"
+abbr = "B"
+color = {background = "#0066ff", text = "#ffffff"}
+
+[arm_b_b.stops]
+01 = {node = "arm_rdn", halts = true, time = 0, platform = "1", headsign = "Negenaar via Nieuwedal"}
+02 = {node = "arm_knz", halts = true, time = 0, platform = "1"}
+03 = {node = "arm_zb", halts = true, time = 0, platform = "1"}
+04 = {node = "arm_vhf", halts = true, time = 0, platform = "1"}
+05 = {node = "arm_hvk", halts = true, time = 0, platform = "1"}
+06 = {node = "arm_nwd", halts = true, time = 0, platform = "1", headsign = "Negenaar via Halenz"}
+07 = {node = "arm_pdb", halts = true, time = 0, platform = "5"}
+08 = {node = "arm_hz", halts = true, time = 0, platform = "2", headsign = "Negenaar via Elfshaven"}
+09 = {node = "arm_wbg", halts = true, time = 0, platform = "1"}
+10 = {node = "arm_ehv", halts = true, time = 0, platform = "1", headsign = "Negenaar"}
+11 = {node = "arm_ngd", halts = true, time = 0, platform = "3"}
+12 = {node = "arm_ng", halts = true, time = 0, platform = "3"}
+
+[arm_c_a]
+agency = "arlov"
+type = "subway"
+name = "Metro C (Luchthaven ⟶ Steyn)"
+headsign = "Steyn"
+abbr = "C"
+color = {background = "#2ad4ff", text = "#ffffff"}
+
+[arm_c_a.stops]
+01 = {node = "arm_lhv", halts = true, time = 0, platform = "1", headsign = "Steyn via Halenz"}
+02 = {node = "arm_vgh", halts = true, time = 0, platform = "1"}
+03 = {node = "arm_hz", halts = true, time = 0, platform = "3", headsign = "Steyn via Nieuwedal"}
+04 = {node = "arm_pdb", halts = true, time = 0, platform = "6"}
+05 = {node = "arm_nwd", halts = true, time = 0, platform = "2", headsign = "Steyn"}
+06 = {node = "arm_hvk", halts = true, time = 0, platform = "2"}
+07 = {node = "arm_odb", halts = true, time = 0, platform = "2"}
+08 = {node = "arm_ahm", halts = true, time = 0, platform = "1"}
+09 = {node = "arm_ost", halts = true, time = 0, platform = "3"}
+10 = {node = "arm_stn", halts = true, time = 0, platform = "3"}
+
+[arm_c_b]
+agency = "arlov"
+type = "subway"
+name = "Metro C (Steyn ⟶ Luchthaven)"
+headsign = "Steyn"
+abbr = "C"
+color = {background = "#2ad4ff", text = "#ffffff"}
+
+[arm_c_b.stops]
+01 = {node = "arm_stn", halts = true, time = 0, platform = "1", headsign = "Luchthaven via Nieuwedal"}
+02 = {node = "arm_ost", halts = true, time = 0, platform = "4"}
+03 = {node = "arm_ahm", halts = true, time = 0, platform = "2"}
+04 = {node = "arm_odb", halts = true, time = 0, platform = "1"}
+05 = {node = "arm_hvk", halts = true, time = 0, platform = "1"}
+06 = {node = "arm_nwd", halts = true, time = 0, platform = "1", headsign = "Luchthaven via Halenz"}
+07 = {node = "arm_pdb", halts = true, time = 0, platform = "5"}
+08 = {node = "arm_hz", halts = true, time = 0, platform = "1", headsign = "Luchthaven"}
+09 = {node = "arm_vgh", halts = true, time = 0, platform = "2"}
+10 = {node = "arm_lhv", halts = true, time = 0, platform = "2"}
+
+[arm_d_a]
+agency = "arlov"
+type = "subway"
+name = "Metro D (Negenaar ⟶ Steyn)"
+headsign = "Steyn"
+abbr = "D"
+color = {background = "#5fd38d", text = "#ffffff"}
+
+[arm_d_a.stops]
+01 = {node = "arm_ng", halts = true, time = 0, platform = "1", headsign = "Steyn via Campus"}
+02 = {node = "arm_ngd", halts = true, time = 0, platform = "1"}
+03 = {node = "arm_bkc", halts = true, time = 0, platform = "1"}
+04 = {node = "arm_bkv", halts = true, time = 0, platform = "1"}
+05 = {node = "arm_cps", halts = true, time = 0, platform = "9", headsign = "Steyn via Forum"}
+06 = {node = "arm_pss", halts = true, time = 0, platform = "1"}
+07 = {node = "arm_for", halts = true, time = 0, platform = "7", headsign = "Steyn"}
+08 = {node = "arm_ldw", halts = true, time = 0, platform = "1"}
+09 = {node = "arm_atv", halts = true, time = 0, platform = "1"}
+10 = {node = "arm_psz", halts = true, time = 0, platform = "1"}
+11 = {node = "arm_ost", halts = true, time = 0, platform = "1"}
+12 = {node = "arm_stn", halts = true, time = 0, platform = "3"}
+
+[arm_d_b]
+agency = "arlov"
+type = "subway"
+name = "Metro D (Steyn ⟶ Negenaar)"
+headsign = "Negenaar"
+abbr = "D"
+color = {background = "#5fd38d", text = "#ffffff"}
+
+[arm_d_b.stops]
+01 = {node = "arm_stn", halts = true, time = 0, platform = "2", headsign = "Negenaar via Forum"}
+02 = {node = "arm_ost", halts = true, time = 0, platform = "2"}
+03 = {node = "arm_psz", halts = true, time = 0, platform = "2"}
+04 = {node = "arm_atv", halts = true, time = 0, platform = "2"}
+05 = {node = "arm_ldw", halts = true, time = 0, platform = "2"}
+06 = {node = "arm_for", halts = true, time = 0, platform = "8", headsign = "Negenaar via Campus"}
+07 = {node = "arm_pss", halts = true, time = 0, platform = "2"}
+08 = {node = "arm_cps", halts = true, time = 0, platform = "10", headsign = "Negenaar"}
+09 = {node = "arm_bkv", halts = true, time = 0, platform = "2"}
+10 = {node = "arm_bkc", halts = true, time = 0, platform = "2"}
+11 = {node = "arm_ngd", halts = true, time = 0, platform = "3"}
+12 = {node = "arm_ng", halts = true, time = 0, platform = "3"}
+
+[arm_e_a]
+agency = "arlov"
+type = "subway"
+name = "Metro E (Lavijn ⟶ Nedelrand)"
+headsign = "Nedelrand"
+abbr = "E"
+color = {background = "#ff7f2a", text = "#ffffff"}
+
+[arm_e_a.stops]
+01 = {node = "arm_lvn", halts = true, time = 0, platform = "1", headsign = "Nedelrand via Elfshaven"}
+02 = {node = "arm_uhc", halts = true, time = 0, platform = "1"}
+03 = {node = "arm_uhs", halts = true, time = 0, platform = "11"}
+04 = {node = "arm_uhh", halts = true, time = 0, platform = "1"}
+05 = {node = "arm_ehv", halts = true, time = 0, platform = "11", headsign = "Nedelrand"}
+06 = {node = "arm_dbm", halts = true, time = 0, platform = "1"}
+07 = {node = "arm_bkc", halts = true, time = 0, platform = "3"}
+08 = {node = "arm_sta", halts = true, time = 0, platform = "1"}
+09 = {node = "arm_mdz", halts = true, time = 0, platform = "1"}
+10 = {node = "arm_sgb", halts = true, time = 0, platform = "1"}
+11 = {node = "arm_sg", halts = true, time = 0, platform = "1"}
+12 = {node = "arm_ndr", halts = true, time = 0, platform = "5"}
+
+[arm_e_b]
+agency = "arlov"
+type = "subway"
+name = "Metro E (Nedelrand ⟶ Lavijn)"
+headsign = "Lavijn"
+abbr = "E"
+color = {background = "#ff7f2a", text = "#ffffff"}
+
+[arm_e_b.stops]
+01 = {node = "arm_ndr", halts = true, time = 0, platform = "4", headsign = "Lavijn via Elfshaven"}
+02 = {node = "arm_sg", halts = true, time = 0, platform = "2"}
+03 = {node = "arm_sgb", halts = true, time = 0, platform = "2"}
+04 = {node = "arm_mdz", halts = true, time = 0, platform = "2"}
+05 = {node = "arm_sta", halts = true, time = 0, platform = "2"}
+06 = {node = "arm_bkc", halts = true, time = 0, platform = "4"}
+07 = {node = "arm_dbm", halts = true, time = 0, platform = "2"}
+08 = {node = "arm_ehv", halts = true, time = 0, platform = "12", headsign = "Lavijn"}
+09 = {node = "arm_uhh", halts = true, time = 0, platform = "2"}
+10 = {node = "arm_uhs", halts = true, time = 0, platform = "12"}
+11 = {node = "arm_uhc", halts = true, time = 0, platform = "2"}
+12 = {node = "arm_lvn", halts = true, time = 0, platform = "2"}
+
+[arm_f_a]
+agency = "arlov"
+type = "subway"
+name = "Metro F (Campus ⟶ Steyn)"
+headsign = "Steyn"
+abbr = "F"
+color = {background = "#ffd918", text = "#ffffff"}
+
+[arm_f_a.stops]
+01 = {node = "arm_cps", halts = true, time = 0, platform = "8", headsign = "Steyn via Halenz"}
+02 = {node = "arm_hz", halts = true, time = 0, platform = "14", headsign = "Steyn via Centraal Station"}
+03 = {node = "arm_vgh", halts = true, time = 0, platform = "4"}
+04 = {node = "arm_lhv", halts = true, time = 0, platform = "4"}
+05 = {node = "arm_cs", halts = true, time = 0, platform = "12", headsign = "Steyn via Morgenster"}
+06 = {node = "arm_trc", halts = true, time = 0, platform = "4"}
+07 = {node = "arm_mpl", halts = true, time = 0, platform = "2"}
+08 = {node = "arm_mst", halts = true, time = 0, platform = "6", headsign = "Steyn"}
+09 = {node = "arm_sdg", halts = true, time = 0, platform = "2"}
+10 = {node = "arm_stn", halts = true, time = 0, platform = "13"}
+
+[arm_f_b]
+agency = "arlov"
+type = "subway"
+name = "Metro F (Steyn ⟶ Campus)"
+headsign = "Campus"
+abbr = "F"
+color = {background = "#ffd918", text = "#ffffff"}
+
+[arm_f_b.stops]
+01 = {node = "arm_stn", halts = true, time = 0, platform = "13", headsign = "Campus via Morgenster"}
+02 = {node = "arm_sdg", halts = true, time = 0, platform = "1"}
+03 = {node = "arm_mst", halts = true, time = 0, platform = "5", headsign = "Campus via Centraal Station"}
+04 = {node = "arm_mpl", halts = true, time = 0, platform = "1"}
+05 = {node = "arm_trc", halts = true, time = 0, platform = "3"}
+06 = {node = "arm_cs", halts = true, time = 0, platform = "11", headsign = "Campus via Halenz"}
+07 = {node = "arm_lhv", halts = true, time = 0, platform = "3"}
+08 = {node = "arm_vgh", halts = true, time = 0, platform = "3"}
+09 = {node = "arm_hz", halts = true, time = 0, platform = "13", headsign = "Campus"}
+10 = {node = "arm_cps", halts = true, time = 0, platform = "7"}
+
+
+# Tram Arloheim
+[art_666_a]
+agency = "arlov"
+type = "tram"
+name = "Tram 666 (Aalsterve ⟶ Fort van Raduyn)"
+headsign = "Fort van Raduyn"
+abbr = "666"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[art_666_a.stops]
+01 = {node = "art_atv", halts = true, time = 0, platform = "3", headsign = "Fort van Raduyn via Steyn"}
+02 = {node = "art_dbk", halts = true, time = 0, platform = "1"}
+03 = {node = "art_vtr", halts = true, time = 0, platform = "1"}
+04 = {node = "art_vmt", halts = true, time = 0, platform = "1"}
+05 = {node = "art_gnv", halts = true, time = 0, platform = "11", headsign = "Fort van Raduyn"}
+06 = {node = "art_cyp", halts = true, time = 0, platform = "1"}
+07 = {node = "art_ktw", halts = true, time = 0, platform = "1"}
+08 = {node = "art_ksm", halts = true, time = 0, platform = "1"}
+09 = {node = "art_rtr", halts = true, time = 0, platform = "1"}
+10 = {node = "art_rdn", halts = true, time = 0, platform = "2"}
+
+[art_666_b]
+agency = "arlov"
+type = "tram"
+name = "Tram 666 (Fort van Raduyn ⟶ Aalsterve)"
+headsign = "Aalsterve"
+abbr = "666"
+color = {background = "#2b7749", text = "#ffffff"}
+
+[art_666_b.stops]
+01 = {node = "art_rdn", halts = true, time = 0, platform = "2", headsign = "Aalsterve via Steyn"}
+02 = {node = "art_rtr", halts = true, time = 0, platform = "1"}
+03 = {node = "art_ksm", halts = true, time = 0, platform = "1"}
+04 = {node = "art_ktw", halts = true, time = 0, platform = "1"}
+05 = {node = "art_cyp", halts = true, time = 0, platform = "2"}
+06 = {node = "art_gnv", halts = true, time = 0, platform = "12", headsign = "Aalsterve"}
+07 = {node = "art_vmt", halts = true, time = 0, platform = "2"}
+08 = {node = "art_vtr", halts = true, time = 0, platform = "2"}
+09 = {node = "art_dbk", halts = true, time = 0, platform = "1"}
+10 = {node = "art_atv", halts = true, time = 0, platform = "3"}
+
+[art_837_a]
+agency = "arlov"
+type = "tram"
+name = "Tram 837 (Morgenster ⟶ Steyn ⟶ Morgenster)"
+headsign = "Steyn"
+abbr = "837"
+color = {background = "#cd87de", text = "#ffffff"}
+
+[art_837_a.stops]
+01 = {node = "art_mst", halts = true, time = 0, platform = "3", headsign = "Steyn"}
+02 = {node = "art_bbn", halts = true, time = 0, platform = "2"}
+03 = {node = "art_dmn", halts = true, time = 0, platform = "2"}
+04 = {node = "art_zhs", halts = true, time = 0, platform = "1A"}
+05 = {node = "art_otb", halts = true, time = 0, platform = "1"}
+06 = {node = "art_gnv", halts = true, time = 0, platform = "21", headsign = "Morgenster"}
+07 = {node = "art_vmt", halts = true, time = 0, platform = "3"}
+08 = {node = "art_ost", halts = true, time = 0, platform = "5"}
+09 = {node = "art_zhs", halts = true, time = 0, platform = "1B"}
+10 = {node = "art_dmn", halts = true, time = 0, platform = "2"}
+11 = {node = "art_bbn", halts = true, time = 0, platform = "1"}
+12 = {node = "art_mst", halts = true, time = 0, platform = "4"}
+
+[art_839_a]
+agency = "arlov"
+type = "tram"
+name = "Tram 839 (Forum ⟶ Centraal Station)"
+headsign = "Centraal Station"
+abbr = "839"
+color = {background = "#7137c8", text = "#ffffff"}
+
+[art_839_a.stops]
+01 = {node = "art_for", halts = true, time = 0, platform = "12A", headsign = "Centraal Station via Morgenster"}
+02 = {node = "art_bwk", halts = true, time = 0, platform = "2"}
+03 = {node = "art_ldw", halts = true, time = 0, platform = "12"}
+04 = {node = "art_ebk", halts = true, time = 0, platform = "2"}
+05 = {node = "art_drt", halts = true, time = 0, platform = "2"}
+06 = {node = "art_odb", halts = true, time = 0, platform = "12"}
+07 = {node = "art_mst", halts = true, time = 0, platform = "2", headsign = "Centraal Station"}
+08 = {node = "art_hwd", halts = true, time = 0, platform = "2"}
+09 = {node = "art_dwk", halts = true, time = 0, platform = "2"}
+10 = {node = "art_zb", halts = true, time = 0, platform = "12"}
+11 = {node = "art_nvh", halts = true, time = 0, platform = "2"}
+12 = {node = "art_psw", halts = true, time = 0, platform = "3"}
+13 = {node = "art_cs", halts = true, time = 0, platform = "13"}
+
+[art_839_b]
+agency = "arlov"
+type = "tram"
+name = "Tram 839 (Centraal Station ⟶ Forum)"
+headsign = "Forum"
+abbr = "839"
+color = {background = "#7137c8", text = "#ffffff"}
+
+[art_839_b.stops]
+01 = {node = "art_cs", halts = true, time = 0, platform = "13", headsign = "Forum via Morgenster"}
+02 = {node = "art_psw", halts = true, time = 0, platform = "4"}
+03 = {node = "art_nvh", halts = true, time = 0, platform = "1"}
+04 = {node = "art_zb", halts = true, time = 0, platform = "11"}
+05 = {node = "art_dwk", halts = true, time = 0, platform = "1"}
+06 = {node = "art_hwd", halts = true, time = 0, platform = "1"}
+07 = {node = "art_mst", halts = true, time = 0, platform = "1", headsign = "Forum"}
+08 = {node = "art_odb", halts = true, time = 0, platform = "11"}
+09 = {node = "art_drt", halts = true, time = 0, platform = "1"}
+10 = {node = "art_ebk", halts = true, time = 0, platform = "1"}
+11 = {node = "art_ldw", halts = true, time = 0, platform = "11"}
+12 = {node = "art_bwk", halts = true, time = 0, platform = "1"}
+13 = {node = "art_for", halts = true, time = 0, platform = "11A"}
+
+[art_840_a]
+agency = "arlov"
+type = "tram"
+name = "Tram 840 (Forum ⟶ Luchthaven)"
+headsign = "Luchthaven"
+abbr = "840"
+color = {background = "#ff7f2a", text = "#ffffff"}
+
+[art_840_a.stops]
+01 = {node = "art_for", halts = true, time = 0, platform = "13", headsign = "Luchthaven via Halenz"}
+02 = {node = "art_pss", halts = true, time = 0, platform = "4"}
+03 = {node = "art_cps", halts = true, time = 0, platform = "12"}
+04 = {node = "art_vg", halts = true, time = 0, platform = "2"}
+05 = {node = "art_wbz", halts = true, time = 0, platform = "2"}
+06 = {node = "art_hz", halts = true, time = 0, platform = "12", headsign = "Luchthaven"}
+07 = {node = "art_mlw", halts = true, time = 0, platform = "2"}
+08 = {node = "art_lan", halts = true, time = 0, platform = "2"}
+09 = {node = "art_cs", halts = true, time = 0, platform = "22"}
+10 = {node = "art_lhv", halts = true, time = 0, platform = "12"}
+
+[art_840_b]
+agency = "arlov"
+type = "tram"
+name = "Tram 840 (Luchthaven ⟶ Forum)"
+headsign = "Forum"
+abbr = "840"
+color = {background = "#ff7f2a", text = "#ffffff"}
+
+[art_840_b.stops]
+01 = {node = "art_lhv", halts = true, time = 0, platform = "11", headsign = "Forum via Halenz"}
+02 = {node = "art_cs", halts = true, time = 0, platform = "21"}
+03 = {node = "art_lan", halts = true, time = 0, platform = "1"}
+04 = {node = "art_mlw", halts = true, time = 0, platform = "1"}
+05 = {node = "art_hz", halts = true, time = 0, platform = "11", headsign = "Forum"}
+06 = {node = "art_wbz", halts = true, time = 0, platform = "1"}
+07 = {node = "art_vg", halts = true, time = 0, platform = "1"}
+08 = {node = "art_cps", halts = true, time = 0, platform = "11"}
+09 = {node = "art_pss", halts = true, time = 0, platform = "3"}
+10 = {node = "art_for", halts = true, time = 0, platform = "14"}
+
+[art_841_a]
+agency = "arlov"
+type = "tram"
+name = "Tram 841 (Wadekwartier ⟶ Elfshaven)"
+headsign = "Elfshaven"
+abbr = "841"
+color = {background = "#c8ab37", text = "#ffffff"}
+
+[art_841_a.stops]
+01 = {node = "art_wdk", halts = true, time = 0, platform = "11"}
+02 = {node = "art_swb", halts = true, time = 0, platform = "2"}
+03 = {node = "art_wvg", halts = true, time = 0, platform = "2"}
+04 = {node = "art_whk", halts = true, time = 0, platform = "2"}
+05 = {node = "art_gkp", halts = true, time = 0, platform = "2"}
+06 = {node = "art_wte", halts = true, time = 0, platform = "2"}
+07 = {node = "art_bkv", halts = true, time = 0, platform = "4"}
+08 = {node = "art_sta", halts = true, time = 0, platform = "2"}
+09 = {node = "art_bpl", halts = true, time = 0, platform = "2"}
+10 = {node = "art_ehv", halts = true, time = 0, platform = "4"}
+
+[art_841_b]
+agency = "arlov"
+type = "tram"
+name = "Tram 841 (Wadekwartier ⟶ Elfshaven)"
+headsign = "Elfshaven"
+abbr = "841"
+color = {background = "#c8ab37", text = "#ffffff"}
+
+[art_841_b.stops]
+01 = {node = "art_ehv", halts = true, time = 0, platform = "3"}
+02 = {node = "art_bpl", halts = true, time = 0, platform = "1"}
+03 = {node = "art_sta", halts = true, time = 0, platform = "1"}
+04 = {node = "art_bkv", halts = true, time = 0, platform = "3"}
+05 = {node = "art_wte", halts = true, time = 0, platform = "1"}
+06 = {node = "art_gkp", halts = true, time = 0, platform = "1"}
+07 = {node = "art_whk", halts = true, time = 0, platform = "1"}
+08 = {node = "art_wvg", halts = true, time = 0, platform = "1"}
+09 = {node = "art_swb", halts = true, time = 0, platform = "1"}
+10 = {node = "art_wdk", halts = true, time = 0, platform = "11"}
+
+[art_850_a]
+agency = "arlov"
+type = "tram"
+name = "Tram 850 (Forum ⟶ Campus)"
+headsign = "Campus (Campusshuttle)"
+abbr = "850"
+color = {background = "#7eafff", text = "#ffffff"}
+
+[art_850_a.stops]
+01 = {node = "art_for", halts = true, time = 0, platform = "11B"}
+02 = {node = "art_kst", halts = true, time = 0, platform = "1"}
+03 = {node = "art_cll", halts = true, time = 0, platform = "1"}
+04 = {node = "art_umc", halts = true, time = 0, platform = "1"}
+05 = {node = "art_ngf", halts = true, time = 0, platform = "1"}
+06 = {node = "art_cps", halts = true, time = 0, platform = "14"}
+
+[art_850_b]
+agency = "arlov"
+type = "tram"
+name = "Tram 850 (Campus ⟶ Forum)"
+headsign = "Forum (Campusshuttle)"
+abbr = "850"
+color = {background = "#7eafff", text = "#ffffff"}
+
+[art_850_b.stops]
+01 = {node = "art_cps", halts = true, time = 0, platform = "13"}
+02 = {node = "art_ngf", halts = true, time = 0, platform = "2"}
+03 = {node = "art_mkn", halts = true, time = 0, platform = "1"}
+04 = {node = "art_kst", halts = true, time = 0, platform = "2"}
+05 = {node = "art_for", halts = true, time = 0, platform = "12B"}
+
+
+# Funiculaires Arloheim
+[arf_667_a]
+agency = "arlov"
+type = "funicular"
+name = "Funiculaire 667 (Triarchie ⟶ Maanzigt)"
+headsign = "Maanzigt"
+abbr = "667"
+color = {background = "#2a889f", text = "#ffffff"}
+
+[arf_667_a.stops]
+01 = {node = "arf_trc", halts = true, time = 0}
+02 = {node = "arf_mzt", halts = true, time = 0}
+
+[arf_667_b]
+agency = "arlov"
+type = "funicular"
+name = "Funiculaire 667 (Maanzigt ⟶ Triarchie)"
+headsign = "Triarchie"
+abbr = "667"
+color = {background = "#2a889f", text = "#ffffff"}
+
+[arf_667_b.stops]
+01 = {node = "arf_mzt", halts = true, time = 0}
+02 = {node = "arf_trc", halts = true, time = 0}
+
+[arf_669_a]
+agency = "arlov"
+type = "funicular"
+name = "Funiculaire 669 (Brandwijk ⟶ Geologie)"
+headsign = "Geologie"
+abbr = "669"
+color = {background = "#2a889f", text = "#ffffff"}
+
+[arf_669_a.stops]
+01 = {node = "arf_bwk", halts = true, time = 0}
+02 = {node = "arf_geo", halts = true, time = 0}
+
+[arf_669_b]
+agency = "arlov"
+type = "funicular"
+name = "Funiculaire 669 (Geologie ⟶ Brandwijk)"
+headsign = "Brandwijk"
+abbr = "669"
+color = {background = "#2a889f", text = "#ffffff"}
+
+[arf_669_b.stops]
+01 = {node = "arf_geo", halts = true, time = 0}
+02 = {node = "arf_bwk", halts = true, time = 0}
+
+[arf_670_a]
+agency = "arlov"
+type = "funicular"
+name = "Funiculaire 670 (Oldenburg ⟶ Heuvelkwartier)"
+headsign = "Heuvelkwartier"
+abbr = "670"
+color = {background = "#2a889f", text = "#ffffff"}
+
+[arf_670_a.stops]
+01 = {node = "arf_odb", halts = true, time = 0}
+02 = {node = "arf_hvk", halts = true, time = 0}
+
+[arf_670_b]
+agency = "arlov"
+type = "funicular"
+name = "Funiculaire 670 (Heuvelkwartier ⟶ Oldenburg)"
+headsign = "Oldenburg"
+abbr = "670"
+color = {background = "#2a889f", text = "#ffffff"}
+
+[arf_670_b.stops]
+01 = {node = "arf_hvk", halts = true, time = 0}
+02 = {node = "arf_odb", halts = true, time = 0}
+
+
+# Liften Arloheim
+[arl_404_a]
+agency = "arlov"
+type = "elevator"
+name = "Lift 404 (Forum ⟶ Observatorium)"
+headsign = "Observatorium"
+abbr = "404"
+color = {background = "#aac735", text = "#ffffff"}
+
+[arl_404_a.stops]
+01 = {node = "arl_for", halts = true, time = 0}
+02 = {node = "arl_obs", halts = true, time = 0}
+
+[arl_404_b]
+agency = "arlov"
+type = "elevator"
+name = "Lift 404 (Observatorium ⟶ Forum)"
+headsign = "Forum"
+abbr = "404"
+color = {background = "#aac735", text = "#ffffff"}
+
+[arl_404_b.stops]
+01 = {node = "arl_obs", halts = true, time = 0}
+02 = {node = "arl_for", halts = true, time = 0}
+
+[arl_420_a]
+agency = "arlov"
+type = "elevator"
+name = "Lift 420 (Nieuwedal ⟶ Maanzigt)"
+headsign = "Maanzigt"
+abbr = "420"
+color = {background = "#aac735", text = "#ffffff"}
+
+[arl_420_a.stops]
+01 = {node = "arl_nwd", halts = true, time = 0}
+02 = {node = "arl_mzt", halts = true, time = 0}
+
+[arl_420_b]
+agency = "arlov"
+type = "elevator"
+name = "Lift 420 (Maanzigt ⟶ Nieuwedal)"
+headsign = "Nieuwedal"
+abbr = "420"
+color = {background = "#aac735", text = "#ffffff"}
+
+[arl_420_b.stops]
+01 = {node = "arl_mzt", halts = true, time = 0}
+02 = {node = "arl_nwd", halts = true, time = 0}
+
+
+# Tram Amsvorde
+[avt_1_a]
+agency = "vara"
+type = "tram"
+name = "Tram 1 (Eimuiden ⟶ De Doelen)"
+headsign = "De Doelen"
+abbr = "1"
+color = {background = "#37c8ab", text = "#ffffff"}
+
+[avt_1_a.stops]
+01 = {node = "avt_ktk", halts = true, time = 0}
+02 = {node = "avt_yct", halts = true, time = 0}
+03 = {node = "avt_ksh", halts = true, time = 0}
+04 = {node = "avt_plp", halts = true, time = 0}
+05 = {node = "avt_dns", halts = true, time = 0}
+06 = {node = "avt_rhp", halts = true, time = 0}
+07 = {node = "avt_av", halts = true, time = 0}
+08 = {node = "avt_lto", halts = true, time = 0}
+09 = {node = "avt_lzd", halts = true, time = 0}
+10 = {node = "avt_stt", halts = true, time = 0}
+11 = {node = "avt_ins", halts = true, time = 0}
+12 = {node = "avt_sls", halts = true, time = 0}
+
+[avt_1_b]
+agency = "vara"
+type = "tram"
+name = "Tram 1 (De Doelen ⟶ Eimuiden)"
+headsign = "Eimuiden"
+abbr = "1"
+color = {background = "#37c8ab", text = "#ffffff"}
+
+[avt_1_b.stops]
+01 = {node = "avt_sls", halts = true, time = 0}
+02 = {node = "avt_ins", halts = true, time = 0}
+03 = {node = "avt_stt", halts = true, time = 0}
+04 = {node = "avt_lzd", halts = true, time = 0}
+05 = {node = "avt_lto", halts = true, time = 0}
+06 = {node = "avt_av", halts = true, time = 0}
+07 = {node = "avt_rhp", halts = true, time = 0}
+08 = {node = "avt_dns", halts = true, time = 0}
+09 = {node = "avt_plp", halts = true, time = 0}
+10 = {node = "avt_ksh", halts = true, time = 0}
+11 = {node = "avt_yct", halts = true, time = 0}
+12 = {node = "avt_ktk", halts = true, time = 0}
+
+[avt_2_a]
+agency = "vara"
+type = "tram"
+name = "Tram 2 (Westhavens ⟶ Oosterstation)"
+headsign = "Oosterstation"
+abbr = "2"
+color = {background = "#ffcc00", text = "#2c5aa0"}
+
+[avt_2_a.stops]
+01 = {node = "avt_ehv", halts = true, time = 0}
+02 = {node = "avt_zhv", halts = true, time = 0}
+03 = {node = "avt_ncb", halts = true, time = 0}
+04 = {node = "avt_mls", halts = true, time = 0}
+05 = {node = "avt_avi", halts = true, time = 0}
+06 = {node = "avt_bcs", halts = true, time = 0}
+07 = {node = "avt_rhp", halts = true, time = 0}
+08 = {node = "avt_av", halts = true, time = 0}
+09 = {node = "avt_ssw", halts = true, time = 0}
+10 = {node = "avt_avo", halts = true, time = 0}
+
+[avt_2_b]
+agency = "vara"
+type = "tram"
+name = "Tram 2 (Oosterstation ⟶ Westhavens)"
+headsign = "Westhavens"
+abbr = "2"
+color = {background = "#ffcc00", text = "#2c5aa0"}
+
+[avt_2_b.stops]
+01 = {node = "avt_avo", halts = true, time = 0}
+02 = {node = "avt_ssw", halts = true, time = 0}
+03 = {node = "avt_av", halts = true, time = 0}
+04 = {node = "avt_rhp", halts = true, time = 0}
+05 = {node = "avt_bcs", halts = true, time = 0}
+06 = {node = "avt_avi", halts = true, time = 0}
+07 = {node = "avt_mls", halts = true, time = 0}
+08 = {node = "avt_ncb", halts = true, time = 0}
+09 = {node = "avt_zhv", halts = true, time = 0}
+10 = {node = "avt_ehv", halts = true, time = 0}
+
+[avt_3_a]
+agency = "vara"
+type = "tram"
+name = "Tram 3 (De Oriënt ⟶ Vittoria)"
+headsign = "Vittoria"
+abbr = "3"
+color = {background = "#ff5555", text = "#ffffff"}
+
+[avt_3_a.stops]
+01 = {node = "avt_pms", halts = true, time = 0}
+02 = {node = "avt_iqs", halts = true, time = 0}
+03 = {node = "avt_wnw", halts = true, time = 0}
+04 = {node = "avt_hrk", halts = true, time = 0}
+05 = {node = "avt_rvn", halts = true, time = 0}
+06 = {node = "avt_avv", halts = true, time = 0}
+07 = {node = "avt_vt", halts = true, time = 0}
+
+[avt_3_b]
+agency = "vara"
+type = "tram"
+name = "Tram 3 (Vittoria ⟶ De Oriënt)"
+headsign = "De Oriënt"
+abbr = "3"
+color = {background = "#ff5555", text = "#ffffff"}
+
+[avt_3_b.stops]
+01 = {node = "avt_vt", halts = true, time = 0}
+02 = {node = "avt_avv", halts = true, time = 0}
+03 = {node = "avt_rvn", halts = true, time = 0}
+04 = {node = "avt_hrk", halts = true, time = 0}
+05 = {node = "avt_wnw", halts = true, time = 0}
+06 = {node = "avt_iqs", halts = true, time = 0}
+07 = {node = "avt_pms", halts = true, time = 0}
+
+
+# Tram Giedrecht
+
+
+# Hyperloop
+[hyp_a]
+agency = "hyp"
+type = "hyperloop"
+name = "Hyperloop (Arloheim Forum ⟶ Gaterade Haven)"
+headsign = "Gaterade Haven"
+abbr = "Hyperloop"
+color = {background = "#aac735", text = "#ffffff"}
+
+[hyp_a.stops]
+01 = {node = "hyp_arfo", halts = true, time = 0}
+02 = {node = "hyp_gth", halts = true, time = 0}
+
+[hyp_b]
+agency = "hyp"
+type = "hyperloop"
+name = "Hyperloop (Gaterade Haven ⟶ Arloheim Forum)"
+headsign = "Arloheim Forum"
+abbr = "Hyperloop"
+color = {background = "#aac735", text = "#ffffff"}
+
+[hyp_b.stops]
+01 = {node = "hyp_gth", halts = true, time = 0}
+02 = {node = "hyp_arfo", halts = true, time = 0}
+
+
+# Veerdiensten

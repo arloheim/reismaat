@@ -30,7 +30,7 @@ nsb_gd = {name = "Giedrecht", code = "gd", type = "rail"}
 nsb_gdz = {name = "Giedrecht Zuid", code = "gdz", type = "rail"}
 nsb_gn = {name = "Goningen", code = "gn", type = "rail"}
 nsb_gnl = {name = "Greneylant", code = "gnl", type = "rail"}
-nsb_gvn = {name = "'s-Groevenisse'", code = "gvn", type = "rail"}
+nsb_gvn = {name = "'s-Groevenisse", code = "gvn", type = "rail"}
 nsb_gbk = {name = "Grote Bladik", code = "gbk", type = "rail"}
 nsb_hak = {name = "Hoogalken", code = "hak", type = "rail"}
 nsb_hk = {name = "Hoorink", code = "hk", type = "rail"}
@@ -63,57 +63,57 @@ nsb_vhz = {name = "Valkenhuizen", code = "vhz", type = "rail"}
 nsb_vv = {name = "Valverde", code = "vv", type = "rail"}
 nsb_vd = {name = "Valle Deserta", code = "vd", type = "rail"}
 nsb_vt = {name = "Vittoria", code = "vt", type = "rail"}
-nsb_whk = {name = "Weesthoorink", code = "whk", type = "rail"}
+nsb_whk = {name = "Westhoorink", code = "whk", type = "rail"}
 nsb_wl = {name = "Woenslaken", code = "wl", type = "rail"}
 nsb_zms = {name = "Zonnemarsen", code = "zms", type = "rail"}
 
 # Metro Arloheim
-arm_nsw = {name = "Nedersalwey", type = "metro", location = "Nedersalwey"}
-arm_wss = {name = "Westerspoor", type = "metro", location = "Nedersalwey"}
-arm_wdk = {name = "Wadekwartier", type = "metro", location = "Arloheim"}
-arm_for = {name = "Forum", type = "metro", location = "Arloheim"}
-arm_nwd = {name = "Nieuwedal", type = "metro", location = "Arloheim"}
-arm_trc = {name = "Triarchie", type = "metro", location = "Arloheim"}
-arm_psw = {name = "Passewijde", type = "metro", location = "Arloheim"}
-arm_qsr = {name = "Al-Qusur", type = "metro", location = "Al-Qusur"}
-arm_ng = {name = "Negenaar", type = "metro", location = "Negenaar"}
-arm_ngd = {name = "Negenaar Dorp", type = "metro", location = "Negenaar"}
-arm_ehv = {name = "Elfshaven", type = "metro", location = "Arloheim"}
-arm_wbg = {name = "Weesburg", type = "metro", location = "Arloheim"}
-arm_hz = {name = "Halenz", type = "metro", location = "Arloheim"}
-arm_pdb = {name = "Panderberg", type = "metro", location = "Arloheim"}
-arm_hvk = {name = "Heuvelkwartier", type = "metro", location = "Arloheim"}
-arm_vhf = {name = "Vrijhof", type = "metro", location = "Arloheim"}
-arm_zb = {name = "Zuiderbank", type = "metro", location = "Arloheim"}
-arm_knz = {name = "Kanaalzij", type = "metro", location = "Arloheim"}
-arm_rdn = {name = "Fort van Raduyn", type = "metro", location = "Arloheim"}
-arm_lhv = {name = "Luchthaven", type = "metro", location = "Arloheim"}
-arm_vgh = {name = "Vliegerhorst", type = "metro", location = "Arloheim"}
-arm_odb = {name = "Oldenburg", type = "metro", location = "Arloheim"}
-arm_ahm = {name = "Aronshym", type = "metro", location = "Arloheim"}
-arm_ost = {name = "Ou-Steyn", type = "metro", location = "Arloheim"}
-arm_stn = {name = "Steyn", type = "metro", location = "Arloheim"}
-arm_bkc = {name = "Bovenkamp Centrum", type = "metro", location = "Arloheim"}
-arm_bkv = {name = "Bovenkamp Vaarthof", type = "metro", location = "Arloheim"}
-arm_cps = {name = "Campus", type = "metro", location = "Arloheim"}
-arm_pss = {name = "Persikstaaf", type = "metro", location = "Arloheim"}
-arm_ldw = {name = "Lodewijk", type = "metro", location = "Arloheim"}
-arm_atv = {name = "Aalsterve", type = "metro", location = "Arloheim"}
-arm_psz = {name = "Pauszande", type = "metro", location = "Arloheim"}
-arm_ndr = {name = "Nedelrand", type = "metro", location = "Nedelrand"}
-arm_sg = {name = "Slinger", type = "metro", location = "Slinger"}
-arm_sgb = {name = "Slingerbeek", type = "metro", location = "Slingerbeek"}
-arm_mdz = {name = "Mijdezinder", type = "metro", location = "Mijdezinder"}
-arm_sta = {name = "Sub Terra", type = "metro", location = "Sub Terra"}
-arm_dbm = {name = "Den Boom", type = "metro", location = "Arloheim"}
-arm_uhh = {name = "Ulstheim Holst", type = "metro", location = "Ulstheim"}
-arm_uhs = {name = "Ulstheim Station", type = "metro", location = "Ulstheim"}
-arm_uhc = {name = "Ulstheim Centrum", type = "metro", location = "Ulstheim"}
-arm_lvn = {name = "Lavijn", type = "metro", location = "Lavijn"}
-arm_cs = {name = "Centraal Station", type = "metro", location = "Arloheim"}
-arm_mpl = {name = "Museumplein", type = "metro", location = "Arloheim"}
-arm_mst = {name = "Morgenster", type = "metro", location = "Arloheim"}
-arm_sdg = {name = "Scheiding", type = "metro", location = "Arloheim"}
+arm_nsw = {name = "Nedersalwey", type = "subway", location = "Nedersalwey"}
+arm_wss = {name = "Westerspoor", type = "subway", location = "Nedersalwey"}
+arm_wdk = {name = "Wadekwartier", type = "subway", location = "Arloheim"}
+arm_for = {name = "Forum", type = "subway", location = "Arloheim"}
+arm_nwd = {name = "Nieuwedal", type = "subway", location = "Arloheim"}
+arm_trc = {name = "Triarchie", type = "subway", location = "Arloheim"}
+arm_psw = {name = "Passewijde", type = "subway", location = "Arloheim"}
+arm_qsr = {name = "Al-Qusur", type = "subway", location = "Al-Qusur"}
+arm_ng = {name = "Negenaar", type = "subway", location = "Negenaar"}
+arm_ngd = {name = "Negenaar Dorp", type = "subway", location = "Negenaar"}
+arm_ehv = {name = "Elfshaven", type = "subway", location = "Arloheim"}
+arm_wbg = {name = "Weesburg", type = "subway", location = "Arloheim"}
+arm_hz = {name = "Halenz", type = "subway", location = "Arloheim"}
+arm_pdb = {name = "Panderberg", type = "subway", location = "Arloheim"}
+arm_hvk = {name = "Heuvelkwartier", type = "subway", location = "Arloheim"}
+arm_vhf = {name = "Vrijhof", type = "subway", location = "Arloheim"}
+arm_zb = {name = "Zuiderbank", type = "subway", location = "Arloheim"}
+arm_knz = {name = "Kanaalzij", type = "subway", location = "Arloheim"}
+arm_rdn = {name = "Fort van Raduyn", type = "subway", location = "Arloheim"}
+arm_lhv = {name = "Luchthaven", type = "subway", location = "Arloheim"}
+arm_vgh = {name = "Vliegerhorst", type = "subway", location = "Arloheim"}
+arm_odb = {name = "Oldenburg", type = "subway", location = "Arloheim"}
+arm_ahm = {name = "Aronshym", type = "subway", location = "Arloheim"}
+arm_ost = {name = "Ou-Steyn", type = "subway", location = "Arloheim"}
+arm_stn = {name = "Steyn", type = "subway", location = "Arloheim"}
+arm_bkc = {name = "Bovenkamp Centrum", type = "subway", location = "Arloheim"}
+arm_bkv = {name = "Bovenkamp Vaarthof", type = "subway", location = "Arloheim"}
+arm_cps = {name = "Campus", type = "subway", location = "Arloheim"}
+arm_pss = {name = "Persikstaaf", type = "subway", location = "Arloheim"}
+arm_ldw = {name = "Lodewijk", type = "subway", location = "Arloheim"}
+arm_atv = {name = "Aalsterve", type = "subway", location = "Arloheim"}
+arm_psz = {name = "Pauszande", type = "subway", location = "Arloheim"}
+arm_ndr = {name = "Nedelrand", type = "subway", location = "Nedelrand"}
+arm_sg = {name = "Slinger", type = "subway", location = "Slinger"}
+arm_sgb = {name = "Slingerbeek", type = "subway", location = "Slingerbeek"}
+arm_mdz = {name = "Mijdezinder", type = "subway", location = "Mijdezinder"}
+arm_sta = {name = "Sub Terra", type = "subway", location = "Sub Terra"}
+arm_dbm = {name = "Den Boom", type = "subway", location = "Arloheim"}
+arm_uhh = {name = "Ulstheim Holst", type = "subway", location = "Ulstheim"}
+arm_uhs = {name = "Ulstheim Station", type = "subway", location = "Ulstheim"}
+arm_uhc = {name = "Ulstheim Centrum", type = "subway", location = "Ulstheim"}
+arm_lvn = {name = "Lavijn", type = "subway", location = "Lavijn"}
+arm_cs = {name = "Centraal Station", type = "subway", location = "Arloheim"}
+arm_mpl = {name = "Museumplein", type = "subway", location = "Arloheim"}
+arm_mst = {name = "Morgenster", type = "subway", location = "Arloheim"}
+arm_sdg = {name = "Scheiding", type = "subway", location = "Arloheim"}
 
 # Tram Arloheim
 art_ehv = {name = "Arloheim, Elfshaven", type = "tram", location = "Arloheim"}
@@ -139,7 +139,7 @@ art_wbz = {name = "Arloheim, Weesburg Zuid", type = "tram", location = "Arloheim
 art_hz = {name = "Arloheim, Halenz", type = "tram", location = "Arloheim"}
 art_mlw = {name = "Arloheim, Molenweg", type = "tram", location = "Arloheim"}
 art_lan = {name = "Arloheim, Land van Nooid", type = "tram", location = "Arloheim"}
-art_ar = {name = "Arloheim, Centraal Station", type = "tram", location = "Arloheim"}
+art_cs = {name = "Arloheim, Centraal Station", type = "tram", location = "Arloheim"}
 art_lhv = {name = "Arloheim, Luchthaven", type = "tram", location = "Arloheim"}
 art_psw = {name = "Arloheim, Passewijde", type = "tram", location = "Arloheim"}
 art_nvh = {name = "Arloheim, Nijverheid", type = "tram", location = "Arloheim"}
@@ -149,6 +149,7 @@ art_hwd = {name = "Arloheim, Haagweide", type = "tram", location = "Arloheim"}
 art_mst = {name = "Arloheim, Morgenster", type = "tram", location = "Arloheim"}
 art_odb = {name = "Arloheim, Oldenburg", type = "tram", location = "Arloheim"}
 art_drt = {name = "Arloheim, Dierentuin", type = "tram", location = "Arloheim"}
+art_ebk = {name = "Arloheim, Elsbeek", type = "tram", location = "Arloheim"}
 art_ldw = {name = "Arloheim, Lodewijk", type = "tram", location = "Arloheim"}
 art_bwk = {name = "Arloheim, Brandwijk", type = "tram", location = "Arloheim"}
 art_bbn = {name = "Arloheim, Bosbaan", type = "tram", location = "Arloheim"}
@@ -160,6 +161,7 @@ art_gnv = {name = "Arloheim, Genova (Station Steyn)", type = "tram", location = 
 art_otb = {name = "Arloheim, Oosterbad", type = "tram", location = "Arloheim"}
 art_atv = {name = "Arloheim, Aalsterve", type = "tram", location = "Arloheim"}
 art_dbk = {name = "Arloheim, Duinbeek", type = "tram", location = "Arloheim"}
+art_vtr = {name = "Arloheim, Vuurtoren", type = "tram", location = "Arloheim"}
 art_cyp = {name = "Arloheim, Cyprian", type = "tram", location = "Arloheim"}
 art_ktw = {name = "Arloheim, Korteweg", type = "tram", location = "Arloheim"}
 art_ksm = {name = "Arloheim, Kersemus", type = "tram", location = "Arloheim"}
@@ -175,10 +177,10 @@ art_trc = {name = "Arloheim, Triarchie", type = "funicular", location = "Arlohei
 art_mzt	= {name = "Arloheim, Maanzigt", type = "funicular", location = "Arloheim"}
 
 # Liften Arloheim
-arl_mzt = {name = "Arloheim, Maanzigt", type = "lift", location = "Arloheim"}
-arl_nwd = {name = "Arloheim, Nieuwedal", type = "lift", location = "Arloheim"}
-arl_for = {name = "Arloheim, Forum", type = "lift", location = "Arloheim"}
-arl_obs = {name = "Arloheim, Observatorium", type = "lift", location = "Arloheim"}
+arl_mzt = {name = "Arloheim, Maanzigt", type = "elevator", location = "Arloheim"}
+arl_nwd = {name = "Arloheim, Nieuwedal", type = "elevator", location = "Arloheim"}
+arl_for = {name = "Arloheim, Forum", type = "elevator", location = "Arloheim"}
+arl_obs = {name = "Arloheim, Observatorium", type = "elevator", location = "Arloheim"}
 
 # Tram Amsvorde
 avt_ktk = {name = "Amsvorde, Kamtsjatka", type = "tram", location = "Amsvorde"}
@@ -193,7 +195,7 @@ avt_lzd = {name = "Amsvorde, Laan van Zuid", type = "tram", location = "Amsvorde
 avt_stt = {name = "Amsvorde, Springtijtunnel", type = "tram", location = "Amsvorde"}
 avt_ins = {name = "Amsvorde, Ignalinastraat", type = "tram", location = "Amsvorde"}
 avt_sls = {name = "Amsvorde, Sluis", type = "tram", location = "Amsvorde"}
-avt_whv = {name = "Amsvorde, Westhavens", type = "tram", location = "Amsvorde"}
+avt_ehv = {name = "Amsvorde, Ertshaven", type = "tram", location = "Amsvorde"}
 avt_zhv = {name = "Amsvorde, Zandhaven", type = "tram", location = "Amsvorde"}
 avt_ncb = {name = "Amsvorde, St. Nicolaasbrug", type = "tram", location = "Amsvorde"}
 avt_mls = {name = "Amsvorde, Málagastraat", type = "tram", location = "Amsvorde"}

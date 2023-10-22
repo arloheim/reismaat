@@ -1,12 +1,12 @@
 # Trein
 [nsb_fu]
 name = "Ferrovie Urbignesi"
-abbreviation = "FU"
+abbr = "FU"
 url = "https://arloheim.nl/wiki/ArlOV"
 
 [nsb_is]
 name = "Ihlaanse Spoorwegen"
-abbreviation = "IS"
+abbr = "IS"
 url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
 
 
@@ -21,7 +21,7 @@ url = "https://arloheim.nl/wiki/Vara"
 
 [gvd]
 name = "Giedrechtse Vervoersdienst"
-abbreviation = "GVD"
+abbr = "GVD"
 
 [hyp]
 name = "Hyperloop"
