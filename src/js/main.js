@@ -8,27 +8,35 @@ const MiniSearch = require('minisearch');
 
 // Import visual modules
 require('@fortawesome/fontawesome-free/js/all.js');
-require('./scss/styles.scss');
 
 
 modalities = {
   rail: 'train',
   metro: 'train-subway',
   tram: 'train-tram',
-  hyperloop: 'cloud-bolt',
+  ferry: 'ferry',
   funicular: 'cable-car',
   lift: 'elevator',
-  ferry: 'ferry',
+  hyperloop: 'bolt',
   eqh: 'horse-head'
 };
+
+
+// Class that defines an agency
+class Agency
+{
+  // Constructor
+  constructor(props) {
+    Object.assign(this, props);
+  }
+}
 
 
 // Class that defines a node
 class Node
 {
   // Constructor
-  constructor(props)
-  {
+  constructor(props) {
     Object.assign(this, props);
 
     if (this.icon === undefined)
@@ -36,8 +44,7 @@ class Node
   }
 
   // Return a description
-  getDescription(data)
-  {
+  getDescription(data) {
     let parts = [];
     if (this.type !== undefined)
       parts.push(data.translate('modalities_node.' + this.type));
@@ -48,8 +55,7 @@ class Node
   }
 
   // Return HTMl for rendering a name
-  renderName(data)
-  {
+  renderName(data) {
     return $('<span class="icon-text">')
       .data('id', this.id)
       .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
@@ -57,8 +63,7 @@ class Node
   }
 
   // Return HTML for rendering a dropdown item
-  renderDropdownItem(data)
-  {
+  renderDropdownItem(data) {
     return $('<a class="dropdown-item">')
       .data('id', this.id)
       .append($('<div class="icon is-medium mr-2">')
@@ -73,14 +78,13 @@ class Node
 class Data
 {
   // Constructor
-  constructor(options = {})
-  {
+  constructor(options = {}) {
     this.options = {
       searchOptions: {prefix: true, fuzzy: 0.1, combineWith: 'AND'},
       ...options
     };
 
-    this.agencies = toml.parse(fs.readFileSync('src/data/agencies.toml', 'utf-8'));
+    this.agencies = underscore.mapObject(toml.parse(fs.readFileSync('src/data/agencies.toml', 'utf-8')), (a, id) => (new Agency({id, ...a})));
     this.agenciesIndex = new MiniSearch({fields: ['name', 'abbr'], searchOptions: {...this.options.searchOptions}});
     this.agenciesIndex.addAll(Object.keys(this.agencies).map(id => ({id, ...this.agencies[id]})))
 
@@ -92,19 +96,16 @@ class Data
   }
 
   // Translate
-  translate(key)
-  {
+  translate(key) {
     return key.split('.').reduce((o, k) => o && o[k], this.translations);
   }
 
   // Search for nodes
-  searchNodes(query)
-  {
+  searchNodes(query) {
     return this.nodesIndex.search(query);
   }
 
-  _boostNodeDocument(id, term, storedFields)
-  {
+  _boostNodeDocument(id, term, storedFields) {
     let types = Object.keys(modalities);
     let typeIndex = types.indexOf(storedFields.type);
     if (typeIndex === -1)
@@ -120,8 +121,8 @@ $(function() {
   // Load the data
   let data = new Data();
 
-  // Event handler for when the node input changes
-  $('#node').on('input change', underscore.debounce(function() {
+  // Event handler for when a node input changes
+  $('.node-input').on('input change', underscore.debounce(function() {
     var $el = $(this);
 
     var input = $el.val();
@@ -140,8 +141,7 @@ $(function() {
       $dropdownContent = $('<div class="dropdown-content">').appendTo($dropdownMenu);
 
     // Function that defines an event handler when a dropdown item is clicked
-    function dropdownItemClick()
-    {
+    function dropdownItemClick() {
       $dropdown.hide().removeClass('is-active');
       $el.val(data.nodes[$(this).data('id')].name);
     }
@@ -150,8 +150,7 @@ $(function() {
     $dropdownContent.empty();
 
     // Add the nodes to the dropdown content
-    for (let foundNode of foundNodes.slice(0, 10))
-    {
+    for (let foundNode of foundNodes.slice(0, 10)) {
       data.nodes[foundNode.id].renderDropdownItem(data)
         .on('click', dropdownItemClick)
         .appendTo($dropdownContent);
@@ -161,15 +160,9 @@ $(function() {
     $dropdown.show().addClass('is-active');
   }, 500));
 
-  // Event handler for when the npde input loses focus
-  $('#node').on('blur', function() {
-    var $el = $(this);
-
-    // Get the dropdown
-    let $dropdown = $el.data('dropdown');
-
+  // Event handler for when a node input loses focus
+  $('.node-input').on('blur', underscore.debounce(function() {
     // Hide the dropdown
-    if ($dropdown !== undefined)
-      $dropdown.removeClass('is-active').hide();
-  });
+    let $dropdown = $(this).parents('.dropdown').removeClass('is-active').hide();
+  }, 100));
 });

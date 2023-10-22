@@ -6,21 +6,26 @@
   "license": "GPL-3.0-or-later",
   "main": "js/main.js",
   "dependencies": {
+    "@creativebulma/bulma-tooltip": "^1.2.0",
     "@fortawesome/fontawesome-free": "^6.4.2",
     "brfs": "^2.0.2",
     "browserify": "^17.0.0",
     "bulma": "^0.9.4",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.1",
     "minisearch": "^6.1.0",
-    "scssify": "^4.0.0",
+    "node-sass": "^9.0.0",
     "toml": "^3.0.0",
-    "underscore": "^1.13.6"
+    "underscore": "^1.13.6",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "scripts": {
-    "build": "browserify src/main.js -o bundle.js",
-    "watch": "watchify src/main.js -o bundle.js --debug --verbose"
-  },
-  "browserify": {
-    "transform": ["brfs", ["scssify", {"sass": {"includePaths": ["node_modules"]}}]]
+    "build": "gulp build",
+    "watch": "gulp watch"
   }
 }

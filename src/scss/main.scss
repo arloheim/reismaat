@@ -1,7 +1,7 @@
 // Import custom variables
 @import 'variables';
 
-// Import the Bulma framework
+// Import the frameworks
 @import 'bulma';
 
 
@@ -145,6 +145,7 @@ a:not(.button, .dropdown-item) {
 
     * {
       overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
