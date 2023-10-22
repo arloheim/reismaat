@@ -103,7 +103,7 @@ arm_psz = {name = "Pauszande", type = "metro", location = "Arloheim"}
 arm_ndr = {name = "Nedelrand", type = "metro", location = "Nedelrand"}
 arm_sg = {name = "Slinger", type = "metro", location = "Slinger"}
 arm_sgb = {name = "Slingerbeek", type = "metro", location = "Slingerbeek"}
-arm_mdz = {name = "Mjdezinder", type = "metro", location = "Mijdezinder"}
+arm_mdz = {name = "Mijdezinder", type = "metro", location = "Mijdezinder"}
 arm_sta = {name = "Sub Terra", type = "metro", location = "Sub Terra"}
 arm_dbm = {name = "Den Boom", type = "metro", location = "Arloheim"}
 arm_uhh = {name = "Ulstheim Holst", type = "metro", location = "Ulstheim"}
@@ -219,12 +219,12 @@ hyp_gth = {name = "Gaterade Haven", type = "hyperloop", location = "Gaterade"}
 fer_str = {name = "Stachteren, Veerhaven", type = "ferry"}
 fer_ng = {name = "Negenaar, Veerhaven", type = "ferry"}
 fer_oh = {name = "Ockholm, Veerhaven", type = "ferry"}
-fer_nsz = {name = "Noordersluizen, Veerhaven", type = "ferry"}
-fer_nszw = {name = "Noordersluizen-West, Veerhaven", type = "ferry"}
-fer_vdo = {name = "Valle Deserta, Voetveer-Oost", type = "ferry"}
-fer_vdw = {name = "Valle Deserta, Voetveer-West", type = "ferry"}
-fer_stio = {name = "Storia Infinita, Voetveer-Oost", type = "ferry"}
-fer_stiw = {name = "Storia Infinita, Voetveer-West", type = "ferry"}
+fer_nsz = {name = "Noordersluizen, Veerhaven Oosterkade", type = "ferry"}
+fer_nszw = {name = "Noordersluizen, Veerhaven Westerkade", type = "ferry"}
+fer_vdo = {name = "Valle Deserta, Voetveer Oost", type = "ferry"}
+fer_vdw = {name = "Valle Deserta, Voetveer West", type = "ferry"}
+fer_stio = {name = "Storia Infinita, Voetveer Oost", type = "ferry"}
+fer_stiw = {name = "Storia Infinita, Voetveer West", type = "ferry"}
 fer_wp = {name = "Wittepaarden, Voetveer", type = "ferry"}
 fer_sg = {name = "Slinger, Voetveer", type = "ferry"}
 
@@ -241,13 +241,13 @@ eqh_wl = {name = "Woenslaken", type = "eqh"}
 eqh_sti = {name = "Storia Infinita", type = "eqh"}
 
 eqd_ztm = {name = "Zwettem", type = "eqd"}
-eqd_nszw = {name = "Noordersluizen (Westerkade)", type = "eqd"}
+eqd_nszw = {name = "Noordersluizen, Westerkade", type = "eqd"}
 eqd_mqd = {name = "Ma'bad Qadim", type = "eqd"}
 eqd_rmn = {name = "Ramune", type = "eqd"}
 eqd_znd = {name = "Zechenidì", type = "eqd"}
 eqd_pdm = {name = "Punto del Mare", type = "eqd"}
 eqd_ndh = {name = "Noordenhoek", type = "eqd"}
-eqd_nszo = {name = "Noordersluizen (Oosterkade)", type = "eqd"}
+eqd_nszo = {name = "Noordersluizen, Oosterkade", type = "eqd"}
 eqd_mea = {name = "Meander", type = "eqd"}
 eqd_zd = {name = "'t Zand", type = "eqd"}
 eqd_abd = {name = "Abende", type = "eqd"}
@@ -262,26 +262,26 @@ mus_pss = {name = "Persikstaaf (Halenzer Stoomspoorwegen)", type = "rail", locat
 mus_wvg = {name = "Welving (Halenzer Stoomspoorwegen)", type = "rail", location = "Arloheim"}
 
 # Points of interest
-poi_arbnl = {name = "Arloheim, Bijnlaan", type = "poi", location = "Arloheim"}
-poi_arobs = {name = "Arloheim, Observatorium", type = "poi", location = "Arloheim"}
-poi_armzt = {name = "Arloheim, Maanzigt", type = "poi", location = "Arloheim"}
-poi_arjkrk = {name = "Arloheim, Sint-Janskerk", type = "poi", location = "Arloheim"}
-poi_arttr = {name = "Arloheim, Theater", type = "poi", location = "Arloheim"}
-poi_aramb = {name = "Arloheim, Ambassades", type = "poi", location = "Arloheim"}
-poi_ngmmk = {name = "Negenaar, Museum voor Moderne Kunst", type = "poi", location = "Negenaar"}
-poi_arfca = {name = "Arloheim, FC Arloheim", type = "poi", location = "Arloheim"}
-poi_arikea = {name = "Arloheim, IKEA", type = "poi", location = "Arloheim"}
-poi_armtn = {name = "Arloheim, Maantuinen", type = "poi", location = "Arloheim"}
-poi_armhl = {name = "Arloheim, Markthal", type = "poi", location = "Arloheim"}
-poi_arplm = {name = "Arloheim, Parlement", type = "poi", location = "Arloheim"}
-poi_arbpk = {name = "Arloheim, Business Park", type = "poi", location = "Arloheim"}
-poi_arzoo = {name = "Arloheim, Dierentuin", type = "poi", location = "Arloheim"}
-poi_arsstn = {name = "Arloheim, Strand van Steyn", type = "poi", location = "Arloheim"}
-poi_argnv = {name = "Arloheim, Genova", type = "poi", location = "Arloheim"}
-poi_arbkw = {name = "Arloheim, Bovenkampse Wateren", type = "poi", location = "Arloheim"}
-poi_aruva = {name = "Arloheim, Universiteit van Arloheim", type = "poi", location = "Arloheim"}
-poi_arvg = {name = "Arloheim, Vlorring", type = "poi", location = "Arloheim"}
-poi_arwpss = {name = "Arloheim, Winkelhart Persikstaaf", type = "poi", location = "Arloheim"}
-poi_arkldw = {name = "Arloheim, Kasteel en Catacomben van Lodewijk", type = "poi", location = "Arloheim"}
-poi_arwtm = {name = "Arloheim, Woestijnmuseum", type = "poi", location = "Arloheim"}
-poi_lvnktb = {name = "Lavijn, Kattenbron", type = "poi", location = "Lavijn"}
+poi_arbnl = {name = "Arloheim, Bijnlaan", type = "poi", location = "Arloheim", icon = "building"}
+poi_arobs = {name = "Arloheim, Observatorium", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_armzt = {name = "Arloheim, Maanzigt", type = "poi", location = "Arloheim", icon = "tree"}
+poi_arjkrk = {name = "Arloheim, Sint-Janskerk", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_arttr = {name = "Arloheim, Theater", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_aramb = {name = "Arloheim, Ambassades", type = "poi", location = "Arloheim", icon = "building"}
+poi_ngmmk = {name = "Negenaar, Museum voor Moderne Kunst", type = "poi", location = "Negenaar", icon = "landmark"}
+poi_arfca = {name = "Arloheim, FC Arloheim", type = "poi", location = "Arloheim", icon = "futbol"}
+poi_arikea = {name = "Arloheim, IKEA", type = "poi", location = "Arloheim", icon = "bag-shopping"}
+poi_armtn = {name = "Arloheim, Maantuinen", type = "poi", location = "Arloheim", icon = "tree"}
+poi_armhl = {name = "Arloheim, Markthal", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_arplm = {name = "Arloheim, Parlement", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_arbpk = {name = "Arloheim, Business Park", type = "poi", location = "Arloheim", icon = "building"}
+poi_arzoo = {name = "Arloheim, Dierentuin", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_arsstn = {name = "Arloheim, Strand van Steyn", type = "poi", location = "Arloheim", icon = "umbrella-beach"}
+poi_argnv = {name = "Arloheim, Genova", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_arbkw = {name = "Arloheim, Bovenkampse Wateren", type = "poi", location = "Arloheim", icon = "tree"}
+poi_aruva = {name = "Arloheim, Universiteit van Arloheim", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_arvg = {name = "Arloheim, Vlorring", type = "poi", location = "Arloheim", icon = "city"}
+poi_arwpss = {name = "Arloheim, Winkelhart Persikstaaf", type = "poi", location = "Arloheim", icon = "bag-shopping"}
+poi_arkldw = {name = "Arloheim, Kasteel en Catacomben van Lodewijk", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_arwtm = {name = "Arloheim, Woestijnmuseum", type = "poi", location = "Arloheim", icon = "landmark"}
+poi_lvnktb = {name = "Lavijn, Kattenbron", type = "poi", location = "Lavijn", icon = "tree"}

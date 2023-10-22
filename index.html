@@ -33,9 +33,10 @@
 
               <div class="field">
                 <div class="control is-expanded">
+                  <label class="label">bestemmingen</label>
                   <div class="dropdown is-fullwidth">
                     <div class="dropdown-trigger">
-                      <input class="input" type="text" placeholder="van station, halte of plaats" id="from">
+                      <input class="input node-input" type="text" placeholder="van station, halte of plaats" id="from">
                     </div>
                   </div>
                 </div>
@@ -45,28 +46,53 @@
                 <div class="control is-expanded">
                   <div class="dropdown is-fullwidth">
                     <div class="dropdown-trigger">
-                      <input class="input" type="text" placeholder="naar station, halte of plaats" id="to">
+                      <input class="input node-input" type="text" placeholder="naar station, halte of plaats" id="to">
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="field is-grouped">
+              <div class="field">
+                <div class="control is-expanded">
+                  <label class="label">datum en tijd</label>
+                  <div class="dropdown is-fullwidth">
+                    <div class="dropdown-trigger">
+                      <input class="input" type="datetime-local" placeholder="nu" id="datetime">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <label class="label">extra opties</label>
+
+                  <label class="checkbox">
+                    <input type="checkbox" class="mx-1">
+                    <span class="has-tooltip-arrow has-tooltip-multiline" data-tooltip="Plan louter routes die geen gebruik maken van besloten vervoerssystemen, zoals de hyperloop.">
+                      Geen besloten vervoer
+                    </span>
+                  </label>
+
+                  <label class="checkbox">
+                    <input type="checkbox" class="mx-1">
+                    <span class="has-tooltip-arrow has-tooltip-multiline" data-tooltip="Plan 5 minuten extra tijd in tussen overstappen.">
+                      Extra overstaptijd inplannen
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field">
                 <div class="control">
                   <a class="button is-primary is-rounded">
                     <span class="icon">
                       <i class="fa-solid fa-route"></i>
                     </span>
-                    <span>Plannen</span>
-                  </a>
-                </div>
-
-                <div class="control">
-                  <a class="button is-light is-rounded">
+                    <span>Plan je reis</span>
                     <span class="icon">
-                      <i class="fa-solid fa-retweet"></i>
+                      <i class="fa-solid fa-arrow-right"></i>
                     </span>
-                    <span>Omwisselen</span>
                   </a>
                 </div>
               </div>
@@ -145,7 +171,7 @@
                       <div class="control is-expanded">
                         <div class="dropdown is-fullwidth">
                           <div class="dropdown-trigger">
-                            <input class="input" type="text" placeholder="station, halte of plaats" id="node">
+                            <input class="input node-input" type="text" placeholder="station, halte of plaats" id="node">
                           </div>
                         </div>
                       </div>
@@ -159,7 +185,7 @@
                       </div>
                     </div>
 
-                    <p>Veelgezochte stations:</p>
+                    <p>Of ga direct naar deze stations:</p>
 
                     <ul>
                       <li><a href="#">Arloheim Forum</a></li>
