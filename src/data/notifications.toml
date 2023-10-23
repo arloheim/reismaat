@@ -1,0 +1,63 @@
+[nsb_vt_disrupted]
+type = "construction"
+name = "werkzaamheden Vittoria - Valle Deserta en Vittoria - Valverde"
+description = "Door werkzaamheden rijdt trein S10 van Arloheim Centraal tot Vittoria. S17 en S97 rijden niet."
+period = "tot 1 november 2023"
+affected_nodes = ["nsb_vt", "nsb_vv", "nsb_sti", "nsb_ub", "nsb_sb", "nsb_tp", "nsb_mso", "nsb_css", "nsb_fta", "nsb_vd", "nsb_snz", "nsb_snn", "nsb_lr", "nsb_gnl"]
+affected_routes = ["nsb_s10_a", "nsb_s10_b", "nsb_s17_a", "nsb_s17_b", "nsb_s97_a", "nsb_s97_b"]
+
+#[nsb_s17_disrupted]
+#type = "construction"
+#name = "werkzaamheden Masarino - Finiterra (S17)"
+#description = "Door werkzaamheden worden de treinstations Casesecce en Finiterra niet bediend. Trein S17 rijdt van Amsvorde Centraal tot Masarino."
+#period = "tot nader order"
+#affected_nodes = ["nsb_css", "nsb_fta"]
+#affected_routes = ["nsb_s17_a", "nsb_s17_b"]
+
+[nsb_s21_disrupted]
+type = "construction"
+name = "werkzaamheden Danewolde - Zonnemarsen"
+description = "Door werkzaamheden wordt het treinstation Zonnemarsen niet bediend. Trein S21 rijdt van Arloheim Forum tot Danewolde."
+period = "tot nader order"
+affected_nodes = ["nsb_zms"]
+affected_routes = ["nsb_s21_a", "nsb_s21_b"]
+
+[nsb_s22_disrupted]
+type = "construction"
+name = "werkzaamheden Woenslaken - 's-Groevenisse"
+description = "Door werkzaamheden worden de treinstations Hoortmeer, Westhoornik en 's-Groevenisse niet bediend. Trein S22 rijdt van Arloheim Campus tot Woenslaken."
+period = "tot nader order"
+affected_nodes = ["nsb_hmr", "nsb_whk", "nsb_gvn"]
+affected_routes = ["nsb_s22_a", "nsb_s22_b"]
+
+[nsb_s30_disrupted]
+type = "construction"
+name = "werkzaamheden Malmen Zuid - Danewolde"
+description = "Door werkzaamheden worden de treinstations Malmen Zuid, Malmen en Hoorink niet bediend. Trein S30 rijdt van Danewolde tot Woenslaken."
+period = "tot nader order"
+affected_nodes = ["nsb_mmz", "nsb_mm", "nsb_hk"]
+affected_routes = ["nsb_s30_a", "nsb_s30_b"]
+
+[nsb_rdk_disrupted]
+type = "construction"
+name = "werkzaamheden Roodekerken"
+description = "Door werkzaamheden kan er niet gehalteerd worden bij het treinstation Roodekerken. Trein S30 rijdt non-stop tussen Dinsdrecht en Woenslaken"
+period = "tot nader order"
+affected_nodes = ["nsb_rdk"]
+affected_routes = ["nsb_s30_a", "nsb_s30_b"]
+
+[nsb_s31_disrupted]
+type = "construction"
+name = "werkzaamheden Fremond - Roodkastel"
+description = "Door werkzaamheden wordt het treinstation Fremond niet bediend. Trein S31 rijdt van Roodkastel tot Berkenhoven."
+period = "tot nader order"
+affected_nodes = ["nsb_fm"]
+affected_routes = ["nsb_s31_a", "nsb_s31_b"]
+
+#[nsb_s97_disrupted]
+#type = "construction"
+#name = "werkzaamheden Schieren Zuid - Greneylant (S97)"
+#description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein S97 rijdt van Vittoria tot Schieren Zuid."
+#period = "tot nader order"
+#affected_nodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
+#affected_routes = ["nsb_s97_a", "nsb_s97_b"]
