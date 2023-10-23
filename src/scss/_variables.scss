@@ -10,15 +10,23 @@ $family-primary: 'Ubuntu', sans-serif;
 
 // Custom colors
 $primary: rgb(137, 44, 160);
+$info: rgb(27, 152, 224);
+$success: rgb(152, 206, 0);
+$warning: rgb(234, 214, 55);
+$danger: rgb(223, 41, 53);
+$light: rgb(245, 243, 245);
+$dark: rgb(48, 43, 39);
 
 // Custom layout colors
+$background: $light;
 $link: $primary;
 $link-visited: $primary;
-$link-hover: $primary;
+$link-hover: $dark;
+$link-active: $dark;
 
 // Custom section padding
 $section-padding: 1.5rem 1.5rem;
-$section-padding-desktop: 2rem 2rem;
+$section-padding-desktop: 1.5rem 1.5rem;
 
 // Custom navbar breakpoint
 $navbar-breakpoint: $tablet;

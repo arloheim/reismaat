@@ -16,67 +16,81 @@ body {
   min-height: 100vh;
 }
 
-// Link styling
-a:not(.button, .dropdown-item) {
-  border-bottom: 1px $link dotted;
-
-  transition: 0.1s ease-in-out;
-  -moz-transition: 0.1s ease-in-out;
-  -webkit-transition: 0.1s ease-in-out;
-  -o-transition: 0.1s ease-in-out;
-
-  &:hover, &:focus {
-    border-bottom-color: $link-hover;
-  }
-
-  &.icon, &.is-overlay {
-    border-bottom: none;
-  }
-}
-
 // Navbar styling
 .navbar {
-  @extend .mt-5;
-  @extend .mb-6;
-  padding: 0 1.5rem;
+  @extend .box;
+  @extend .is-white;
+  @extend .p-2;
 
-  background-color: transparent;
-
+  // Navbar item styling
   .navbar-item {
-    @extend .is-uppercase;
-    @extend .is-size-5;
     @extend .has-text-weight-light;
 
     a {
       padding: 4px 0px;
       color: $text;
-      border-bottom: 1px transparent solid;
-
-      &:hover, &:focus {
-        border-bottom-color: $text;
-      }
-
-      &.active {
-        color: $link;
-        border-bottom-color: $link;
-      }
+      border-bottom: none;
     }
   }
 
+  // Navbar brand styling
   .navbar-brand {
-    @extend .ml-0;
+    img {
+      max-height: 2.25rem;
+
+      @extend .mr-3;
+      @extend .p-0;
+    }
+
+    p {
+      @extend .is-size-4;
+      @extend .has-text-primary;
+      @extend .has-text-weight-normal;
+    }
   }
 
-  .navbar-logo {
-    @extend .mr-3;
-    @extend .px-0;
-    @extend .py-0;
-  }
-
+  // Navbar burger styling
   .navbar-burger {
     border-bottom: none;
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  // Mavbar menu styling
+  .navbar-menu {
+    @extend .is-shadowless;
+  }
+}
+
+// Header styling
+.header {
+  @extend .block;
+  @extend .is-hidden-mobile;
+
+  height: 15rem;
+
+  img {
+    @extend .box;
+    @extend .p-0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Footer styling
+.footer {
+  @extend .p-0;
+
+  background: transparent;
+
+  p {
+    @extend .block;
+    @extend .is-size-7;
+    @extend .has-text-centered;
+    @extend .has-text-grey;
+    @extend .mb-3;
   }
 }
 
@@ -148,4 +162,10 @@ a:not(.button, .dropdown-item) {
       text-overflow: ellipsis;
     }
   }
+}
+
+
+// Route styling
+.route {
+  @extend .px-1;
 }
