@@ -25,7 +25,7 @@ $(function() {
     stations: 'stations-header.png',
   };
 
-  let router = new Navigo('/js/reismaat');
+  let router = new Navigo('/reismaat');
 
   router.hooks({
     after(match) {
