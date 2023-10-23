@@ -18,6 +18,8 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.1",
     "minisearch": "^6.1.0",
+    "mustache": "^4.2.0",
+    "navigo": "^8.11.1",
     "node-sass": "^9.0.0",
     "toml": "^3.0.0",
     "underscore": "^1.13.6",

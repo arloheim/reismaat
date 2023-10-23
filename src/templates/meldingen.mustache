@@ -1,0 +1,51 @@
+<div class="box has-background-primary">
+  <h3 class="has-text-white mb-2">meldingen</h3>
+
+  <p class="has-text-white">Er zijn {{notifications.length}} meldingen over de actuele situatie in het openbaar vervoer.</p>
+</div>
+
+{{#notifications}}
+  <div class="box">
+    <h3 class="has-text-{{color}}-dark mb-2">
+      <span class="icon-text">
+        <span class="icon mr-4">
+          <i class="fa-solid fa-fw fa-{{icon}}"></i>
+        </span>
+        <span>{{name}}</span>
+      </span>
+    </h3>
+
+    {{#description}}
+      <p>{{description}}</p>
+    {{/description}}
+
+    <div class="columns">
+      {{#hasAffectedNodes}}
+        <div class="column is-4">
+          <h4 class="mb-2">Getroffen stations</h4>
+
+          {{#affectedNodes}}
+            <p class="mb-0">{{{renderNameAsLinkHtml}}}</p>
+          {{/affectedNodes}}
+        </div>
+      {{/hasAffectedNodes}}
+
+      {{#hasAffectedRoutes}}
+        <div class="column is-4">
+          <h4 class="mb-2">Getroffen lijnen</h4>
+            {{#affectedRoutes}}
+              <p class="mb-0">{{{renderAbbrAndHeadsignHtml}}}</p>
+            {{/affectedRoutes}}
+          </ul>
+        </div>
+      {{/hasAffectedRoutes}}
+
+      {{#period}}
+        <div class="column is-4">
+          <h4 class="mb-2">Periode</h4>
+          <p>{{period}}</p>
+        </div>
+      {{/period}}
+    </div>
+  </div>
+{{/notifications}}

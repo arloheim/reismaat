@@ -12,198 +12,48 @@
 
   <body>
     <div class="container">
-      <section class="section content">
-        <div class="media mb-4">
-          <figure class="media-left mr-4">
-            <div class="image is-64x64">
+      <section class="section">
+        <nav class="navbar">
+          <div class="navbar-brand">
+            <div class="navbar-item">
               <img src="assets/images/logo.png" alt="reismaat">
+              <p class="mb-0">reismaat<span class="has-text-grey">.ih</span></p>
             </div>
-          </figure>
 
-          <div class="media-content">
-            <h1 class="mb-0">reismaat<span class="has-text-grey">.ih</span></h1>
-            <p>reis op maat met jouw maat op reis</p>
-          </div>
-        </div>
-
-        <div class="tile is-ancestor">
-          <div class="tile is-4 is-parent">
-            <div class="tile is-child box">
-              <h3>plan je reis</h3>
-
-              <div class="field">
-                <div class="control is-expanded">
-                  <label class="label">bestemmingen</label>
-                  <div class="dropdown is-fullwidth">
-                    <div class="dropdown-trigger">
-                      <input class="input node-input" type="text" placeholder="van station, halte of plaats" id="from">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="field">
-                <div class="control is-expanded">
-                  <div class="dropdown is-fullwidth">
-                    <div class="dropdown-trigger">
-                      <input class="input node-input" type="text" placeholder="naar station, halte of plaats" id="to">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="field">
-                <div class="control is-expanded">
-                  <label class="label">datum en tijd</label>
-                  <div class="dropdown is-fullwidth">
-                    <div class="dropdown-trigger">
-                      <input class="input" type="datetime-local" placeholder="nu" id="datetime">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="field">
-                <div class="control">
-                  <label class="label">extra opties</label>
-
-                  <label class="checkbox">
-                    <input type="checkbox" class="mx-1">
-                    <span class="has-tooltip-arrow has-tooltip-multiline" data-tooltip="Plan louter routes die geen gebruik maken van besloten vervoerssystemen, zoals de hyperloop.">
-                      Geen besloten vervoer
-                    </span>
-                  </label>
-
-                  <label class="checkbox">
-                    <input type="checkbox" class="mx-1">
-                    <span class="has-tooltip-arrow has-tooltip-multiline" data-tooltip="Plan 5 minuten extra tijd in tussen overstappen.">
-                      Extra overstaptijd inplannen
-                    </span>
-                  </label>
-                </div>
-              </div>
-
-              <div class="field">
-                <div class="control">
-                  <a class="button is-primary is-rounded">
-                    <span class="icon">
-                      <i class="fa-solid fa-route"></i>
-                    </span>
-                    <span>Plan je reis</span>
-                    <span class="icon">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <a class="navbar-burger" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
           </div>
 
-          <div class="tile is-8 is-parent">
-            <div class="tile is-child box has-text-white has-background-primary">
-              <h3 class="has-text-white">goed voorbereid op pad</h3>
-
-              <div class="tile is-ancestor">
-                <div class="tile is-6 is-vertical is-parent">
-                  <div class="tile is-child box">
-                    <h2 class="mb-2">
-                      <span class="icon-text">
-                        <span class="icon mr-4">
-                          <i class="fa-solid fa-ticket"></i>
-                        </span>
-                        <span>tickets</span>
-                      </span>
-                    </h2>
-
-                    <ul>
-                      <li>Vervoersbewijzen voor het hele land</li>
-                      <li>Geldig voor elk vervoersmiddel</li>
-                      <li>Voordelige dagtickets en aanbiedingen</li>
-                    </ul>
-
-                    <a class="button is-dark is-rounded" href="#">
-                      <span>Koop je tickets</span>
-                      <span class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-
-                  <div class="tile is-child box">
-                    <h2 class="mb-2">
-                      <span class="icon-text">
-                        <span class="icon mr-4">
-                          <i class="fa-solid fa-timeline"></i>
-                        </span>
-                        <span>dienstregeling</span>
-                      </span>
-                    </h2>
-
-                    <ul>
-                      <li>Informatie over trein, metro en tram</li>
-                      <li>Overzicht van alle lijnen en vervoerders</li>
-                      <li>Toegankelijk reizen</li>
-                    </ul>
-
-                    <a class="button is-dark is-rounded" href="#">
-                      <span>Bekijk de dienstregeling</span>
-                      <span class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="tile is-6 is-parent">
-                  <div class="tile is-child box">
-                    <h2 class="mb-2">
-                      <span class="icon-text">
-                        <span class="icon mr-4">
-                          <i class="fa-solid fa-circle-info"></i>
-                        </span>
-                        <span>stationsinfo</span>
-                      </span>
-                    </h2>
-
-                    <p>Bekijk vertrektijden en voorzieningen van de stations en haltes in Ihlane:</p>
-
-                    <div class="field has-addons mb-5">
-                      <div class="control is-expanded">
-                        <div class="dropdown is-fullwidth">
-                          <div class="dropdown-trigger">
-                            <input class="input node-input" type="text" placeholder="station, halte of plaats" id="node">
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="control">
-                        <a class="button is-dark">
-                          <span class="icon">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-
-                    <p>Of ga direct naar deze stations:</p>
-
-                    <ul>
-                      <li><a href="#">Arloheim Forum</a></li>
-                      <li><a href="#">Arloheim Centraal</a></li>
-                      <li><a href="#">Arloheim Campus</a></li>
-                      <li><a href="#">Amsvorde Centraal</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" href="/" data-navigo>reisplanner</a>
+              <a class="navbar-item" href="/meldingen" data-navigo>meldingen</a>
+              <a class="navbar-item" href="/tickets" data-navigo>tickets</a>
+              <a class="navbar-item" href="/dienstregeling" data-navigo>dienstregeling</a>
+              <a class="navbar-item" href="/stations" data-navigo>stations</a>
             </div>
           </div>
-        </div>
+        </nav>
 
-        <p class="is-size-7 has-text-centered has-text-grey">
-          deze reisplanner is een initiatief van de openbaarvervoersbedrijven van Ihlane<br>
-          reismaat en het reismaat-logo zijn handelsmerken van Reismaat B.V., postbus 92, 029992 Ulstheim
-        </p>
+        <header class="header">
+          <img src="assets/images/reisplanner-header.png" id="header">
+        </header>
+
+        <main class="content" id="view"></main>
+
+        <footer class="footer content">
+          <p>
+            dit product is een initiatief van de <a target="_blank" href="https://arloheim.nl/wiki/Lijst_van_openbaarvervoersbedrijven_in_Ihlane">openbaarvervoersbedrijven van Ihlane</a> en ontwikkeld door <a target="_blank" href="https://arloheim.nl/wiki/Reismaat_B.V.">Reismaat B.V.</a><br>
+            reismaat en het reismaat-logo zijn handelsmerken van Reismaat B.V., postbus 92, 029992 Ulstheim
+          </p>
+
+          <p>
+            lees meer over de geofictie- en Minecraftwereld Ihlane op <a target="_blank" href="https://arloheim.nl">arloheim.nl</a>
+          </p>
+        </footer>
       </section>
     </div>
 

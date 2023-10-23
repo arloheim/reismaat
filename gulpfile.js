@@ -14,11 +14,12 @@ async function js() {
   b.transform('brfs');
 
   return b.bundle()
+    .on('error', console.log)
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(gulp.dest('./dist/js'))
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/js'));
 }
@@ -28,13 +29,15 @@ async function css() {
     .pipe(rename('bundle.css'))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'condensed', includePaths: ['./node_modules']})
-      .on('error', sass.logError))
+       .on('error', console.log))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'));
 }
 
 async function watch() {
   gulp.watch('src/js/**.js', js);
+  gulp.watch('src/data/**', js);
+  gulp.watch('src/templates/**', js);
   gulp.watch('src/scss/**.scss', css);
 }
 

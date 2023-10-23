@@ -1,156 +1,100 @@
-// Import modules
 const $ = require('jquery');
-const fs = require('fs');
-const toml = require('toml');
-const underscore = require('underscore');
+const _ = require('underscore');
+const Navigo = require('navigo');
 
-const MiniSearch = require('minisearch');
+const data = require('./data.js')
+const templates = require('./templates.js');
 
-// Import visual modules
 require('@fortawesome/fontawesome-free/js/all.js');
-
-
-modalities = {
-  rail: 'train',
-  subway: 'train-subway',
-  tram: 'train-tram',
-  ferry: 'ferry',
-  funicular: 'cable-car',
-  elevator: 'elevator',
-  hyperloop: 'bolt',
-  eqh: 'horse-head'
-};
-
-
-// Class that defines an agency
-class Agency
-{
-  // Constructor
-  constructor(props) {
-    Object.assign(this, props);
-  }
-}
-
-
-// Class that defines a node
-class Node
-{
-  // Constructor
-  constructor(props) {
-    Object.assign(this, props);
-
-    if (this.icon === undefined)
-      this.icon = modalities[this.type] ?? 'location-dot';
-  }
-
-  // Return a description
-  getDescription(data) {
-    let parts = [];
-    if (this.type !== undefined)
-      parts.push(data.translate('modalities_node.' + this.type));
-    if (this.location !== undefined)
-      parts.push(this.location);
-    parts.push(this.id);
-    return parts.join(' &middot; ');
-  }
-
-  // Return HTMl for rendering a name
-  renderName(data) {
-    return $('<span class="icon-text">')
-      .data('id', this.id)
-      .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
-      .append($('<span>').html(this.name));
-  }
-
-  // Return HTML for rendering a dropdown item
-  renderDropdownItem(data) {
-    return $('<a class="dropdown-item">')
-      .data('id', this.id)
-      .append($('<div class="icon is-medium mr-2">')
-        .append($('<i class="fas fa-fw fa-xl">').addClass(`fa-${this.icon}`)))
-      .append($('<div class="is-flex is-flex-direction-column">')
-        .append($('<span>').html(this.name))
-        .append($('<span class="is-size-7 has-text-grey">').html(this.getDescription(data))));
-  }
-}
-
-
-// Class that defines a route
-class Route
-{
-  // Constructor
-  constructor(props, agencies, nodes) {
-    Object.assign(this, props);
-
-    if (this.agency !== undefined)
-      this.agency = agencies[this.agency] ?? null;
-    if (this.stops !== undefined)
-      this.stops = Object.values(underscore.mapObject(this.stops, (s, id) => (new Stop({id, ...s}, nodes)))).toSorted((a, b) => );
-  }
-}
-
-
-// Class that defines a stop
-class Stop
-{
-  // Constructor
-  constructor(props, nodes) {
-    Object.assign(this, props);
-
-    if (this.node !== undefined)
-      this.node = nodes[this.node] ?? null;
-  }
-}
-
-
-// Class for data
-class Data
-{
-  // Constructor
-  constructor(options = {}) {
-    this.options = {
-      searchOptions: {prefix: true, fuzzy: 0.1, combineWith: 'AND'},
-      ...options
-    };
-
-    this.agencies = underscore.mapObject(toml.parse(fs.readFileSync('src/data/agencies.toml', 'utf-8')), (a, id) => (new Agency({id, ...a})));
-    this.nodes = underscore.mapObject(toml.parse(fs.readFileSync('src/data/nodes.toml', 'utf-8')), (n, id) => (new Node({id, ...n})));
-    this.routes = underscore.mapObject(toml.parse(fs.readFileSync('src/data/routes.toml', 'utf-8')), (r, id) => (new Route({id, ...r}, this.agencies, this.nodes)));
-    this.translations = toml.parse(fs.readFileSync('src/data/translations.toml', 'utf-8'));
-
-    this.nodesIndex = new MiniSearch({fields: ['name', 'location', 'code'], storeFields: ['type'], searchOptions: {...this.options.searchOptions, boost: {name: 2}, boostDocument: this._boostNodeDocument}});
-    this.nodesIndex.addAll(Object.values(this.nodes));
-  }
-
-  // Translate
-  translate(key) {
-    return key.split('.').reduce((o, k) => o && o[k], this.translations);
-  }
-
-  // Search for nodes
-  searchNodes(query) {
-    return this.nodesIndex.search(query);
-  }
-
-  _boostNodeDocument(id, term, storedFields) {
-    let types = Object.keys(modalities);
-    let typeIndex = types.indexOf(storedFields.type);
-    if (typeIndex === -1)
-      return 1;
-    else
-      return 0.7 + (types.length - typeIndex) / types.length * 0.3;
-  }
-}
 
 
 // Event handler when the document is ready
 $(function() {
   // Load the data
-  let data = new Data();
-  console.log(data);
+  let db = new data.Data();
+
+  // Create the router
+  let $routeView = $('#view');
+
+  let headers = {
+    default: 'default-header.png',
+    reisplanner: 'reisplanner-header.png',
+    meldingen: 'meldingen-header.png',
+    tickets: 'tickets-header.png',
+    dienstregeling: 'dienstregeling-header.png',
+    stations: 'stations-header.png',
+  };
+
+  let router = new Navigo('/js/reismaat');
+
+  router.hooks({
+    after(match) {
+      let header = headers[match.route.name] ?? headers.default;
+      $('#header').attr('src', `assets/images/${header}`);
+    }
+  });
+
+  router.on({
+    '/': {
+      as: 'reisplanner',
+      uses: function(match) {
+        templates.reisplanner($routeView, {
+          notifications: Object.values(db.notifications),
+          hasNotifications: Object.keys(db.notifications).length > 0,
+        });
+      }
+    },
+    '/planner': {
+      as: 'reisplanner-results',
+      uses: function(match) {
+        let from = match.params?.van ?? undefined;
+        let to = match.params?.naar ?? undefined;
+      }
+    },
+    '/meldingen': {
+      as: 'meldingen',
+      uses: function(match) {
+        templates.meldingen($routeView, {
+          notifications: Object.values(db.notifications),
+          hasNotifications: Object.keys(db.notifications).length > 0,
+        });
+      }
+    },
+    '/tickets': {
+      as: 'tickets',
+      uses: function(match) {
+        templates.tickets($routeView, {});
+      }
+    },
+    '/dienstregeling': {
+      as: 'dienstregeling',
+      uses: function(match) {
+        templates.dienstregeling($routeView, {});
+      }
+    },
+    '/stations': {
+      as: 'stations',
+      uses: function(match) {
+        templates.stations($routeView, {});
+      }
+    }
+  });
+
+  router.notFound(function() {
+    templates.notFound($routeView, {});
+  });
+
+  router.resolve();
+
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function() {
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    $(".navbar-burger").toggleClass("is-active");
+    $(".navbar-menu").toggleClass("is-active");
+  });
 
   // Event handler for when a node input changes
-  $('.node-input').on('input change', underscore.debounce(function() {
+  $('.node-input').on('input change', _.debounce(function() {
     var $el = $(this);
 
     var input = $el.val();
@@ -189,7 +133,7 @@ $(function() {
   }, 500));
 
   // Event handler for when a node input loses focus
-  $('.node-input').on('blur', underscore.debounce(function() {
+  $('.node-input').on('blur', _.debounce(function() {
     // Hide the dropdown
     let $dropdown = $(this).parents('.dropdown').removeClass('is-active').hide();
   }, 100));
