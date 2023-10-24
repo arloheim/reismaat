@@ -1,0 +1,13 @@
+# Trein, metro, tram, veerboot
+rail = {name = "Trein", node_name = "Treinstation", icon = 'train'}
+subway = {name = "Metro", node_name = "Metrostation", icon = 'train-subway'}
+tram = {name = "Tram", node_name = "Tramhalte", icon = 'train-tram'}
+ferry = {name = "Veerboot", node_name = "Veerhaven", icon = 'ferry'}
+
+# Overige modaliteiten
+funicular = {name = "Funiculaire", node_name = "Funiculaire", icon = 'cable-car'}
+elevator = {name = "Lift", node_name = "Lift", icon = 'elevator'}
+
+# Besloten vervoer
+hyperloop = {name = "Hyperloop", node_name = "Hyperloopstation", icon = 'bolt'}
+eqh = {name = "Flexpaard", node_name = "Flexpaardhub", icon = 'horse-head'}

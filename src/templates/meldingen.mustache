@@ -1,19 +1,21 @@
-<div class="box has-background-primary">
-  <h3 class="has-text-white mb-2">meldingen</h3>
+<div class="box has-background-white">
+  <h2 class="mb-2">
+    <span class="icon-text">
+      <span class="icon mr-4">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </span>
+      <span>meldingen</span>
+    </span>
+  </h2>
 
-  <p class="has-text-white">Er zijn {{notifications.length}} meldingen over de actuele situatie in het openbaar vervoer.</p>
+  <p>Er zijn {{notifications.length}} meldingen over de actuele situatie in het openbaar vervoer.</p>
 </div>
 
 {{#notifications}}
-  <div class="box">
-    <h3 class="has-text-{{color}}-dark mb-2">
-      <span class="icon-text">
-        <span class="icon mr-4">
-          <i class="fa-solid fa-fw fa-{{icon}}"></i>
-        </span>
-        <span>{{name}}</span>
-      </span>
-    </h3>
+  <div class="box has-background-white">
+    <p class="has-text-weight-bold has-text-{{color}}-dark mb-0">{{type.name}}</p>
+
+    <h4 class="mt-0 mb-2">{{name}}</h4>
 
     {{#description}}
       <p>{{description}}</p>
@@ -22,19 +24,21 @@
     <div class="columns">
       {{#hasAffectedNodes}}
         <div class="column is-4">
-          <h4 class="mb-2">Getroffen stations</h4>
+          <h5 class="mb-2">Getroffen stations</h5>
 
-          {{#affectedNodes}}
-            <p class="mb-0">{{{renderNameAsLinkHtml}}}</p>
-          {{/affectedNodes}}
+          <p>
+            {{#affectedNodes}}
+              {{& shortDisplayLinkHtml}},
+            {{/affectedNodes}}
+          </p>
         </div>
       {{/hasAffectedNodes}}
 
       {{#hasAffectedRoutes}}
         <div class="column is-4">
-          <h4 class="mb-2">Getroffen lijnen</h4>
+          <h5 class="mb-2">Getroffen lijnen</h5>
             {{#affectedRoutes}}
-              <p class="mb-0">{{{renderAbbrAndHeadsignHtml}}}</p>
+              <p class="mb-0">{{& longDisplayLinkHtml}}</p>
             {{/affectedRoutes}}
           </ul>
         </div>
@@ -42,7 +46,7 @@
 
       {{#period}}
         <div class="column is-4">
-          <h4 class="mb-2">Periode</h4>
+          <h5 class="mb-2">Periode</h5>
           <p>{{period}}</p>
         </div>
       {{/period}}

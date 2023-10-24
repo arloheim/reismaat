@@ -211,8 +211,6 @@ avt_rvn = {name = "Amsvorde, Ravijn", modality = "tram", location = "Amsvorde"}
 avt_avv = {name = "Amsvorde, Venpoort", modality = "tram", location = "Amsvorde"}
 avt_vt = {name = "Vittoria, Vittoria", modality = "tram", location = "Vittoria"}
 
-# Tram Giedrecht
-
 # Hyperloop
 hyp_arfo = {name = "Arloheim Forum", modality = "hyperloop", location = "Arloheim"}
 hyp_gth = {name = "Gaterade Haven", modality = "hyperloop", location = "Gaterade"}

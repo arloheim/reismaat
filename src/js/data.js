@@ -6,18 +6,6 @@ const toml = require('toml');
 const MiniSearch = require('minisearch');
 
 
-// Map of the defined modalities
-const _modalities = {
-  rail: {icon: 'train', routeName: "Trein", nodeName: "Treinstation"},
-  subway: {icon: 'train-subway', routeName: "Metro", nodeName: "Metrostation"},
-  tram: {icon: 'train-tram', routeName: "Tram", nodeName: "Tramhalte"},
-  ferry: {icon: 'ferry', routeName: "Veerboot", nodeName: "Veerhaven"},
-  funicular: {icon: 'cable-car', routeName: "Funiculaire", nodeName: "Funiculaire"},
-  elevator: {icon: 'elevator', routeName: "Lift", nodeName: "Lift"},
-  hyperloop: {icon: 'bolt', routeName: "Hyperloop", nodeName: "Hyperloopstation"},
-  eqh: {icon: 'horse-head', routeName: "Flexpaard", nodeName: "Flexpaardhub"},
-};
-
 // Map of the defined notification types
 const _notificationTypes = {
   disruption: {icon: 'triangle-exclamation', color: 'danger', name: "Storing"},
@@ -34,8 +22,22 @@ class Agency
 
     this.id = props.id;
     this.name = props.name;
-    this.abbr = props.abbr ?? null;
-    this.url = props.url ?? null;
+    this.abbr = props.abbr ?? undefined;
+    this.url = props.url ?? undefined;
+  }
+}
+
+// Class that defines a modality
+class Modality
+{
+  // Constructor
+  constructor(data, props) {
+    this._data = data;
+
+    this.id = props.id;
+    this.name = props.name ?? undefined;
+    this.nodeName = props.node_name ?? undefined;
+    this.icon = props.icon;
   }
 }
 
@@ -48,41 +50,49 @@ class Node
 
     this.id = props.id;
     this.name = props.name;
-    this.code = props.code ?? null;
-    this.url = props.url ?? null;
-    this.modality = props.modality ?? null;
-    this.location = props.location ?? null;
-    this.icon = props.icon ?? _modalities[this.modality]?.icon ?? 'location-dot';
+    this.code = props.code ?? undefined;
+    this.url = props.url ?? undefined;
+    this.modalityId = props.modality;
+    this.modalityNodeName = props.modalityNodeName ?? this.modality?.nodeName ?? undefined;
+    this.icon = props.icon ?? this.modality?.icon ?? 'location-dot';
+    this.location = props.location ?? undefined;
+  }
+
+  // Get the modality of the node
+  get modality() {
+    return this._data.modalities[this.modalityId] ?? null;
   }
 
   // Get the description of the node
   get description() {
     let parts = [];
-    if (this.modality !== undefined && _modalities[this.modality] !== undefined)
-      parts.push(_modalities[this.modality].nodeName);
+    if (this.modalityNodeName !== undefined)
+      parts.push(this.modalityNodeName);
     if (this.location !== undefined)
       parts.push(this.location);
     parts.push(this.id);
     return parts.join(' &middot; ');
   }
 
-  // Return HTMl for rendering a name
-  renderName() {
+  // Get the short display as an element or HTML
+  get shortDisplayElement() {
     return $('<span class="icon-text">')
       .data('id', this.id)
       .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
       .append($('<span>').html(this.name));
   }
-
-  // Return HTML for rendering a link containing the name
-  renderNameAsLink() {
-    return $('<a data-navigo>')
-      .attr('href', `/stations/${this.id}`)
-      .append(this.renderName());
+  get shortDisplayHtml() {
+    return this.shortDisplayElement.prop('outerHTML');
   }
 
-  renderNameAsLinkHtml() {
-    return this.renderNameAsLink().prop('outerHTML');
+  // Get the short dsplay link as an element or HTML
+  get shortDisplayLinkElement() {
+    return $('<a class="is-plain" data-navigo>')
+      .attr('href', `/stations/${this.id}`)
+      .append(this.shortDisplayElement);
+  }
+  get shortDisplayLinkHtml() {
+    return this.shortDisplayLinkElement.prop('outerHTML');
   }
 
   // Return HTML for rendering a dropdown item
@@ -105,44 +115,70 @@ class Route
     this._data = data;
 
     this.id = props.id;
-    this.agencyId = props.agency ?? null;
     this.name = props.name;
-    this.abbr = props.abbr ?? null;
-    this.url = props.url ?? null;
-    this.modality = props.modality ?? 'rail';
-    this.headsign = props.headsign ?? null;
-    this.icon = props.icon ?? _modalities[this.modality]?.icon ?? 'train';
+    this.abbr = props.abbr ?? undefined;
+    this.url = props.url ?? undefined;
+    this.agencyId = props.agency ?? undefined;
+    this.modalityId = props.modality;
+    this.modalityName = props.modalityName ?? this.modality?.name ?? undefined;
+    this.icon = props.icon ?? this.modality.icon;
+    this.headsign = props.headsign ?? undefined;
     this.color = {background: '#ffffff', text: '#000000', ...props.color};
     this.stops = _.values(_.mapObject(props.stops ?? {}, (s, sequence) => (new RouteStop(this._data, this, {sequence, ...s})))).toSorted((a, b) => a.sequence - b.sequence);
   }
 
   // Get the agency of the route
   get agency() {
-    return this._data.agencies[this.agencyId] ?? null;
+    return this._data.agencies[this.agencyId] ?? undefined;
   }
 
-  renderAbbr() {
+  // Get the modality of the node
+  get modality() {
+    return this._data.modalities[this.modalityId] ?? undefined;
+  }
+
+  // Get the short display as an element or HTML
+  get shortDisplayElement() {
     return $('<span class="route">')
       .css({background: this.color.background, color: this.color.text})
       .html(this.abbr ?? this.name);
   }
+  get shortDisplayHtml() {
+    return this.shortDisplayElement.prop('outerHTML');
+  }
 
-  renderAbbrAndHeadsign() {
+  // Get the long display as an element or HTML
+  get longDisplayElement() {
     return $('<span class="icon-text">')
       .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
       .append($('<span>')
-        .append(this.renderAbbr())
-        .append($('<span>').html(` → ${this.headsign}`)));
+        .append($('<span class="route">')
+          .css({background: this.color.background, color: this.color.text})
+          .html(this.abbr ?? this.name))
+        .append($('<span>').html(` ⟶ ${this.headsign}`)));
+  }
+  get longDisplayHtml() {
+    return this.longDisplayElement.prop('outerHTML');
   }
 
-  renderAbbrAndHeadsignAsLink() {
-    return $('<a data-navigo>')
+  // Get the short dsplay link as an element or HTML
+  get shortDisplayLinkElement() {
+    return $('<a class="is-plain" data-navigo>')
       .attr('href', `/dienstregeling/${this.id}`)
-      .append(this.renderAbbrAndHeadsign());
+      .append(this.shortDisplayElement);
+  }
+  get shortDisplayLinkHtml() {
+    return this.shortDisplayLinkElement.prop('outerHTML');
   }
 
-  renderAbbrAndHeadsignHtml() {
-    return this.renderAbbrAndHeadsignAsLink().prop('outerHTML');
+  // Get the long dsplay link as an element or HTML
+  get longDisplayLinkElement() {
+    return $('<a class="is-plain" data-navigo>')
+      .attr('href', `/dienstregeling/${this.id}`)
+      .append(this.longDisplayElement);
+  }
+  get longDisplayLinkHtml() {
+    return this.longDisplayLinkElement.prop('outerHTML');
   }
 }
 
@@ -159,12 +195,12 @@ class RouteStop
     this.time = props.time;
     this.halts = props.halts ?? true;
     this.cancelled = props.cancelled ?? false;
-    this.platform = props.platform ?? null;
+    this.platform = props.platform ?? undefined;
   }
 
   // Get the node of the stop
   get node() {
-    return this._data.nodes[this.nodeId] ?? null;
+    return this._data.nodes[this.nodeId] ?? undefined;
   }
 }
 
@@ -175,14 +211,14 @@ class Notification
   constructor(data, props) {
     this._data = data;
 
-    this.type = props.type ?? 'disruption';
-    this.name = props.name ?? _notificationTypes[this.type]?.name ?? null;
+    this.type = _notificationTypes[props.type] ?? _notificationTypes.disruption;
+    this.name = props.name ?? this.type.name ?? null;
     this.description = props.description ?? null;
     this.period = props.period ?? null;
     this.affectedNodesIds = props.affected_nodes ?? [];
     this.affectedRoutesIds = props.affected_routes ?? [];
     this.icon = props.icon ?? _notificationTypes[this.type]?.icon ?? 'triangle-exclamation';
-    this.color = props.color ?? _notificationTypes[this.type]?.color ?? 'danger';
+    this.color = props.color ?? this.type.color ?? 'danger';
   }
 
   // Get the affected nodes of the notification
@@ -233,6 +269,14 @@ class Data
       return this._agencies;
   }
 
+  // Get the modalities or load them if they're not loaded yet
+  get modalities() {
+    if (this._modalities === undefined)
+      return this._modalities = this._loadModalities();
+    else
+      return this._modalities;
+  }
+
   // Get the nodes or load them if they're not loaded yet
   get nodes() {
     if (this._nodes === undefined)
@@ -261,6 +305,11 @@ class Data
   // Load the agencies from the data file
   _loadAgencies() {
     return _.mapObject(toml.parse(fs.readFileSync('src/data/agencies.toml', 'utf-8')), (a, id) => (new Agency(this, {id, ...a})));
+  }
+
+  // Load the modalities from the data file
+  _loadModalities() {
+    return _.mapObject(toml.parse(fs.readFileSync('src/data/modalities.toml', 'utf-8')), (m, id) => (new Modality(this, {id, ...m})))
   }
 
   // Load the nodes from the data file

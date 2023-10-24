@@ -17,20 +17,26 @@ $(function() {
   let $routeView = $('#view');
 
   let headers = {
-    default: 'default-header.png',
-    reisplanner: 'reisplanner-header.png',
-    meldingen: 'meldingen-header.png',
-    tickets: 'tickets-header.png',
-    dienstregeling: 'dienstregeling-header.png',
-    stations: 'stations-header.png',
+    'default': 'default-header.png',
+    'reisplanner': 'reisplanner-header.png',
+    'meldingen': 'meldingen-header.png',
+    'tickets': 'tickets-header.png',
+    'dienstregeling': 'dienstregeling-header.png',
+    'dienstregeling.details': 'dienstregeling-header.png',
+    'stations': 'stations-header.png',
+    'stations.details': 'stations-header.png',
   };
 
-  let router = new Navigo('/reismaat');
+  let router = new Navigo('/');
 
   router.hooks({
     after(match) {
+      // Scroll to the top of the page
+      scrollTo({top: 0});
+
+      // Set the header image
       let header = headers[match.route.name] ?? headers.default;
-      $('#header').attr('src', `assets/images/${header}`);
+      $('#header').attr('src', `/assets/images/${header}`);
     }
   });
 
@@ -69,13 +75,39 @@ $(function() {
     '/dienstregeling': {
       as: 'dienstregeling',
       uses: function(match) {
-        templates.dienstregeling($routeView, {});
+        templates.dienstregeling($routeView, {
+          routes: _.map(
+            _.pairs(_.groupBy(_.values(db.routes), 'agencyId')),
+            ([agencyId, agencyRoutes]) => ({agency: db.agencies[agencyId], agencyModalities: _.map(
+              _.pairs(_.groupBy(_.values(agencyRoutes), 'modalityId')),
+              ([modalityId, modalityRoutes]) => ({modality: db.modalities[modalityId], modalityRoutes}))})),
+        });
+      }
+    },
+    '/dienstregeling/:id': {
+      as: 'dienstregeling.details',
+      uses: function(match) {
+        templates.dienstregeling($routeView, {
+          route: db.routes[match.data.id],
+        });
       }
     },
     '/stations': {
       as: 'stations',
       uses: function(match) {
         templates.stations($routeView, {});
+      }
+    },
+    '/stations/:id': {
+      as: 'stations.details',
+      uses: function(match) {
+        templates.stations($routeView, {
+          node: db.nodes[match.data.id],
+          routes: Object.values(db.routes)
+            .map(r => ({route: r, stop: r.stops.find(s => s.nodeId === match.data.id)}))
+            .filter(o => o.stop !== undefined)
+            .toSorted((a, b) => a.stop.platform.localeCompare(b.stop.platform))
+        });
       }
     }
   });

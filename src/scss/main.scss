@@ -35,6 +35,8 @@ body {
 
   // Navbar brand styling
   .navbar-brand {
+    @extend .is-unselectable;
+
     img {
       max-height: 2.25rem;
 
@@ -109,6 +111,11 @@ body {
     }
   }
 
+  // Link
+  a.is-plain {
+    color: $text;
+  }
+
   // Figure
   figure {
     margin: 0;
@@ -167,5 +174,6 @@ body {
 
 // Route styling
 .route {
+  @extend .has-text-weight-bold;
   @extend .px-1;
 }
