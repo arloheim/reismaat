@@ -9,9 +9,9 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d1_a.stops]
 01 = {node = "nsb_arc", time = 0, platform = "3"}
-02 = {node = "nsb_arfo", time = 0, platform = "6"}
-03 = {node = "nsb_ar", time = 0, platform = "3"}
-04 = {node = "nsb_av", time = 0, platform = "6"}
+02 = {node = "nsb_arfo", time = 30, platform = "6"}
+03 = {node = "nsb_ar", time = 45, platform = "3"}
+04 = {node = "nsb_av", time = 180, platform = "6"}
 
 [nsb_d1_b]
 agency = "nsb_fu"
@@ -23,9 +23,9 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d1_b.stops]
 01 = {node = "nsb_av", time = 0, platform = "6"}
-02 = {node = "nsb_ar", time = 0, platform = "6"}
-03 = {node = "nsb_arfo", time = 0, platform = "1"}
-04 = {node = "nsb_arc", time = 0, platform = "3"}
+02 = {node = "nsb_ar", time = 180, platform = "6"}
+03 = {node = "nsb_arfo", time = 45, platform = "1"}
+04 = {node = "nsb_arc", time = 30, platform = "3"}
 
 [nsb_d2_a]
 agency = "nsb_fu"
@@ -37,10 +37,10 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d2_a.stops]
 01 = {node = "nsb_arc", time = 0, platform = "3"}
-02 = {node = "nsb_arfo", time = 0, platform = "6"}
-03 = {node = "nsb_ar", time = 0, platform = "3"}
-04 = {node = "nsb_uh", time = 0, platform = "2"}
-05 = {node = "nsb_oh", time = 0, platform = "2"}
+02 = {node = "nsb_arfo", time = 30, platform = "6"}
+03 = {node = "nsb_ar", time = 45, platform = "3"}
+04 = {node = "nsb_uh", time = 105, platform = "2"}
+05 = {node = "nsb_oh", time = 75, platform = "2"}
 
 [nsb_d2_b]
 agency = "nsb_fu"
@@ -52,10 +52,10 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d2_b.stops]
 01 = {node = "nsb_oh", time = 0, platform = "1"}
-02 = {node = "nsb_uh", time = 0, platform = "1"}
-03 = {node = "nsb_ar", time = 0, platform = "6"}
-04 = {node = "nsb_arfo", time = 0, platform = "1"}
-05 = {node = "nsb_arc", time = 0, platform = "3"}
+02 = {node = "nsb_uh", time = 75, platform = "1"}
+03 = {node = "nsb_ar", time = 105, platform = "6"}
+04 = {node = "nsb_arfo", time = 45, platform = "1"}
+05 = {node = "nsb_arc", time = 30, platform = "3"}
 
 [nsb_d7_a]
 agency = "nsb_is"
@@ -67,11 +67,11 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d7_a.stops]
 01 = {node = "nsb_ar", time = 0, platform = "4"}
-02 = {node = "nsb_arfo", time = 0, platform = "6"}
-03 = {node = "nsb_arc", time = 0, platform = "6"}
-04 = {node = "nsb_wl", time = 0, platform = "2"}
-05 = {node = "nsb_gd", time = 0, platform = "1"}
-06 = {node = "nsb_gdz", time = 0, platform = "2"}
+02 = {node = "nsb_arfo", time = 45, platform = "6"}
+03 = {node = "nsb_arc", time = 30, platform = "6"}
+04 = {node = "nsb_wl", time = 330, platform = "2"}
+05 = {node = "nsb_gd", time = 210, platform = "1"}
+06 = {node = "nsb_gdz", time = 30, platform = "2"}
 
 [nsb_d7_b]
 agency = "nsb_is"
@@ -83,11 +83,11 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d7_b.stops]
 01 = {node = "nsb_gdz", time = 0, platform = "2"}
-02 = {node = "nsb_gd", time = 0, platform = "2"}
-03 = {node = "nsb_wl", time = 0, platform = "1"}
-04 = {node = "nsb_arc", time = 0, platform = "3"}
-05 = {node = "nsb_arfo", time = 0, platform = "1"}
-06 = {node = "nsb_ar", time = 0, platform = "4"}
+02 = {node = "nsb_gd", time = 30, platform = "2"}
+03 = {node = "nsb_wl", time = 210, platform = "1"}
+04 = {node = "nsb_arc", time = 330, platform = "3"}
+05 = {node = "nsb_arfo", time = 30, platform = "1"}
+06 = {node = "nsb_ar", time = 45, platform = "4"}
 
 [nsb_d8_a]
 agency = "nsb_is"
@@ -99,10 +99,10 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d8_a.stops]
 01 = {node = "nsb_ar", time = 0, platform = "4"}
-02 = {node = "nsb_arfo", time = 0, platform = "6"}
-03 = {node = "nsb_arc", time = 0, platform = "6"}
-04 = {node = "nsb_bkh", time = 0, platform = "4"}
-05 = {node = "nsb_dw", time = 0, platform = "1"}
+02 = {node = "nsb_arfo", time = 45, platform = "6"}
+03 = {node = "nsb_arc", time = 30, platform = "6"}
+04 = {node = "nsb_bkh", time = 225, platform = "4"}
+05 = {node = "nsb_dw", time = 180, platform = "1"}
 
 [nsb_d8_b]
 agency = "nsb_is"
@@ -114,10 +114,10 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d8_b.stops]
 01 = {node = "nsb_dw", time = 0, platform = "4"}
-02 = {node = "nsb_bkh", time = 0, platform = "3"}
-03 = {node = "nsb_arc", time = 0, platform = "3"}
-04 = {node = "nsb_arfo", time = 0, platform = "1"}
-05 = {node = "nsb_ar", time = 0, platform = "4"}
+02 = {node = "nsb_bkh", time = 180, platform = "3"}
+03 = {node = "nsb_arc", time = 225, platform = "3"}
+04 = {node = "nsb_arfo", time = 30, platform = "1"}
+05 = {node = "nsb_ar", time = 45, platform = "4"}
 
 [nsb_d9_a]
 agency = "nsb_is"
@@ -129,11 +129,11 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d9_a.stops]
 01 = {node = "nsb_ar", time = 0, platform = "4"}
-02 = {node = "nsb_arfo", time = 0, platform = "6"}
-03 = {node = "nsb_arc", time = 0, platform = "6"}
-04 = {node = "nsb_bkh", time = 0, platform = "2"}
-05 = {node = "nsb_gt", time = 0, platform = "3A"}
-06 = {node = "nsb_gth", time = 0, platform = "1"}
+02 = {node = "nsb_arfo", time = 45, platform = "6"}
+03 = {node = "nsb_arc", time = 30, platform = "6"}
+04 = {node = "nsb_bkh", time = 225, platform = "2"}
+05 = {node = "nsb_gt", time = 75, platform = "3A"}
+06 = {node = "nsb_gth", time = 30, platform = "1"}
 
 [nsb_d9_b]
 agency = "nsb_is"
@@ -145,11 +145,11 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d9_b.stops]
 01 = {node = "nsb_gth", time = 0, platform = "1"}
-02 = {node = "nsb_gt", time = 0, platform = "2A"}
-03 = {node = "nsb_bkh", time = 0, platform = "1"}
-04 = {node = "nsb_arc", time = 0, platform = "3"}
-05 = {node = "nsb_arfo", time = 0, platform = "1"}
-06 = {node = "nsb_ar", time = 0, platform = "4"}
+02 = {node = "nsb_gt", time = 30, platform = "2A"}
+03 = {node = "nsb_bkh", time = 75, platform = "1"}
+04 = {node = "nsb_arc", time = 225, platform = "3"}
+05 = {node = "nsb_arfo", time = 30, platform = "1"}
+06 = {node = "nsb_ar", time = 45, platform = "4"}
 
 
 # Trein (S-treinen)
@@ -163,17 +163,17 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s10_a.stops]
 01 = {node = "nsb_ar", time = 0, platform = "1"}
-02 = {node = "nsb_qs", time = 0, platform = "1"}
-03 = {node = "nsb_wh", time = 0, platform = "2"}
-04 = {node = "nsb_db", time = 0, platform = "1"}
-05 = {node = "nsb_avi", time = 0, platform = "2"}
-06 = {node = "nsb_av", time = 0, platform = "3"}
-07 = {node = "nsb_avo", time = 0, platform = "2"}
-08 = {node = "nsb_avv", time = 0, platform = "3"}
-09 = {node = "nsb_vt", time = 0, platform = "1"}
-10 = {node = "nsb_vv", time = 0, platform = "1"}
-11 = {node = "nsb_sti", time = 0, platform = "1"}
-12 = {node = "nsb_ub", time = 0, platform = "2"}
+02 = {node = "nsb_qs", time = 30, platform = "1"}
+03 = {node = "nsb_wh", time = 45, platform = "2"}
+04 = {node = "nsb_db", time = 60, platform = "1"}
+05 = {node = "nsb_avi", time = 45, platform = "2"}
+06 = {node = "nsb_av", time = 30, platform = "3"}
+07 = {node = "nsb_avo", time = 30, platform = "2"}
+08 = {node = "nsb_avv", time = 30, platform = "3"}
+09 = {node = "nsb_vt", time = 30, platform = "1"}
+10 = {node = "nsb_vv", time = 195, platform = "1"}
+11 = {node = "nsb_sti", time = 75, platform = "1"}
+12 = {node = "nsb_ub", time = 75, platform = "2"}
 
 [nsb_s10_b]
 agency = "nsb_fu"
@@ -185,17 +185,17 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s10_b.stops]
 01 = {node = "nsb_ub", time = 0, platform = "1"}
-02 = {node = "nsb_sti", time = 0, platform = "2"}
-03 = {node = "nsb_vv", time = 0, platform = "1"}
-04 = {node = "nsb_vt", time = 0, platform = "2"}
-05 = {node = "nsb_avv", time = 0, platform = "2"}
-06 = {node = "nsb_avo", time = 0, platform = "1"}
-07 = {node = "nsb_av", time = 0, platform = "2"}
-08 = {node = "nsb_avi", time = 0, platform = "1"}
-09 = {node = "nsb_db", time = 0, platform = "2"}
-10 = {node = "nsb_wh", time = 0, platform = "1"}
-11 = {node = "nsb_qs", time = 0, platform = "2"}
-12 = {node = "nsb_ar", time = 0, platform = "2"}
+02 = {node = "nsb_sti", time = 75, platform = "2"}
+03 = {node = "nsb_vv", time = 75, platform = "1"}
+04 = {node = "nsb_vt", time = 195, platform = "2"}
+05 = {node = "nsb_avv", time = 30, platform = "2"}
+06 = {node = "nsb_avo", time = 30, platform = "1"}
+07 = {node = "nsb_av", time = 30, platform = "2"}
+08 = {node = "nsb_avi", time = 30, platform = "1"}
+09 = {node = "nsb_db", time = 45, platform = "2"}
+10 = {node = "nsb_wh", time = 60, platform = "1"}
+11 = {node = "nsb_qs", time = 45, platform = "2"}
+12 = {node = "nsb_ar", time = 30, platform = "2"}
 
 [nsb_s11_a]
 agency = "nsb_fu"
@@ -207,15 +207,15 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s11_a.stops]
 01 = {node = "nsb_ndr", time = 0, platform = "3B"}
-02 = {node = "nsb_arc", time = 0, platform = "4"}
-03 = {node = "nsb_arfo", time = 0, platform = "2"}
-04 = {node = "nsb_arp", time = 0, platform = "3"}
-05 = {node = "nsb_ar", time = 0, platform = "4"}
-06 = {node = "nsb_qs", time = 0, platform = "3"}
-07 = {node = "nsb_wh", time = 0, platform = "2"}
-08 = {node = "nsb_uhz", time = 0, platform = "2"}
-09 = {node = "nsb_uh", time = 0, platform = "2"}
-10 = {node = "nsb_oh", time = 0, platform = "2"}
+02 = {node = "nsb_arc", time = 60, platform = "4"}
+03 = {node = "nsb_arfo", time = 30, platform = "2"}
+04 = {node = "nsb_arp", time = 15, platform = "3"}
+05 = {node = "nsb_ar", time = 30, platform = "4"}
+06 = {node = "nsb_qs", time = 30, platform = "3"}
+07 = {node = "nsb_wh", time = 45, platform = "2"}
+08 = {node = "nsb_uhz", time = 30, platform = "2"}
+09 = {node = "nsb_uh", time = 15, platform = "2"}
+10 = {node = "nsb_oh", time = 75, platform = "2"}
 
 [nsb_s11_b]
 agency = "nsb_fu"
@@ -227,15 +227,15 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s11_b.stops]
 01 = {node = "nsb_oh", time = 0, platform = "2"}
-02 = {node = "nsb_uh", time = 0, platform = "1"}
-03 = {node = "nsb_uhz", time = 0, platform = "1"}
-04 = {node = "nsb_wh", time = 0, platform = "1"}
-05 = {node = "nsb_qs", time = 0, platform = "3"}
-06 = {node = "nsb_ar", time = 0, platform = "5"}
-07 = {node = "nsb_arp", time = 0, platform = "2"}
-08 = {node = "nsb_arfo", time = 0, platform = "2"}
-09 = {node = "nsb_arc", time = 0, platform = "5"}
-10 = {node = "nsb_ndr", time = 0, platform = "3B"}
+02 = {node = "nsb_uh", time = 75, platform = "1"}
+03 = {node = "nsb_uhz", time = 15, platform = "1"}
+04 = {node = "nsb_wh", time = 30, platform = "1"}
+05 = {node = "nsb_qs", time = 45, platform = "3"}
+06 = {node = "nsb_ar", time = 30, platform = "5"}
+07 = {node = "nsb_arp", time = 30, platform = "2"}
+08 = {node = "nsb_arfo", time = 15, platform = "2"}
+09 = {node = "nsb_arc", time = 30, platform = "5"}
+10 = {node = "nsb_ndr", time = 60, platform = "3B"}
 
 [nsb_s12_a]
 agency = "nsb_fu"
@@ -247,16 +247,16 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s12_a.stops]
 01 = {node = "nsb_arc", time = 0, platform = "4"}
-02 = {node = "nsb_arfo", time = 0, platform = "2"}
-03 = {node = "nsb_arp", time = 0, platform = "3"}
-04 = {node = "nsb_ar", time = 0, platform = "4"}
-05 = {node = "nsb_qs", time = 0, platform = "1"}
-06 = {node = "nsb_wh", time = 0, platform = "2"}
-07 = {node = "nsb_db", time = 0, platform = "1"}
-08 = {node = "nsb_avi", time = 0, platform = "2"}
-09 = {node = "nsb_av", time = 0, platform = "7"}
-10 = {node = "nsb_avo", time = 0, platform = "2"}
-11 = {node = "nsb_avv", time = 0, platform = "1"}
+02 = {node = "nsb_arfo", time = 30, platform = "2"}
+03 = {node = "nsb_arp", time = 15, platform = "3"}
+04 = {node = "nsb_ar", time = 30, platform = "4"}
+05 = {node = "nsb_qs", time = 30, platform = "1"}
+06 = {node = "nsb_wh", time = 45, platform = "2"}
+07 = {node = "nsb_db", time = 60, platform = "1"}
+08 = {node = "nsb_avi", time = 45, platform = "2"}
+09 = {node = "nsb_av", time = 30, platform = "7"}
+10 = {node = "nsb_avo", time = 30, platform = "2"}
+11 = {node = "nsb_avv", time = 30, platform = "1"}
 
 [nsb_s12_b]
 agency = "nsb_fu"
@@ -268,16 +268,16 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s12_b.stops]
 01 = {node = "nsb_avv", time = 0, platform = "1"}
-02 = {node = "nsb_avo", time = 0, platform = "1"}
-03 = {node = "nsb_av", time = 0, platform = "3"}
-04 = {node = "nsb_avi", time = 0, platform = "1"}
-05 = {node = "nsb_db", time = 0, platform = "2"}
-06 = {node = "nsb_wh", time = 0, platform = "2"}
-07 = {node = "nsb_qs", time = 0, platform = "2"}
-08 = {node = "nsb_ar", time = 0, platform = "5"}
-09 = {node = "nsb_arp", time = 0, platform = "2"}
-10 = {node = "nsb_arfo", time = 0, platform = "2"}
-11 = {node = "nsb_arc", time = 0, platform = "4"}
+02 = {node = "nsb_avo", time = 30, platform = "1"}
+03 = {node = "nsb_av", time = 30, platform = "3"}
+04 = {node = "nsb_avi", time = 30, platform = "1"}
+05 = {node = "nsb_db", time = 45, platform = "2"}
+06 = {node = "nsb_wh", time = 60, platform = "2"}
+07 = {node = "nsb_qs", time = 45, platform = "2"}
+08 = {node = "nsb_ar", time = 30, platform = "5"}
+09 = {node = "nsb_arp", time = 30, platform = "2"}
+10 = {node = "nsb_arfo", time = 15, platform = "2"}
+11 = {node = "nsb_arc", time = 30, platform = "4"}
 
 [nsb_s15_a]
 agency = "nsb_fu"
@@ -289,12 +289,12 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s15_a.stops]
 01 = {node = "nsb_avv", time = 0, platform = "1"}
-02 = {node = "nsb_avo", time = 0, platform = "1"}
-03 = {node = "nsb_av", time = 0, platform = "2"}
-04 = {node = "nsb_avi", time = 0, platform = "1"}
-05 = {node = "nsb_db", time = 0, platform = "2"}
-06 = {node = "nsb_uhz", time = 0, platform = "2"}
-07 = {node = "nsb_uh", time = 0, platform = "5"}
+02 = {node = "nsb_avo", time = 30, platform = "1"}
+03 = {node = "nsb_av", time = 30, platform = "2"}
+04 = {node = "nsb_avi", time = 30, platform = "1"}
+05 = {node = "nsb_db", time = 45, platform = "2"}
+06 = {node = "nsb_uhz", time = 75, platform = "2"}
+07 = {node = "nsb_uh", time = 15, platform = "5"}
 
 [nsb_s15_b]
 agency = "nsb_fu"
@@ -306,12 +306,12 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s15_b.stops]
 01 = {node = "nsb_uh", time = 0, platform = "5"}
-02 = {node = "nsb_uhz", time = 0, platform = "1"}
-03 = {node = "nsb_db", time = 0, platform = "1"}
-04 = {node = "nsb_avi", time = 0, platform = "2"}
-05 = {node = "nsb_av", time = 0, platform = "7"}
-06 = {node = "nsb_avo", time = 0, platform = "2"}
-07 = {node = "nsb_avv", time = 0, platform = "1"}
+02 = {node = "nsb_uhz", time = 15, platform = "1"}
+03 = {node = "nsb_db", time = 75, platform = "1"}
+04 = {node = "nsb_avi", time = 45, platform = "2"}
+05 = {node = "nsb_av", time = 30, platform = "7"}
+06 = {node = "nsb_avo", time = 30, platform = "2"}
+07 = {node = "nsb_avv", time = 30, platform = "1"}
 
 [nsb_s16_a]
 agency = "nsb_fu"
@@ -323,11 +323,11 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s16_a.stops]
 01 = {node = "nsb_avv", time = 0, platform = "1"}
-02 = {node = "nsb_avo", time = 0, platform = "1"}
-03 = {node = "nsb_av", time = 0, platform = "2"}
-04 = {node = "nsb_avi", time = 0, platform = "1"}
-05 = {node = "nsb_db", time = 0, platform = "3"}
-06 = {node = "nsb_lv", time = 0, platform = "1"}
+02 = {node = "nsb_avo", time = 30, platform = "1"}
+03 = {node = "nsb_av", time = 30, platform = "2"}
+04 = {node = "nsb_avi", time = 30, platform = "1"}
+05 = {node = "nsb_db", time = 45, platform = "3"}
+06 = {node = "nsb_lv", time = 45, platform = "1"}
 
 [nsb_s16_b]
 agency = "nsb_fu"
@@ -339,11 +339,11 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s16_b.stops]
 01 = {node = "nsb_lv", time = 0, platform = "1"}
-02 = {node = "nsb_db", time = 0, platform = "3"}
-03 = {node = "nsb_avi", time = 0, platform = "2"}
-04 = {node = "nsb_av", time = 0, platform = "7"}
-05 = {node = "nsb_avo", time = 0, platform = "2"}
-06 = {node = "nsb_avv", time = 0, platform = "1"}
+02 = {node = "nsb_db", time = 45, platform = "3"}
+03 = {node = "nsb_avi", time = 45, platform = "2"}
+04 = {node = "nsb_av", time = 30, platform = "7"}
+05 = {node = "nsb_avo", time = 30, platform = "2"}
+06 = {node = "nsb_avv", time = 30, platform = "1"}
 
 [nsb_s17_a]
 agency = "nsb_fu"
@@ -355,14 +355,15 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s17_a.stops]
 01 = {node = "nsb_av", time = 0, platform = "3"}
-02 = {node = "nsb_avo", time = 0, platform = "2"}
-03 = {node = "nsb_avv", time = 0, platform = "3"}
-04 = {node = "nsb_vt", time = 0, platform = "1"}
-05 = {node = "nsb_sb", time = 0, platform = "1"}
-06 = {node = "nsb_tp", time = 0, platform = "1"}
-07 = {node = "nsb_mso", time = 0, platform = "1"}
+02 = {node = "nsb_avo", time = 30, platform = "2"}
+03 = {node = "nsb_avv", time = 30, platform = "3"}
+04 = {node = "nsb_vt", time = 30, platform = "1"}
+05 = {node = "nsb_sb", time = 60, platform = "1"}
+06 = {node = "nsb_tp", time = 30, platform = "1"}
+07 = {node = "nsb_mso", time = 60, platform = "1"}
 08 = {node = "nsb_css", time = 0, platform = "", cancelled = "true"}
-09 = {node = "nsb_fta", time = 0, platform = "", cancelled = "true"}
+09 = {node = "nsb_alt", time = 0, platform = "", cancelled = "true"}
+10 = {node = "nsb_fta", time = 0, platform = "", cancelled = "true"}
 
 [nsb_s17_b]
 agency = "nsb_fu"
@@ -374,14 +375,15 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s17_b.stops]
 01 = {node = "nsb_fta", time = 0, platform = "", cancelled = "true"}
-02 = {node = "nsb_css", time = 0, platform = "", cancelled = "true"}
-03 = {node = "nsb_mso", time = 0, platform = "2"}
-04 = {node = "nsb_tp", time = 0, platform = "1"}
-05 = {node = "nsb_sb", time = 0, platform = "2"}
-06 = {node = "nsb_vt", time = 0, platform = "2"}
-07 = {node = "nsb_avv", time = 0, platform = "2"}
-08 = {node = "nsb_avo", time = 0, platform = "1"}
-09 = {node = "nsb_av", time = 0, platform = "2"}
+02 = {node = "nsb_alt", time = 0, platform = "", cancelled = "true"}
+03 = {node = "nsb_css", time = 0, platform = "", cancelled = "true"}
+04 = {node = "nsb_mso", time = 0, platform = "2"}
+05 = {node = "nsb_tp", time = 60, platform = "1"}
+06 = {node = "nsb_sb", time = 30, platform = "2"}
+07 = {node = "nsb_vt", time = 60, platform = "2"}
+08 = {node = "nsb_avv", time = 30, platform = "2"}
+09 = {node = "nsb_avo", time = 30, platform = "1"}
+10 = {node = "nsb_av", time = 30, platform = "2"}
 
 [nsb_s97_a]
 agency = "nsb_fu"
@@ -393,8 +395,8 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s97_a.stops]
 01 = {node = "nsb_vt", time = 0, platform = "3"}
-02 = {node = "nsb_vd", time = 0, platform = "1"}
-03 = {node = "nsb_snz", time = 0, platform = "1"}
+02 = {node = "nsb_vd", time = 75, platform = "1"}
+03 = {node = "nsb_snz", time = 60, platform = "1"}
 04 = {node = "nsb_snn", time = 0, platform = "", cancelled = "true"}
 05 = {node = "nsb_lr", time = 0, platform = "", cancelled = "true"}
 06 = {node = "nsb_gnl", time = 0, platform = "", cancelled = "true"}
@@ -412,8 +414,8 @@ color = {background = "#2b7749", text = "#ffffff"}
 02 = {node = "nsb_lr", time = 0, platform = "", cancelled = "true"}
 03 = {node = "nsb_snn", time = 0, platform = "", cancelled = "true"}
 04 = {node = "nsb_snz", time = 0, platform = "2"}
-05 = {node = "nsb_vd", time = 0, platform = "1"}
-06 = {node = "nsb_vt", time = 0, platform = "3"}
+05 = {node = "nsb_vd", time = 60, platform = "1"}
+06 = {node = "nsb_vt", time = 75, platform = "3"}
 
 [nsb_s20_a]
 agency = "nsb_is"
@@ -425,16 +427,16 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s20_a.stops]
 01 = {node = "nsb_arfo", time = 0, platform = "3B"}
-02 = {node = "nsb_arc", time = 0, platform = "5"}
-03 = {node = "nsb_ndr", time = 0, platform = "3A"}
-04 = {node = "nsb_bw", time = 0, platform = "1"}
-05 = {node = "nsb_gbk", time = 0, platform = "1"}
-06 = {node = "nsb_gn", time = 0, platform = "1"}
-07 = {node = "nsb_lvl", time = 0, platform = "1"}
-08 = {node = "nsb_bkh", time = 0, platform = "2"}
-09 = {node = "nsb_gtp", time = 0, platform = "1"}
-10 = {node = "nsb_gt", time = 0, platform = "3A"}
-11 = {node = "nsb_gth", time = 0, platform = "1"}
+02 = {node = "nsb_arc", time = 30, platform = "5"}
+03 = {node = "nsb_ndr", time = 60, platform = "3A"}
+04 = {node = "nsb_bw", time = 45, platform = "1"}
+05 = {node = "nsb_gbk", time = 30, platform = "1"}
+06 = {node = "nsb_gn", time = 45, platform = "1"}
+07 = {node = "nsb_lvl", time = 30, platform = "1"}
+08 = {node = "nsb_bkh", time = 30, platform = "2"}
+09 = {node = "nsb_gtp", time = 60, platform = "1"}
+10 = {node = "nsb_gt", time = 15, platform = "3A"}
+11 = {node = "nsb_gth", time = 30, platform = "1"}
 
 [nsb_s20_b]
 agency = "nsb_is"
@@ -446,16 +448,16 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s20_b.stops]
 01 = {node = "nsb_gth", time = 0, platform = "1"}
-02 = {node = "nsb_gt", time = 0, platform = "2A"}
-03 = {node = "nsb_gtp", time = 0, platform = "2"}
-04 = {node = "nsb_bkh", time = 0, platform = "1"}
-05 = {node = "nsb_lvl", time = 0, platform = "2"}
-06 = {node = "nsb_gn", time = 0, platform = "2"}
-07 = {node = "nsb_gbk", time = 0, platform = "2"}
-08 = {node = "nsb_bw", time = 0, platform = "2"}
-09 = {node = "nsb_ndr", time = 0, platform = "1A"}
-10 = {node = "nsb_arc", time = 0, platform = "4"}
-11 = {node = "nsb_arfo", time = 0, platform = "3B"}
+02 = {node = "nsb_gt", time = 30, platform = "2A"}
+03 = {node = "nsb_gtp", time = 15, platform = "2"}
+04 = {node = "nsb_bkh", time = 60, platform = "1"}
+05 = {node = "nsb_lvl", time = 30, platform = "2"}
+06 = {node = "nsb_gn", time = 30, platform = "2"}
+07 = {node = "nsb_gbk", time = 45, platform = "2"}
+08 = {node = "nsb_bw", time = 30, platform = "2"}
+09 = {node = "nsb_ndr", time = 45, platform = "1A"}
+10 = {node = "nsb_arc", time = 60, platform = "4"}
+11 = {node = "nsb_arfo", time = 30, platform = "3B"}
 
 [nsb_s21_a]
 agency = "nsb_is"
@@ -467,17 +469,17 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s21_a.stops]
 01 = {node = "nsb_arfo", time = 0, platform = "3B"}
-02 = {node = "nsb_arc", time = 0, platform = "5"}
-03 = {node = "nsb_ndr", time = 0, platform = "3A"}
-04 = {node = "nsb_bw", time = 0, platform = "1"}
-05 = {node = "nsb_gbk", time = 0, platform = "1"}
-06 = {node = "nsb_gn", time = 0, platform = "1"}
-07 = {node = "nsb_lvl", time = 0, platform = "1"}
-08 = {node = "nsb_bkh", time = 0, platform = "4"}
-09 = {node = "nsb_hak", time = 0, platform = "1"}
-10 = {node = "nsb_vkh", time = 0, platform = "2"}
-11 = {node = "nsb_bg", time = 0, platform = "1"}
-12 = {node = "nsb_dw", time = 0, platform = "2"}
+02 = {node = "nsb_arc", time = 30, platform = "5"}
+03 = {node = "nsb_ndr", time = 60, platform = "3A"}
+04 = {node = "nsb_bw", time = 45, platform = "1"}
+05 = {node = "nsb_gbk", time = 30, platform = "1"}
+06 = {node = "nsb_gn", time = 45, platform = "1"}
+07 = {node = "nsb_lvl", time = 30, platform = "1"}
+08 = {node = "nsb_bkh", time = 30, platform = "4"}
+09 = {node = "nsb_hak", time = 60, platform = "1"}
+10 = {node = "nsb_vhz", time = 45, platform = "2"}
+11 = {node = "nsb_bg", time = 60, platform = "1"}
+12 = {node = "nsb_dw", time = 30, platform = "2"}
 # [...]
 13 = {node = "nsb_zms", time = 0, platform = "", cancelled = "true"}
 
@@ -493,17 +495,17 @@ color = {background = "#2b7749", text = "#ffffff"}
 01 = {node = "nsb_zms", time = 0, platform = "", cancelled = "true"}
 # [...]
 02 = {node = "nsb_dw", time = 0, platform = "3"}
-03 = {node = "nsb_bg", time = 0, platform = "2"}
-04 = {node = "nsb_vkh", time = 0, platform = "5"}
-05 = {node = "nsb_hak", time = 0, platform = "2"}
-06 = {node = "nsb_bkh", time = 0, platform = "3"}
-07 = {node = "nsb_lvl", time = 0, platform = "2"}
-08 = {node = "nsb_gn", time = 0, platform = "2"}
-09 = {node = "nsb_gbk", time = 0, platform = "2"}
-10 = {node = "nsb_bw", time = 0, platform = "2"}
-11 = {node = "nsb_ndr", time = 0, platform = "1A"}
-12 = {node = "nsb_arc", time = 0, platform = "4"}
-13 = {node = "nsb_arfo", time = 0, platform = "3B"}
+03 = {node = "nsb_bg", time = 30, platform = "2"}
+04 = {node = "nsb_vhz", time = 60, platform = "5"}
+05 = {node = "nsb_hak", time = 45, platform = "2"}
+06 = {node = "nsb_bkh", time = 60, platform = "3"}
+07 = {node = "nsb_lvl", time = 30, platform = "2"}
+08 = {node = "nsb_gn", time = 30, platform = "2"}
+09 = {node = "nsb_gbk", time = 45, platform = "2"}
+10 = {node = "nsb_bw", time = 30, platform = "2"}
+11 = {node = "nsb_ndr", time = 45, platform = "1A"}
+12 = {node = "nsb_arc", time = 60, platform = "4"}
+13 = {node = "nsb_arfo", time = 30, platform = "3B"}
 
 [nsb_s22_a]
 agency = "nsb_is"
@@ -515,12 +517,12 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s22_a.stops]
 01 = {node = "nsb_arc", time = 0, platform = "1"}
-02 = {node = "nsb_ndr", time = 0, platform = "3A"}
-03 = {node = "nsb_bw", time = 0, platform = "1"}
-04 = {node = "nsb_afv", time = 0, platform = "1"}
-05 = {node = "nsb_pry", time = 0, platform = "2"}
-06 = {node = "nsb_kdk", time = 0, platform = "1"}
-07 = {node = "nsb_wl", time = 0, platform = "1"}
+02 = {node = "nsb_ndr", time = 60, platform = "3A"}
+03 = {node = "nsb_bw", time = 45, platform = "1"}
+04 = {node = "nsb_afv", time = 30, platform = "1"}
+05 = {node = "nsb_pry", time = 45, platform = "2"}
+06 = {node = "nsb_kdk", time = 60, platform = "1"}
+07 = {node = "nsb_wl", time = 60, platform = "1"}
 08 = {node = "nsb_hmr", time = 0, platform = "", cancelled = "true"}
 09 = {node = "nsb_whk", time = 0, platform = "", cancelled = "true"}
 10 = {node = "nsb_gvn", time = 0, platform = "", cancelled = "true"}
@@ -538,12 +540,12 @@ color = {background = "#2b7749", text = "#ffffff"}
 02 = {node = "nsb_whk", time = 0, platform = "", cancelled = "true"}
 03 = {node = "nsb_hmr", time = 0, platform = "", cancelled = "true"}
 04 = {node = "nsb_wl", time = 0, platform = "2"}
-05 = {node = "nsb_kdk", time = 0, platform = "1"}
-06 = {node = "nsb_pry", time = 0, platform = "1"}
-07 = {node = "nsb_afv", time = 0, platform = "1"}
-08 = {node = "nsb_bw", time = 0, platform = "2"}
-09 = {node = "nsb_ndr", time = 0, platform = "1A"}
-10 = {node = "nsb_arc", time = 0, platform = "2"}
+05 = {node = "nsb_kdk", time = 60, platform = "1"}
+06 = {node = "nsb_pry", time = 60, platform = "1"}
+07 = {node = "nsb_afv", time = 45, platform = "1"}
+08 = {node = "nsb_bw", time = 30, platform = "2"}
+09 = {node = "nsb_ndr", time = 45, platform = "1A"}
+10 = {node = "nsb_arc", time = 60, platform = "2"}
 
 [nsb_s23_a]
 agency = "nsb_is"
@@ -555,10 +557,10 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s23_a.stops]
 01 = {node = "nsb_arc", time = 0, platform = "1"}
-02 = {node = "nsb_ndr", time = 0, platform = "3A"}
-03 = {node = "nsb_sg", time = 0, platform = "1"}
-04 = {node = "nsb_np", time = 0, platform = "2"}
-05 = {node = "nsb_str", time = 0, platform = "2"}
+02 = {node = "nsb_ndr", time = 60, platform = "3A"}
+03 = {node = "nsb_sg", time = 60, platform = "1"}
+04 = {node = "nsb_np", time = 105, platform = "2"}
+05 = {node = "nsb_str", time = 75, platform = "2"}
 
 [nsb_s23_b]
 agency = "nsb_is"
@@ -570,10 +572,10 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s23_b.stops]
 01 = {node = "nsb_str", time = 0, platform = "2"}
-02 = {node = "nsb_np", time = 0, platform = "1"}
-03 = {node = "nsb_sg", time = 0, platform = "2"}
-04 = {node = "nsb_ndr", time = 0, platform = "1A"}
-05 = {node = "nsb_arc", time = 0, platform = "2"}
+02 = {node = "nsb_np", time = 75, platform = "1"}
+03 = {node = "nsb_sg", time = 105, platform = "2"}
+04 = {node = "nsb_ndr", time = 60, platform = "1A"}
+05 = {node = "nsb_arc", time = 60, platform = "2"}
 
 [nsb_s30_a]
 agency = "nsb_is"
@@ -588,16 +590,16 @@ color = {background = "#2b7749", text = "#ffffff"}
 02 = {node = "nsb_mm", time = 0, platform = "", cancelled = "true"}
 03 = {node = "nsb_hk", time = 0, platform = "", cancelled = "true"}
 04 = {node = "nsb_dw", time = 0, platform = "6"}
-05 = {node = "nsb_dwo", time = 0, platform = "2"}
-06 = {node = "nsb_aur", time = 0, platform = "2"}
-07 = {node = "nsb_rks", time = 0, platform = "2"}
-08 = {node = "nsb_md", time = 0, platform = "2"}
-09 = {node = "nsb_akh", time = 0, platform = "1"}
-10 = {node = "nsb_gdz", time = 0, platform = "2"}
-11 = {node = "nsb_gd", time = 0, platform = "2"}
-12 = {node = "nsb_dd", time = 0, platform = "2"}
-13 = {node = "nsb_rdk", time = 0, platform = "", cancelled = "true"}
-14 = {node = "nsb_wl", time = 0, platform = "1"}
+05 = {node = "nsb_dwo", time = 15, platform = "2"}
+06 = {node = "nsb_aur", time = 30, platform = "2"}
+07 = {node = "nsb_rks", time = 30, platform = "2"}
+08 = {node = "nsb_md", time = 30, platform = "2"}
+09 = {node = "nsb_akh", time = 75, platform = "1"}
+10 = {node = "nsb_gdz", time = 120, platform = "2"}
+11 = {node = "nsb_gd", time = 30, platform = "2"}
+12 = {node = "nsb_dd", time = 30, platform = "2"}
+13 = {node = "nsb_rdk", time = 105, platform = "", cancelled = "true"}
+14 = {node = "nsb_wl", time = 90, platform = "1"}
 
 [nsb_s30_b]
 agency = "nsb_is"
@@ -609,16 +611,16 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s30_b.stops]
 01 = {node = "nsb_wl", time = 0, platform = "2"}
-02 = {node = "nsb_rdk", time = 0, platform = "", cancelled = "true"}
-03 = {node = "nsb_dd", time = 0, platform = "1"}
-04 = {node = "nsb_gd", time = 0, platform = "1"}
-05 = {node = "nsb_gdz", time = 0, platform = "1"}
-06 = {node = "nsb_akh", time = 0, platform = "1"}
-07 = {node = "nsb_md", time = 0, platform = "1"}
-08 = {node = "nsb_rks", time = 0, platform = "1"}
-09 = {node = "nsb_aur", time = 0, platform = "1"}
-10 = {node = "nsb_dwo", time = 0, platform = "1"}
-11 = {node = "nsb_dw", time = 0, platform = "5"}
+02 = {node = "nsb_rdk", time = 90, platform = "", cancelled = "true"}
+03 = {node = "nsb_dd", time = 105, platform = "1"}
+04 = {node = "nsb_gd", time = 30, platform = "1"}
+05 = {node = "nsb_gdz", time = 30, platform = "1"}
+06 = {node = "nsb_akh", time = 120, platform = "1"}
+07 = {node = "nsb_md", time = 75, platform = "1"}
+08 = {node = "nsb_rks", time = 30, platform = "1"}
+09 = {node = "nsb_aur", time = 30, platform = "1"}
+10 = {node = "nsb_dwo", time = 30, platform = "1"}
+11 = {node = "nsb_dw", time = 15, platform = "5"}
 12 = {node = "nsb_hk", time = 0, platform = "", cancelled = "true"}
 13 = {node = "nsb_mm", time = 0, platform = "", cancelled = "true"}
 14 = {node = "nsb_mmz", time = 0, platform = "", cancelled = "true"}
@@ -635,10 +637,10 @@ color = {background = "#2b7749", text = "#ffffff"}
 01 = {node = "nsb_fm", time = 0, platform = "", cancelled = "true"}
 # [...]
 02 = {node = "nsb_rks", time = 0, platform = "2"}
-03 = {node = "nsb_md", time = 0, platform = "2"}
-04 = {node = "nsb_vkh", time = 0, platform = "6"}
-05 = {node = "nsb_hak", time = 0, platform = "2"}
-06 = {node = "nsb_bkh", time = 0, platform = "34"}
+03 = {node = "nsb_md", time = 30, platform = "2"}
+04 = {node = "nsb_vkh", time = 60, platform = "6"}
+05 = {node = "nsb_hak", time = 45, platform = "2"}
+06 = {node = "nsb_bkh", time = 60, platform = "34"}
 
 [nsb_s31_b]
 agency = "nsb_is"
@@ -650,10 +652,10 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s31_b.stops]
 01 = {node = "nsb_bkh", time = 0, platform = "34"}
-02 = {node = "nsb_hak", time = 0, platform = "1"}
-03 = {node = "nsb_vkh", time = 0, platform = "1"}
-04 = {node = "nsb_md", time = 0, platform = "1"}
-05 = {node = "nsb_rks", time = 0, platform = "1"}
+02 = {node = "nsb_hak", time = 60, platform = "1"}
+03 = {node = "nsb_vkh", time = 45, platform = "1"}
+04 = {node = "nsb_md", time = 60, platform = "1"}
+05 = {node = "nsb_rks", time = 30, platform = "1"}
 # [...]
 06 = {node = "nsb_fm", time = 0, platform = "", cancelled = "true"}
 
@@ -669,13 +671,13 @@ color = {background = "#ff2a2a", text = "#ffffff"}
 
 [arm_a_a.stops]
 01 = {node = "arm_nsw", time = 0, platform = "1", headsign = "Al-Qusur via Forum"}
-02 = {node = "arm_wss", time = 0, platform = "2"}
-03 = {node = "arm_wdk", time = 0, platform = "2"}
-04 = {node = "arm_for", time = 0, platform = "10", headsign = "Al-Qusur via Nieuwedal"}
-05 = {node = "arm_nwd", time = 0, platform = "4", headsign = "Al-Qusur"}
-06 = {node = "arm_trc", time = 0, platform = "2"}
-07 = {node = "arm_psw", time = 0, platform = "2"}
-08 = {node = "arm_qsr", time = 0, platform = "12"}
+02 = {node = "arm_wss", time = 15, platform = "2"}
+03 = {node = "arm_wdk", time = 30, platform = "2"}
+04 = {node = "arm_for", time = 30, platform = "10", headsign = "Al-Qusur via Nieuwedal"}
+05 = {node = "arm_nwd", time = 15, platform = "4", headsign = "Al-Qusur"}
+06 = {node = "arm_trc", time = 15, platform = "2"}
+07 = {node = "arm_psw", time = 15, platform = "2"}
+08 = {node = "arm_qsr", time = 15, platform = "12"}
 
 [arm_a_b]
 agency = "arlov"
@@ -687,13 +689,13 @@ color = {background = "#ff2a2a", text = "#ffffff"}
 
 [arm_a_b.stops]
 01 = {node = "arm_qsr", time = 0, platform = "12", headsign = "Nedersalwey via Nieuwedal"}
-02 = {node = "arm_psw", time = 0, platform = "1"}
-03 = {node = "arm_trc", time = 0, platform = "1"}
-04 = {node = "arm_nwd", time = 0, platform = "3", headsign = "Nedersalwey via Forum"}
-05 = {node = "arm_for", time = 0, platform = "9", headsign = "Nedersalwey"}
-06 = {node = "arm_wdk", time = 0, platform = "1"}
-07 = {node = "arm_wss", time = 0, platform = "1"}
-08 = {node = "arm_nsw", time = 0, platform = "1"}
+02 = {node = "arm_psw", time = 15, platform = "1"}
+03 = {node = "arm_trc", time = 15, platform = "1"}
+04 = {node = "arm_nwd", time = 15, platform = "3", headsign = "Nedersalwey via Forum"}
+05 = {node = "arm_for", time = 15, platform = "9", headsign = "Nedersalwey"}
+06 = {node = "arm_wdk", time = 30, platform = "1"}
+07 = {node = "arm_wss", time = 30, platform = "1"}
+08 = {node = "arm_nsw", time = 15, platform = "1"}
 
 [arm_b_a]
 agency = "arlov"
@@ -705,17 +707,17 @@ color = {background = "#0066ff", text = "#ffffff"}
 
 [arm_b_a.stops]
 01 = {node = "arm_ng", time = 0, platform = "2", headsign = "Fort van Raduyn via Elfshaven"}
-02 = {node = "arm_ngd", time = 0, platform = "2"}
-03 = {node = "arm_ehv", time = 0, platform = "2", headsign = "Fort van Raduyn via Halenz"}
-04 = {node = "arm_wbg", time = 0, platform = "2"}
-05 = {node = "arm_hz", time = 0, platform = "3", headsign = "Fort van Raduyn via Nieuwedal"}
-06 = {node = "arm_pdb", time = 0, platform = "6"}
-07 = {node = "arm_nwd", time = 0, platform = "2", headsign = "Fort van Raduyn"}
-08 = {node = "arm_hvk", time = 0, platform = "3"}
-09 = {node = "arm_vhf", time = 0, platform = "2"}
-10 = {node = "arm_zb", time = 0, platform = "2"}
-11 = {node = "arm_knz", time = 0, platform = "2"}
-12 = {node = "arm_rdn", time = 0, platform = "1"}
+02 = {node = "arm_ngd", time = 15, platform = "2"}
+03 = {node = "arm_ehv", time = 45, platform = "2", headsign = "Fort van Raduyn via Halenz"}
+04 = {node = "arm_wbg", time = 15, platform = "2"}
+05 = {node = "arm_hz", time = 30, platform = "3", headsign = "Fort van Raduyn via Nieuwedal"}
+06 = {node = "arm_pdb", time = 30, platform = "6"}
+07 = {node = "arm_nwd", time = 15, platform = "2", headsign = "Fort van Raduyn"}
+08 = {node = "arm_hvk", time = 15, platform = "3"}
+09 = {node = "arm_vhf", time = 15, platform = "2"}
+10 = {node = "arm_zb", time = 30, platform = "2"}
+11 = {node = "arm_knz", time = 15, platform = "2"}
+12 = {node = "arm_rdn", time = 15, platform = "1"}
 
 [arm_b_b]
 agency = "arlov"
@@ -727,17 +729,17 @@ color = {background = "#0066ff", text = "#ffffff"}
 
 [arm_b_b.stops]
 01 = {node = "arm_rdn", time = 0, platform = "1", headsign = "Negenaar via Nieuwedal"}
-02 = {node = "arm_knz", time = 0, platform = "1"}
-03 = {node = "arm_zb", time = 0, platform = "1"}
-04 = {node = "arm_vhf", time = 0, platform = "1"}
-05 = {node = "arm_hvk", time = 0, platform = "1"}
-06 = {node = "arm_nwd", time = 0, platform = "1", headsign = "Negenaar via Halenz"}
-07 = {node = "arm_pdb", time = 0, platform = "5"}
-08 = {node = "arm_hz", time = 0, platform = "2", headsign = "Negenaar via Elfshaven"}
-09 = {node = "arm_wbg", time = 0, platform = "1"}
-10 = {node = "arm_ehv", time = 0, platform = "1", headsign = "Negenaar"}
-11 = {node = "arm_ngd", time = 0, platform = "3"}
-12 = {node = "arm_ng", time = 0, platform = "3"}
+02 = {node = "arm_knz", time = 15, platform = "1"}
+03 = {node = "arm_zb", time = 15, platform = "1"}
+04 = {node = "arm_vhf", time = 30, platform = "1"}
+05 = {node = "arm_hvk", time = 15, platform = "1"}
+06 = {node = "arm_nwd", time = 15, platform = "1", headsign = "Negenaar via Halenz"}
+07 = {node = "arm_pdb", time = 15, platform = "5"}
+08 = {node = "arm_hz", time = 30, platform = "2", headsign = "Negenaar via Elfshaven"}
+09 = {node = "arm_wbg", time = 30, platform = "1"}
+10 = {node = "arm_ehv", time = 15, platform = "1", headsign = "Negenaar"}
+11 = {node = "arm_ngd", time = 45, platform = "3"}
+12 = {node = "arm_ng", time = 15, platform = "3"}
 
 [arm_c_a]
 agency = "arlov"
@@ -749,15 +751,15 @@ color = {background = "#2ad4ff", text = "#ffffff"}
 
 [arm_c_a.stops]
 01 = {node = "arm_lhv", time = 0, platform = "1", headsign = "Steyn via Halenz"}
-02 = {node = "arm_vgh", time = 0, platform = "1"}
-03 = {node = "arm_hz", time = 0, platform = "3", headsign = "Steyn via Nieuwedal"}
-04 = {node = "arm_pdb", time = 0, platform = "6"}
-05 = {node = "arm_nwd", time = 0, platform = "2", headsign = "Steyn"}
-06 = {node = "arm_hvk", time = 0, platform = "2"}
-07 = {node = "arm_odb", time = 0, platform = "2"}
-08 = {node = "arm_ahm", time = 0, platform = "1"}
-09 = {node = "arm_ost", time = 0, platform = "3"}
-10 = {node = "arm_stn", time = 0, platform = "3"}
+02 = {node = "arm_vgh", time = 15, platform = "1"}
+03 = {node = "arm_hz", time = 15, platform = "3", headsign = "Steyn via Nieuwedal"}
+04 = {node = "arm_pdb", time = 30, platform = "6"}
+05 = {node = "arm_nwd", time = 15, platform = "2", headsign = "Steyn"}
+06 = {node = "arm_hvk", time = 15, platform = "2"}
+07 = {node = "arm_odb", time = 15, platform = "2"}
+08 = {node = "arm_ahm", time = 30, platform = "1"}
+09 = {node = "arm_ost", time = 15, platform = "3"}
+10 = {node = "arm_stn", time = 15, platform = "3"}
 
 [arm_c_b]
 agency = "arlov"
@@ -769,15 +771,15 @@ color = {background = "#2ad4ff", text = "#ffffff"}
 
 [arm_c_b.stops]
 01 = {node = "arm_stn", time = 0, platform = "1", headsign = "Luchthaven via Nieuwedal"}
-02 = {node = "arm_ost", time = 0, platform = "4"}
-03 = {node = "arm_ahm", time = 0, platform = "2"}
-04 = {node = "arm_odb", time = 0, platform = "1"}
-05 = {node = "arm_hvk", time = 0, platform = "1"}
-06 = {node = "arm_nwd", time = 0, platform = "1", headsign = "Luchthaven via Halenz"}
-07 = {node = "arm_pdb", time = 0, platform = "5"}
-08 = {node = "arm_hz", time = 0, platform = "1", headsign = "Luchthaven"}
-09 = {node = "arm_vgh", time = 0, platform = "2"}
-10 = {node = "arm_lhv", time = 0, platform = "2"}
+02 = {node = "arm_ost", time = 15, platform = "4"}
+03 = {node = "arm_ahm", time = 15, platform = "2"}
+04 = {node = "arm_odb", time = 30, platform = "1"}
+05 = {node = "arm_hvk", time = 15, platform = "1"}
+06 = {node = "arm_nwd", time = 15, platform = "1", headsign = "Luchthaven via Halenz"}
+07 = {node = "arm_pdb", time = 15, platform = "5"}
+08 = {node = "arm_hz", time = 30, platform = "1", headsign = "Luchthaven"}
+09 = {node = "arm_vgh", time = 15, platform = "2"}
+10 = {node = "arm_lhv", time = 15, platform = "2"}
 
 [arm_d_a]
 agency = "arlov"
@@ -789,17 +791,17 @@ color = {background = "#5fd38d", text = "#ffffff"}
 
 [arm_d_a.stops]
 01 = {node = "arm_ng", time = 0, platform = "1", headsign = "Steyn via Campus"}
-02 = {node = "arm_ngd", time = 0, platform = "1"}
-03 = {node = "arm_bkc", time = 0, platform = "1"}
-04 = {node = "arm_bkv", time = 0, platform = "1"}
-05 = {node = "arm_cps", time = 0, platform = "9", headsign = "Steyn via Forum"}
-06 = {node = "arm_pss", time = 0, platform = "1"}
-07 = {node = "arm_for", time = 0, platform = "7", headsign = "Steyn"}
-08 = {node = "arm_ldw", time = 0, platform = "1"}
-09 = {node = "arm_atv", time = 0, platform = "1"}
-10 = {node = "arm_psz", time = 0, platform = "1"}
-11 = {node = "arm_ost", time = 0, platform = "1"}
-12 = {node = "arm_stn", time = 0, platform = "3"}
+02 = {node = "arm_ngd", time = 15, platform = "1"}
+03 = {node = "arm_bkc", time = 30, platform = "1"}
+04 = {node = "arm_bkv", time = 15, platform = "1"}
+05 = {node = "arm_cps", time = 30, platform = "9", headsign = "Steyn via Forum"}
+06 = {node = "arm_pss", time = 30, platform = "1"}
+07 = {node = "arm_for", time = 15, platform = "7", headsign = "Steyn"}
+08 = {node = "arm_ldw", time = 30, platform = "1"}
+09 = {node = "arm_atv", time = 30, platform = "1"}
+10 = {node = "arm_psz", time = 15, platform = "1"}
+11 = {node = "arm_ost", time = 15, platform = "1"}
+12 = {node = "arm_stn", time = 15, platform = "3"}
 
 [arm_d_b]
 agency = "arlov"
@@ -811,17 +813,17 @@ color = {background = "#5fd38d", text = "#ffffff"}
 
 [arm_d_b.stops]
 01 = {node = "arm_stn", time = 0, platform = "2", headsign = "Negenaar via Forum"}
-02 = {node = "arm_ost", time = 0, platform = "2"}
-03 = {node = "arm_psz", time = 0, platform = "2"}
-04 = {node = "arm_atv", time = 0, platform = "2"}
-05 = {node = "arm_ldw", time = 0, platform = "2"}
-06 = {node = "arm_for", time = 0, platform = "8", headsign = "Negenaar via Campus"}
-07 = {node = "arm_pss", time = 0, platform = "2"}
-08 = {node = "arm_cps", time = 0, platform = "10", headsign = "Negenaar"}
-09 = {node = "arm_bkv", time = 0, platform = "2"}
-10 = {node = "arm_bkc", time = 0, platform = "2"}
-11 = {node = "arm_ngd", time = 0, platform = "3"}
-12 = {node = "arm_ng", time = 0, platform = "3"}
+02 = {node = "arm_ost", time = 15, platform = "2"}
+03 = {node = "arm_psz", time = 15, platform = "2"}
+04 = {node = "arm_atv", time = 15, platform = "2"}
+05 = {node = "arm_ldw", time = 30, platform = "2"}
+06 = {node = "arm_for", time = 30, platform = "8", headsign = "Negenaar via Campus"}
+07 = {node = "arm_pss", time = 15, platform = "2"}
+08 = {node = "arm_cps", time = 30, platform = "10", headsign = "Negenaar"}
+09 = {node = "arm_bkv", time = 30, platform = "2"}
+10 = {node = "arm_bkc", time = 15, platform = "2"}
+11 = {node = "arm_ngd", time = 30, platform = "3"}
+12 = {node = "arm_ng", time = 15, platform = "3"}
 
 [arm_e_a]
 agency = "arlov"
@@ -833,17 +835,17 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 
 [arm_e_a.stops]
 01 = {node = "arm_lvn", time = 0, platform = "1", headsign = "Nedelrand via Elfshaven"}
-02 = {node = "arm_uhc", time = 0, platform = "1"}
-03 = {node = "arm_uhs", time = 0, platform = "11"}
-04 = {node = "arm_uhh", time = 0, platform = "1"}
-05 = {node = "arm_ehv", time = 0, platform = "11", headsign = "Nedelrand"}
-06 = {node = "arm_dbm", time = 0, platform = "1"}
-07 = {node = "arm_bkc", time = 0, platform = "3"}
-08 = {node = "arm_sta", time = 0, platform = "1"}
-09 = {node = "arm_mdz", time = 0, platform = "1"}
-10 = {node = "arm_sgb", time = 0, platform = "1"}
-11 = {node = "arm_sg", time = 0, platform = "1"}
-12 = {node = "arm_ndr", time = 0, platform = "5"}
+02 = {node = "arm_uhc", time = 15, platform = "1"}
+03 = {node = "arm_uhs", time = 15, platform = "11"}
+04 = {node = "arm_uhh", time = 15, platform = "1"}
+05 = {node = "arm_ehv", time = 75, platform = "11", headsign = "Nedelrand"}
+06 = {node = "arm_dbm", time = 15, platform = "1"}
+07 = {node = "arm_bkc", time = 15, platform = "3"}
+08 = {node = "arm_sta", time = 15, platform = "1"}
+09 = {node = "arm_mdz", time = 15, platform = "1"}
+10 = {node = "arm_sgb", time = 15, platform = "1"}
+11 = {node = "arm_sg", time = 15, platform = "1"}
+12 = {node = "arm_ndr", time = 45, platform = "5"}
 
 [arm_e_b]
 agency = "arlov"
@@ -855,17 +857,17 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 
 [arm_e_b.stops]
 01 = {node = "arm_ndr", time = 0, platform = "4", headsign = "Lavijn via Elfshaven"}
-02 = {node = "arm_sg", time = 0, platform = "2"}
-03 = {node = "arm_sgb", time = 0, platform = "2"}
-04 = {node = "arm_mdz", time = 0, platform = "2"}
-05 = {node = "arm_sta", time = 0, platform = "2"}
-06 = {node = "arm_bkc", time = 0, platform = "4"}
-07 = {node = "arm_dbm", time = 0, platform = "2"}
-08 = {node = "arm_ehv", time = 0, platform = "12", headsign = "Lavijn"}
-09 = {node = "arm_uhh", time = 0, platform = "2"}
-10 = {node = "arm_uhs", time = 0, platform = "12"}
-11 = {node = "arm_uhc", time = 0, platform = "2"}
-12 = {node = "arm_lvn", time = 0, platform = "2"}
+02 = {node = "arm_sg", time = 45, platform = "2"}
+03 = {node = "arm_sgb", time = 15, platform = "2"}
+04 = {node = "arm_mdz", time = 15, platform = "2"}
+05 = {node = "arm_sta", time = 15, platform = "2"}
+06 = {node = "arm_bkc", time = 15, platform = "4"}
+07 = {node = "arm_dbm", time = 15, platform = "2"}
+08 = {node = "arm_ehv", time = 15, platform = "12", headsign = "Lavijn"}
+09 = {node = "arm_uhh", time = 75, platform = "2"}
+10 = {node = "arm_uhs", time = 15, platform = "12"}
+11 = {node = "arm_uhc", time = 15, platform = "2"}
+12 = {node = "arm_lvn", time = 15, platform = "2"}
 
 [arm_f_a]
 agency = "arlov"
@@ -873,19 +875,19 @@ modality = "subway"
 name = "Metro F (Campus ⟶ Steyn)"
 headsign = "Steyn"
 abbr = "F"
-color = {background = "#ffd918", text = "#ffffff"}
+color = {background = "#ffd918", text = "#000000"}
 
 [arm_f_a.stops]
 01 = {node = "arm_cps", time = 0, platform = "8", headsign = "Steyn via Halenz"}
-02 = {node = "arm_hz", time = 0, platform = "14", headsign = "Steyn via Centraal Station"}
-03 = {node = "arm_vgh", time = 0, platform = "4"}
-04 = {node = "arm_lhv", time = 0, platform = "4"}
-05 = {node = "arm_cs", time = 0, platform = "12", headsign = "Steyn via Morgenster"}
-06 = {node = "arm_trc", time = 0, platform = "4"}
-07 = {node = "arm_mpl", time = 0, platform = "2"}
-08 = {node = "arm_mst", time = 0, platform = "6", headsign = "Steyn"}
-09 = {node = "arm_sdg", time = 0, platform = "2"}
-10 = {node = "arm_stn", time = 0, platform = "13"}
+02 = {node = "arm_hz", time = 30, platform = "14", headsign = "Steyn via Centraal Station"}
+03 = {node = "arm_vgh", time = 15, platform = "4"}
+04 = {node = "arm_lhv", time = 15, platform = "4"}
+05 = {node = "arm_cs", time = 30, platform = "12", headsign = "Steyn via Morgenster"}
+06 = {node = "arm_trc", time = 15, platform = "4"}
+07 = {node = "arm_mpl", time = 30, platform = "2"}
+08 = {node = "arm_mst", time = 15, platform = "6", headsign = "Steyn"}
+09 = {node = "arm_sdg", time = 15, platform = "2"}
+10 = {node = "arm_stn", time = 30, platform = "13"}
 
 [arm_f_b]
 agency = "arlov"
@@ -893,19 +895,19 @@ modality = "subway"
 name = "Metro F (Steyn ⟶ Campus)"
 headsign = "Campus"
 abbr = "F"
-color = {background = "#ffd918", text = "#ffffff"}
+color = {background = "#ffd918", text = "#000000"}
 
 [arm_f_b.stops]
 01 = {node = "arm_stn", time = 0, platform = "13", headsign = "Campus via Morgenster"}
-02 = {node = "arm_sdg", time = 0, platform = "1"}
-03 = {node = "arm_mst", time = 0, platform = "5", headsign = "Campus via Centraal Station"}
-04 = {node = "arm_mpl", time = 0, platform = "1"}
-05 = {node = "arm_trc", time = 0, platform = "3"}
-06 = {node = "arm_cs", time = 0, platform = "11", headsign = "Campus via Halenz"}
-07 = {node = "arm_lhv", time = 0, platform = "3"}
-08 = {node = "arm_vgh", time = 0, platform = "3"}
-09 = {node = "arm_hz", time = 0, platform = "13", headsign = "Campus"}
-10 = {node = "arm_cps", time = 0, platform = "7"}
+02 = {node = "arm_sdg", time = 30, platform = "1"}
+03 = {node = "arm_mst", time = 15, platform = "5", headsign = "Campus via Centraal Station"}
+04 = {node = "arm_mpl", time = 15, platform = "1"}
+05 = {node = "arm_trc", time = 30, platform = "3"}
+06 = {node = "arm_cs", time = 15, platform = "11", headsign = "Campus via Halenz"}
+07 = {node = "arm_lhv", time = 30, platform = "3"}
+08 = {node = "arm_vgh", time = 15, platform = "3"}
+09 = {node = "arm_hz", time = 15, platform = "13", headsign = "Campus"}
+10 = {node = "arm_cps", time = 30, platform = "7"}
 
 
 # Tram Arloheim
@@ -919,15 +921,15 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [art_666_a.stops]
 01 = {node = "art_atv", time = 0, platform = "3", headsign = "Fort van Raduyn via Steyn"}
-02 = {node = "art_dbk", time = 0, platform = "1"}
-03 = {node = "art_vtr", time = 0, platform = "1"}
-04 = {node = "art_vmt", time = 0, platform = "1"}
-05 = {node = "art_gnv", time = 0, platform = "11", headsign = "Fort van Raduyn"}
-06 = {node = "art_cyp", time = 0, platform = "1"}
-07 = {node = "art_ktw", time = 0, platform = "1"}
-08 = {node = "art_ksm", time = 0, platform = "1"}
-09 = {node = "art_rtr", time = 0, platform = "1"}
-10 = {node = "art_rdn", time = 0, platform = "2"}
+02 = {node = "art_dbk", time = 15, platform = "1"}
+03 = {node = "art_vtr", time = 30, platform = "1"}
+04 = {node = "art_vmt", time = 15, platform = "1"}
+05 = {node = "art_gnv", time = 15, platform = "11", headsign = "Fort van Raduyn"}
+06 = {node = "art_cyp", time = 15, platform = "1"}
+07 = {node = "art_ktw", time = 15, platform = "1"}
+08 = {node = "art_ksm", time = 15, platform = "1"}
+09 = {node = "art_rtr", time = 15, platform = "1"}
+10 = {node = "art_rdn", time = 15, platform = "2"}
 
 [art_666_b]
 agency = "arlov"
@@ -939,15 +941,15 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [art_666_b.stops]
 01 = {node = "art_rdn", time = 0, platform = "2", headsign = "Aalsterve via Steyn"}
-02 = {node = "art_rtr", time = 0, platform = "1"}
-03 = {node = "art_ksm", time = 0, platform = "1"}
-04 = {node = "art_ktw", time = 0, platform = "1"}
-05 = {node = "art_cyp", time = 0, platform = "2"}
-06 = {node = "art_gnv", time = 0, platform = "12", headsign = "Aalsterve"}
-07 = {node = "art_vmt", time = 0, platform = "2"}
-08 = {node = "art_vtr", time = 0, platform = "2"}
-09 = {node = "art_dbk", time = 0, platform = "1"}
-10 = {node = "art_atv", time = 0, platform = "3"}
+02 = {node = "art_rtr", time = 15, platform = "1"}
+03 = {node = "art_ksm", time = 15, platform = "1"}
+04 = {node = "art_ktw", time = 15, platform = "1"}
+05 = {node = "art_cyp", time = 15, platform = "2"}
+06 = {node = "art_gnv", time = 15, platform = "12", headsign = "Aalsterve"}
+07 = {node = "art_vmt", time = 15, platform = "2"}
+08 = {node = "art_vtr", time = 15, platform = "2"}
+09 = {node = "art_dbk", time = 30, platform = "1"}
+10 = {node = "art_atv", time = 15, platform = "3"}
 
 [art_837_a]
 agency = "arlov"
@@ -959,17 +961,17 @@ color = {background = "#cd87de", text = "#ffffff"}
 
 [art_837_a.stops]
 01 = {node = "art_mst", time = 0, platform = "3", headsign = "Steyn"}
-02 = {node = "art_bbn", time = 0, platform = "2"}
-03 = {node = "art_dmn", time = 0, platform = "2"}
-04 = {node = "art_zhs", time = 0, platform = "1A"}
-05 = {node = "art_otb", time = 0, platform = "1"}
-06 = {node = "art_gnv", time = 0, platform = "21", headsign = "Morgenster"}
-07 = {node = "art_vmt", time = 0, platform = "3"}
-08 = {node = "art_ost", time = 0, platform = "5"}
-09 = {node = "art_zhs", time = 0, platform = "1B"}
-10 = {node = "art_dmn", time = 0, platform = "2"}
-11 = {node = "art_bbn", time = 0, platform = "1"}
-12 = {node = "art_mst", time = 0, platform = "4"}
+02 = {node = "art_bbn", time = 15, platform = "2"}
+03 = {node = "art_dmn", time = 15, platform = "2"}
+04 = {node = "art_zhs", time = 15, platform = "1A"}
+05 = {node = "art_otb", time = 15, platform = "1"}
+06 = {node = "art_gnv", time = 15, platform = "21", headsign = "Morgenster"}
+07 = {node = "art_vmt", time = 15, platform = "3"}
+08 = {node = "art_ost", time = 15, platform = "5"}
+09 = {node = "art_zhs", time = 15, platform = "1B"}
+10 = {node = "art_dmn", time = 15, platform = "2"}
+11 = {node = "art_bbn", time = 15, platform = "1"}
+12 = {node = "art_mst", time = 15, platform = "4"}
 
 [art_839_a]
 agency = "arlov"
@@ -981,18 +983,18 @@ color = {background = "#7137c8", text = "#ffffff"}
 
 [art_839_a.stops]
 01 = {node = "art_for", time = 0, platform = "12A", headsign = "Centraal Station via Morgenster"}
-02 = {node = "art_bwk", time = 0, platform = "2"}
-03 = {node = "art_ldw", time = 0, platform = "12"}
-04 = {node = "art_ebk", time = 0, platform = "2"}
-05 = {node = "art_drt", time = 0, platform = "2"}
-06 = {node = "art_odb", time = 0, platform = "12"}
-07 = {node = "art_mst", time = 0, platform = "2", headsign = "Centraal Station"}
-08 = {node = "art_hwd", time = 0, platform = "2"}
-09 = {node = "art_dwk", time = 0, platform = "2"}
-10 = {node = "art_zb", time = 0, platform = "12"}
-11 = {node = "art_nvh", time = 0, platform = "2"}
-12 = {node = "art_psw", time = 0, platform = "3"}
-13 = {node = "art_cs", time = 0, platform = "13"}
+02 = {node = "art_bwk", time = 15, platform = "2"}
+03 = {node = "art_ldw", time = 15, platform = "12"}
+04 = {node = "art_ebk", time = 15, platform = "2"}
+05 = {node = "art_drt", time = 15, platform = "2"}
+06 = {node = "art_odb", time = 15, platform = "12"}
+07 = {node = "art_mst", time = 15, platform = "2", headsign = "Centraal Station"}
+08 = {node = "art_hwd", time = 15, platform = "2"}
+09 = {node = "art_dwk", time = 15, platform = "2"}
+10 = {node = "art_zb", time = 15, platform = "12"}
+11 = {node = "art_nvh", time = 15, platform = "2"}
+12 = {node = "art_psw", time = 15, platform = "3"}
+13 = {node = "art_cs", time = 30, platform = "13"}
 
 [art_839_b]
 agency = "arlov"
@@ -1004,18 +1006,18 @@ color = {background = "#7137c8", text = "#ffffff"}
 
 [art_839_b.stops]
 01 = {node = "art_cs", time = 0, platform = "13", headsign = "Forum via Morgenster"}
-02 = {node = "art_psw", time = 0, platform = "4"}
-03 = {node = "art_nvh", time = 0, platform = "1"}
-04 = {node = "art_zb", time = 0, platform = "11"}
-05 = {node = "art_dwk", time = 0, platform = "1"}
-06 = {node = "art_hwd", time = 0, platform = "1"}
-07 = {node = "art_mst", time = 0, platform = "1", headsign = "Forum"}
-08 = {node = "art_odb", time = 0, platform = "11"}
-09 = {node = "art_drt", time = 0, platform = "1"}
-10 = {node = "art_ebk", time = 0, platform = "1"}
-11 = {node = "art_ldw", time = 0, platform = "11"}
-12 = {node = "art_bwk", time = 0, platform = "1"}
-13 = {node = "art_for", time = 0, platform = "11A"}
+02 = {node = "art_psw", time = 30, platform = "4"}
+03 = {node = "art_nvh", time = 15, platform = "1"}
+04 = {node = "art_zb", time = 15, platform = "11"}
+05 = {node = "art_dwk", time = 15, platform = "1"}
+06 = {node = "art_hwd", time = 15, platform = "1"}
+07 = {node = "art_mst", time = 15, platform = "1", headsign = "Forum"}
+08 = {node = "art_odb", time = 15, platform = "11"}
+09 = {node = "art_drt", time = 15, platform = "1"}
+10 = {node = "art_ebk", time = 15, platform = "1"}
+11 = {node = "art_ldw", time = 15, platform = "11"}
+12 = {node = "art_bwk", time = 15, platform = "1"}
+13 = {node = "art_for", time = 15, platform = "11A"}
 
 [art_840_a]
 agency = "arlov"
@@ -1027,15 +1029,15 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 
 [art_840_a.stops]
 01 = {node = "art_for", time = 0, platform = "13", headsign = "Luchthaven via Halenz"}
-02 = {node = "art_pss", time = 0, platform = "4"}
-03 = {node = "art_cps", time = 0, platform = "12"}
-04 = {node = "art_vg", time = 0, platform = "2"}
-05 = {node = "art_wbz", time = 0, platform = "2"}
-06 = {node = "art_hz", time = 0, platform = "12", headsign = "Luchthaven"}
-07 = {node = "art_mlw", time = 0, platform = "2"}
-08 = {node = "art_lan", time = 0, platform = "2"}
-09 = {node = "art_cs", time = 0, platform = "22"}
-10 = {node = "art_lhv", time = 0, platform = "12"}
+02 = {node = "art_pss", time = 15, platform = "4"}
+03 = {node = "art_cps", time = 30, platform = "12"}
+04 = {node = "art_vg", time = 15, platform = "2"}
+05 = {node = "art_wbz", time = 15, platform = "2"}
+06 = {node = "art_hz", time = 15, platform = "12", headsign = "Luchthaven"}
+07 = {node = "art_mlw", time = 15, platform = "2"}
+08 = {node = "art_lan", time = 15, platform = "2"}
+09 = {node = "art_cs", time = 30, platform = "22"}
+10 = {node = "art_lhv", time = 15, platform = "12"}
 
 [art_840_b]
 agency = "arlov"
@@ -1047,15 +1049,15 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 
 [art_840_b.stops]
 01 = {node = "art_lhv", time = 0, platform = "11", headsign = "Forum via Halenz"}
-02 = {node = "art_cs", time = 0, platform = "21"}
-03 = {node = "art_lan", time = 0, platform = "1"}
-04 = {node = "art_mlw", time = 0, platform = "1"}
-05 = {node = "art_hz", time = 0, platform = "11", headsign = "Forum"}
-06 = {node = "art_wbz", time = 0, platform = "1"}
-07 = {node = "art_vg", time = 0, platform = "1"}
-08 = {node = "art_cps", time = 0, platform = "11"}
-09 = {node = "art_pss", time = 0, platform = "3"}
-10 = {node = "art_for", time = 0, platform = "14"}
+02 = {node = "art_cs", time = 15, platform = "21"}
+03 = {node = "art_lan", time = 30, platform = "1"}
+04 = {node = "art_mlw", time = 15, platform = "1"}
+05 = {node = "art_hz", time = 15, platform = "11", headsign = "Forum"}
+06 = {node = "art_wbz", time = 15, platform = "1"}
+07 = {node = "art_vg", time = 15, platform = "1"}
+08 = {node = "art_cps", time = 15, platform = "11"}
+09 = {node = "art_pss", time = 30, platform = "3"}
+10 = {node = "art_for", time = 15, platform = "14"}
 
 [art_841_a]
 agency = "arlov"
@@ -1067,15 +1069,15 @@ color = {background = "#c8ab37", text = "#ffffff"}
 
 [art_841_a.stops]
 01 = {node = "art_wdk", time = 0, platform = "11"}
-02 = {node = "art_swb", time = 0, platform = "2"}
-03 = {node = "art_wvg", time = 0, platform = "2"}
-04 = {node = "art_whk", time = 0, platform = "2"}
-05 = {node = "art_gkp", time = 0, platform = "2"}
-06 = {node = "art_wte", time = 0, platform = "2"}
-07 = {node = "art_bkv", time = 0, platform = "4"}
-08 = {node = "art_sta", time = 0, platform = "2"}
-09 = {node = "art_bpl", time = 0, platform = "2"}
-10 = {node = "art_ehv", time = 0, platform = "4"}
+02 = {node = "art_swb", time = 15, platform = "2"}
+03 = {node = "art_wvg", time = 15, platform = "2"}
+04 = {node = "art_whk", time = 15, platform = "2"}
+05 = {node = "art_gkp", time = 30, platform = "2"}
+06 = {node = "art_wte", time = 15, platform = "2"}
+07 = {node = "art_bkv", time = 15, platform = "4"}
+08 = {node = "art_sta", time = 15, platform = "2"}
+09 = {node = "art_bpl", time = 15, platform = "2"}
+10 = {node = "art_ehv", time = 15, platform = "4"}
 
 [art_841_b]
 agency = "arlov"
@@ -1087,15 +1089,15 @@ color = {background = "#c8ab37", text = "#ffffff"}
 
 [art_841_b.stops]
 01 = {node = "art_ehv", time = 0, platform = "3"}
-02 = {node = "art_bpl", time = 0, platform = "1"}
-03 = {node = "art_sta", time = 0, platform = "1"}
-04 = {node = "art_bkv", time = 0, platform = "3"}
-05 = {node = "art_wte", time = 0, platform = "1"}
-06 = {node = "art_gkp", time = 0, platform = "1"}
-07 = {node = "art_whk", time = 0, platform = "1"}
-08 = {node = "art_wvg", time = 0, platform = "1"}
-09 = {node = "art_swb", time = 0, platform = "1"}
-10 = {node = "art_wdk", time = 0, platform = "11"}
+02 = {node = "art_bpl", time = 15, platform = "1"}
+03 = {node = "art_sta", time = 15, platform = "1"}
+04 = {node = "art_bkv", time = 15, platform = "3"}
+05 = {node = "art_wte", time = 15, platform = "1"}
+06 = {node = "art_gkp", time = 15, platform = "1"}
+07 = {node = "art_whk", time = 30, platform = "1"}
+08 = {node = "art_wvg", time = 15, platform = "1"}
+09 = {node = "art_swb", time = 15, platform = "1"}
+10 = {node = "art_wdk", time = 15, platform = "11"}
 
 [art_850_a]
 agency = "arlov"
@@ -1107,11 +1109,11 @@ color = {background = "#7eafff", text = "#ffffff"}
 
 [art_850_a.stops]
 01 = {node = "art_for", time = 0, platform = "11B"}
-02 = {node = "art_kst", time = 0, platform = "1"}
-03 = {node = "art_cll", time = 0, platform = "1"}
-04 = {node = "art_umc", time = 0, platform = "1"}
-05 = {node = "art_ngf", time = 0, platform = "1"}
-06 = {node = "art_cps", time = 0, platform = "14"}
+02 = {node = "art_kst", time = 15, platform = "1"}
+03 = {node = "art_cll", time = 15, platform = "1"}
+04 = {node = "art_umc", time = 15, platform = "1"}
+05 = {node = "art_ngf", time = 15, platform = "1"}
+06 = {node = "art_cps", time = 15, platform = "14"}
 
 [art_850_b]
 agency = "arlov"
@@ -1123,10 +1125,10 @@ color = {background = "#7eafff", text = "#ffffff"}
 
 [art_850_b.stops]
 01 = {node = "art_cps", time = 0, platform = "13"}
-02 = {node = "art_ngf", time = 0, platform = "2"}
-03 = {node = "art_mkn", time = 0, platform = "1"}
-04 = {node = "art_kst", time = 0, platform = "2"}
-05 = {node = "art_for", time = 0, platform = "12B"}
+02 = {node = "art_ngf", time = 15, platform = "2"}
+03 = {node = "art_mkn", time = 15, platform = "1"}
+04 = {node = "art_kst", time = 15, platform = "2"}
+05 = {node = "art_for", time = 15, platform = "12B"}
 
 
 # Funiculaires Arloheim
@@ -1140,7 +1142,7 @@ color = {background = "#2a889f", text = "#ffffff"}
 
 [arf_667_a.stops]
 01 = {node = "arf_trc", time = 0}
-02 = {node = "arf_mzt", time = 0}
+02 = {node = "arf_mzt", time = 15}
 
 [arf_667_b]
 agency = "arlov"
@@ -1152,7 +1154,7 @@ color = {background = "#2a889f", text = "#ffffff"}
 
 [arf_667_b.stops]
 01 = {node = "arf_mzt", time = 0}
-02 = {node = "arf_trc", time = 0}
+02 = {node = "arf_trc", time = 15}
 
 [arf_669_a]
 agency = "arlov"
@@ -1164,7 +1166,7 @@ color = {background = "#2a889f", text = "#ffffff"}
 
 [arf_669_a.stops]
 01 = {node = "arf_bwk", time = 0}
-02 = {node = "arf_geo", time = 0}
+02 = {node = "arf_geo", time = 15}
 
 [arf_669_b]
 agency = "arlov"
@@ -1176,7 +1178,7 @@ color = {background = "#2a889f", text = "#ffffff"}
 
 [arf_669_b.stops]
 01 = {node = "arf_geo", time = 0}
-02 = {node = "arf_bwk", time = 0}
+02 = {node = "arf_bwk", time = 15}
 
 [arf_670_a]
 agency = "arlov"
@@ -1188,7 +1190,7 @@ color = {background = "#2a889f", text = "#ffffff"}
 
 [arf_670_a.stops]
 01 = {node = "arf_odb", time = 0}
-02 = {node = "arf_hvk", time = 0}
+02 = {node = "arf_hvk", time = 15}
 
 [arf_670_b]
 agency = "arlov"
@@ -1200,7 +1202,7 @@ color = {background = "#2a889f", text = "#ffffff"}
 
 [arf_670_b.stops]
 01 = {node = "arf_hvk", time = 0}
-02 = {node = "arf_odb", time = 0}
+02 = {node = "arf_odb", time = 15}
 
 
 # Liften Arloheim
@@ -1214,7 +1216,7 @@ color = {background = "#aac735", text = "#ffffff"}
 
 [arl_404_a.stops]
 01 = {node = "arl_for", time = 0}
-02 = {node = "arl_obs", time = 0}
+02 = {node = "arl_obs", time = 15}
 
 [arl_404_b]
 agency = "arlov"
@@ -1226,7 +1228,7 @@ color = {background = "#aac735", text = "#ffffff"}
 
 [arl_404_b.stops]
 01 = {node = "arl_obs", time = 0}
-02 = {node = "arl_for", time = 0}
+02 = {node = "arl_for", time = 15}
 
 [arl_420_a]
 agency = "arlov"
@@ -1238,7 +1240,7 @@ color = {background = "#aac735", text = "#ffffff"}
 
 [arl_420_a.stops]
 01 = {node = "arl_nwd", time = 0}
-02 = {node = "arl_mzt", time = 0}
+02 = {node = "arl_mzt", time = 15}
 
 [arl_420_b]
 agency = "arlov"
@@ -1250,7 +1252,7 @@ color = {background = "#aac735", text = "#ffffff"}
 
 [arl_420_b.stops]
 01 = {node = "arl_mzt", time = 0}
-02 = {node = "arl_nwd", time = 0}
+02 = {node = "arl_nwd", time = 15}
 
 
 # Tram Amsvorde
@@ -1264,17 +1266,17 @@ color = {background = "#37c8ab", text = "#ffffff"}
 
 [avt_1_a.stops]
 01 = {node = "avt_ktk", time = 0}
-02 = {node = "avt_yct", time = 0}
-03 = {node = "avt_ksh", time = 0}
-04 = {node = "avt_plp", time = 0}
-05 = {node = "avt_dns", time = 0}
-06 = {node = "avt_rhp", time = 0}
-07 = {node = "avt_av", time = 0}
-08 = {node = "avt_lto", time = 0}
-09 = {node = "avt_lzd", time = 0}
-10 = {node = "avt_stt", time = 0}
-11 = {node = "avt_ins", time = 0}
-12 = {node = "avt_sls", time = 0}
+02 = {node = "avt_yct", time = 15}
+03 = {node = "avt_ksh", time = 15}
+04 = {node = "avt_plp", time = 15}
+05 = {node = "avt_dns", time = 15}
+06 = {node = "avt_rhp", time = 15}
+07 = {node = "avt_av", time = 15}
+08 = {node = "avt_lto", time = 15}
+09 = {node = "avt_lzd", time = 15}
+10 = {node = "avt_stt", time = 15}
+11 = {node = "avt_ins", time = 15}
+12 = {node = "avt_sls", time = 15}
 
 [avt_1_b]
 agency = "vara"
@@ -1286,17 +1288,17 @@ color = {background = "#37c8ab", text = "#ffffff"}
 
 [avt_1_b.stops]
 01 = {node = "avt_sls", time = 0}
-02 = {node = "avt_ins", time = 0}
-03 = {node = "avt_stt", time = 0}
-04 = {node = "avt_lzd", time = 0}
-05 = {node = "avt_lto", time = 0}
-06 = {node = "avt_av", time = 0}
-07 = {node = "avt_rhp", time = 0}
-08 = {node = "avt_dns", time = 0}
-09 = {node = "avt_plp", time = 0}
-10 = {node = "avt_ksh", time = 0}
-11 = {node = "avt_yct", time = 0}
-12 = {node = "avt_ktk", time = 0}
+02 = {node = "avt_ins", time = 15}
+03 = {node = "avt_stt", time = 15}
+04 = {node = "avt_lzd", time = 15}
+05 = {node = "avt_lto", time = 15}
+06 = {node = "avt_av", time = 15}
+07 = {node = "avt_rhp", time = 15}
+08 = {node = "avt_dns", time = 15}
+09 = {node = "avt_plp", time = 15}
+10 = {node = "avt_ksh", time = 15}
+11 = {node = "avt_yct", time = 15}
+12 = {node = "avt_ktk", time = 15}
 
 [avt_2_a]
 agency = "vara"
@@ -1308,15 +1310,15 @@ color = {background = "#ffcc00", text = "#2c5aa0"}
 
 [avt_2_a.stops]
 01 = {node = "avt_ehv", time = 0}
-02 = {node = "avt_zhv", time = 0}
-03 = {node = "avt_ncb", time = 0}
-04 = {node = "avt_mls", time = 0}
-05 = {node = "avt_avi", time = 0}
-06 = {node = "avt_bcs", time = 0}
-07 = {node = "avt_rhp", time = 0}
-08 = {node = "avt_av", time = 0}
-09 = {node = "avt_ssw", time = 0}
-10 = {node = "avt_avo", time = 0}
+02 = {node = "avt_zhv", time = 15}
+03 = {node = "avt_ncb", time = 15}
+04 = {node = "avt_mls", time = 15}
+05 = {node = "avt_avi", time = 15}
+06 = {node = "avt_bcs", time = 15}
+07 = {node = "avt_rhp", time = 15}
+08 = {node = "avt_av", time = 15}
+09 = {node = "avt_ssw", time = 15}
+10 = {node = "avt_avo", time = 15}
 
 [avt_2_b]
 agency = "vara"
@@ -1328,15 +1330,15 @@ color = {background = "#ffcc00", text = "#2c5aa0"}
 
 [avt_2_b.stops]
 01 = {node = "avt_avo", time = 0}
-02 = {node = "avt_ssw", time = 0}
-03 = {node = "avt_av", time = 0}
-04 = {node = "avt_rhp", time = 0}
-05 = {node = "avt_bcs", time = 0}
-06 = {node = "avt_avi", time = 0}
-07 = {node = "avt_mls", time = 0}
-08 = {node = "avt_ncb", time = 0}
-09 = {node = "avt_zhv", time = 0}
-10 = {node = "avt_ehv", time = 0}
+02 = {node = "avt_ssw", time = 15}
+03 = {node = "avt_av", time = 15}
+04 = {node = "avt_rhp", time = 15}
+05 = {node = "avt_bcs", time = 15}
+06 = {node = "avt_avi", time = 15}
+07 = {node = "avt_mls", time = 15}
+08 = {node = "avt_ncb", time = 15}
+09 = {node = "avt_zhv", time = 15}
+10 = {node = "avt_ehv", time = 15}
 
 [avt_3_a]
 agency = "vara"
@@ -1348,12 +1350,12 @@ color = {background = "#ff5555", text = "#ffffff"}
 
 [avt_3_a.stops]
 01 = {node = "avt_pms", time = 0}
-02 = {node = "avt_iqs", time = 0}
-03 = {node = "avt_wnw", time = 0}
-04 = {node = "avt_hrk", time = 0}
-05 = {node = "avt_rvn", time = 0}
-06 = {node = "avt_avv", time = 0}
-07 = {node = "avt_vt", time = 0}
+02 = {node = "avt_iqs", time = 15}
+03 = {node = "avt_wnw", time = 15}
+04 = {node = "avt_hrk", time = 15}
+05 = {node = "avt_rvn", time = 15}
+06 = {node = "avt_avv", time = 15}
+07 = {node = "avt_vt", time = 15}
 
 [avt_3_b]
 agency = "vara"
@@ -1365,15 +1367,12 @@ color = {background = "#ff5555", text = "#ffffff"}
 
 [avt_3_b.stops]
 01 = {node = "avt_vt", time = 0}
-02 = {node = "avt_avv", time = 0}
-03 = {node = "avt_rvn", time = 0}
-04 = {node = "avt_hrk", time = 0}
-05 = {node = "avt_wnw", time = 0}
-06 = {node = "avt_iqs", time = 0}
-07 = {node = "avt_pms", time = 0}
-
-
-# Tram Giedrecht
+02 = {node = "avt_avv", time = 15}
+03 = {node = "avt_rvn", time = 15}
+04 = {node = "avt_hrk", time = 15}
+05 = {node = "avt_wnw", time = 15}
+06 = {node = "avt_iqs", time = 15}
+07 = {node = "avt_pms", time = 15}
 
 
 # Hyperloop
@@ -1387,7 +1386,7 @@ color = {background = "#aac735", text = "#ffffff"}
 
 [hyp_a.stops]
 01 = {node = "hyp_arfo", time = 0}
-02 = {node = "hyp_gth", time = 0}
+02 = {node = "hyp_gth", time = 15}
 
 [hyp_b]
 agency = "hyp"
@@ -1399,7 +1398,7 @@ color = {background = "#aac735", text = "#ffffff"}
 
 [hyp_b.stops]
 01 = {node = "hyp_gth", time = 0}
-02 = {node = "hyp_arfo", time = 0}
+02 = {node = "hyp_arfo", time = 15}
 
 
 # Veerdiensten
