@@ -173,8 +173,8 @@ arf_hvk = {name = "Arloheim, Heuvelkwartier", modality = "funicular", location =
 arf_odb = {name = "Arloheim, Oldenburg", modality = "funicular", location = "Arloheim"}
 arf_bwk = {name = "Arloheim, Brandwijk", modality = "funicular", location = "Arloheim"}
 arf_geo = {name = "Arloheim, Geologie", modality = "funicular", location = "Arloheim"}
-art_trc = {name = "Arloheim, Triarchie", modality = "funicular", location = "Arloheim"}
-art_mzt	= {name = "Arloheim, Maanzigt", modality = "funicular", location = "Arloheim"}
+arf_trc = {name = "Arloheim, Triarchie", modality = "funicular", location = "Arloheim"}
+arf_mzt	= {name = "Arloheim, Maanzigt", modality = "funicular", location = "Arloheim"}
 
 # Liften Arloheim
 arl_mzt = {name = "Arloheim, Maanzigt", modality = "elevator", location = "Arloheim"}

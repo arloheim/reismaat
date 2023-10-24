@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "gulp build",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "update": "git pull && npm install && gulp build",
   }
 }
