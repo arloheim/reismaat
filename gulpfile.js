@@ -7,6 +7,13 @@ const sass = require('gulp-sass')(require('node-sass'));
 const source = require('vinyl-source-stream');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
+var webserver = require('gulp-webserver');
+
+
+function handleError(err) {
+  console.error(err);
+  this.emit('end');
+}
 
 
 async function js() {
@@ -14,7 +21,7 @@ async function js() {
   b.transform('brfs');
 
   return b.bundle()
-    .on('error', console.log)
+    .on('error', handleError)
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(gulp.dest('./dist/js'))
@@ -29,18 +36,22 @@ async function css() {
     .pipe(rename('bundle.css'))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'condensed', includePaths: ['./node_modules']})
-       .on('error', console.log))
+       .on('error', handleError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'));
 }
 
-async function watch() {
+async function dev() {
   gulp.watch('src/js/**.js', js);
   gulp.watch('src/data/**', js);
   gulp.watch('src/templates/**', js);
   gulp.watch('src/scss/**.scss', css);
+
+  return gulp.src('.')
+    .pipe(webserver({fallback: 'index.html', livereload: true}))
+    .on('error', handleError);
 }
 
 
 exports.build = gulp.series(js, css);
-exports.watch = watch;
+exports.dev = dev;

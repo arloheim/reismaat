@@ -2,9 +2,19 @@
   "name": "reismaat",
   "version": "1.0.0",
   "description": "",
-  "author": "danae",
+  "author": "Danae Dekker",
+  "constributors": ["Danae Dekker", "Sjors Bes"],
   "license": "GPL-3.0-or-later",
-  "main": "js/main.js",
+  "browser": "src/js/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danae/reismaat.git"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "postinstall": "gulp build",
+    "update": "git pull && npm install"
+  },
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
     "@fortawesome/fontawesome-free": "^6.4.2",
@@ -26,10 +36,7 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
-  "scripts": {
-    "build": "gulp build",
-    "watch": "gulp watch",
-    "serve": "http-server --proxy http://localhost:8080?",
-    "update": "git pull && npm install && gulp build"
+  "devDependencies": {
+    "gulp-webserver": "^0.9.1"
   }
 }
