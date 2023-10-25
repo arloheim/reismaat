@@ -21,10 +21,10 @@ arm_for_art_for = {between = "arm_for", and = "art_for", time = 120}
 nsb_arfo_arl_for = {between = "nsb_arfo", and = "arl_for", time = 240}
 arm_arfo_arl_for = {between = "arm_for", and = "arl_for", time = 240}
 art_for_arl_for = {between = "art_for", and = "arl_for", time = 120}
-nsb_arfo_hyp_for = {between = "nsb_arfo", and = "hyp_for", time = 300, separate = true}
-arm_arfo_hyp_for = {between = "arm_for", and = "hyp_for", time = 300, separate = true}
-art_for_hyp_for = {between = "art_for", and = "hyp_for", time = 360, separate = true}
-arl_for_hyp_for = {between = "arl_for", and = "hyp_for", time = 360, separate = true}
+nsb_arfo_hyp_arfo = {between = "nsb_arfo", and = "hyp_arfo", time = 300, separate = true}
+arm_arfo_hyp_arfo = {between = "arm_for", and = "hyp_arfo", time = 300, separate = true}
+art_for_hyp_arfo = {between = "art_for", and = "hyp_arfo", time = 360, separate = true}
+arl_for_hyp_arfo = {between = "arl_for", and = "hyp_arfo", time = 360, separate = true}
 # Arloheim Panderberg / Panderberg
 nsb_arp_arm_pdb = {between = "nsb_arp", and = "arm_pdb", time = 120}
 # Arloheim Centraal / Centraal Station

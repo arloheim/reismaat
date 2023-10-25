@@ -924,7 +924,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 02 = {node = "art_dbk", time = 15, platform = "1"}
 03 = {node = "art_vtr", time = 30, platform = "1"}
 04 = {node = "art_vmt", time = 15, platform = "1"}
-05 = {node = "art_gnv", time = 15, platform = "11", headsign = "Fort van Raduyn"}
+05 = {node = "art_stn", time = 15, platform = "11", headsign = "Fort van Raduyn"}
 06 = {node = "art_cyp", time = 15, platform = "1"}
 07 = {node = "art_ktw", time = 15, platform = "1"}
 08 = {node = "art_ksm", time = 15, platform = "1"}
@@ -945,7 +945,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 03 = {node = "art_ksm", time = 15, platform = "1"}
 04 = {node = "art_ktw", time = 15, platform = "1"}
 05 = {node = "art_cyp", time = 15, platform = "2"}
-06 = {node = "art_gnv", time = 15, platform = "12", headsign = "Aalsterve"}
+06 = {node = "art_stn", time = 15, platform = "12", headsign = "Aalsterve"}
 07 = {node = "art_vmt", time = 15, platform = "2"}
 08 = {node = "art_vtr", time = 15, platform = "2"}
 09 = {node = "art_dbk", time = 30, platform = "1"}

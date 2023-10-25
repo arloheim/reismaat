@@ -11,7 +11,7 @@ require('@fortawesome/fontawesome-free/js/all.js');
 // Event handler when the document is ready
 $(function() {
   // Load the feed
-  let feed = new data.Feed();
+  let theFeed = new feed.Feed();
 
   // Create the router
   let $routeView = $('#view');
@@ -90,8 +90,8 @@ $(function() {
       as: 'reisplanner',
       uses: function(match) {
         templates.reisplanner($routeView, {
-          notifications: feed.notifications,
-          hasNotifications: feed.notifications.length > 0,
+          notifications: theFeed.notifications,
+          hasNotifications: theFeed.notifications.length > 0,
         });
       }
     },
@@ -106,8 +106,8 @@ $(function() {
       as: 'meldingen',
       uses: function(match) {
         templates.meldingen($routeView, {
-          notifications: feed.notifications,
-          hasNotifications: feed.notifications.length > 0,
+          notifications: theFeed.notifications,
+          hasNotifications: theFeed.notifications.length > 0,
         });
       }
     },
@@ -121,13 +121,13 @@ $(function() {
       as: 'dienstregeling',
       uses: function(match) {
         templates.dienstregeling($routeView, {
-          routes: _.chain(feed.routes)
+          routes: _.chain(theFeed.routes)
             .groupBy(r => r.agency.id)
             .pairs()
-            .map(([agencyId, agencyRoutes]) => ({agency: feed.getAgency(agencyId), agencyModalities: _.chain(agencyRoutes)
+            .map(([agencyId, agencyRoutes]) => ({agency: theFeed.getAgency(agencyId), agencyModalities: _.chain(agencyRoutes)
                 .groupBy(r => r.modality.id)
                 .pairs()
-                .map(([modalityId, modalityRoutes]) => ({modality: feed.getModality(modalityId), modalityRoutes}))
+                .map(([modalityId, modalityRoutes]) => ({modality: theFeed.getModality(modalityId), modalityRoutes}))
                 .value()}))
             .value()
         });
@@ -136,7 +136,7 @@ $(function() {
     '/dienstregeling/:id': {
       as: 'dienstregeling.details',
       uses: function(match) {
-        let route = feed.getRoute(match.data.id);
+        let route = theFeed.getRoute(match.data.id);
 
         if (route !== undefined)
           templates.dienstregeling($routeView, {route});
@@ -153,7 +153,7 @@ $(function() {
     '/stations/:id': {
       as: 'stations.details',
       uses: function(match) {
-        let node = feed.getNode(match.data.id);
+        let node = theFeed.getNode(match.data.id);
         let nodeRoutes = node?.routesExcludingNonHalts
           .map(route => ({route, stop: route.getStopAtNode(node)}))
           .toSorted((a, b) => a.stop.platform.localeCompare(b.stop.platform));

@@ -142,10 +142,11 @@ class Transfer
   constructor(feed, props) {
     this._feed = feed;
 
+    this.id = props.id;
     this.between = props.between;
     this.and = props.and;
     this.time = props.time;
-    this.initialTime = props.initialTime;
+    this.initialTime = props.initialTime ?? 0;
 
     // Calculate the cumulative time of the transfer
     this.cumulativeTime = this.initialTime + this.time;
@@ -214,7 +215,7 @@ class Route
 
   // Copy the route
   copy(modifiedProps = {}) {
-    return new Route(this._feed, {...this, modifiedProps});
+    return new Route(this._feed, {...this, ...modifiedProps});
   }
 
   // Slice the route to begin at the specified node
@@ -375,6 +376,9 @@ class Feed
 
   // Return the modality with the specified id in the feed
   getModality(id) {
+    if (id === undefined)
+      return undefined;
+
     let modality = this._modalities[id];
     if (modality === undefined)
       console.warn(`Could not find modality with id '${id}'`);
@@ -388,6 +392,9 @@ class Feed
 
   // Return the node with the specified id in the feed
   getNode(id) {
+    if (id === undefined)
+      return undefined;
+
     let node =  this._nodes[id];
     if (node === undefined)
       console.warn(`Could not find node with id '${id}'`);
@@ -406,6 +413,9 @@ class Feed
 
   // Return the transfer with the specified id in the feed
   getTransfer(id) {
+    if (id === undefined)
+      return undefined;
+
     let transfer = this._transfers[id];
     if (transfer === undefined)
       console.warn(`Could not find transfer with id '${id}'`);
@@ -429,6 +439,9 @@ class Feed
 
   // Return the route with the specified id in the feed
   getRoute(id) {
+    if (id === undefined)
+      return undefined;
+
     let route = this._routes[id];
     if (route === undefined)
       console.warn(`Could not find route with id '${id}'`);
@@ -447,6 +460,9 @@ class Feed
 
   // Return the notification with the specified id in the feed
   getNotification(id) {
+    if (id === undefined)
+      return undefined;
+
     let notification = this._notifications[id];
     if (notification === undefined)
       console.warn(`Could not find notification with id '${id}'`);
@@ -482,6 +498,8 @@ class Feed
 
   // Parse a transfer from an object
   _parseTransfer(transfer, id) {
+    transfer.between = this.getNode(transfer.between);
+    transfer.and = this.getNode(transfer.and);
     return new Transfer(this, {id, ...transfer});
   }
 
