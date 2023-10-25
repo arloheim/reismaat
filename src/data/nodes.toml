@@ -22,7 +22,8 @@ nsb_dw = {name = "Danewolde", code = "dw", modality = "rail"}
 nsb_dwo = {name = "Danewolde Overwaer", code = "swo", modality = "rail"}
 nsb_dd = {name = "Dinsdrecht", code = "ss", modality = "rail"}
 nsb_fta = {name = "Finiterra", code = "fta", modality = "rail"}
-nsb_fm = {name = "Fremond", code = "fm", modality = "rail"}
+nsb_fm = {name = "Fremond aan Zee", code = "fm", modality = "rail"}
+nsb_fmc = {name = "Fremond Centrum", code = "fmc", modality = "rail"}
 nsb_gt = {name = "Gaterade", code = "gt", modality = "rail"}
 nsb_gth = {name = "Gaterade Haven", code = "gth", modality = "rail"}
 nsb_gtp = {name = "Gaterade Poort", code = "gtp", modality = "rail"}

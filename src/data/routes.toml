@@ -77,7 +77,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 agency = "nsb_is"
 modality = "rail"
 name = "D7 (Giedrecht Zuid ⟶ Arloheim Centraal)"
-headsign = "Giedrecht Zuid"
+headsign = "Arloheim Centraal"
 abbr = "D7"
 color = {background = "#4d1515", text = "#ffffff"}
 
@@ -272,7 +272,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 03 = {node = "nsb_av", time = 30, platform = "3"}
 04 = {node = "nsb_avi", time = 30, platform = "1"}
 05 = {node = "nsb_db", time = 45, platform = "2"}
-06 = {node = "nsb_wh", time = 60, platform = "2"}
+06 = {node = "nsb_wh", time = 60, platform = "1"}
 07 = {node = "nsb_qs", time = 45, platform = "2"}
 08 = {node = "nsb_ar", time = 30, platform = "5"}
 09 = {node = "nsb_arp", time = 30, platform = "2"}
@@ -598,7 +598,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_gdz", time = 120, platform = "2"}
 11 = {node = "nsb_gd", time = 30, platform = "2"}
 12 = {node = "nsb_dd", time = 30, platform = "2"}
-13 = {node = "nsb_rdk", time = 105, platform = "", cancelled = "true"}
+13 = {node = "nsb_rdk", time = 105, platform = "1"}
 14 = {node = "nsb_wl", time = 90, platform = "1"}
 
 [nsb_s30_b]
@@ -611,7 +611,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s30_b.stops]
 01 = {node = "nsb_wl", time = 0, platform = "2"}
-02 = {node = "nsb_rdk", time = 90, platform = "", cancelled = "true"}
+02 = {node = "nsb_rdk", time = 90, platform = "1"}
 03 = {node = "nsb_dd", time = 105, platform = "1"}
 04 = {node = "nsb_gd", time = 30, platform = "1"}
 05 = {node = "nsb_gdz", time = 30, platform = "1"}
@@ -628,36 +628,36 @@ color = {background = "#2b7749", text = "#ffffff"}
 [nsb_s31_a]
 agency = "nsb_is"
 modality = "rail"
-name = "S31 (Fremond ⟶ Berkenhoven)"
+name = "S31 (Fremond aan Zee ⟶ Berkenhoven)"
 headsign = "Berkenhoven"
 abbr = "S31"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s31_a.stops]
 01 = {node = "nsb_fm", time = 0, platform = "", cancelled = "true"}
-# [...]
-02 = {node = "nsb_rks", time = 0, platform = "2"}
-03 = {node = "nsb_md", time = 30, platform = "2"}
-04 = {node = "nsb_vkh", time = 60, platform = "6"}
-05 = {node = "nsb_hak", time = 45, platform = "2"}
-06 = {node = "nsb_bkh", time = 60, platform = "34"}
+02 = {node = "nsb_fmc", time = 0, platform = "2"}
+03 = {node = "nsb_rks", time = 60, platform = "2"}
+04 = {node = "nsb_md", time = 30, platform = "2"}
+05 = {node = "nsb_vhz", time = 60, platform = "6"}
+06 = {node = "nsb_hak", time = 45, platform = "2"}
+07 = {node = "nsb_bkh", time = 60, platform = "34"}
 
 [nsb_s31_b]
 agency = "nsb_is"
 modality = "rail"
-name = "S31 (Berkenhoven ⟶ Fremond)"
-headsign = "Fremond"
+name = "S31 (Berkenhoven ⟶ Fremond aan Zee)"
+headsign = "Fremond aan Zee"
 abbr = "S31"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s31_b.stops]
 01 = {node = "nsb_bkh", time = 0, platform = "34"}
 02 = {node = "nsb_hak", time = 60, platform = "1"}
-03 = {node = "nsb_vkh", time = 45, platform = "1"}
+03 = {node = "nsb_vhz", time = 45, platform = "1"}
 04 = {node = "nsb_md", time = 60, platform = "1"}
 05 = {node = "nsb_rks", time = 30, platform = "1"}
-# [...]
-06 = {node = "nsb_fm", time = 0, platform = "", cancelled = "true"}
+06 = {node = "nsb_fmc", time = 60, platform = "1"}
+07 = {node = "nsb_fm", time = 0, platform = "", cancelled = "true"}
 
 
 # Metro Arloheim
