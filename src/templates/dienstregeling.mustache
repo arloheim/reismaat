@@ -17,18 +17,21 @@
 
         <table class="table is-narrow">
           <tr>
-            <th style="width:80%">Stop</th>
-            <th style="width:20%">Spoor</th>
+            <th class="has-text-right" style="width:15%">Tijd</th>
+            <th style="width:70%">Stop</th>
+            <th style="width:15%">Spoor</th>
           </tr>
 
           {{#stops}}
             <tr>
               {{^cancelled}}
+                <td class="has-text-right">{{cumulativeTime}}</td>
                 <td>{{& node.shortDisplayLinkHtml}}</td>
                 <td>{{platform}}</td>
               {{/cancelled}}
 
               {{#cancelled}}
+                <td class="has-text-right">{{cumulativeTime}}</td>
                 <td>{{& node.shortDisplayLinkHtml}} <span class="has-text-weight-bold has-text-danger-dark">(vervalt)</span></td>
                 <td>&nbsp;</td>
               {{/cancelled}}

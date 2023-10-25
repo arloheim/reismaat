@@ -327,7 +327,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 03 = {node = "nsb_av", time = 30, platform = "2"}
 04 = {node = "nsb_avi", time = 30, platform = "1"}
 05 = {node = "nsb_db", time = 45, platform = "3"}
-06 = {node = "nsb_lv", time = 45, platform = "1"}
+06 = {node = "nsb_lvn", time = 45, platform = "1"}
 
 [nsb_s16_b]
 agency = "nsb_fu"
@@ -338,7 +338,7 @@ abbr = "S16"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s16_b.stops]
-01 = {node = "nsb_lv", time = 0, platform = "1"}
+01 = {node = "nsb_lvn", time = 0, platform = "1"}
 02 = {node = "nsb_db", time = 45, platform = "3"}
 03 = {node = "nsb_avi", time = 45, platform = "2"}
 04 = {node = "nsb_av", time = 30, platform = "7"}

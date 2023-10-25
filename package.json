@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "author": "Danae Dekker",
-  "constributors": ["Danae Dekker", "Sjors Bes"],
+  "constributors": [
+    "Danae Dekker",
+    "Sjors Bes"
+  ],
   "license": "GPL-3.0-or-later",
   "browser": "src/js/main.js",
   "repository": {

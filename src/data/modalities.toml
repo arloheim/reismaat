@@ -1,13 +1,50 @@
 # Trein, metro, tram, veerboot
-rail = {name = "Trein", node_name = "Treinstation", icon = 'train'}
-subway = {name = "Metro", node_name = "Metrostation", icon = 'train-subway'}
-tram = {name = "Tram", node_name = "Tramhalte", icon = 'train-tram'}
-ferry = {name = "Veerboot", node_name = "Veerhaven", icon = 'ferry'}
+[rail]
+name = 'Trein'
+nodeName = 'Treinstation'
+description = 'Railgebonden regionaal of interregionaal vervoer'
+icon = 'train'
+
+[subway]
+name = 'Metro'
+nodeName = 'Metrostation'
+description = 'Railgebonden vervoer in een agglomeratie gebruik makend van een conflictvrije baan'
+icon = 'train-subway'
+
+[tram]
+name = 'Tram'
+nodeName = 'Tramhalte'
+description = 'Railgebonden vervoer in een agglomeratie op straatniveau'
+icon = 'train-tram'
+
+[ferry]
+name = 'Veerboot'
+nodeName = 'Veerhaven'
+description = 'Korte- of langeafstandsvervoer per boot'
+icon = 'ferry'
 
 # Overige modaliteiten
-funicular = {name = "Funiculaire", node_name = "Funiculaire", icon = 'cable-car'}
-elevator = {name = "Lift", node_name = "Lift", icon = 'elevator'}
+[funicular]
+name = 'Funiculaire'
+nodeName = 'Funiculaire'
+description = 'Railgebonden transportsysteem voor het overbruggen van hoogteverschillen'
+icon = 'cable-car'
+
+[elevator]
+name = 'Lift'
+nodeName = 'Lift'
+description = 'Verticaal transportsysteem voor het overbruggen van hoogteverschillen'
+icon = 'elevator'
 
 # Besloten vervoer
-hyperloop = {name = "Hyperloop", node_name = "Hyperloopstation", icon = 'bolt'}
-eqh = {name = "Flexpaard", node_name = "Flexpaardhub", icon = 'horse-head'}
+[hyperloop]
+name = 'Hyperloop'
+nodeName = 'Hyperloopstation'
+description = 'Transportsysteem voor langeafstandsvervoer gebruikmakend van een luchtdrukbuis'
+icon = 'bolt'
+
+[eqh]
+name = 'Flexpaard'
+nodeName = 'Flexpaardhub'
+description = 'Huursysteem voor deelpaarden'
+icon = 'horse-head'
