@@ -249,6 +249,8 @@ eqd_zd = {name = "'t Zand"}
 eqd_abd = {name = "Abende"}
 eqd_sjo = {name = "Sint Jan bij de Oase"}
 eqd_wp = {name = "Witte Paarden"}
+eqd_ngv = {name = "Negenervroente"}
+eqd_fdp = {name = "Ferdrop"}
 
 # Museumstations
 mus_hz = {name = "Halenz (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
