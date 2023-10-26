@@ -98,4 +98,4 @@ arf_mzt_arl_mzt = {between = "arf_mzt", and = "arl_mzt", time = 60}
 # Tram Amsvorde
 
 # Sluisweg / Weenisweg
-avt_ssw_avt_wnw = {between = "avt_ssw", and = "avt_wnw", time = 0, separate = true}
+avt_ssw_avt_wnw = {between = "avt_ssw", and = "avt_wnw", time = 60, separate = true}

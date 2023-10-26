@@ -317,6 +317,7 @@ class Notification
     this.affectedRoutes = props.affectedRoutes ?? [];
     this.icon = props.icon ?? this.type?.icon ?? 'circle-info';
     this.color = props.color ?? this.type?.color ?? 'info';
+    this.showInOverview = props.showInOverview ?? false;
   }
 
   // Return if the notification has affected nodes

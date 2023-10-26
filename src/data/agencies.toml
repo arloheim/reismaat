@@ -24,7 +24,7 @@ name = "Giedrechtse Vervoersdienst"
 abbr = "GVD"
 
 [hyp]
-name = "Hyperloop"
+name = "hyperloop.ih"
 
 [equual]
 name = "Equual"

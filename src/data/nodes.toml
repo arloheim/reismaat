@@ -227,7 +227,7 @@ fer_vdo = {name = "Valle Deserta, Voetveer Oost", modality = "ferry"}
 fer_vdw = {name = "Valle Deserta, Voetveer West", modality = "ferry"}
 fer_stio = {name = "Storia Infinita, Voetveer Oost", modality = "ferry"}
 fer_stiw = {name = "Storia Infinita, Voetveer West", modality = "ferry"}
-fer_wp = {name = "Wittepaarden, Voetveer", modality = "ferry"}
+fer_wp = {name = "Witte Paarden, Voetveer", modality = "ferry"}
 fer_sg = {name = "Slinger, Voetveer", modality = "ferry"}
 
 # Flexpaarden

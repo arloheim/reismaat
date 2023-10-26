@@ -240,7 +240,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 [nsb_s12_a]
 agency = "nsb_fu"
 modality = "rail"
-name = "S12 (Arloheim  Campus ⟶ Amsvorde Venpoort)"
+name = "S12 (Arloheim Campus ⟶ Amsvorde Venpoort)"
 headsign = "Amsvorde Venpoort"
 abbr = "S12"
 color = {background = "#2b7749", text = "#ffffff"}
@@ -261,8 +261,8 @@ color = {background = "#2b7749", text = "#ffffff"}
 [nsb_s12_b]
 agency = "nsb_fu"
 modality = "rail"
-name = "S12 (Amsvorde Venpoort ⟶ Arloheim  Campus)"
-headsign = "Arloheim  Campus"
+name = "S12 (AmsvordeVenpoort ⟶ Arloheim Campus)"
+headsign = "Arloheim Campus"
 abbr = "S12"
 color = {background = "#2b7749", text = "#ffffff"}
 
@@ -1381,8 +1381,7 @@ agency = "hyp"
 modality = "hyperloop"
 name = "Hyperloop (Arloheim Forum ⟶ Gaterade Haven)"
 headsign = "Gaterade Haven"
-abbr = "Hyperloop"
-color = {background = "#aac735", text = "#ffffff"}
+color = {background = "#4a4a4a", text = "#ffffff"}
 
 [hyp_a.stops]
 01 = {node = "hyp_arfo", time = 0}
@@ -1393,8 +1392,7 @@ agency = "hyp"
 modality = "hyperloop"
 name = "Hyperloop (Gaterade Haven ⟶ Arloheim Forum)"
 headsign = "Arloheim Forum"
-abbr = "Hyperloop"
-color = {background = "#aac735", text = "#ffffff"}
+color = {background = "#4a4a4a", text = "#ffffff"}
 
 [hyp_b.stops]
 01 = {node = "hyp_gth", time = 0}

@@ -1,11 +1,10 @@
-[nsb_vt_disrupted]
-type = "construction"
-name = "Vittoria - Urbigno / Vittoria - Finiterra / Vittoria - Greneylant"
-description = "Door werkzaamheden rijdt trein S10 van Arloheim Centraal tot Vittoria v.v. Trein S17 en trein S97 rijden niet."
-period = "tot 1 november 2023"
-affectedNodes = ["nsb_vt", "nsb_vv", "nsb_sti", "nsb_ub", "nsb_sb", "nsb_tp", "nsb_mso", "nsb_css", "nsb_fta", "nsb_vd", "nsb_snz", "nsb_snn", "nsb_lr", "nsb_gnl"]
-affectedRoutes = ["nsb_s10_a", "nsb_s10_b", "nsb_s17_a", "nsb_s17_b", "nsb_s97_a", "nsb_s97_b"]
+# Algemene meldingen
+[separate_ticket]
+name = "Vereist een apart ticket"
+affectedRoutes = ["hyp_a", "hyp_b"]
 
+
+# Storingen en werkzaamheden
 [nsb_d7_changed]
 type = "construction"
 name = "Woenslaken - Giedrecht"
@@ -13,14 +12,16 @@ description = "Door werkzaamheden stopt trein D7 tussen Woenslaken en Giedrecht 
 period = "tot nader order"
 affectedNodes = ["nsb_rdk", "nsb_dd"]
 affectedRoutes = ["nsb_d7_a", "nsb_d7_b"]
+showInOverview = true
 
-#[nsb_s17_disrupted]
-#type = "construction"
-#name = "Masarino - Finiterra (S17)"
-#description = "Door werkzaamheden worden de treinstations Casesecce, Altione en Finiterra niet bediend. Trein S17 rijdt van Amsvorde Centraal tot Masarino v.v."
-#period = "tot nader order"
-#affectedNodes = ["nsb_css", "nsb_alt", "nsb_fta"]
-#affectedRoutes = ["nsb_s17_a", "nsb_s17_b"]
+[nsb_s17_disrupted]
+type = "construction"
+name = "Masarino - Finiterra (S17)"
+description = "Door werkzaamheden worden de treinstations Casesecce, Altione en Finiterra niet bediend. Trein S17 rijdt van Amsvorde Centraal tot Masarino v.v."
+period = "tot nader order"
+affectedNodes = ["nsb_css", "nsb_alt", "nsb_fta"]
+affectedRoutes = ["nsb_s17_a", "nsb_s17_b"]
+showInOverview = true
 
 [nsb_s21_disrupted]
 type = "construction"
@@ -29,6 +30,7 @@ description = "Door werkzaamheden wordt het treinstation Zonnemarsen niet bedien
 period = "tot nader order"
 affectedNodes = ["nsb_zms"]
 affectedRoutes = ["nsb_s21_a", "nsb_s21_b"]
+showInOverview = true
 
 [nsb_s22_disrupted]
 type = "construction"
@@ -37,6 +39,7 @@ description = "Door werkzaamheden worden de treinstations Hoortmeer, Westhoornik
 period = "tot nader order"
 affectedNodes = ["nsb_hmr", "nsb_whk", "nsb_gvn"]
 affectedRoutes = ["nsb_s22_a", "nsb_s22_b"]
+showInOverview = true
 
 [nsb_s30_disrupted]
 type = "construction"
@@ -45,6 +48,7 @@ description = "Door werkzaamheden worden de treinstations Malmen Zuid, Malmen en
 period = "tot nader order"
 affectedNodes = ["nsb_mmz", "nsb_mm", "nsb_hk"]
 affectedRoutes = ["nsb_s30_a", "nsb_s30_b"]
+showInOverview = true
 
 [nsb_s31_disrupted]
 type = "construction"
@@ -53,11 +57,13 @@ description = "Door werkzaamheden wordt het treinstation Fremond aan Zee niet be
 period = "tot nader order"
 affectedNodes = ["nsb_fm"]
 affectedRoutes = ["nsb_s31_a", "nsb_s31_b"]
+showInOverview = true
 
-#[nsb_s97_disrupted]
-#type = "construction"
-#name = "Schieren Zuid - Greneylant (S97)"
-#description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein S97 rijdt van Vittoria tot Schieren Zuid."
-#period = "tot nader order"
-#affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
-#affectedRoutes = ["nsb_s97_a", "nsb_s97_b"]
+[nsb_s97_disrupted]
+type = "construction"
+name = "Schieren Zuid - Greneylant (S97)"
+description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein S97 rijdt van Vittoria tot Schieren Zuid."
+period = "tot nader order"
+affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
+affectedRoutes = ["nsb_s97_a", "nsb_s97_b"]
+showInOverview = true
