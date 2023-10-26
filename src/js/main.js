@@ -3,6 +3,7 @@ const _ = require('underscore');
 const dayjs = require('dayjs');
 const Navigo = require('navigo');
 
+const algorithm = require('./algorithm')
 const feed = require('./feed.js')
 const templates = require('./templates.js');
 
@@ -139,11 +140,21 @@ $(function() {
         templates.render($routeView, 'pages/reisplanner', {notifications: theFeed.notifications.filter(n => n.showInOverview), datetime: dayjs().format('YYYY-MM-DDTHH:mm')}, onTemplateRendered);
       }
     },
-    '/planner': {
-      as: 'reisplanner-results',
+    '/reisadvies': {
+      as: 'reisadvies',
       uses: function(match) {
-        let from = match.params?.van ?? undefined;
-        let to = match.params?.naar ?? undefined;
+        console.log(match);
+        let from = theFeed.getNode(match.params?.van);
+        let to = theFeed.getNode(match.params?.naar);
+
+        if (from !== undefined && to !== undefined) {
+          let algo = new algorithm.RaptorAlgorithm(theFeed);
+          let journeys = algo.calculate(from, to);
+
+          templates.render($routeView, 'pages/reisadvies', {from, to, journeys}, onTemplateRendered);
+        } else {
+          templates.renderNotFound($routeView, {}, onTemplateRendered);
+        }
       }
     },
     '/meldingen': {

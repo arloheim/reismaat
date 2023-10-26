@@ -152,9 +152,34 @@ class Transfer
     this.cumulativeTime = this.initialTime + this.time;
   }
 
+  // Get the opposite node of the speficied node in the transfer
+  getOppositeNode(node) {
+    if (this.between.id === node.id)
+      return this.and;
+    else if (this.and.id === node.id)
+      return this.between;
+    else
+      return undefined;
+  }
+
   // Copy the transfer
   copy(modifiedProps = {}) {
-    return new Transfer(this._feed, {...this, modifiedProps});
+    return new Transfer(this._feed, {...this, ...modifiedProps});
+  }
+
+  // Align the transfer to the specified node
+  alignToNode(node) {
+    if (this.between.id === node.id)
+      return this.copy();
+    else if (this.and.id === node.id)
+      return this.copy({between: this.and, and: this.between});
+    else
+      return undefined;
+  }
+
+  // Align the transfer to the opposite node of the specified node
+  alignToOppositeNode(node) {
+    return this.alignToNode(this.getOppositeNode(node));
   }
 
   // Apply an initial time to the transfer
@@ -185,8 +210,15 @@ class Route
     this.initialTime = props.initialTime ?? 0;
 
     // Calculate cumulative time for the stops of the route
+    let lastHeadsign = this.headsign;
     for (let [index, stop] of this.stops.entries())
     {
+      // Set the headsign of the stop
+      if (stop.headsign !== undefined)
+        lastHeadsign = stop.headsign;
+      else
+        stop.headsign = lastHeadsign;
+
       // Set the last flag of the last stop
       stop.last = index === this.stops.legnth - 1;
 
@@ -227,7 +259,7 @@ class Route
   // Slice the route to end at the specified node
   sliceEndingAtNode(node) {
     let index = this.getStopIndexAtNode(node);
-    return index > -1 ? this.copy({stops: this.stops.slice(0, index)}) : this.copy();
+    return index > -1 ? this.copy({stops: this.stops.slice(0, index + 1)}) : this.copy();
   }
 
   // Apply an initial time to the route
@@ -238,9 +270,12 @@ class Route
 
   // Return the short display as an element or HTML
   get shortDisplayElement() {
-    return $('<span class="route">')
-      .css({background: this.color.background, color: this.color.text})
-      .html(this.abbr ?? this.name);
+    return $('<span class="icon-text">')
+      .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
+      .append($('<span>')
+        .append($('<span class="route">')
+          .css({background: this.color.background, color: this.color.text})
+          .html(this.abbr ?? this.name)));
   }
   get shortDisplayHtml() {
     return this.shortDisplayElement.prop('outerHTML');
@@ -254,7 +289,7 @@ class Route
         .append($('<span class="route">')
           .css({background: this.color.background, color: this.color.text})
           .html(this.abbr ?? this.name))
-        .append($('<span>').html(` ⟶ ${this.headsign}`)));
+        .append($('<span>').html(` naar ${this.headsign}`)));
   }
   get longDisplayHtml() {
     return this.longDisplayElement.prop('outerHTML');
@@ -294,6 +329,7 @@ class RouteStop
     this.halts = props.halts ?? true;
     this.cancelled = props.cancelled ?? false;
     this.platform = props.platform || undefined;
+    this.headsign = props.headsign;
   }
 
   // Copy the stop
@@ -353,8 +389,12 @@ class Feed
     this._routes = this._loadRoutes();
     this._notifications = this._loadNotifications();
 
-    this.nodesIndex = new MiniSearch({fields: ['name', 'location', 'code'], storeFields: ['type'], searchOptions: {prefix: true, fuzzy: 0.1, combineWith: 'AND', boost: {name: 2}, boostDocument: this._boostNodeDocument}});
-    this.nodesIndex.addAll(Object.values(this.nodes));
+    this._nodesIndex = new MiniSearch({
+      fields: ['name', 'location', 'code'],
+      storeFields: ['modality'],
+      searchOptions: {prefix: true, fuzzy: 0.1, combineWith: 'AND', boost: {name: 2}, boostDocument: this._boostNodeDocument.bind(this)}
+    });
+    this._nodesIndex.addAll(Object.values(this.nodes));
   }
 
   // Return the agencies in the feed
@@ -557,12 +597,11 @@ class Feed
   }
 
   _boostNodeDocument(id, term, storedFields) {
-    let types = Object.keys(modalities);
-    let typeIndex = types.indexOf(storedFields.type);
-    if (typeIndex === -1)
-      return 1;
+    let modalityIndex = this.modalities.findIndex(m => m.id === storedFields.modality?.id);
+    if (storedFields.modality !== undefined && modalityIndex > -1)
+      return 0.7 + (this.modalities.length - modalityIndex) / this.modalities.length * 0.3;
     else
-      return 0.7 + (types.length - typeIndex) / types.length * 0.3;
+      return 0.7;
   }
 }
 
