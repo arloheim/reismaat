@@ -9,7 +9,7 @@ const MiniSearch = require('minisearch');
 // Map of the defined notification types
 const _notificationTypes = {
   disruption: {icon: 'triangle-exclamation', color: 'danger', name: "Storing"},
-  construction: {icon: 'road-barrier', color: 'warning', name: "Werkzaamheden"},
+  construction: {icon: 'triangle-exclamation', color: 'warning', name: "Werkzaamheden"},
 };
 
 

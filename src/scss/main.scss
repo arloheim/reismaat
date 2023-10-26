@@ -291,6 +291,7 @@ body {
     &.is-platform {
       @extend .is-flex-shrink-0;
       @extend .is-flex-grow-0;
+      @extend .has-text-weight-bold;
 
       width: 4.5rem;
     }
@@ -334,6 +335,7 @@ body {
 // Route abbreviation styling
 .route-abbr {
   @extend .has-text-weight-bold;
+  @extend .mr-1;
   @extend .px-1;
 }
 

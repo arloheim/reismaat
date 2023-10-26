@@ -1,0 +1,27 @@
+{{#route}}
+  <div class="tile is-ancestor">
+    <div class="tile is-5 is-parent">
+      <div class="tile is-child box has-background-white">
+        <h3 class="mb-4">dienstregeling</h3>
+
+        <h5 class="mb-2">Lijn</h5>
+        <p>{{> feed/route_long}}</p>
+
+        <h5 class="mb-2">Modaliteit</h5>
+        <p>{{modalityName}} van <a target="_blank" href="{{agency.url}}">{{agency.name}}</a></p>
+
+        {{#notifications.length}}
+          <h5 class="mb-2">Meldingen</h5>
+
+          {{#notifications}}
+            {{> feed/notification}}
+          {{/notifications}}
+        {{/notifications.length}}
+      </div>
+    </div>
+
+    <div class="tile is-7 is-parent">
+      {{> tiles/route_stops}}
+    </div>
+  </div>
+{{/route}}

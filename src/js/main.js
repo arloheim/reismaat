@@ -138,7 +138,7 @@ $(function() {
     '/': {
       as: 'reisplanner',
       uses: function(match) {
-        templates.render($routeView, 'pages/reisplanner', {notifications: theFeed.notifications.filter(n => n.showInOverview), datetime: dayjs().format('YYYY-MM-DDTHH:mm')}, onTemplateRendered);
+        templates.render($routeView, 'pages/home', {notifications: theFeed.notifications.filter(n => n.showInOverview), datetime: dayjs().format('YYYY-MM-DDTHH:mm')}, onTemplateRendered);
       }
     },
     '/reisadvies': {
@@ -153,7 +153,7 @@ $(function() {
           let algo = new algorithm.RaptorAlgorithm(theFeed);
           let journeys = algo.calculate(from, to, dayjs(datetime));
 
-          templates.render($routeView, 'pages/reisadvies', {from, to, datetime, journeys}, onTemplateRendered);
+          templates.render($routeView, 'pages/planner', {from, to, datetime, journeys}, onTemplateRendered);
         } else {
           templates.renderNotFound($routeView, {}, onTemplateRendered);
         }
@@ -162,7 +162,7 @@ $(function() {
     '/meldingen': {
       as: 'meldingen',
       uses: function(match) {
-        templates.render($routeView, 'pages/meldingen', {notifications: theFeed.notifications.filter(n => n.showInOverview)}, onTemplateRendered);
+        templates.render($routeView, 'pages/notifications', {notifications: theFeed.notifications.filter(n => n.showInOverview)}, onTemplateRendered);
       }
     },
     '/tickets': {
@@ -174,7 +174,7 @@ $(function() {
     '/dienstregeling': {
       as: 'dienstregeling',
       uses: function(match) {
-        templates.render($routeView, 'pages/dienstregeling', {
+        templates.render($routeView, 'pages/routes', {
           routes: _.chain(theFeed.routes)
             .groupBy(r => r.agency.id)
             .pairs()
@@ -193,7 +193,7 @@ $(function() {
         let route = theFeed.getRoute(match.data.id);
 
         if (route !== undefined)
-          templates.render($routeView, 'pages/dienstregeling', {
+          templates.render($routeView, 'pages/routes_details', {
             route,
             firstStop: route.stops.at(0),
             lastStop: route.stops.at(-1),
@@ -206,7 +206,7 @@ $(function() {
     '/stations': {
       as: 'stations',
       uses: function(match) {
-        templates.render($routeView, 'pages/stations', {}, onTemplateRendered);
+        templates.render($routeView, 'pages/nodes', {}, onTemplateRendered);
       }
     },
     '/stations/:id': {
@@ -218,7 +218,7 @@ $(function() {
           .toSorted((a, b) => a.stop.platform.localeCompare(b.stop.platform));
 
         if (node !== undefined)
-          templates.render($routeView, 'pages/stations', {node, nodeRoutes}, onTemplateRendered);
+          templates.render($routeView, 'pages/nodes_details', {node, nodeRoutes}, onTemplateRendered);
         else
           templates.renderNotFound($routeView, {}, onTemplateRendered);
       }

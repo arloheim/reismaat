@@ -6,12 +6,14 @@ const path = require('path');
 // Object that contains the available templates
 const _templates = {
   // Normal pages
-  'pages/reisplanner': fs.readFileSync('src/templates/pages/reisplanner.mustache', 'utf-8'),
-  'pages/reisadvies': fs.readFileSync('src/templates/pages/reisadvies.mustache', 'utf-8'),
-  'pages/meldingen': fs.readFileSync('src/templates/pages/meldingen.mustache', 'utf-8'),
+  'pages/home': fs.readFileSync('src/templates/pages/home.mustache', 'utf-8'),
+  'pages/planner': fs.readFileSync('src/templates/pages/planner.mustache', 'utf-8'),
+  'pages/notifications': fs.readFileSync('src/templates/pages/notifications.mustache', 'utf-8'),
   'pages/tickets': fs.readFileSync('src/templates/pages/tickets.mustache', 'utf-8'),
-  'pages/dienstregeling': fs.readFileSync('src/templates/pages/dienstregeling.mustache', 'utf-8'),
-  'pages/stations': fs.readFileSync('src/templates/pages/stations.mustache', 'utf-8'),
+  'pages/routes': fs.readFileSync('src/templates/pages/routes.mustache', 'utf-8'),
+  'pages/routes_details': fs.readFileSync('src/templates/pages/routes_details.mustache', 'utf-8'),
+  'pages/nodes': fs.readFileSync('src/templates/pages/nodes.mustache', 'utf-8'),
+  'pages/nodes_details': fs.readFileSync('src/templates/pages/nodes_details.mustache', 'utf-8'),
 
   // Error pages
   'pages/errors/404': fs.readFileSync('src/templates/pages/errors/404.mustache', 'utf-8'),
@@ -25,6 +27,7 @@ const _templates = {
   'components/journey_box_route': fs.readFileSync('src/templates/components/journey_box_route.mustache', 'utf-8'),
   'components/journey_box_transfer': fs.readFileSync('src/templates/components/journey_box_transfer.mustache', 'utf-8'),
   'components/journey_cell_node': fs.readFileSync('src/templates/components/journey_cell_node.mustache', 'utf-8'),
+  'components/journey_cell_node_simple': fs.readFileSync('src/templates/components/journey_cell_node_simple.mustache', 'utf-8'),
   'components/journey_cell_platform': fs.readFileSync('src/templates/components/journey_cell_platform.mustache', 'utf-8'),
   'components/journey_cell_route': fs.readFileSync('src/templates/components/journey_cell_route.mustache', 'utf-8'),
   'components/journey_cell_time': fs.readFileSync('src/templates/components/journey_cell_time.mustache', 'utf-8'),

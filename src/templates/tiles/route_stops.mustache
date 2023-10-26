@@ -1,28 +1,30 @@
 <div class="tile is-child box has-background-white">
   <h3>haltes</h3>
 
-  <!-- First stop at {{firstStop.node.name}} -->
-  <div class="journey-row is-bold">
-    <div class="journey-cell is-line">
-      <span class="line is-start"></span>
-      <span class="icon has-text-primary">
-        <i class="fa-solid fa-fw fa-circle-dot"></i>
-      </span>
+  {{#firstStop}}
+    <!-- First stop at {{node.name}} -->
+    <div class="journey-row route-first-stop is-bold">
+      <div class="journey-cell is-line">
+        <span class="line is-start"></span>
+        <span class="icon has-text-primary">
+          <i class="fa-solid fa-fw fa-circle-dot"></i>
+        </span>
+      </div>
+
+      {{#node}}
+        {{> components/journey_cell_node_simple}}
+      {{/node}}
+
+      {{#platform}}
+        {{> components/journey_cell_platform}}
+      {{/platform}}
     </div>
-
-    {{#firstStop.node}}
-      {{> components/journey_cell_node}}
-    {{/firstStop.node}}
-
-    {{#firstStop.platform}}
-      {{> components/journey_cell_platform}}
-    {{/firstStop.platform}}
-  </div>
+  {{/firstStop}}
 
   <!-- Intermediate stops -->
   {{#intermediateStops}}
     <!-- Intermediate stop at {{node.name}} -->
-    <div class="journey-row">
+    <div class="journey-row route-intermediate-stop">
       <div class="journey-cell is-line">
         <span class="line"></span>
         <span class="icon has-text-primary">
@@ -31,7 +33,7 @@
       </div>
 
       {{#node}}
-        {{> components/journey_cell_node}}
+        {{> components/journey_cell_node_simple}}
       {{/node}}
 
       {{#platform}}
@@ -40,22 +42,23 @@
     </div>
   {{/intermediateStops}}
 
-  <!-- Last stop at {{lastStop.node.name}} -->
-  <div class="journey-row is-bold">
+  {{#lastStop}}
+    <!-- Last stop at {{node.name}} -->
+    <div class="journey-row route-last-stop is-bold">
+      <div class="journey-cell is-line">
+        <span class="line is-end"></span>
+        <span class="icon has-text-primary">
+          <i class="fa-solid fa-fw fa-circle-dot"></i>
+        </span>
+      </div>
 
-    <div class="journey-cell is-line">
-      <span class="line is-end"></span>
-      <span class="icon has-text-primary">
-        <i class="fa-solid fa-fw fa-circle-dot"></i>
-      </span>
+      {{#node}}
+        {{> components/journey_cell_node_simple}}
+      {{/node}}
+
+      {{#platform}}
+        {{> components/journey_cell_platform}}
+      {{/platform}}
     </div>
-
-    {{#lastStop.node}}
-      {{> components/journey_cell_node}}
-    {{/lastStop.node}}
-
-    {{#lastStop.platform}}
-      {{> components/journey_cell_platform}}
-    {{/lastStop.platform}}
-  </div>
+  {{/lastStop}}
 </div>
