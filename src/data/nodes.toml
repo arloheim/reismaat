@@ -223,24 +223,18 @@ fer_ng = {name = "Negenaar, Veerhaven", modality = "ferry"}
 fer_oh = {name = "Ockholm, Veerhaven", modality = "ferry"}
 fer_nsz = {name = "Noordersluizen, Veerhaven Oosterkade", modality = "ferry"}
 fer_nszw = {name = "Noordersluizen, Veerhaven Westerkade", modality = "ferry"}
-fer_vdo = {name = "Valle Deserta, Voetveer Oost", modality = "ferry"}
-fer_vdw = {name = "Valle Deserta, Voetveer West", modality = "ferry"}
-fer_stio = {name = "Storia Infinita, Voetveer Oost", modality = "ferry"}
-fer_stiw = {name = "Storia Infinita, Voetveer West", modality = "ferry"}
-fer_wp = {name = "Witte Paarden, Voetveer", modality = "ferry"}
-fer_sg = {name = "Slinger, Voetveer", modality = "ferry"}
 
 # Flexpaarden
-eqh_qs = {name = "Al-Qusur", modality = "eqh"}
-eqh_lvn = {name = "Lavijn", modality = "eqh"}
-eqh_avi = {name = "Amsvorde Iberië", modality = "eqh"}
-eqh_sg = {name = "Slinger", modality = "eqh"}
-eqh_vt = {name = "Vittoria", modality = "eqh"}
-eqh_mdz = {name = "Mijdezinder", modality = "eqh"}
-eqh_gth = {name = "Gaterade Haven", modality = "eqh"}
-eqh_dd = {name = "Dinsdrecht", modality = "eqh"}
-eqh_wl = {name = "Woenslaken", modality = "eqh"}
-eqh_sti = {name = "Storia Infinita", modality = "eqh"}
+eqh_qs = {name = "Al-Qusur", modality = "horse_rental"}
+eqh_lvn = {name = "Lavijn", modality = "horse_rental"}
+eqh_avi = {name = "Amsvorde Iberië", modality = "horse_rental"}
+eqh_sg = {name = "Slinger", modality = "horse_rental"}
+eqh_vt = {name = "Vittoria", modality = "horse_rental"}
+eqh_mdz = {name = "Mijdezinder", modality = "horse_rental"}
+eqh_gth = {name = "Gaterade Haven", modality = "horse_rental"}
+eqh_dd = {name = "Dinsdrecht", modality = "horse_rental"}
+eqh_wl = {name = "Woenslaken", modality = "horse_rental"}
+eqh_sti = {name = "Storia Infinita", modality = "horse_rental"}
 
 eqd_ztm = {name = "Zwettem"}
 eqd_nszw = {name = "Noordersluizen, Westerkade"}
