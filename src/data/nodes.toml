@@ -141,6 +141,7 @@ art_hz = {name = "Arloheim, Halenz", modality = "tram", location = "Arloheim"}
 art_mlw = {name = "Arloheim, Molenweg", modality = "tram", location = "Arloheim"}
 art_lan = {name = "Arloheim, Land van Nooid", modality = "tram", location = "Arloheim"}
 art_cs = {name = "Arloheim, Centraal Station", modality = "tram", location = "Arloheim"}
+art_cslz = {name = "Arloheim, Centraal Station (Luneriazijde)", modality = "tram", location = "Arloheim"}
 art_lhv = {name = "Arloheim, Luchthaven", modality = "tram", location = "Arloheim"}
 art_psw = {name = "Arloheim, Passewijde", modality = "tram", location = "Arloheim"}
 art_nvh = {name = "Arloheim, Nijverheid", modality = "tram", location = "Arloheim"}
@@ -217,8 +218,8 @@ avt_vt = {name = "Vittoria, Vittoria", modality = "tram", location = "Vittoria"}
 fer_str = {name = "Stachteren, Veerhaven", modality = "ferry"}
 fer_ng = {name = "Negenaar, Veerhaven", modality = "ferry"}
 fer_oh = {name = "Ockholm, Veerhaven", modality = "ferry"}
-fer_nsz = {name = "Noordersluizen, Veerhaven Oosterkade", modality = "ferry"}
-fer_nszw = {name = "Noordersluizen, Veerhaven Westerkade", modality = "ferry"}
+fer_nszw = {name = "Noordersluizen-West, Veerhaven", modality = "ferry"}
+fer_nszo = {name = "Noordersluizen-Oost, Veerhaven", modality = "ferry"}
 
 # Hyperloop
 hyp_arfo = {name = "Arloheim Forum", modality = "hyperloop", location = "Arloheim"}
@@ -243,7 +244,7 @@ cty_mqd = {name = "Ma'bad Qadim"}
 cty_mea = {name = "Meander"}
 cty_ngv = {name = "Negenervroente"}
 cty_ndh = {name = "Noordenhoek"}
-cty_nsz = {name = "Noordersluizen"}
+cty_nszw = {name = "Noordersluizen-West"}
 cty_nszo = {name = "Noordersluizen-Oost"}
 cty_pdm = {name = "Punto del Mare"}
 cty_rmn = {name = "Ramune"}

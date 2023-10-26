@@ -1036,7 +1036,7 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 06 = {node = "art_hz", time = 15, platform = "12", headsign = "Luchthaven"}
 07 = {node = "art_mlw", time = 15, platform = "2"}
 08 = {node = "art_lan", time = 15, platform = "2"}
-09 = {node = "art_cs", time = 30, platform = "22"}
+09 = {node = "art_cslz", time = 30, platform = "22"}
 10 = {node = "art_lhv", time = 15, platform = "12"}
 
 [art_840_b]
@@ -1049,7 +1049,7 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 
 [art_840_b.stops]
 01 = {node = "art_lhv", time = 0, platform = "11", headsign = "Forum via Halenz"}
-02 = {node = "art_cs", time = 15, platform = "21"}
+02 = {node = "art_cslz", time = 15, platform = "21"}
 03 = {node = "art_lan", time = 30, platform = "1"}
 04 = {node = "art_mlw", time = 15, platform = "1"}
 05 = {node = "art_hz", time = 15, platform = "11", headsign = "Forum"}
@@ -1375,13 +1375,56 @@ color = {background = "#ff5555", text = "#ffffff"}
 07 = {node = "avt_pms", time = 15}
 
 
+# Veerdiensten
+[fer_str_ng_oh]
+agency = "fer_nos"
+modality = "ferry"
+name = "Veerboot (Stachteren ⟶ Negenaar ⟶ Ockholm)"
+headsign = "Ockholm"
+
+[fer_str_ng_oh.stops]
+01 = {node = "fer_str", time = 0, headsign = "Ockholm via Negenaar"}
+02 = {node = "fer_ng", time = 120, headsign = "Ockholm"}
+03 = {node = "fer_oh", time = 135}
+
+[fer_oh_ng_str]
+agency = "fer_nos"
+modality = "ferry"
+name = "Veerboot (Ockholm ⟶ Negenaar ⟶ Stachteren)"
+headsign = "Stachteren"
+
+[fer_oh_ng_str.stops]
+01 = {node = "fer_oh", time = 0, headsign = "Stachteren via Negenaar"}
+02 = {node = "fer_ng", time = 135, headsign = "Stachteren"}
+03 = {node = "fer_str", time = 120}
+
+[fer_nszw_nszo]
+agency = "fer_nsz"
+modality = "ferry"
+name = "Veerboot (Noordersluizen-West ⟶ Noordersluizen-Oost)"
+headsign = "Noordersluizen-Oost"
+
+[fer_nszw_nszo.stops]
+01 = {node = "fer_nszw", time = 0}
+02 = {node = "fer_nszo", time = 30}
+
+[fer_nszo_nszw]
+agency = "fer_nsz"
+modality = "ferry"
+name = "Veerboot (Noordersluizen-Oost ⟶ Noordersluizen-West)"
+headsign = "Noordersluizen-West"
+
+[fer_nszo_nszw.stops]
+01 = {node = "fer_nszo", time = 0}
+02 = {node = "fer_nszw", time = 30}
+
+
 # Hyperloop
 [hyp_a]
 agency = "hyp"
 modality = "hyperloop"
 name = "Hyperloop (Arloheim Forum ⟶ Gaterade Haven)"
 headsign = "Gaterade Haven"
-color = {background = "#4a4a4a", text = "#ffffff"}
 
 [hyp_a.stops]
 01 = {node = "hyp_arfo", time = 0}
@@ -1392,14 +1435,10 @@ agency = "hyp"
 modality = "hyperloop"
 name = "Hyperloop (Gaterade Haven ⟶ Arloheim Forum)"
 headsign = "Arloheim Forum"
-color = {background = "#4a4a4a", text = "#ffffff"}
 
 [hyp_b.stops]
 01 = {node = "hyp_gth", time = 0}
 02 = {node = "hyp_arfo", time = 15}
-
-
-# Veerdiensten
 
 
 # Flexpaarden
@@ -1415,17 +1454,17 @@ showInOverview = false
 01 = {node = "eqh_qs", time = 0}
 02 = {node = "cty_mqd", time = 0}
 
-[eqh_lvn_nsz]
+[eqh_lvn_nszw]
 agency = "equual"
 modality = "horse_rental"
-name = "Flexpaard (Lavijn ⟶ Noordersluizen)"
-headsign = "Noordersluizen West"
+name = "Flexpaard (Lavijn ⟶ Noordersluizen-West)"
+headsign = "Noordersluizen-West"
 color = {background = "#892ca0", text = "#ffffff"}
 showInOverview = false
 
-[eqh_lvn_nsz.stops]
+[eqh_lvn_nszw.stops]
 01 = {node = "eqh_lvn", time = 0}
-02 = {node = "cty_nsz", time = 0}
+02 = {node = "cty_nszw", time = 0}
 
 [eqh_lvn_ztm]
 agency = "equual"
@@ -1439,17 +1478,17 @@ showInOverview = false
 01 = {node = "eqh_lvn", time = 0}
 02 = {node = "cty_ztm", time = 0}
 
-[eqh_avi_nsz]
+[eqh_avi_nszw]
 agency = "equual"
 modality = "horse_rental"
-name = "Flexpaard (Amsvorde Iberië ⟶ Noordersluizen)"
+name = "Flexpaard (Amsvorde Iberië ⟶ Noordersluizen-West)"
 headsign = "Noordersluizen-West"
 color = {background = "#892ca0", text = "#ffffff"}
 showInOverview = false
 
-[eqh_avi_nsz.stops]
+[eqh_avi_nszw.stops]
 01 = {node = "eqh_avi", time = 0}
-02 = {node = "cty_nsz", time = 0}
+02 = {node = "cty_nszw", time = 0}
 
 [eqh_avi_ztm]
 agency = "equual"

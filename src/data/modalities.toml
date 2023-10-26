@@ -41,7 +41,7 @@ icon = 'elevator'
 name = 'Hyperloop'
 nodeName = 'Hyperloopstation'
 description = 'Transportsysteem voor langeafstandsvervoer gebruikmakend van een luchtdrukbuis'
-icon = 'bolt'
+icon = 'bolt-lightning'
 
 # Natransport
 [horse_rental]

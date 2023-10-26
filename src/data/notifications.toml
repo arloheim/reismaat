@@ -1,7 +1,32 @@
 # Algemene meldingen
-[separate_ticket]
-name = "Vereist een apart ticket"
+[reservation_recommended]
+name = "Voor deze rit is een zitplaatsreservering aanbevolen"
+affectedRoutes = ["nsb_d1_a", "nsb_d1_b", "nsb_d9_a", "nsb_d9_b"]
+
+[reservation_required]
+name = "Voor deze rit is een zitplaatsreservering verplicht"
+
+[supplement_required]
+name = "Voor deze rit dient een toeslag te worden betaald"
+icon = "receipt"
+
+[separate_ticket_required]
+name = "Voor deze rit is een apart ticket nodig"
+icon = "receipt"
 affectedRoutes = ["hyp_a", "hyp_b"]
+
+[second_class_only]
+name = "Louter tweede klas"
+affectedRoutes = ["nsb_s23_a", "nsb_s23_b"]
+
+[high_occupancy_rate]
+name = "Deze rit heeft gewoonlijk een hoge bezettingsgraad"
+affectedRoutes = ["nsb_d1_a", "nsb_d1_b"]
+
+[no_horses_allowed]
+name = "Meenemen van flexpaarden is niet toegestaan"
+icon = "circle-xmark"
+affectedRoutes = ["fer_str_ng_oh", "fer_str_ng_oh", "fer_nszw_nszo", "fer_nszo_nszw"]
 
 
 # Storingen en werkzaamheden

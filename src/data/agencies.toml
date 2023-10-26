@@ -10,7 +10,7 @@ abbr = "IS"
 url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
 
 
-# Overige modaliteiten
+# Stadsvervoer
 [arlov]
 name = "ArlOV"
 url = "https://arloheim.nl/wiki/ArlOV"
@@ -23,8 +23,21 @@ url = "https://arloheim.nl/wiki/Vara"
 name = "Giedrechtse Vervoersdienst"
 abbr = "GVD"
 
+
+# Veerdiensten
+[fer_nos]
+name = "Rederij N-O-S"
+abbr = "N-O-S"
+
+[fer_nsz]
+name = "N.V. Stoombootmaatschappij Noordersluizen"
+
+
+# Besloten vervoer
 [hyp]
 name = "hyperloop.ih"
 
+
+# Natransport
 [equual]
 name = "Equual"
