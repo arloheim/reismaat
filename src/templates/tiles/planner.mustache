@@ -1,0 +1,76 @@
+<div class="tile is-child box has-background-white">
+  <h3>plan je reis</h3>
+
+  <form id="planner">
+    <div class="field">
+      <div class="control is-expanded">
+        <label class="label">bestemmingen</label>
+        <div class="dropdown is-fullwidth">
+          <div class="dropdown-trigger">
+            <input class="input node-input" type="text" value="{{from.name}}" placeholder="van station, halte of plaats" id="from">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control is-expanded">
+        <div class="dropdown is-fullwidth">
+          <div class="dropdown-trigger">
+            <input class="input node-input" type="text" value="{{to.name}}" placeholder="naar station, halte of plaats" id="to">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="label">datum en tijd</label>
+
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input class="input" type="datetime-local" value="{{datetime}}" id="datetime">
+          </div>
+
+          <div class="control">
+            <a class="button is-dark" id="now">Nu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="label">extra opties</label>
+
+        <label class="checkbox">
+          <input type="checkbox" class="mx-1">
+          <span class="has-tooltip-arrow has-tooltip-multiline" data-tooltip="Plan louter routes die geen gebruik maken van besloten vervoerssystemen, zoals de hyperloop.">
+            Geen besloten vervoer
+          </span>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" class="mx-1">
+          <span class="has-tooltip-arrow has-tooltip-multiline" data-tooltip="Plan 5 minuten extra tijd in tussen overstappen.">
+            Extra overstaptijd inplannen
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <button class="button is-primary is-rounded" type="submit">
+          <span class="icon">
+            <i class="fa-solid fa-route"></i>
+          </span>
+          <span>Plan je reis</span>
+          <span class="icon">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

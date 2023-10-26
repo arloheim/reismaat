@@ -1,0 +1,72 @@
+<div class="tile is-ancestor">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child is-flex-grow-0 box has-background-white">
+      <h3>reisadviezen</h3>
+
+      {{#journeys}}
+        <div class="journey-link is-relative is-active">
+          <a class="is-overlay" data-collapse="journey_{{index}}"></a>
+
+          <div class="level is-mobile mb-2">
+            <div class="level-left">
+              <p class="level-item has-text-weight-bold">
+                <span class="icon-text">
+                  <span>{{formattedDepartureTime}}</span>
+                  <span class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                  <span>{{formattedArrivalTime}}</span>
+                </span>
+              </p>
+            </div>
+
+            <div class="level-right">
+              <p class="level-item">
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fa-solid fa-clock"></i>
+                  </span>
+                  <span class="mr-2">{{formattedDuration}}</span>
+                  <span class="icon">
+                    <i class="fa-solid fa-shuffle"></i>
+                  </span>
+                  <span>{{transfers}}</span>
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <p>
+            {{#legs}}
+              {{#route}}
+                {{> feed/route_short}}
+                &nbsp;+&nbsp;
+              {{/route}}
+
+              {{#transfer}}
+                <span class="icon">
+                  <i class="fa-solid fa-person-walking"></i>
+                </span>
+                &nbsp;+&nbsp;
+              {{/transfer}}
+            {{/legs}}
+          </p>
+        </div>
+      {{/journeys}}
+    </div>
+
+    {{> tiles/planner}}
+  </div>
+
+  <div class="tile is-8 is-parent">
+    <div class="tile is-child box has-background-primary">
+      <h3 class="has-text-white mb-4">reisadvies van {{from.name}} naar {{to.name}}</h3>
+
+      {{#journeys}}
+        <div class="collapse" id="journey_{{index}}" data-group="journeys">
+          {{> components/journey_details}}
+        </div>
+      {{/journeys}}
+    </div>
+  </div>
+</div>

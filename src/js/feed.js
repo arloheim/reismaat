@@ -200,7 +200,7 @@ class Route
 
   // Return the notifications that affect the route
   get notifications() {
-    return this._feed.getNotificationsThatAffectRoute(this);;
+    return this._feed.getNotificationsThatAffectRoute(this);
   }
 
   // Return the stop of the route that halts at the specified node
@@ -309,14 +309,14 @@ class Notification
   constructor(feed, props) {
     this._feed = feed;
 
-    this.type = _notificationTypes[props.type] ?? _notificationTypes.disruption;
+    this.type = _notificationTypes[props.type];
     this.name = props.name ?? this.type?.name;
     this.description = props.description;
     this.period = props.period;
-    this.affectedNodes = props.affected_nodes ?? [];
-    this.affectedRoutes = props.affected_routes ?? [];
-    this.icon = props.icon ?? _notificationTypes[this.type]?.icon ?? 'triangle-exclamation';
-    this.color = props.color ?? this.type.color ?? 'danger';
+    this.affectedNodes = props.affectedNodes ?? [];
+    this.affectedRoutes = props.affectedRoutes ?? [];
+    this.icon = props.icon ?? this.type?.icon ?? 'circle-info';
+    this.color = props.color ?? this.type?.color ?? 'info';
   }
 
   // Return if the notification has affected nodes
@@ -519,8 +519,8 @@ class Feed
 
   // Parse a notification from an object
   _parseNotification(notification, id) {
-    notification.affectedNodes = notification.affectedNodes.map(n => this.getNode(n));
-    notification.affectedRoutes = notification.affectedRoutes.map(r => this.getRoute(r));
+    notification.affectedNodes = notification.affectedNodes?.map(n => this.getNode(n)) ?? [];
+    notification.affectedRoutes = notification.affectedRoutes?.map(r => this.getRoute(r)) ?? [];
     return new Notification(this, {id, ...notification})
   }
 
@@ -569,6 +569,8 @@ class Feed
 // Define the exports
 module.exports.Agency = Agency;
 module.exports.Node = Node;
+module.exports.Transfer = Transfer;
 module.exports.Route = Route;
 module.exports.RouteStop = RouteStop;
+module.exports.Notification = Notification;
 module.exports.Feed = Feed;

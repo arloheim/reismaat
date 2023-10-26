@@ -1,5 +1,6 @@
 const $ = require('jquery');
 const _ = require('underscore');
+const dayjs = require('dayjs');
 const Navigo = require('navigo');
 
 const feed = require('./feed.js')
@@ -27,6 +28,97 @@ $(function() {
     'stations.details': 'stations-header.png',
   };
 
+  function onTemplateRendered($el) {
+    // Show the first element of a collapse group
+    $el.find('.collapse[data-group]').first().show();
+
+    // Handle setting the date field to the current time
+    $el.find('#now').on('click', function() {
+      $el.find('#datetime').val(dayjs().format('YYYY-MM-DDTHH:mm'));
+    });
+
+    // Toggle a collapse element when the corresponding link is clicked
+    $el.find('a[data-collapse]').on('click', function() {
+      let collapseElement = $(this).data('collapse');
+
+      // Toggle the collapse
+      let $collapse = $el.find(`.collapse#${collapseElement}`);
+
+      let group = $collapse.data('group');
+      if (group !== undefined)
+        $el.find(`.collapse[data-group="${group}"]`).hide();
+
+      if ($collapse.data('slide') !== undefined)
+        $collapse.slideToggle(250);
+      else
+        $collapse.toggle();
+
+      // Toggle the icon of the link
+      $(this).find('.icon > svg').toggleClass('fa-chevron-down fa-chevron-up');
+    });
+
+    // Event handler for when a node input changes
+    $el.find('.node-input').on('input change', _.debounce(function() {
+      var $el = $(this);
+
+      var input = $el.val();
+      var foundNodes = theFeed.searchNodes(input);
+
+      // Get the dropdown
+      let $dropdown = $el.parents('.dropdown');
+
+      // Create the dropdown content
+      let $dropdownMenu = $dropdown.find('.dropdown-menu');
+      if ($dropdownMenu.length === 0)
+        $dropdownMenu = $('<div class="dropdown-menu">').appendTo($dropdown);
+
+      let $dropdownContent = $dropdownMenu.find('.dropdown-content');
+      if ($dropdownContent.length == 0)
+        $dropdownContent = $('<div class="dropdown-content">').appendTo($dropdownMenu);
+
+      // Function that defines an event handler when a dropdown item is clicked
+      function dropdownItemClick() {
+        $dropdown.hide().removeClass('is-active');
+        $el.val(theFeed.getNode($(this).data('id')).name);
+      }
+
+      // Clear the dropdown content
+      $dropdownContent.empty();
+
+      // Add the nodes to the dropdown content
+      for (let foundNode of foundNodes.slice(0, 10)) {
+        theFeed.getNode(foundNode.id).renderDropdownItem()
+          .on('click', dropdownItemClick)
+          .appendTo($dropdownContent);
+      }
+
+      // Activate the dropdown
+      $dropdown.show().addClass('is-active');
+    }, 500));
+
+    // Event handler for when a node input loses focus
+    $el.find('.node-input').on('blur', _.debounce(function() {
+      // Hide the dropdown
+      let $dropdown = $(this).parents('.dropdown').removeClass('is-active').hide();
+    }, 100));
+
+    // Plan a trip when the planner form is submitted
+    $el.find('form#planner').on('submit', function(e) {
+      e.preventDefault();
+
+      // Get the params from the form
+      let from = $(this).find('#from').val();
+      let to = $(this).find('#to').val();
+
+      from = theFeed.searchNodes(from)[0]?.id;
+      to = theFeed.searchNodes(to)[0]?.id;
+
+      console.log(from, to);
+
+      router.navigate(`/reisadvies?van=${from}&naar=${to}`);
+    })
+  }
+
   let router = new Navigo('/');
 
   router.hooks({
@@ -37,51 +129,6 @@ $(function() {
       // Set the header image
       let header = headers[match.route.name] ?? headers.default;
       $('#header').attr('src', `/assets/images/${header}`);
-
-      // Event handler for when a node input changes
-      $('.node-input').on('input change', _.debounce(function() {
-        var $el = $(this);
-
-        var input = $el.val();
-        var foundNodes = data.searchNodes(input);
-
-        // Get the dropdown
-        let $dropdown = $el.parents('.dropdown');
-
-        // Create the dropdown content
-        let $dropdownMenu = $dropdown.find('.dropdown-menu');
-        if ($dropdownMenu.length === 0)
-          $dropdownMenu = $('<div class="dropdown-menu">').appendTo($dropdown);
-
-        let $dropdownContent = $dropdownMenu.find('.dropdown-content');
-        if ($dropdownContent.length == 0)
-          $dropdownContent = $('<div class="dropdown-content">').appendTo($dropdownMenu);
-
-        // Function that defines an event handler when a dropdown item is clicked
-        function dropdownItemClick() {
-          $dropdown.hide().removeClass('is-active');
-          $el.val(data.nodes[$(this).data('id')].name);
-        }
-
-        // Clear the dropdown content
-        $dropdownContent.empty();
-
-        // Add the nodes to the dropdown content
-        for (let foundNode of foundNodes.slice(0, 10)) {
-          data.nodes[foundNode.id].renderDropdownItem(data)
-            .on('click', dropdownItemClick)
-            .appendTo($dropdownContent);
-        }
-
-        // Activate the dropdown
-        $dropdown.show().addClass('is-active');
-      }, 500));
-
-      // Event handler for when a node input loses focus
-      $('.node-input').on('blur', _.debounce(function() {
-        // Hide the dropdown
-        let $dropdown = $(this).parents('.dropdown').removeClass('is-active').hide();
-      }, 100));
     }
   });
 
@@ -89,10 +136,7 @@ $(function() {
     '/': {
       as: 'reisplanner',
       uses: function(match) {
-        templates.reisplanner($routeView, {
-          notifications: theFeed.notifications,
-          hasNotifications: theFeed.notifications.length > 0,
-        });
+        templates.render($routeView, 'pages/reisplanner', {notifications: theFeed.notifications.filter(n => n.showInOverview), datetime: dayjs().format('YYYY-MM-DDTHH:mm')}, onTemplateRendered);
       }
     },
     '/planner': {
@@ -105,22 +149,19 @@ $(function() {
     '/meldingen': {
       as: 'meldingen',
       uses: function(match) {
-        templates.meldingen($routeView, {
-          notifications: theFeed.notifications,
-          hasNotifications: theFeed.notifications.length > 0,
-        });
+        templates.render($routeView, 'pages/meldingen', {notifications: theFeed.notifications.filter(n => n.showInOverview)}, onTemplateRendered);
       }
     },
     '/tickets': {
       as: 'tickets',
       uses: function(match) {
-        templates.tickets($routeView, {});
+        templates.render($routeView, 'pages/tickets', {}, onTemplateRendered);
       }
     },
     '/dienstregeling': {
       as: 'dienstregeling',
       uses: function(match) {
-        templates.dienstregeling($routeView, {
+        templates.render($routeView, 'pages/dienstregeling', {
           routes: _.chain(theFeed.routes)
             .groupBy(r => r.agency.id)
             .pairs()
@@ -130,7 +171,7 @@ $(function() {
                 .map(([modalityId, modalityRoutes]) => ({modality: theFeed.getModality(modalityId), modalityRoutes}))
                 .value()}))
             .value()
-        });
+        }, onTemplateRendered);
       }
     },
     '/dienstregeling/:id': {
@@ -139,15 +180,15 @@ $(function() {
         let route = theFeed.getRoute(match.data.id);
 
         if (route !== undefined)
-          templates.dienstregeling($routeView, {route});
+          templates.render($routeView, 'pages/dienstregeling', {route}, onTemplateRendered);
         else
-          templates.notFound($routeView, {});
+          templates.renderNotFound($routeView, {}, onTemplateRendered);
       }
     },
     '/stations': {
       as: 'stations',
       uses: function(match) {
-        templates.stations($routeView, {});
+        templates.render($routeView, 'pages/stations', {}, onTemplateRendered);
       }
     },
     '/stations/:id': {
@@ -159,9 +200,9 @@ $(function() {
           .toSorted((a, b) => a.stop.platform.localeCompare(b.stop.platform));
 
         if (node !== undefined)
-          templates.stations($routeView, {node, nodeRoutes});
+          templates.render($routeView, 'pages/stations', {node, nodeRoutes}, onTemplateRendered);
         else
-          templates.notFound($routeView, {});
+          templates.renderNotFound($routeView, {}, onTemplateRendered);
       }
     }
   });

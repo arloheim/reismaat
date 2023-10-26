@@ -144,9 +144,157 @@ body {
   }
 }
 
-// Box styling
-.box {
-  @extend .is-shadowless;
+// Collapse styling
+.collapse {
+  display: none;
+}
+
+// Journey link styling
+.journey-link {
+  @extend .box;
+  @extend .px-3;
+  @extend .py-2;
+
+  &.is-active {
+    background: $primary-light;
+  }
+
+  // Link spacing
+  &:not(:last-child) {
+    margin-bottom: $media-content-spacing;
+  }
+}
+
+// Journey details styling
+.journey-details {
+
+}
+
+// Journey box styling
+.journey-box {
+  @extend .box;
+  @extend .mb-0;
+  @extend .p-2;
+
+  // Route box styling
+  &.is-route {
+    @extend .has-background-white;
+  }
+
+  // Transfer box styling
+  &.is-transfer {
+    @extend .has-background-light;
+    @extend .has-text-grey;
+  }
+
+  // Negating border radius
+  &:not(:first-child) {
+    border-top: 4px solid $light;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+  &:not(:last-child) {
+    border-bottom: 4px solid $light;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  // Journey row styling
+  .journey-row {
+    @extend .is-flex;
+    @extend .is-flex-direction-row;
+
+    max-width: 100%;
+
+    // Bold journey row styling
+    &.is-bold {
+      @extend .has-text-weight-bold;
+    }
+
+    // Journey cell styling
+    .journey-cell {
+      @extend .p-1;
+
+      // Paragraph styling
+      p {
+        @extend .mb-0;
+
+        &.is-muted {
+          @extend .has-text-grey;
+          @extend .has-text-weight-normal;
+        }
+      }
+
+      // Time cell
+      &.is-time {
+        @extend .is-flex-shrink-0;
+        @extend .is-flex-grow-0;
+        @extend .has-text-right;
+
+        width: 4rem;
+      }
+
+      // Line cell
+      &.is-line {
+        @extend .is-flex-shrink-0;
+        @extend .is-flex-grow-0;
+        @extend .has-text-centered;
+
+        position: relative;
+        line-height: 0px;
+        width: 3rem;
+
+        // Line segment
+        & > .line {
+          @extend .is-block;
+
+          position: absolute;
+          left: calc(50% - 2px);
+          top: 0;
+
+          margin-top: -4px;
+          margin-bottom: -4px;
+          height: calc(100% + 8px);
+
+          border-left: 2px solid $primary;
+          border-right: 2px solid $primary;
+
+          &.is-start {
+            height: calc(100% - 16px);
+            top: 24px;
+            bottom: 0;
+          }
+
+          &.is-end {
+            height: 16px;
+            top: 0;
+            bottom: calc(100% - 24px);
+          }
+        }
+
+        & > .icon * {
+          z-index: 1;
+        }
+      }
+
+      // Node cell
+      &.is-node {
+        @extend .is-flex-shrink-0;
+        @extend .is-flex-grow-1;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      // Platform cell
+      &.is-platform {
+        @extend .is-flex-shrink-0;
+        @extend .is-flex-grow-0;
+
+        width: 4.5rem;
+      }
+    }
+  }
 }
 
 // Dropdown styling
@@ -171,9 +319,20 @@ body {
   }
 }
 
+// Box styling
+.box {
+  @extend .is-shadowless;
+}
 
-// Route styling
-.route {
+// Icon text styling
+.icon-text {
+  span:not(.icon) {
+    text-wrap: wrap;
+  }
+}
+
+// Route abbreviation styling
+.route-abbr {
   @extend .has-text-weight-bold;
   @extend .px-1;
 }
