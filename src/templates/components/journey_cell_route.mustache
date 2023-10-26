@@ -1,0 +1,16 @@
+<div class="journey-cell is-node">
+  {{^stop.cancelled}}
+    {{#route}}
+      <p>{{> feed/route_long}}</p>
+    {{/route}}
+  {{/stop.cancelled}}
+
+  {{#stop.cancelled}}
+    {{#route}}
+      <p>
+        <span class="is-cancelled">{{> feed/route_long}}</span>
+        <span class="has-text-danger-dark has-text-weight-bold">(rijdt niet)</span>
+      </p>
+    {{/route}}
+  {{/stop.cancelled}}
+</div>

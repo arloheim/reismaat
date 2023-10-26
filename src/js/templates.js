@@ -18,6 +18,7 @@ const _templates = {
 
   // Tiles
   'tiles/planner': fs.readFileSync('src/templates/tiles/planner.mustache', 'utf-8'),
+  'tiles/route_stops': fs.readFileSync('src/templates/tiles/route_stops.mustache', 'utf-8'),
 
   // Components
   'components/journey_details': fs.readFileSync('src/templates/components/journey_details.mustache', 'utf-8'),
@@ -25,6 +26,7 @@ const _templates = {
   'components/journey_box_transfer': fs.readFileSync('src/templates/components/journey_box_transfer.mustache', 'utf-8'),
   'components/journey_cell_node': fs.readFileSync('src/templates/components/journey_cell_node.mustache', 'utf-8'),
   'components/journey_cell_platform': fs.readFileSync('src/templates/components/journey_cell_platform.mustache', 'utf-8'),
+  'components/journey_cell_route': fs.readFileSync('src/templates/components/journey_cell_route.mustache', 'utf-8'),
   'components/journey_cell_time': fs.readFileSync('src/templates/components/journey_cell_time.mustache', 'utf-8'),
 
   // Feed components

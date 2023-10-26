@@ -1,3 +1,12 @@
 <div class="journey-cell is-node">
-  <p>{{> feed/node_short}}</p>
+  {{^cancelled}}
+    <p>{{> feed/node_short}}</p>
+  {{/cancelled}}
+
+  {{#cancelled}}
+    <p>
+      <span class="is-cancelled">{{> feed/node_short}}</span>
+      <span class="has-text-danger-dark has-text-weight-bold">(vervalt)</span>
+    </p>
+  {{/cancelled}}
 </div>

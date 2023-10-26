@@ -1,9 +1,9 @@
 <div class="journey-box is-route">
   <!-- First stop at {{firstStop.node.name}} -->
   <div class="journey-row is-bold">
-    {{#firstStop.formattedTime}}
+    {{#route.firstStop.formattedTime}}
       {{> components/journey_cell_time}}
-    {{/firstStop.formattedTime}}
+    {{/route.firstStop.formattedTime}}
 
     <div class="journey-cell is-line">
       <span class="line is-start"></span>
@@ -12,13 +12,13 @@
       </span>
     </div>
 
-    {{#firstStop.node}}
+    {{#route.firstStop.node}}
       {{> components/journey_cell_node}}
-    {{/firstStop.node}}
+    {{/route.firstStop.node}}
 
-    {{#firstStop.platform}}
+    {{#route.firstStop.platform}}
       {{> components/journey_cell_platform}}
-    {{/firstStop.platform}}
+    {{/route.firstStop.platform}}
   </div>
 
   <!-- Route information -->
@@ -57,7 +57,7 @@
   {{/notifications.length}}
 
   <!-- Intermediate stops -->
-  {{#intermediateStops.length}}
+  {{#route.intermediateStops.length}}
     <div class="journey-row">
       <div class="journey-cell is-time"></div>
 
@@ -78,7 +78,7 @@
     </div>
 
     <div class="collapse" id="journey_{{index}}_{{id}}_stops" data-slide>
-      {{#intermediateStops}}
+      {{#route.intermediateStops}}
         <!-- Intermediate stop at {{node.name}} -->
         <div class="journey-row">
           {{#formattedTime}}
@@ -100,15 +100,15 @@
             {{> components/journey_cell_platform}}
           {{/platform}}
         </div>
-      {{/intermediateStops}}
+      {{/route.intermediateStops}}
     </div>
-  {{/intermediateStops.length}}
+  {{/route.intermediateStops.length}}
 
   <!-- Last stop at {{lastStop.node.name}} -->
   <div class="journey-row is-bold">
-    {{#lastStop.formattedTime}}
+    {{#route.lastStop.formattedTime}}
       {{> components/journey_cell_time}}
-    {{/lastStop.formattedTime}}
+    {{/route.lastStop.formattedTime}}
 
     <div class="journey-cell is-line">
       <span class="line is-end"></span>
@@ -117,12 +117,12 @@
       </span>
     </div>
 
-    {{#lastStop.node}}
+    {{#route.lastStop.node}}
       {{> components/journey_cell_node}}
-    {{/lastStop.node}}
+    {{/route.lastStop.node}}
 
-    {{#lastStop.platform}}
+    {{#route.lastStop.platform}}
       {{> components/journey_cell_platform}}
-    {{/lastStop.platform}}
+    {{/route.lastStop.platform}}
   </div>
 </div>

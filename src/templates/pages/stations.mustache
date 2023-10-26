@@ -15,26 +15,15 @@
       <div class="tile is-child box has-background-white">
         <h3>dienstregeling</h3>
 
-        <table class="table is-narrow">
-          <tr>
-            <th style="width:80%">Lijn</th>
-            <th style="width:20%">Spoor</th>
-          </tr>
+        {{#nodeRoutes}}
+          <div class="journey-row">
+            {{> components/journey_cell_route}}
 
-          {{#nodeRoutes}}
-            <tr>
-              {{^stop.cancelled}}
-                <td>{{& route.longDisplayLinkHtml}}</td>
-                <td>{{stop.platform}}</td>
-              {{/stop.cancelled}}
-
-              {{#stop.cancelled}}
-                <td>{{& route.longDisplayLinkHtml}} <span class="has-text-weight-bold has-text-danger-dark">(rijdt niet)</span></td>
-                <td>&nbsp;</td>
-              {{/stop.cancelled}}
-            </tr>
-          {{/nodeRoutes}}
-        </table>
+            {{#stop.platform}}
+              {{> components/journey_cell_platform}}
+            {{/stop.platform}}
+          </div>
+        {{/nodeRoutes}}
       </div>
     </div>
 

@@ -193,7 +193,12 @@ $(function() {
         let route = theFeed.getRoute(match.data.id);
 
         if (route !== undefined)
-          templates.render($routeView, 'pages/dienstregeling', {route}, onTemplateRendered);
+          templates.render($routeView, 'pages/dienstregeling', {
+            route,
+            firstStop: route.stops.at(0),
+            lastStop: route.stops.at(-1),
+            intermediateStops: route.stops.slice(1, -1),
+          }, onTemplateRendered);
         else
           templates.renderNotFound($routeView, {}, onTemplateRendered);
       }

@@ -12,11 +12,11 @@ class Journey
     this.index = index;
     this.legs = legs;
 
-    this.departureNode = this.legs.at(0).firstStop?.node ?? this.legs.at(0).firstNode;
-    this.arrivalNode = this.legs.at(-1).lastStop?.node ?? this.legs.at(-1).lastNode;
+    this.departureNode = this.legs.at(0).route?.firstStop.node ?? this.legs.at(0).firstNode;
+    this.arrivalNode = this.legs.at(-1).route?.lastStop.node ?? this.legs.at(-1).lastNode;
     this.departureTime = departureTime;
     this.formattedDepartureTime = this.departureTime.format('H:mm');
-    this.arrivalTime = departureTime.add(legs.at(-1).lastStop?.cumulativeTime ?? this.legs.at(-1).transfer.cumulativeTime, 'seconds');
+    this.arrivalTime = departureTime.add(legs.at(-1).time, 'seconds');
     this.formattedArrivalTime = this.arrivalTime.format('H:mm');
     this.duration = this.arrivalTime.diff(this.departureTime, 'seconds');
     this.formattedDuration = `${Math.floor(this.duration / 3600)}:${Math.ceil(this.duration % 3600 / 60)}`;
@@ -96,7 +96,7 @@ class RaptorAlgorithm
         // Prepend a new leg
         if (connection instanceof feed.Route) {
           let fromNode = connection.stops[0].node;
-          legs.unshift({type: 'route', route: connection, time: connection.stops.at(-1).cumulativeTime, firstStop: connection.stops.at(0), lastStop: connection.stops.at(-1), intermediateStops: connection.stops.slice(1, -1)});
+          legs.unshift({type: 'route', route: connection, time: connection.lastStop.cumulativeTime});
           toNode = fromNode;
           k --;
         } else if (connection instanceof feed.Transfer) {

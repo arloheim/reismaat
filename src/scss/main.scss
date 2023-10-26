@@ -198,101 +198,101 @@ body {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
   }
+}
 
-  // Journey row styling
-  .journey-row {
-    @extend .is-flex;
-    @extend .is-flex-direction-row;
+// Journey row styling
+.journey-row {
+  @extend .is-flex;
+  @extend .is-flex-direction-row;
 
-    max-width: 100%;
+  max-width: 100%;
 
-    // Bold journey row styling
-    &.is-bold {
-      @extend .has-text-weight-bold;
+  // Bold journey row styling
+  &.is-bold {
+    @extend .has-text-weight-bold;
+  }
+
+  // Journey cell styling
+  .journey-cell {
+    @extend .p-1;
+
+    // Paragraph styling
+    p {
+      @extend .mb-0;
+
+      &.is-muted {
+        @extend .has-text-grey;
+        @extend .has-text-weight-normal;
+      }
     }
 
-    // Journey cell styling
-    .journey-cell {
-      @extend .p-1;
+    // Time cell
+    &.is-time {
+      @extend .is-flex-shrink-0;
+      @extend .is-flex-grow-0;
+      @extend .has-text-right;
 
-      // Paragraph styling
-      p {
-        @extend .mb-0;
+      width: 4rem;
+    }
 
-        &.is-muted {
-          @extend .has-text-grey;
-          @extend .has-text-weight-normal;
+    // Line cell
+    &.is-line {
+      @extend .is-flex-shrink-0;
+      @extend .is-flex-grow-0;
+      @extend .has-text-centered;
+
+      position: relative;
+      line-height: 0px;
+      width: 3rem;
+
+      // Line segment
+      & > .line {
+        @extend .is-block;
+
+        position: absolute;
+        left: calc(50% - 2px);
+        top: 0;
+
+        margin-top: -4px;
+        margin-bottom: -4px;
+        height: calc(100% + 8px);
+
+        border-left: 2px solid $primary;
+        border-right: 2px solid $primary;
+
+        &.is-start {
+          height: calc(100% - 16px);
+          top: 24px;
+          bottom: 0;
         }
-      }
 
-      // Time cell
-      &.is-time {
-        @extend .is-flex-shrink-0;
-        @extend .is-flex-grow-0;
-        @extend .has-text-right;
-
-        width: 4rem;
-      }
-
-      // Line cell
-      &.is-line {
-        @extend .is-flex-shrink-0;
-        @extend .is-flex-grow-0;
-        @extend .has-text-centered;
-
-        position: relative;
-        line-height: 0px;
-        width: 3rem;
-
-        // Line segment
-        & > .line {
-          @extend .is-block;
-
-          position: absolute;
-          left: calc(50% - 2px);
+        &.is-end {
+          height: 16px;
           top: 0;
-
-          margin-top: -4px;
-          margin-bottom: -4px;
-          height: calc(100% + 8px);
-
-          border-left: 2px solid $primary;
-          border-right: 2px solid $primary;
-
-          &.is-start {
-            height: calc(100% - 16px);
-            top: 24px;
-            bottom: 0;
-          }
-
-          &.is-end {
-            height: 16px;
-            top: 0;
-            bottom: calc(100% - 24px);
-          }
-        }
-
-        & > .icon * {
-          z-index: 1;
+          bottom: calc(100% - 24px);
         }
       }
 
-      // Node cell
-      &.is-node {
-        @extend .is-flex-shrink-0;
-        @extend .is-flex-grow-1;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
+      & > .icon * {
+        z-index: 1;
       }
+    }
 
-      // Platform cell
-      &.is-platform {
-        @extend .is-flex-shrink-0;
-        @extend .is-flex-grow-0;
+    // Node cell
+    &.is-node {
+      @extend .is-flex-shrink-0;
+      @extend .is-flex-grow-1;
 
-        width: 4.5rem;
-      }
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    // Platform cell
+    &.is-platform {
+      @extend .is-flex-shrink-0;
+      @extend .is-flex-grow-0;
+
+      width: 4.5rem;
     }
   }
 }
@@ -335,4 +335,11 @@ body {
 .route-abbr {
   @extend .has-text-weight-bold;
   @extend .px-1;
+}
+
+// Cancelled styling
+.is-cancelled {
+  a {
+    @extend .has-text-grey;
+  }
 }

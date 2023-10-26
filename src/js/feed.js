@@ -230,6 +230,21 @@ class Route
     }
   }
 
+  // Return the first stop of the route
+  get firstStop() {
+    return this.stops.at(0);
+  }
+
+  // Return the last stop of the route
+  get lastStop() {
+    return this.stops.at(-1);
+  }
+
+  // Return the intermediate stops of the route
+  get intermediateStops() {
+    return this.stops.slice(1, -1);
+  }
+
   // Return the notifications that affect the route
   get notifications() {
     return this._feed.getNotificationsThatAffectRoute(this);
