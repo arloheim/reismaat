@@ -110,13 +110,14 @@ $(function() {
       // Get the params from the form
       let from = $(this).find('#from').val();
       let to = $(this).find('#to').val();
+      let datetime = $(this).find('#datetime').val();
 
       from = theFeed.searchNodes(from)[0]?.id;
       to = theFeed.searchNodes(to)[0]?.id;
 
       console.log(from, to);
 
-      router.navigate(`/reisadvies?van=${from}&naar=${to}`);
+      router.navigate(`/reisadvies?van=${from}&naar=${to}&datum=${datetime}`);
     })
   }
 
@@ -146,12 +147,13 @@ $(function() {
         console.log(match);
         let from = theFeed.getNode(match.params?.van);
         let to = theFeed.getNode(match.params?.naar);
+        let datetime = match.params?.datum;
 
         if (from !== undefined && to !== undefined) {
           let algo = new algorithm.RaptorAlgorithm(theFeed);
-          let journeys = algo.calculate(from, to);
+          let journeys = algo.calculate(from, to, dayjs(datetime));
 
-          templates.render($routeView, 'pages/reisadvies', {from, to, journeys}, onTemplateRendered);
+          templates.render($routeView, 'pages/reisadvies', {from, to, datetime, journeys}, onTemplateRendered);
         } else {
           templates.renderNotFound($routeView, {}, onTemplateRendered);
         }
@@ -177,10 +179,10 @@ $(function() {
             .groupBy(r => r.agency.id)
             .pairs()
             .map(([agencyId, agencyRoutes]) => ({agency: theFeed.getAgency(agencyId), agencyModalities: _.chain(agencyRoutes)
-                .groupBy(r => r.modality.id)
-                .pairs()
-                .map(([modalityId, modalityRoutes]) => ({modality: theFeed.getModality(modalityId), modalityRoutes}))
-                .value()}))
+              .groupBy(r => r.modality.id)
+              .pairs()
+              .map(([modalityId, modalityRoutes]) => ({modality: theFeed.getModality(modalityId), modalityRoutes}))
+              .value()}))
             .value()
         }, onTemplateRendered);
       }

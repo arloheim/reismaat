@@ -70,7 +70,7 @@ class RaptorAlgorithm
 
 
   // Return possible journeys between two nodes
-  calculate(departureNode, arrivalNode) {
+  calculate(departureNode, arrivalNode, dateTime) {
     // Get all connections from the departure node
     let connections = this._scan(departureNode);
 
@@ -110,7 +110,7 @@ class RaptorAlgorithm
       }
 
       // Append the legs to the journey
-      journeys.push(new Journey(journeys.length, legs, dayjs()));
+      journeys.push(new Journey(journeys.length, legs, dateTime ?? dayjs()));
     }
 
     // Sort the journeys by total time
