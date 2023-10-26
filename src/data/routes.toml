@@ -1415,17 +1415,17 @@ showInOverview = false
 01 = {node = "eqh_qs", time = 0}
 02 = {node = "cty_mqd", time = 0}
 
-[eqh_lvn_nszw]
+[eqh_lvn_nsz]
 agency = "equual"
 modality = "horse_rental"
-name = "Flexpaard (Lavijn ⟶ Noordersluizen West)"
+name = "Flexpaard (Lavijn ⟶ Noordersluizen)"
 headsign = "Noordersluizen West"
 color = {background = "#892ca0", text = "#ffffff"}
 showInOverview = false
 
-[eqh_lvn_nszw.stops]
+[eqh_lvn_nsz.stops]
 01 = {node = "eqh_lvn", time = 0}
-02 = {node = "cty_nszw", time = 0}
+02 = {node = "cty_nsz", time = 0}
 
 [eqh_lvn_ztm]
 agency = "equual"
@@ -1439,17 +1439,17 @@ showInOverview = false
 01 = {node = "eqh_lvn", time = 0}
 02 = {node = "cty_ztm", time = 0}
 
-[eqh_avi_nszw]
+[eqh_avi_nsz]
 agency = "equual"
 modality = "horse_rental"
-name = "Flexpaard (Amsvorde Iberië ⟶ Noordersluizen-West)"
+name = "Flexpaard (Amsvorde Iberië ⟶ Noordersluizen)"
 headsign = "Noordersluizen-West"
 color = {background = "#892ca0", text = "#ffffff"}
 showInOverview = false
 
-[eqh_avi_nszw.stops]
+[eqh_avi_nsz.stops]
 01 = {node = "eqh_avi", time = 0}
-02 = {node = "cty_nszw", time = 0}
+02 = {node = "cty_nsz", time = 0}
 
 [eqh_avi_ztm]
 agency = "equual"
@@ -1526,14 +1526,14 @@ showInOverview = false
 [eqh_vt_nszo]
 agency = "equual"
 modality = "horse_rental"
-name = "Flexpaard (Vittoria ⟶ Noordersluizen)"
-headsign = "Noordersluizen"
+name = "Flexpaard (Vittoria ⟶ Noordersluizen-Oost)"
+headsign = "Noordersluizen-Oost"
 color = {background = "#892ca0", text = "#ffffff"}
 showInOverview = false
 
 [eqh_vt_nszo.stops]
 01 = {node = "eqh_vt", time = 0}
-02 = {node = "cty_nsz", time = 0}
+02 = {node = "cty_nszo", time = 0}
 
 [eqh_vt_ndh]
 agency = "equual"

@@ -244,7 +244,7 @@ cty_mea = {name = "Meander"}
 cty_ngv = {name = "Negenervroente"}
 cty_ndh = {name = "Noordenhoek"}
 cty_nsz = {name = "Noordersluizen"}
-cty_nszw = {name = "Noordersluizen-West"}
+cty_nszo = {name = "Noordersluizen-Oost"}
 cty_pdm = {name = "Punto del Mare"}
 cty_rmn = {name = "Ramune"}
 cty_sjo = {name = "Sint Jan bij de Oase"}

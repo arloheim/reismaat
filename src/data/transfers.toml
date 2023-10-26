@@ -110,8 +110,8 @@ eqh_qs_arm_qsr = {between = "eqh_qs", and = "arm_qsr", time = 60, separate = tru
 eqh_lvn_nsb_lvn = {between = "eqh_lvn", and = "nsb_lvn", time = 120, separate = true}
 eqh_lvn_arm_lvn = {between = "eqh_lvn", and = "arm_lvn", time = 60, separate = true}
 # Amsvorde Iberië
-eqh_avi_nsb_avi = {between = "eqh_lvn", and = "nsb_avi", time = 60, separate = true}
-eqh_avi_avt_avi = {between = "eqh_lvn", and = "avt_avi", time = 60, separate = true}
+eqh_avi_nsb_avi = {between = "eqh_avi", and = "nsb_avi", time = 60, separate = true}
+eqh_avi_avt_avi = {between = "eqh_avi", and = "avt_avi", time = 60, separate = true}
 # Slinger
 eqh_sg_nsb_sg = {between = "eqh_sg", and = "nsb_sg", time = 300, separate = true}
 eqh_sg_arm_sg = {between = "eqh_sg", and = "arm_sg", time = 60, separate = true}
