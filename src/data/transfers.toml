@@ -99,3 +99,32 @@ arf_mzt_arl_mzt = {between = "arf_mzt", and = "arl_mzt", time = 60}
 
 # Sluisweg / Weenisweg
 avt_ssw_avt_wnw = {between = "avt_ssw", and = "avt_wnw", time = 60, separate = true}
+
+
+# Flexpaard-hubs
+
+# Al-Qusur
+eqh_qs_nsb_qs = {between = "eqh_qs", and = "nsb_qs", time = 60, separate = true}
+eqh_qs_arm_qsr = {between = "eqh_qs", and = "arm_qsr", time = 60, separate = true}
+# Lavijn
+eqh_lvn_nsb_lvn = {between = "eqh_lvn", and = "nsb_lvn", time = 120, separate = true}
+eqh_lvn_arm_lvn = {between = "eqh_lvn", and = "arm_lvn", time = 60, separate = true}
+# Amsvorde Iberië
+eqh_avi_nsb_avi = {between = "eqh_lvn", and = "nsb_avi", time = 60, separate = true}
+eqh_avi_avt_avi = {between = "eqh_lvn", and = "avt_avi", time = 60, separate = true}
+# Slinger
+eqh_sg_nsb_sg = {between = "eqh_sg", and = "nsb_sg", time = 300, separate = true}
+eqh_sg_arm_sg = {between = "eqh_sg", and = "arm_sg", time = 60, separate = true}
+# Vittoria
+eqh_vt_nsb_vt = {between = "eqh_vt", and = "nsb_vt", time = 60, separate = true}
+# Mijdezinder
+eqh_mdz_arm_mdz = {between = "eqh_mdz", and = "arm_mdz", time = 60, separate = true}
+# Gaterade haven
+eqh_gth_nsb_gth = {between = "eqh_gth", and = "nsb_gth", time = 60, separate = true}
+eqh_gth_hyp_gth = {between = "eqh_gth", and = "hyp_gth", time = 300, separate = true}
+# Dinsdrecht
+eqh_dd_nsb_dd = {between = "eqh_dd", and = "nsb_dd", time = 60, separate = true}
+# Woenslaken
+eqh_wl_nsb_wl = {between = "eqh_wl", and = "nsb_wl", time = 60, separate = true}
+# Storia Infinita
+eqh_sti_nsb_sti = {between = "eqh_sti", and = "nsb_sti", time = 60, separate = true}

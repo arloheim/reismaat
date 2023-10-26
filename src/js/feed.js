@@ -220,7 +220,7 @@ class Route
         stop.headsign = lastHeadsign;
 
       // Set the last flag of the last stop
-      stop.last = index === this.stops.legnth - 1;
+      stop.isLastStop = index === this.stops.length - 1;
 
       // Set the time of the first stop
       stop.time = index > 0 ? stop.time : 0;
@@ -345,6 +345,11 @@ class RouteStop
     this.cancelled = props.cancelled ?? false;
     this.platform = props.platform || undefined;
     this.headsign = props.headsign;
+    this.alightDirection = props.alightDirection;
+    this.alightLeft = this.alightDirection !== undefined ? this.alightDirection === 'left' : undefined;
+    this.alightRight = this.alightDirection !== undefined ? this.alightDirection === 'right' : undefined;
+
+    this.isLastStop = false;
   }
 
   // Copy the stop

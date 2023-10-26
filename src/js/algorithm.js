@@ -4,6 +4,56 @@ const dayjs = require('dayjs');
 const feed = require('./feed.js');
 
 
+// Class that defines a route leg of a journey
+class RouteLeg
+{
+  // Constructor
+  constructor(route) {
+    this.route = route;
+  }
+
+  // Get the cumulative time of the route
+  get cumulativeTime() {
+    return this.route.lastStop.cumulativeTime;
+  }
+
+  // Get the departure node of the route
+  get departureNode() {
+    return this.route.firstStop.node;
+  }
+
+  // Get the arrival node of the route
+  get arrivalNode() {
+    return this.route.lastStop.node;
+  }
+}
+
+
+// Class that defines a transfer leg of a journey
+class TransferLeg
+{
+  // Constructor
+  constructor(transfer) {
+    this.transfer = transfer;
+  }
+
+  // Get the cumulative time of the transfer
+  get cumulativeTime() {
+    return this.transfer.cumulativeTime;
+  }
+
+  // Get the departure node of the transfer
+  get departureNode() {
+    return this.transfer.between;
+  }
+
+  // Get the arrival node of the transfer
+  get arrivalNode() {
+    return this.transfer.and;
+  }
+}
+
+
 // Class that defines a journey
 class Journey
 {
@@ -12,32 +62,28 @@ class Journey
     this.index = index;
     this.legs = legs;
 
-    this.departureNode = this.legs.at(0).route?.firstStop.node ?? this.legs.at(0).firstNode;
-    this.arrivalNode = this.legs.at(-1).route?.lastStop.node ?? this.legs.at(-1).lastNode;
+    this.departureNode = this.legs.at(0).departureNode;
+    this.arrivalNode = this.legs.at(-1).arrivalNode;
     this.departureTime = departureTime;
-    this.formattedDepartureTime = this.departureTime.format('H:mm');
-    this.arrivalTime = departureTime.add(legs.at(-1).time, 'seconds');
-    this.formattedArrivalTime = this.arrivalTime.format('H:mm');
+    this.arrivalTime = departureTime.add(legs.at(-1).cumulativeTime, 'seconds');
     this.duration = this.arrivalTime.diff(this.departureTime, 'seconds');
-    this.formattedDuration = `${Math.floor(this.duration / 3600)}:${Math.ceil(this.duration % 3600 / 60)}`;
-    this.transfers = legs.filter(l => l.type === 'route').length - 1;
+    this.transfers = legs.filter(l => l instanceof RouteLeg).length - 1;
+
+    this.formattedDepartureTime = this.departureTime.format('H:mm');
+    this.formattedArrivalTime = this.arrivalTime.format('H:mm');
+    this.formattedDuration = `${Math.floor(this.duration / 3600)}:${Math.ceil(this.duration % 3600 / 60).toString().padStart(2, '0')}`;
 
     // Iterate over the legs
     for (let leg of this.legs) {
-      // Check if the leg is a route
-      if (leg.type === 'route') {
+      // Check the type of the leg
+      if (leg instanceof RouteLeg) {
         // Copy the route
         leg.route = leg.route.copy();
 
         // Iterate over the stops of the route and set the formatted time
         for (let stop of leg.route.stops)
           stop.formattedTime = this.departureTime.add(stop.cumulativeTime, 'seconds').format('H:mm');
-
-        // Set the first and last stops
-        leg.firstStop = leg.route.stops.at(0);
-        leg.intermediateStops = leg.route.stops.slice(1, -1);
-        leg.lastStop = leg.route.stops.at(-1);
-      } else if (leg.type === 'transfer') {
+      } else if (leg instanceof TransferLeg) {
         // Copy the transfer
         leg.transfer = leg.transfer.copy();
 
@@ -96,12 +142,12 @@ class RaptorAlgorithm
         // Prepend a new leg
         if (connection instanceof feed.Route) {
           let fromNode = connection.stops[0].node;
-          legs.unshift({type: 'route', route: connection, time: connection.lastStop.cumulativeTime});
+          legs.unshift(new RouteLeg(connection));
           toNode = fromNode;
           k --;
         } else if (connection instanceof feed.Transfer) {
           let fromNode = connection.getOppositeNode(toNode);
-          legs.unshift({type: 'transfer', transfer: connection.alignToNode(fromNode), time: connection.cumulativeTime, firstNode: fromNode, lastNode: toNode});
+          legs.unshift(new TransferLeg(connection.alignToNode(fromNode)));
           toNode = fromNode;
         } else {
           console.warn(`Found unrecognized connection type`, connection);
@@ -241,5 +287,7 @@ class RaptorAlgorithm
 
 
 // Define the exports
+module.exports.RouteLeg = RouteLeg;
+module.exports.TransferLeg = TransferLeg;
 module.exports.Journey = Journey;
 module.exports.RaptorAlgorithm = RaptorAlgorithm;

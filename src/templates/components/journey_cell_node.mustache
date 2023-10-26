@@ -1,6 +1,13 @@
 <div class="journey-cell is-node">
   {{^cancelled}}
     <p>{{> feed/node_short}}</p>
+
+    {{#isLastStop}}
+      {{#alightDirection}}
+        {{#alightLeft}}<p class="is-muted">Links uitstappen</p>{{/alightLeft}}
+        {{#alightRight}}<p class="is-muted">Rechts uitstappen</p>{{/alightRight}}
+      {{/alightDirection}}
+    {{/isLastStop}}
   {{/cancelled}}
 
   {{#cancelled}}

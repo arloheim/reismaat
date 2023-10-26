@@ -213,10 +213,6 @@ avt_rvn = {name = "Amsvorde, Ravijn", modality = "tram", location = "Amsvorde"}
 avt_avv = {name = "Amsvorde, Venpoort", modality = "tram", location = "Amsvorde"}
 avt_vt = {name = "Vittoria, Vittoria", modality = "tram", location = "Vittoria"}
 
-# Hyperloop
-hyp_arfo = {name = "Arloheim Forum", modality = "hyperloop", location = "Arloheim"}
-hyp_gth = {name = "Gaterade Haven", modality = "hyperloop", location = "Gaterade"}
-
 # Veerdiensten
 fer_str = {name = "Stachteren, Veerhaven", modality = "ferry"}
 fer_ng = {name = "Negenaar, Veerhaven", modality = "ferry"}
@@ -224,7 +220,11 @@ fer_oh = {name = "Ockholm, Veerhaven", modality = "ferry"}
 fer_nsz = {name = "Noordersluizen, Veerhaven Oosterkade", modality = "ferry"}
 fer_nszw = {name = "Noordersluizen, Veerhaven Westerkade", modality = "ferry"}
 
-# Flexpaarden
+# Hyperloop
+hyp_arfo = {name = "Arloheim Forum", modality = "hyperloop", location = "Arloheim"}
+hyp_gth = {name = "Gaterade Haven", modality = "hyperloop", location = "Gaterade"}
+
+# Flexpaard-hubs
 eqh_qs = {name = "Al-Qusur", modality = "horse_rental"}
 eqh_lvn = {name = "Lavijn", modality = "horse_rental"}
 eqh_avi = {name = "Amsvorde Iberië", modality = "horse_rental"}
@@ -236,28 +236,22 @@ eqh_dd = {name = "Dinsdrecht", modality = "horse_rental"}
 eqh_wl = {name = "Woenslaken", modality = "horse_rental"}
 eqh_sti = {name = "Storia Infinita", modality = "horse_rental"}
 
-eqd_ztm = {name = "Zwettem"}
-eqd_nszw = {name = "Noordersluizen, Westerkade"}
-eqd_mqd = {name = "Ma'bad Qadim"}
-eqd_rmn = {name = "Ramune"}
-eqd_znd = {name = "Zechenidì"}
-eqd_pdm = {name = "Punto del Mare"}
-eqd_ndh = {name = "Noordenhoek"}
-eqd_nszo = {name = "Noordersluizen, Oosterkade"}
-eqd_mea = {name = "Meander"}
-eqd_zd = {name = "'t Zand"}
-eqd_abd = {name = "Abende"}
-eqd_sjo = {name = "Sint Jan bij de Oase"}
-eqd_wp = {name = "Witte Paarden"}
-eqd_ngv = {name = "Negenervroente"}
-eqd_fdp = {name = "Ferdrop"}
-
-# Museumstations
-mus_hz = {name = "Halenz (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
-mus_gnd = {name = "Groenedal (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
-mus_vg = {name = "Vlorring (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
-mus_pss = {name = "Persikstaaf (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
-mus_wvg = {name = "Welving (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
+# Steden, dorpen en wijken
+cty_abd = {name = "Abende"}
+cty_fdp = {name = "Ferdrop"}
+cty_mqd = {name = "Ma'bad Qadim"}
+cty_mea = {name = "Meander"}
+cty_ngv = {name = "Negenervroente"}
+cty_ndh = {name = "Noordenhoek"}
+cty_nsz = {name = "Noordersluizen"}
+cty_nszw = {name = "Noordersluizen-West"}
+cty_pdm = {name = "Punto del Mare"}
+cty_rmn = {name = "Ramune"}
+cty_sjo = {name = "Sint Jan bij de Oase"}
+cty_wp = {name = "Witte Paarden"}
+cty_zd = {name = "'t Zand"}
+cty_znd = {name = "Zechenidì"}
+cty_ztm = {name = "Zwettem"}
 
 # Points of interest
 poi_arbnl = {name = "Arloheim, Bijnlaan", location = "Arloheim", icon = "building"}
@@ -283,3 +277,10 @@ poi_arwpss = {name = "Arloheim, Winkelhart Persikstaaf", location = "Arloheim", 
 poi_arkldw = {name = "Arloheim, Kasteel en Catacomben van Lodewijk", location = "Arloheim", icon = "landmark"}
 poi_arwtm = {name = "Arloheim, Woestijnmuseum", location = "Arloheim", icon = "landmark"}
 poi_lvnktb = {name = "Lavijn, Kattenbron", location = "Lavijn", icon = "tree"}
+
+# Museumstations
+mus_hz = {name = "Halenz (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
+mus_gnd = {name = "Groenedal (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
+mus_vg = {name = "Vlorring (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
+mus_pss = {name = "Persikstaaf (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
+mus_wvg = {name = "Welving (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}

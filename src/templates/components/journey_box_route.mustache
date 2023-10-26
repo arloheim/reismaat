@@ -1,28 +1,30 @@
 <div class="journey-box is-route">
-  <!-- First stop at {{firstStop.node.name}} -->
-  <div class="journey-row is-bold">
-    {{#route.firstStop.formattedTime}}
-      {{> components/journey_cell_time}}
-    {{/route.firstStop.formattedTime}}
+  {{#firstStop}}
+    <!-- First stop at {{firstStop.node.name}} -->
+    <div class="journey-row route-first-stop is-bold">
+      {{#formattedTime}}
+        {{> components/journey_cell_time}}
+      {{/formattedTime}}
 
-    <div class="journey-cell is-line">
-      <span class="line is-start"></span>
-      <span class="icon has-text-primary">
-        <i class="fa-solid fa-fw fa-circle-dot"></i>
-      </span>
+      <div class="journey-cell is-line">
+        <span class="line is-start"></span>
+        <span class="icon has-text-primary">
+          <i class="fa-solid fa-fw fa-circle-dot"></i>
+        </span>
+      </div>
+
+      {{#node}}
+        {{> components/journey_cell_node}}
+      {{/node}}
+
+      {{#platform}}
+        {{> components/journey_cell_platform}}
+      {{/platform}}
     </div>
-
-    {{#route.firstStop.node}}
-      {{> components/journey_cell_node}}
-    {{/route.firstStop.node}}
-
-    {{#route.firstStop.platform}}
-      {{> components/journey_cell_platform}}
-    {{/route.firstStop.platform}}
-  </div>
+  {{/firstStop}}
 
   <!-- Route information -->
-  <div class="journey-row">
+  <div class="journey-row route-info">
     <div class="journey-cell is-time"></div>
 
     <div class="journey-cell is-line">
@@ -41,7 +43,7 @@
 
   <!-- Notifications -->
   {{#notifications.length}}
-    <div class="journey-row">
+    <div class="journey-row route-notifications">
       <div class="journey-cell is-time"></div>
 
       <div class="journey-cell is-line">
@@ -57,8 +59,8 @@
   {{/notifications.length}}
 
   <!-- Intermediate stops -->
-  {{#route.intermediateStops.length}}
-    <div class="journey-row">
+  {{#intermediateStops.length}}
+    <div class="journey-row route-collapse">
       <div class="journey-cell is-time"></div>
 
       <div class="journey-cell is-line">
@@ -78,9 +80,9 @@
     </div>
 
     <div class="collapse" id="journey_{{index}}_{{id}}_stops" data-slide>
-      {{#route.intermediateStops}}
+      {{#intermediateStops}}
         <!-- Intermediate stop at {{node.name}} -->
-        <div class="journey-row">
+        <div class="journey-row route-intermediate-stop">
           {{#formattedTime}}
             {{> components/journey_cell_time}}
           {{/formattedTime}}
@@ -100,29 +102,31 @@
             {{> components/journey_cell_platform}}
           {{/platform}}
         </div>
-      {{/route.intermediateStops}}
+      {{/intermediateStops}}
     </div>
-  {{/route.intermediateStops.length}}
+  {{/intermediateStops.length}}
 
-  <!-- Last stop at {{lastStop.node.name}} -->
-  <div class="journey-row is-bold">
-    {{#route.lastStop.formattedTime}}
-      {{> components/journey_cell_time}}
-    {{/route.lastStop.formattedTime}}
+  {{#lastStop}}
+    <!-- Last stop at {{lastStop.node.name}} -->
+    <div class="journey-row route-last-stop is-bold">
+      {{#formattedTime}}
+        {{> components/journey_cell_time}}
+      {{/formattedTime}}
 
-    <div class="journey-cell is-line">
-      <span class="line is-end"></span>
-      <span class="icon has-text-primary">
-        <i class="fa-solid fa-fw fa-circle-dot"></i>
-      </span>
+      <div class="journey-cell is-line">
+        <span class="line is-end"></span>
+        <span class="icon has-text-primary">
+          <i class="fa-solid fa-fw fa-circle-dot"></i>
+        </span>
+      </div>
+
+      {{#node}}
+        {{> components/journey_cell_node}}
+      {{/node}}
+
+      {{#platform}}
+        {{> components/journey_cell_platform}}
+      {{/platform}}
     </div>
-
-    {{#route.lastStop.node}}
-      {{> components/journey_cell_node}}
-    {{/route.lastStop.node}}
-
-    {{#route.lastStop.platform}}
-      {{> components/journey_cell_platform}}
-    {{/route.lastStop.platform}}
-  </div>
+  {{/lastStop}}
 </div>

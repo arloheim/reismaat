@@ -43,8 +43,9 @@ nodeName = 'Hyperloopstation'
 description = 'Transportsysteem voor langeafstandsvervoer gebruikmakend van een luchtdrukbuis'
 icon = 'bolt'
 
+# Natransport
 [horse_rental]
 name = 'Flexpaard'
-nodeName = 'Flexpaardhub'
+nodeName = 'Flexpaard-hub'
 description = 'Huursysteem voor deelpaarden'
-icon = 'horse-head'
+icon = 'horse'
