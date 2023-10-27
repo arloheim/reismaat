@@ -1,3 +1,7 @@
+<header class="header">
+  <img src="/assets/images/header-nodes.png">
+</header>
+
 {{#node}}
   <div class="box has-background-white">
     <h2 class="mb-0">
@@ -12,27 +16,11 @@
 
   <div class="tile is-ancestor">
     <div class="tile is-6 is-parent">
-      <div class="tile is-child box has-background-white">
-        <h3>dienstregeling</h3>
-
-        {{#nodeRoutes}}
-          <div class="journey-row">
-            {{> components/journey_cell_route}}
-
-            {{#stop.platform}}
-              {{> components/journey_cell_platform}}
-            {{/stop.platform}}
-          </div>
-        {{/nodeRoutes}}
-      </div>
+      {{> tiles/nodes_details_routes}}
     </div>
 
     <div class="tile is-6 is-parent">
-      <div class="tile is-child box has-background-white">
-        <h3>voorzieningen</h3>
-
-        <p>To be uitgebreided</p>
-      </div>
+      {{> tiles/nodes_details_services}}
     </div>
   </div>
 {{/node}}

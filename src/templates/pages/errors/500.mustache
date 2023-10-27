@@ -1,0 +1,20 @@
+<header class="header">
+  <img src="/assets/images/header-error.png">
+</header>
+
+<div class="box has-background-white">
+  <h3>er is een fout opgetreden</h3>
+
+  <p>Tijdens het laden van de opgegeven pagina is een onherstelbare fout opgetreden. Onze ict-experts zijn ervan op de hoogte gebracht en doen er alles aan om deze fout zo snel mogelijk te herstellen. Probeer het later nog eens.</p>
+
+  <ul>
+    <li><a href="/" data-navigo>Ga naar de homepage</a></li>
+    <li><a href="/meldingen" data-navigo>Bekijk actuele storingen en werkzaamheden</a></li>
+  </ul>
+
+  {{#error.stack}}
+    <p>De fout heeft de volgende melding gegenereerd:</p>
+
+    <pre class="has-background-danger-light has-text-danger">{{.}}</pre>
+  {{/error.stack}}
+</div>

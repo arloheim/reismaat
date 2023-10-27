@@ -1,39 +1,9 @@
-<div class="box has-background-white">
-  <h2 class="mb-2">
-    <span class="icon-text">
-      <span class="icon mr-4">
-        <i class="fa-solid fa-circle-info"></i>
-      </span>
-      <span>stations</span>
-    </span>
-  </h2>
+<header class="header">
+  <img src="/assets/images/header-nodes.png">
+</header>
 
-  <p>Bekijk vertrektijden en voorzieningen van de stations en haltes in Ihlane:</p>
-
-  <div class="field has-addons mb-5">
-    <div class="control is-expanded">
-      <div class="dropdown is-fullwidth">
-        <div class="dropdown-trigger">
-          <input class="input node-input" type="text" placeholder="station, halte of plaats" id="node">
-        </div>
-      </div>
-    </div>
-
-    <div class="control">
-      <a class="button is-dark">
-        <span class="icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </span>
-      </a>
-    </div>
+<div class="tile is-ancestor">
+  <div class="tile is-parent">
+    {{> tiles/action_nodes}}
   </div>
-
-  <p>Of ga direct naar deze stations:</p>
-
-  <ul>
-    <li><a href="/stations/nsb_arfo" data-navigo>Arloheim Forum</a></li>
-    <li><a href="/stations/nsb_ar" data-navigo>Arloheim Centraal</a></li>
-    <li><a href="/stations/nsb_arc" data-navigo>Arloheim Campus</a></li>
-    <li><a href="/stations/nsb_av" data-navigo>Amsvorde Centraal</a></li>
-  </ul>
 </div>

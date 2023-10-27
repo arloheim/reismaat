@@ -1,3 +1,7 @@
+<header class="header">
+  <img src="/assets/images/header-notifications.png">
+</header>
+
 <div class="box has-background-white">
   <h2 class="mb-2">
     <span class="icon-text">
@@ -8,48 +12,13 @@
     </span>
   </h2>
 
-  <p>Er zijn {{notifications.length}} meldingen over de actuele situatie in het openbaar vervoer.</p>
+  <p>Er zijn {{feed.notificationsInOverview.length}} meldingen over de actuele situatie in het openbaar vervoer.</p>
 </div>
 
-{{#notifications}}
-  <div class="box has-background-white">
-    <p class="has-text-weight-bold has-text-{{color}}-dark mb-0">{{type.name}}</p>
-
-    <h4 class="mt-0 mb-2">{{name}}</h4>
-
-    {{#description}}
-      <p>{{description}}</p>
-    {{/description}}
-
-    <div class="columns">
-      {{#hasAffectedNodes}}
-        <div class="column is-4">
-          <h5 class="mb-2">Getroffen stations</h5>
-
-          <p>
-            {{#affectedNodes}}
-              {{& shortDisplayLinkHtml}},
-            {{/affectedNodes}}
-          </p>
-        </div>
-      {{/hasAffectedNodes}}
-
-      {{#hasAffectedRoutes}}
-        <div class="column is-4">
-          <h5 class="mb-2">Getroffen lijnen</h5>
-            {{#affectedRoutes}}
-              <p class="mb-0">{{& longDisplayLinkHtml}}</p>
-            {{/affectedRoutes}}
-          </ul>
-        </div>
-      {{/hasAffectedRoutes}}
-
-      {{#period}}
-        <div class="column is-4">
-          <h5 class="mb-2">Periode</h5>
-          <p>{{period}}</p>
-        </div>
-      {{/period}}
-    </div>
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-parent">
+    {{#feed.notificationsInOverview}}
+      {{> tiles/notifications_details}}
+    {{/feed.notificationsInOverview}}
   </div>
-{{/notifications}}
+</div>

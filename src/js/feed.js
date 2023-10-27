@@ -101,27 +101,6 @@ class Node
     return parts.join(' &middot; ');
   }
 
-  // Return the short display as an element or HTML
-  get shortDisplayElement() {
-    return $('<span class="icon-text">')
-      .data('id', this.id)
-      .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
-      .append($('<span>').html(this.name));
-  }
-  get shortDisplayHtml() {
-    return this.shortDisplayElement.prop('outerHTML');
-  }
-
-  // Return the short dsplay link as an element or HTML
-  get shortDisplayLinkElement() {
-    return $('<a class="is-plain" data-navigo>')
-      .attr('href', `/stations/${this.id}`)
-      .append(this.shortDisplayElement);
-  }
-  get shortDisplayLinkHtml() {
-    return this.shortDisplayLinkElement.prop('outerHTML');
-  }
-
   // Return HTML for rendering a dropdown item
   renderDropdownItem() {
     return $('<a class="dropdown-item">')
@@ -208,6 +187,7 @@ class Route
     this.color = {background: '#ffffff', text: '#000000', ...props.color};
     this.stops = props.stops.map(s => s.copy());
     this.initialTime = props.initialTime ?? 0;
+    this.showInOverview = props.showInOverview ?? true;
 
     // Calculate cumulative time for the stops of the route
     let lastHeadsign = this.headsign;
@@ -280,54 +260,6 @@ class Route
   // Apply an initial time to the route
   withInitialTime(initialTime) {
     return this.copy({initialTime});
-  }
-
-
-  // Return the short display as an element or HTML
-  get shortDisplayElement() {
-    return $('<span class="icon-text">')
-      .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
-      .append($('<span>')
-        .append($('<span class="route">')
-          .css({background: this.color.background, color: this.color.text})
-          .html(this.abbr ?? this.name)));
-  }
-  get shortDisplayHtml() {
-    return this.shortDisplayElement.prop('outerHTML');
-  }
-
-  // Return the long display as an element or HTML
-  get longDisplayElement() {
-    return $('<span class="icon-text">')
-      .append($('<span class="icon">').html(`<i class="fas fa-fw fa-${this.icon}"></i>`))
-      .append($('<span>')
-        .append($('<span class="route">')
-          .css({background: this.color.background, color: this.color.text})
-          .html(this.abbr ?? this.name))
-        .append($('<span>').html(` naar ${this.headsign}`)));
-  }
-  get longDisplayHtml() {
-    return this.longDisplayElement.prop('outerHTML');
-  }
-
-  // Return the short dsplay link as an element or HTML
-  get shortDisplayLinkElement() {
-    return $('<a class="is-plain" data-navigo>')
-      .attr('href', `/dienstregeling/${this.id}`)
-      .append(this.shortDisplayElement);
-  }
-  get shortDisplayLinkHtml() {
-    return this.shortDisplayLinkElement.prop('outerHTML');
-  }
-
-  // Return the long dsplay link as an element or HTML
-  get longDisplayLinkElement() {
-    return $('<a class="is-plain" data-navigo>')
-      .attr('href', `/dienstregeling/${this.id}`)
-      .append(this.longDisplayElement);
-  }
-  get longDisplayLinkHtml() {
-    return this.longDisplayLinkElement.prop('outerHTML');
   }
 }
 
@@ -498,6 +430,11 @@ class Feed
     return Object.values(this._routes);
   }
 
+  // Return the routes that are shown in the overview in the feed
+  get routesInOverview() {
+    return this.routes.filter(r => r.showInOverview);
+  }
+
   // Return the route with the specified id in the feed
   getRoute(id) {
     if (id === undefined)
@@ -517,6 +454,11 @@ class Feed
   // Return the notifications in the feed
   get notifications() {
     return Object.values(this._notifications);
+  }
+
+  // Return the notifications that are shown in the overview in the feed
+  get notificationsInOverview() {
+    return this.notifications.filter(n => n.showInOverview);
   }
 
   // Return the notification with the specified id in the feed
@@ -627,10 +569,4 @@ class Feed
 
 
 // Define the exports
-module.exports.Agency = Agency;
-module.exports.Node = Node;
-module.exports.Transfer = Transfer;
-module.exports.Route = Route;
-module.exports.RouteStop = RouteStop;
-module.exports.Notification = Notification;
-module.exports.Feed = Feed;
+module.exports = {Agency, Modality, Node, Transfer, Route, RouteStop, Notification, Feed};

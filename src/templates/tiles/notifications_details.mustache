@@ -1,0 +1,40 @@
+<div class="tile is-child box has-background-white">
+  <p class="has-text-weight-bold has-text-{{color}}-dark mb-0">{{type.name}}</p>
+
+  <h4 class="mt-0 mb-2">{{name}}</h4>
+
+  {{#description}}
+    <p>{{description}}</p>
+  {{/description}}
+
+  <div class="columns">
+    {{#affectedNodes.length}}
+      <div class="column is-4">
+        <h5 class="mb-2">Getroffen stations</h5>
+
+        <p>
+          {{#affectedNodes}}
+            {{> feed/node_long}},
+          {{/affectedNodes}}
+        </p>
+      </div>
+    {{/affectedNodes.length}}
+
+    {{#affectedRoutes.length}}
+      <div class="column is-4">
+        <h5 class="mb-2">Getroffen lijnen</h5>
+          {{#affectedRoutes}}
+            <p class="mb-0">{{> feed/route_long}}</p>
+          {{/affectedRoutes}}
+        </ul>
+      </div>
+    {{/affectedRoutes.length}}
+
+    {{#period}}
+      <div class="column is-4">
+        <h5 class="mb-2">Periode</h5>
+        <p>{{period}}</p>
+      </div>
+    {{/period}}
+  </div>
+</div>

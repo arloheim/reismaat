@@ -1,35 +1,114 @@
 const $ = require('jquery');
 const _ = require('underscore');
 const dayjs = require('dayjs');
-const Navigo = require('navigo');
 
-const algorithm = require('./algorithm')
-const feed = require('./feed.js')
-const templates = require('./templates.js');
+const {RaptorAlgorithm} = require('./algorithm')
+const {Feed} = require('./feed.js')
+const {Router, NotFoundError} = require('./router.js')
 
-require('@fortawesome/fontawesome-free/js/all.js');
+require('./styles.js');
 
 
 // Event handler when the document is ready
 $(function() {
-  // Load the feed
-  let theFeed = new feed.Feed();
+  // Create the feed
+  let feed = new Feed();
+  console.log('Feed:', feed);
 
   // Create the router
-  let $routeView = $('#view');
+  let router = new Router('/', $('#view'));
 
-  let headers = {
-    'default': 'default-header.png',
-    'reisplanner': 'reisplanner-header.png',
-    'meldingen': 'meldingen-header.png',
-    'tickets': 'tickets-header.png',
-    'dienstregeling': 'dienstregeling-header.png',
-    'dienstregeling.details': 'dienstregeling-header.png',
-    'stations': 'stations-header.png',
-    'stations.details': 'stations-header.png',
+  // Add routes to the router
+  router.addRoute('home', {path: '/', template: 'pages/home', data: collectHomeData});
+  router.addRoute('planner', {path: '/reisadvies', template: 'pages/planner', data: collectPlannerData});
+  router.addRoute('notifications', {path: '/meldingen', template: 'pages/notifications'});
+  router.addRoute('tickets', {path: '/tickets', template: 'pages/tickets'});
+  router.addRoute('routes', {path: '/dienstregeling', template: 'pages/routes', data: collectRoutesData});
+  router.addRoute('routes_details', {path: '/dienstregeling/:id', template: 'pages/routes_details', data: collectRoutesDetailsData});
+  router.addRoute('nodes', {path: '/stations', template: 'pages/nodes'});
+  router.addRoute('nodes_details', {path: '/stations/:id', template: 'pages/nodes_details', data: collectNodesDetailsData});
+
+  // Add hooks to the router
+  router.addAfterRoutingHook(afterRouting);
+  router.addAfterRenderingHook(afterRendering);
+
+  // Add default data to the router
+  router.addDefaultData(match => ({feed}));
+
+  // Resolve the route
+  router.resolve();
+
+
+  // Collect data for the home page
+  function collectHomeData(match) {
+    return {
+      datetime: dayjs().format('YYYY-MM-DDTHH:mm')
+    }
   };
 
-  function onTemplateRendered($el) {
+  // Collect data for the planner page
+  function collectPlannerData(match) {
+    let from = feed.getNode(match.params?.van);
+    let to = feed.getNode(match.params?.naar);
+    let datetime = match.params?.datum;
+
+    if (from === undefined && to === undefined)
+      throw new NotFoundError(`Could not find nodes to plan between`);
+
+    let algo = new RaptorAlgorithm(feed);
+    let journeys = algo.calculate(from, to, dayjs(datetime));
+
+    return {from, to, datetime, journeys};
+  }
+
+  // Collect data for the routes page
+  function collectRoutesData(match) {
+    return {
+      routes: _.chain(feed.routesInOverview)
+        .groupBy(r => r.agency.id)
+        .pairs()
+        .map(([agencyId, agencyRoutes]) => ({agency: feed.getAgency(agencyId), agencyModalities: _.chain(agencyRoutes)
+          .groupBy(r => r.modality.id)
+          .pairs()
+          .map(([modalityId, modalityRoutes]) => ({modality: feed.getModality(modalityId), modalityRoutes}))
+          .value()}))
+        .value()
+    };
+  }
+
+  // Collect data for the routes details page
+  function collectRoutesDetailsData(match) {
+    let routeId = match.data?.id;
+    let route = feed.getRoute(routeId);
+    if (routeId === undefined || route === undefined)
+      throw new NotFoundError(`Could not find route with id '${routeId}'`);
+
+    return {route};
+  }
+
+  // Collect data for the nodes details page
+  function collectNodesDetailsData(match) {
+    let nodeId = match.data?.id;
+    let node = feed.getNode(nodeId);
+    if (nodeId === undefined || node === undefined)
+      throw new NotFoundError(`Could not find node with id '${nodeId}'`);
+
+    let nodeRoutes = node?.routesExcludingNonHalts
+      .map(route => ({route, stop: route.getStopAtNode(node)}))
+      .toSorted((a, b) => a.stop.platform.localeCompare(b.stop.platform));
+
+    return {node, nodeRoutes};
+  }
+
+
+  // Hook for when the router is done routing
+  function afterRouting() {
+    // Scroll to the top of the page
+    window.scrollTo({top: 0});
+  }
+
+  // Hook for when the router is done rendering
+  function afterRendering($el) {
     // Show the first element of a collapse group
     $el.find('.collapse[data-group]').first().show();
 
@@ -63,7 +142,7 @@ $(function() {
       var $el = $(this);
 
       var input = $el.val();
-      var foundNodes = theFeed.searchNodes(input);
+      var foundNodes = feed.searchNodes(input);
 
       // Get the dropdown
       let $dropdown = $el.parents('.dropdown');
@@ -80,7 +159,7 @@ $(function() {
       // Function that defines an event handler when a dropdown item is clicked
       function dropdownItemClick() {
         $dropdown.hide().removeClass('is-active');
-        $el.val(theFeed.getNode($(this).data('id')).name);
+        $el.val(feed.getNode($(this).data('id')).name);
       }
 
       // Clear the dropdown content
@@ -88,7 +167,7 @@ $(function() {
 
       // Add the nodes to the dropdown content
       for (let foundNode of foundNodes.slice(0, 10)) {
-        theFeed.getNode(foundNode.id).renderDropdownItem()
+        feed.getNode(foundNode.id).renderDropdownItem()
           .on('click', dropdownItemClick)
           .appendTo($dropdownContent);
       }
@@ -112,124 +191,15 @@ $(function() {
       let to = $(this).find('#to').val();
       let datetime = $(this).find('#datetime').val();
 
-      from = theFeed.searchNodes(from)[0]?.id;
-      to = theFeed.searchNodes(to)[0]?.id;
+      from = feed.searchNodes(from)[0]?.id;
+      to = feed.searchNodes(to)[0]?.id;
 
       console.log(from, to);
 
-      router.navigate(`/reisadvies?van=${from}&naar=${to}&datum=${datetime}`);
-    })
+      router.navigateToPath(`/reisadvies?van=${from}&naar=${to}&datum=${datetime}`);
+    });
   }
 
-  let router = new Navigo('/');
-
-  router.hooks({
-    after(match) {
-      // Scroll to the top of the page
-      scrollTo({top: 0});
-
-      // Set the header image
-      let header = headers[match.route.name] ?? headers.default;
-      $('#header').attr('src', `/assets/images/${header}`);
-    }
-  });
-
-  router.on({
-    '/': {
-      as: 'reisplanner',
-      uses: function(match) {
-        templates.render($routeView, 'pages/home', {notifications: theFeed.notifications.filter(n => n.showInOverview), datetime: dayjs().format('YYYY-MM-DDTHH:mm')}, onTemplateRendered);
-      }
-    },
-    '/reisadvies': {
-      as: 'reisadvies',
-      uses: function(match) {
-        console.log(match);
-        let from = theFeed.getNode(match.params?.van);
-        let to = theFeed.getNode(match.params?.naar);
-        let datetime = match.params?.datum;
-
-        if (from !== undefined && to !== undefined) {
-          let algo = new algorithm.RaptorAlgorithm(theFeed);
-          let journeys = algo.calculate(from, to, dayjs(datetime));
-
-          templates.render($routeView, 'pages/planner', {from, to, datetime, journeys}, onTemplateRendered);
-        } else {
-          templates.renderNotFound($routeView, {}, onTemplateRendered);
-        }
-      }
-    },
-    '/meldingen': {
-      as: 'meldingen',
-      uses: function(match) {
-        templates.render($routeView, 'pages/notifications', {notifications: theFeed.notifications.filter(n => n.showInOverview)}, onTemplateRendered);
-      }
-    },
-    '/tickets': {
-      as: 'tickets',
-      uses: function(match) {
-        templates.render($routeView, 'pages/tickets', {}, onTemplateRendered);
-      }
-    },
-    '/dienstregeling': {
-      as: 'dienstregeling',
-      uses: function(match) {
-        templates.render($routeView, 'pages/routes', {
-          routes: _.chain(theFeed.routes)
-            .groupBy(r => r.agency.id)
-            .pairs()
-            .map(([agencyId, agencyRoutes]) => ({agency: theFeed.getAgency(agencyId), agencyModalities: _.chain(agencyRoutes)
-              .groupBy(r => r.modality.id)
-              .pairs()
-              .map(([modalityId, modalityRoutes]) => ({modality: theFeed.getModality(modalityId), modalityRoutes}))
-              .value()}))
-            .value()
-        }, onTemplateRendered);
-      }
-    },
-    '/dienstregeling/:id': {
-      as: 'dienstregeling.details',
-      uses: function(match) {
-        let route = theFeed.getRoute(match.data.id);
-
-        if (route !== undefined)
-          templates.render($routeView, 'pages/routes_details', {
-            route,
-            firstStop: route.stops.at(0),
-            lastStop: route.stops.at(-1),
-            intermediateStops: route.stops.slice(1, -1),
-          }, onTemplateRendered);
-        else
-          templates.renderNotFound($routeView, {}, onTemplateRendered);
-      }
-    },
-    '/stations': {
-      as: 'stations',
-      uses: function(match) {
-        templates.render($routeView, 'pages/nodes', {}, onTemplateRendered);
-      }
-    },
-    '/stations/:id': {
-      as: 'stations.details',
-      uses: function(match) {
-        let node = theFeed.getNode(match.data.id);
-        let nodeRoutes = node?.routesExcludingNonHalts
-          .map(route => ({route, stop: route.getStopAtNode(node)}))
-          .toSorted((a, b) => a.stop.platform.localeCompare(b.stop.platform));
-
-        if (node !== undefined)
-          templates.render($routeView, 'pages/nodes_details', {node, nodeRoutes}, onTemplateRendered);
-        else
-          templates.renderNotFound($routeView, {}, onTemplateRendered);
-      }
-    }
-  });
-
-  router.notFound(function() {
-    templates.notFound($routeView, {});
-  });
-
-  router.resolve();
 
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(function() {

@@ -17,10 +17,19 @@ const _templates = {
 
   // Error pages
   'pages/errors/404': fs.readFileSync('src/templates/pages/errors/404.mustache', 'utf-8'),
+  'pages/errors/500': fs.readFileSync('src/templates/pages/errors/500.mustache', 'utf-8'),
 
   // Tiles
-  'tiles/planner': fs.readFileSync('src/templates/tiles/planner.mustache', 'utf-8'),
-  'tiles/route_stops': fs.readFileSync('src/templates/tiles/route_stops.mustache', 'utf-8'),
+  'tiles/action_nodes': fs.readFileSync('src/templates/tiles/action_nodes.mustache', 'utf-8'),
+  'tiles/action_notifications': fs.readFileSync('src/templates/tiles/action_notifications.mustache', 'utf-8'),
+  'tiles/action_planner': fs.readFileSync('src/templates/tiles/action_planner.mustache', 'utf-8'),
+  'tiles/action_routes': fs.readFileSync('src/templates/tiles/action_routes.mustache', 'utf-8'),
+  'tiles/action_tickets': fs.readFileSync('src/templates/tiles/action_tickets.mustache', 'utf-8'),
+  'tiles/nodes_details_routes': fs.readFileSync('src/templates/tiles/nodes_details_routes.mustache', 'utf-8'),
+  'tiles/nodes_details_services': fs.readFileSync('src/templates/tiles/nodes_details_services.mustache', 'utf-8'),
+  'tiles/notifications_details': fs.readFileSync('src/templates/tiles/notifications_details.mustache', 'utf-8'),
+  'tiles/routes_details_stops': fs.readFileSync('src/templates/tiles/routes_details_stops.mustache', 'utf-8'),
+  'tiles/routes_details_summary': fs.readFileSync('src/templates/tiles/routes_details_summary.mustache', 'utf-8'),
 
   // Components
   'components/journey_details': fs.readFileSync('src/templates/components/journey_details.mustache', 'utf-8'),
@@ -41,26 +50,29 @@ const _templates = {
 };
 
 
+
+// Return if a template exists
+function templateExists(template) {
+  return _templates[template] !== undefined;
+}
+
 // Render a template
-function render(el, template, view, callback) {
-  console.log(view);
-
-  template = _templates[template];
-  if (template !== undefined)
-    el.html(mustache.render(template, view, _templates));
-  else
-    el.html(mustache.render(_templates['pages/errors/404'], view, _templates));
-
+function renderTemplate(element, template, data, callback) {
+  element.html(mustache.render(_templates[template], data, _templates));
   if (callback !== undefined)
-    callback(el);
+    callback(element);
 }
 
 // Render the not found template
-function renderNotFound(el, view, callback) {
-  render(el, 'pages/errors/404', view, callback);
+function renderNotFoundTemplate(element, error, callback) {
+  renderTemplate(element, 'pages/errors/404', {error}, callback);
+}
+
+// Render the error template
+function renderErrorTemplate(element, error, callback) {
+  renderTemplate(element, 'pages/errors/500', {error}, callback);
 }
 
 
 // Define the exports
-module.exports.render = render;
-module.exports.renderNotFound = renderNotFound;
+module.exports = {templateExists, renderTemplate, renderNotFoundTemplate, renderErrorTemplate};

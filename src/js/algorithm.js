@@ -287,7 +287,4 @@ class RaptorAlgorithm
 
 
 // Define the exports
-module.exports.RouteLeg = RouteLeg;
-module.exports.TransferLeg = TransferLeg;
-module.exports.Journey = Journey;
-module.exports.RaptorAlgorithm = RaptorAlgorithm;
+module.exports = {RouteLeg, TransferLeg, Journey, RaptorAlgorithm};
