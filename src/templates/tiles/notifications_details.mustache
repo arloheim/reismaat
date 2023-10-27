@@ -12,11 +12,9 @@
       <div class="column is-4">
         <h5 class="mb-2">Getroffen stations</h5>
 
-        <p>
-          {{#affectedNodes}}
-            {{> feed/node_long}},
-          {{/affectedNodes}}
-        </p>
+        {{#affectedNodes}}
+          <p class="mb-0">{{> feed/node_long}}</p>
+        {{/affectedNodes}}
       </div>
     {{/affectedNodes.length}}
 
@@ -24,7 +22,11 @@
       <div class="column is-4">
         <h5 class="mb-2">Getroffen lijnen</h5>
           {{#affectedRoutes}}
-            <p class="mb-0">{{> feed/route_long}}</p>
+            <p class="mb-0">
+              <a class="is-plain" href="/dienstregeling/{{id}}">
+                {{> feed/route_long}}
+              </a>
+            </p>
           {{/affectedRoutes}}
         </ul>
       </div>

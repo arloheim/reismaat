@@ -74,7 +74,10 @@ class Journey
     this.formattedDuration = `${Math.floor(this.duration / 3600)}:${Math.ceil(this.duration % 3600 / 60).toString().padStart(2, '0')}`;
 
     // Iterate over the legs
-    for (let leg of this.legs) {
+    for (let [index, leg] of this.legs.entries()) {
+      // Set the last flag of the last leg
+      leg.isLast = this.legs.indexOf(leg) === this.legs.length - 1;
+
       // Check the type of the leg
       if (leg instanceof RouteLeg) {
         // Copy the route

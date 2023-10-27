@@ -41,6 +41,7 @@ const _templates = {
   'components/journey_cell_platform': fs.readFileSync('src/templates/components/journey_cell_platform.mustache', 'utf-8'),
   'components/journey_cell_route': fs.readFileSync('src/templates/components/journey_cell_route.mustache', 'utf-8'),
   'components/journey_cell_time': fs.readFileSync('src/templates/components/journey_cell_time.mustache', 'utf-8'),
+  'components/journey_link': fs.readFileSync('src/templates/components/journey_link.mustache', 'utf-8'),
 
   // Feed components
   'feed/node_long': fs.readFileSync('src/templates/feed/node_long.mustache', 'utf-8'),
