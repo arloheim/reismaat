@@ -27,6 +27,7 @@ $(function() {
   router.addRoute('routes_details', {path: '/dienstregeling/:id', template: 'pages/routes_details', data: collectRoutesDetailsData});
   router.addRoute('nodes', {path: '/stations', template: 'pages/nodes'});
   router.addRoute('nodes_details', {path: '/stations/:id', template: 'pages/nodes_details', data: collectNodesDetailsData});
+  router.addRoute('about', {path: '/over', template: 'pages/about'});
 
   // Add hooks to the router
   router.addAfterRoutingHook(afterRouting);

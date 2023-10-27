@@ -14,6 +14,7 @@ const _templates = {
   'pages/routes_details': fs.readFileSync('src/templates/pages/routes_details.mustache', 'utf-8'),
   'pages/nodes': fs.readFileSync('src/templates/pages/nodes.mustache', 'utf-8'),
   'pages/nodes_details': fs.readFileSync('src/templates/pages/nodes_details.mustache', 'utf-8'),
+  'pages/about': fs.readFileSync('src/templates/pages/about.mustache', 'utf-8'),
 
   // Error pages
   'pages/errors/404': fs.readFileSync('src/templates/pages/errors/404.mustache', 'utf-8'),

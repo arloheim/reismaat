@@ -25,12 +25,13 @@ body {
   // Navbar item styling
   .navbar-item {
     @extend .has-text-weight-light;
+  }
 
-    a {
-      padding: 4px 0px;
-      color: $text;
-      border-bottom: none;
-    }
+  // Navbar dropdown styling
+  .navbar-dropdown {
+    @extend .is-shadowless;
+
+    border-top-color: $primary;
   }
 
   // Navbar brand styling
@@ -152,6 +153,7 @@ body {
 // Journey link styling
 .journey-link {
   @extend .box;
+  @extend .is-relative;
   @extend .px-3;
   @extend .py-2;
 
@@ -219,11 +221,6 @@ body {
     // Paragraph styling
     p {
       @extend .mb-0;
-
-      &.is-muted {
-        @extend .has-text-grey;
-        @extend .has-text-weight-normal;
-      }
     }
 
     // Time cell
@@ -337,6 +334,8 @@ body {
   @extend .has-text-weight-bold;
   @extend .mr-1;
   @extend .px-1;
+
+  border-radius: 3px;
 }
 
 // Cancelled styling
@@ -357,4 +356,16 @@ body {
   @extend .has-text-grey;
 
   height: 70vh;
+}
+
+// Lead styling
+.is-lead {
+  @extend .is-size-5;
+  @extend .has-text-weight-light;
+}
+
+// Muted styling
+.is-muted {
+  @extend .has-text-grey;
+  @extend .has-text-weight-normal;
 }

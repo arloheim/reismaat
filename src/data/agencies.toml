@@ -2,42 +2,51 @@
 [nsb_fu]
 name = "Ferrovie Urbignesi"
 abbr = "FU"
+description = "treinvervoer in Ihlane"
 url = "https://arloheim.nl/wiki/Ferrovie_Urbignesi"
 
 [nsb_is]
 name = "Ihlaanse Spoorwegen"
 abbr = "IS"
+description = "treinvervoer in Ihlane"
 url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
 
 
 # Stadsvervoer
 [arlov]
 name = "ArlOV"
+description = "stadsvervoer in Arloheim"
 url = "https://arloheim.nl/wiki/ArlOV"
 
 [vara]
 name = "Vara"
+description = "stadsvervoer in Amsvorde"
 url = "https://arloheim.nl/wiki/Vara"
 
 [gvd]
 name = "Giedrechtse Vervoersdienst"
+description = "stadsvervoer in Giedrecht"
 abbr = "GVD"
 
 
 # Veerdiensten
 [fer_nos]
 name = "Rederij N-O-S"
+description = "veerdienst Stachteren-Negenaar-Ockholm"
 abbr = "N-O-S"
 
 [fer_nsz]
-name = "N.V. Stoombootmaatschappij Noordersluizen"
+name = "SMIJN"
+description = "veerdienst Noordersluizen"
 
 
 # Besloten vervoer
 [hyp]
 name = "hyperloop.ih"
+description = "snelle en comfortabele verbindingen"
 
 
 # Natransport
 [equual]
 name = "Equual"
+description = "aanbieder van flexpaarden als deelvervoer"
