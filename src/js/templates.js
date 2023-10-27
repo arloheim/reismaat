@@ -48,6 +48,7 @@ const _templates = {
   'feed/node_short': fs.readFileSync('src/templates/feed/node_short.mustache', 'utf-8'),
   'feed/notification': fs.readFileSync('src/templates/feed/notification.mustache', 'utf-8'),
   'feed/route_long': fs.readFileSync('src/templates/feed/route_long.mustache', 'utf-8'),
+  'feed/route_long_link': fs.readFileSync('src/templates/feed/route_long_link.mustache', 'utf-8'),
   'feed/route_short': fs.readFileSync('src/templates/feed/route_short.mustache', 'utf-8'),
 };
 
