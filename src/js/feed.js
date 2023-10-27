@@ -61,7 +61,7 @@ class Node
     this.modality = props.modality;
     this.modalityNodeName = props.modalityNodeName ?? this.modality?.nodeName;
     this.icon = props.icon ?? this.modality?.icon ?? 'location-dot';
-    this.location = props.location;
+    this.city = props.city;
   }
 
   // Return the transfers that include the node
@@ -95,9 +95,8 @@ class Node
     let parts = [];
     if (this.modalityNodeName !== undefined)
       parts.push(this.modalityNodeName);
-    if (this.location !== undefined)
-      parts.push(this.location);
-    parts.push(this.id);
+    if (this.city !== undefined)
+      parts.push(this.city);
     return parts.join(' &middot; ');
   }
 
@@ -342,7 +341,7 @@ class Feed
     this._notifications = this._loadNotifications();
 
     this._nodesIndex = new MiniSearch({
-      fields: ['name', 'location', 'code'],
+      fields: ['name', 'city', 'code'],
       storeFields: ['modality'],
       searchOptions: {prefix: true, fuzzy: 0.1, combineWith: 'AND', boost: {name: 2}, boostDocument: this._boostNodeDocument.bind(this)}
     });

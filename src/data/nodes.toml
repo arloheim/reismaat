@@ -1,287 +1,287 @@
 # Trein
-nsb_afv = {name = "De Afval", code = "afv", modality = "rail"}
-nsb_db = {name = "Al-Diyar Al-Bayda", code = "db", modality = "rail"}
-nsb_qs = {name = "Al-Qusur", code = "qs", modality = "rail"}
-nsb_wh = {name = "Al-Waha", code = "wh", modality = "rail"}
-nsb_akh = {name = "Alkenholt", code = "akh", modality = "rail"}
-nsb_alt = {name = "Altione", code = "alt", modality = "rail"}
-nsb_av = {name = "Amsvorde Centraal", code = "av", modality = "rail", location = "Amsvorde"}
-nsb_avi = {name = "Amsvorde Iberië", code = "avi", modality = "rail", location = "Amsvorde"}
-nsb_avo = {name = "Amsvorde Oost", code = "avo", modality = "rail", location = "Amsvorde"}
-nsb_avv = {name = "Amsvorde Venpoort", code = "avv", modality = "rail", location = "Amsvorde"}
-nsb_arc = {name = "Arloheim Campus", code = "arc", modality = "rail", location = "Arloheim"}
-nsb_ar = {name = "Arloheim Centraal", code = "ar", modality = "rail", location = "Arloheim"}
-nsb_arfo = {name = "Arloheim Forum", code = "arfo", modality = "rail", location = "Arloheim"}
-nsb_arp = {name = "Arloheim Panderberg", code = "arp", modality = "rail", location = "Arloheim"}
-nsb_aur = {name = "Aurora", code = "aur", modality = "rail"}
-nsb_bw = {name = "Berg en Waes", code = "bw", modality = "rail"}
-nsb_bkh = {name = "Berkenhoven", code = "bkh", modality = "rail"}
-nsb_bg = {name = "Bugel", code = "bg", modality = "rail"}
-nsb_css = {name = "Casesecce", code = "css", modality = "rail"}
-nsb_dw = {name = "Danewolde", code = "dw", modality = "rail"}
-nsb_dwo = {name = "Danewolde Overwaer", code = "swo", modality = "rail"}
-nsb_dd = {name = "Dinsdrecht", code = "ss", modality = "rail"}
-nsb_fta = {name = "Finiterra", code = "fta", modality = "rail"}
-nsb_fm = {name = "Fremond aan Zee", code = "fm", modality = "rail"}
-nsb_fmc = {name = "Fremond Centrum", code = "fmc", modality = "rail"}
-nsb_gt = {name = "Gaterade", code = "gt", modality = "rail"}
-nsb_gth = {name = "Gaterade Haven", code = "gth", modality = "rail"}
-nsb_gtp = {name = "Gaterade Poort", code = "gtp", modality = "rail"}
-nsb_gd = {name = "Giedrecht", code = "gd", modality = "rail"}
-nsb_gdz = {name = "Giedrecht Zuid", code = "gdz", modality = "rail"}
-nsb_gn = {name = "Goningen", code = "gn", modality = "rail"}
-nsb_gnl = {name = "Greneylant", code = "gnl", modality = "rail"}
-nsb_gvn = {name = "'s-Groevenisse", code = "gvn", modality = "rail"}
-nsb_gbk = {name = "Grote Bladik", code = "gbk", modality = "rail"}
-nsb_hak = {name = "Hoogalken", code = "hak", modality = "rail"}
-nsb_hk = {name = "Hoorink", code = "hk", modality = "rail"}
-nsb_hmr = {name = "Hoortmeer", code = "hmr", modality = "rail"}
-nsb_kdk = {name = "Kuindijk", code = "kdk", modality = "rail"}
-nsb_lvl = {name = "Laagvliet", code = "lvl", modality = "rail"}
-nsb_lr = {name = "Landraaf", code = "lr", modality = "rail"}
-nsb_lvn = {name = "Lavijn", code = "lvn", modality = "rail"}
-nsb_mm = {name = "Malmen", code = "mm", modality = "rail"}
-nsb_mmz = {name = "Malmen Zuid", code = "mmz", modality = "rail"}
-nsb_mso = {name = "Masarino", code = "mso", modality = "rail"}
-nsb_md = {name = "Meede", code = "md", modality = "rail"}
-nsb_ndr = {name = "Nedelrand", code = "ndr", modality = "rail"}
-nsb_np = {name = "Nipsen", code = "np", modality = "rail"}
-nsb_oh = {name = "Ockholm", code = "oh", modality = "rail"}
-nsb_pry = {name = "Polraaij", code = "pry", modality = "rail"}
-nsb_rdk = {name = "Roodekerken", code = "rdk", modality = "rail"}
-nsb_rks = {name = "Roodkastel", code = "rks", modality = "rail"}
-nsb_sb = {name = "Sabbiane", code = "sb", modality = "rail"}
-nsb_snn = {name = "Schieren Noord", code = "snn", modality = "rail"}
-nsb_snz = {name = "Schieren Zuid", code = "snz", modality = "rail"}
-nsb_sg = {name = "Slinger", code = "sg", modality = "rail"}
-nsb_str = {name = "Stachteren", code = "str", modality = "rail"}
-nsb_sti = {name = "Storia Infinita", code = "sti", modality = "rail"}
-nsb_tp = {name = "Il Tempio", code = "up", modality = "rail"}
-nsb_uh = {name = "Ulstheim", code = "uh", modality = "rail"}
-nsb_uhz = {name = "Ulstheim Zuid", code = "uhz", modality = "rail"}
-nsb_ub = {name = "Urbigno", code = "ub", modality = "rail"}
-nsb_vhz = {name = "Valkenhuizen", code = "vhz", modality = "rail"}
-nsb_vv = {name = "Valverde", code = "vv", modality = "rail"}
-nsb_vd = {name = "Valle Deserta", code = "vd", modality = "rail"}
-nsb_vt = {name = "Vittoria", code = "vt", modality = "rail"}
-nsb_whk = {name = "Westhoorink", code = "whk", modality = "rail"}
-nsb_wl = {name = "Woenslaken", code = "wl", modality = "rail"}
-nsb_zms = {name = "Zonnemarsen", code = "zms", modality = "rail"}
+nsb_afv = {name = "De Afval", code = "afv", modality = "rail", city = "De Afval"}
+nsb_db = {name = "Al-Diyar Al-Bayda", code = "db", modality = "rail", city = "Al-Diyar Al-Bayda"}
+nsb_qs = {name = "Al-Qusur", code = "qs", modality = "rail", city = "Al-Qusur"}
+nsb_wh = {name = "Al-Waha", code = "wh", modality = "rail", city = "Al-Waha"}
+nsb_akh = {name = "Alkenholt", code = "akh", modality = "rail", city = "Alkenholt"}
+nsb_alt = {name = "Altione", code = "alt", modality = "rail", city = "Altione"}
+nsb_av = {name = "Amsvorde Centraal", code = "av", modality = "rail", city = "Amsvorde"}
+nsb_avi = {name = "Amsvorde Iberië", code = "avi", modality = "rail", city = "Amsvorde"}
+nsb_avo = {name = "Amsvorde Oost", code = "avo", modality = "rail", city = "Amsvorde"}
+nsb_avv = {name = "Amsvorde Venpoort", code = "avv", modality = "rail", city = "Amsvorde"}
+nsb_arc = {name = "Arloheim Campus", code = "arc", modality = "rail", city = "Arloheim"}
+nsb_ar = {name = "Arloheim Centraal", code = "ar", modality = "rail", city = "Arloheim"}
+nsb_arfo = {name = "Arloheim Forum", code = "arfo", modality = "rail", city = "Arloheim"}
+nsb_arp = {name = "Arloheim Panderberg", code = "arp", modality = "rail", city = "Arloheim"}
+nsb_aur = {name = "Aurora", code = "aur", modality = "rail", city = "Roodkastel"}
+nsb_bw = {name = "Berg en Waes", code = "bw", modality = "rail", city = "Berg en Waes"}
+nsb_bkh = {name = "Berkenhoven", code = "bkh", modality = "rail", city = "Berkenhoven"}
+nsb_bg = {name = "Bugel", code = "bg", modality = "rail", city = "Danewolde"}
+nsb_css = {name = "Casesecce", code = "css", modality = "rail", city = "Casesecce"}
+nsb_dw = {name = "Danewolde", code = "dw", modality = "rail", city = "Danewolde"}
+nsb_dwo = {name = "Danewolde Overwaer", code = "swo", modality = "rail", city = "Danewolde"}
+nsb_dd = {name = "Dinsdrecht", code = "ss", modality = "rail", city = "Dinsdrecht"}
+nsb_fta = {name = "Finiterra", code = "fta", modality = "rail", city = "Finiterra"}
+nsb_fm = {name = "Fremond aan Zee", code = "fm", modality = "rail", city = "Fremond"}
+nsb_fmc = {name = "Fremond Centrum", code = "fmc", modality = "rail", city = "Fremond"}
+nsb_gt = {name = "Gaterade", code = "gt", modality = "rail", city = "Gaterade"}
+nsb_gth = {name = "Gaterade Haven", code = "gth", modality = "rail", city = "Gaterade"}
+nsb_gtp = {name = "Gaterade Poort", code = "gtp", modality = "rail", city = "Gaterade"}
+nsb_gd = {name = "Giedrecht", code = "gd", modality = "rail", city = "Giedrecht"}
+nsb_gdz = {name = "Giedrecht Zuid", code = "gdz", modality = "rail", city = "Giedrecht"}
+nsb_gn = {name = "Goningen", code = "gn", modality = "rail", city = "Gonigen"}
+nsb_gnl = {name = "Greneylant", code = "gnl", modality = "rail", city = "Greneylant"}
+nsb_gvn = {name = "'s-Groevenisse", code = "gvn", modality = "rail", city = "'s-Groevenisse"}
+nsb_gbk = {name = "Grote Bladik", code = "gbk", modality = "rail", city = "Grote Bladik"}
+nsb_hak = {name = "Hoogalken", code = "hak", modality = "rail", city = "Hoogalken"}
+nsb_hk = {name = "Hoorink", code = "hk", modality = "rail", city = "Malmen"}
+nsb_hmr = {name = "Hoortmeer", code = "hmr", modality = "rail", city = "Hoortmeer"}
+nsb_kdk = {name = "Kuindijk", code = "kdk", modality = "rail", city = "Polraaij"}
+nsb_lvl = {name = "Laagvliet", code = "lvl", modality = "rail", city = "Laagvliet"}
+nsb_lr = {name = "Landraaf", code = "lr", modality = "rail", city = "Landraaf"}
+nsb_lvn = {name = "Lavijn", code = "lvn", modality = "rail", city = "Lavijn"}
+nsb_mm = {name = "Malmen", code = "mm", modality = "rail", city = "Malmen"}
+nsb_mmz = {name = "Malmen Zuid", code = "mmz", modality = "rail", city = "Malmen"}
+nsb_mso = {name = "Masarino", code = "mso", modality = "rail", city = "Masarino"}
+nsb_md = {name = "Meede", code = "md", modality = "rail", city = "Roodkastel"}
+nsb_ndr = {name = "Nedelrand", code = "ndr", modality = "rail", city = "Nedelrand"}
+nsb_np = {name = "Nipsen", code = "np", modality = "rail", city = "Nipsen"}
+nsb_oh = {name = "Ockholm", code = "oh", modality = "rail", city = "Ockholm"}
+nsb_pry = {name = "Polraaij", code = "pry", modality = "rail", city = "Polraaij"}
+nsb_rdk = {name = "Roodekerken", code = "rdk", modality = "rail", city = "Roodekerken"}
+nsb_rks = {name = "Roodkastel", code = "rks", modality = "rail", city = "Roodkastel"}
+nsb_sb = {name = "Sabbiane", code = "sb", modality = "rail", city = "Sabbiane"}
+nsb_snn = {name = "Schieren Noord", code = "snn", modality = "rail", city = "Schieren"}
+nsb_snz = {name = "Schieren Zuid", code = "snz", modality = "rail", city = "Schieren"}
+nsb_sg = {name = "Slinger", code = "sg", modality = "rail", city = "Slinger"}
+nsb_str = {name = "Stachteren", code = "str", modality = "rail", city = "Stachteren"}
+nsb_sti = {name = "Storia Infinita", code = "sti", modality = "rail", city = "Storia Infinita"}
+nsb_tp = {name = "Il Tempio", code = "up", modality = "rail", city = "Sabbiane"}
+nsb_uh = {name = "Ulstheim", code = "uh", modality = "rail", city = "Ulstheim"}
+nsb_uhz = {name = "Ulstheim Zuid", code = "uhz", modality = "rail", city = "Ulstheim"}
+nsb_ub = {name = "Urbigno", code = "ub", modality = "rail", city = "Urbigno"}
+nsb_vhz = {name = "Valkenhuizen", code = "vhz", modality = "rail", city = "Valkenhuizen"}
+nsb_vv = {name = "Valverde", code = "vv", modality = "rail", city = "Valverede"}
+nsb_vd = {name = "Valle Deserta", code = "vd", modality = "rail", city = "Sabbiane"}
+nsb_vt = {name = "Vittoria", code = "vt", modality = "rail", city = "Vittoria"}
+nsb_whk = {name = "Westhoornik", code = "whk", modality = "rail", city = "Westhoornik"}
+nsb_wl = {name = "Woenslaken", code = "wl", modality = "rail", city = "Woenslaken"}
+nsb_zms = {name = "Zonnemarsen", code = "zms", modality = "rail", city = "Zonnemarsen"}
 
 # Metro Arloheim
-arm_nsw = {name = "Nedersalwey", modality = "subway", location = "Nedersalwey"}
-arm_wss = {name = "Westerspoor", modality = "subway", location = "Nedersalwey"}
-arm_wdk = {name = "Wadekwartier", modality = "subway", location = "Arloheim"}
-arm_for = {name = "Forum", modality = "subway", location = "Arloheim"}
-arm_nwd = {name = "Nieuwedal", modality = "subway", location = "Arloheim"}
-arm_trc = {name = "Triarchie", modality = "subway", location = "Arloheim"}
-arm_psw = {name = "Passewijde", modality = "subway", location = "Arloheim"}
-arm_qsr = {name = "Al-Qusur", modality = "subway", location = "Al-Qusur"}
-arm_ng = {name = "Negenaar", modality = "subway", location = "Negenaar"}
-arm_ngd = {name = "Negenaar Dorp", modality = "subway", location = "Negenaar"}
-arm_ehv = {name = "Elfshaven", modality = "subway", location = "Arloheim"}
-arm_wbg = {name = "Weesburg", modality = "subway", location = "Arloheim"}
-arm_hz = {name = "Halenz", modality = "subway", location = "Arloheim"}
-arm_pdb = {name = "Panderberg", modality = "subway", location = "Arloheim"}
-arm_hvk = {name = "Heuvelkwartier", modality = "subway", location = "Arloheim"}
-arm_vhf = {name = "Vrijhof", modality = "subway", location = "Arloheim"}
-arm_zb = {name = "Zuiderbank", modality = "subway", location = "Arloheim"}
-arm_knz = {name = "Kanaalzij", modality = "subway", location = "Arloheim"}
-arm_rdn = {name = "Fort van Raduyn", modality = "subway", location = "Arloheim"}
-arm_lhv = {name = "Luchthaven", modality = "subway", location = "Arloheim"}
-arm_vgh = {name = "Vliegerhorst", modality = "subway", location = "Arloheim"}
-arm_odb = {name = "Oldenburg", modality = "subway", location = "Arloheim"}
-arm_ahm = {name = "Aronshym", modality = "subway", location = "Arloheim"}
-arm_ost = {name = "Ou-Steyn", modality = "subway", location = "Arloheim"}
-arm_stn = {name = "Steyn", modality = "subway", location = "Arloheim"}
-arm_bkc = {name = "Bovenkamp Centrum", modality = "subway", location = "Arloheim"}
-arm_bkv = {name = "Bovenkamp Vaarthof", modality = "subway", location = "Arloheim"}
-arm_cps = {name = "Campus", modality = "subway", location = "Arloheim"}
-arm_pss = {name = "Persikstaaf", modality = "subway", location = "Arloheim"}
-arm_ldw = {name = "Lodewijk", modality = "subway", location = "Arloheim"}
-arm_atv = {name = "Aalsterve", modality = "subway", location = "Arloheim"}
-arm_psz = {name = "Pauszande", modality = "subway", location = "Arloheim"}
-arm_ndr = {name = "Nedelrand", modality = "subway", location = "Nedelrand"}
-arm_sg = {name = "Slinger", modality = "subway", location = "Slinger"}
-arm_sgb = {name = "Slingerbeek", modality = "subway", location = "Slingerbeek"}
-arm_mdz = {name = "Mijdezinder", modality = "subway", location = "Mijdezinder"}
-arm_sta = {name = "Sub Terra", modality = "subway", location = "Sub Terra"}
-arm_dbm = {name = "Den Boom", modality = "subway", location = "Arloheim"}
-arm_uhh = {name = "Ulstheim Holst", modality = "subway", location = "Ulstheim"}
-arm_uhs = {name = "Ulstheim Station", modality = "subway", location = "Ulstheim"}
-arm_uhc = {name = "Ulstheim Centrum", modality = "subway", location = "Ulstheim"}
-arm_lvn = {name = "Lavijn", modality = "subway", location = "Lavijn"}
-arm_cs = {name = "Centraal Station", modality = "subway", location = "Arloheim"}
-arm_mpl = {name = "Museumplein", modality = "subway", location = "Arloheim"}
-arm_mst = {name = "Morgenster", modality = "subway", location = "Arloheim"}
-arm_sdg = {name = "Scheiding", modality = "subway", location = "Arloheim"}
+arm_nsw = {name = "Nedersalwey", code = "nsw", modality = "subway", city = "Nedersalwey"}
+arm_wss = {name = "Westerspoor", code = "wss", modality = "subway", city = "Nedersalwey"}
+arm_wdk = {name = "Wadekwartier", code = "wdk", modality = "subway", city = "Arloheim"}
+arm_for = {name = "Forum", code = "for", modality = "subway", city = "Arloheim"}
+arm_nwd = {name = "Nieuwedal", code = "nwd", modality = "subway", city = "Arloheim"}
+arm_trc = {name = "Triarchie", code = "trc", modality = "subway", city = "Arloheim"}
+arm_psw = {name = "Passewijde", code = "psw", modality = "subway", city = "Arloheim"}
+arm_qsr = {name = "Al-Qusur", code = "qsr", modality = "subway", city = "Al-Qusur"}
+arm_ng = {name = "Negenaar", code = "ng", modality = "subway", city = "Negenaar"}
+arm_ngd = {name = "Negenaar Dorp", code = "ngd", modality = "subway", city = "Negenaar"}
+arm_ehv = {name = "Elfshaven", code = "ehv", modality = "subway", city = "Arloheim"}
+arm_wbg = {name = "Weesburg", code = "wbg", modality = "subway", city = "Arloheim"}
+arm_hz = {name = "Halenz", code = "hz", modality = "subway", city = "Arloheim"}
+arm_pdb = {name = "Panderberg", code = "pdb", modality = "subway", city = "Arloheim"}
+arm_hvk = {name = "Heuvelkwartier",code = "hvk",  modality = "subway", city = "Arloheim"}
+arm_vhf = {name = "Vrijhof", code = "vhf", modality = "subway", city = "Arloheim"}
+arm_zb = {name = "Zuiderbank", code = "zb", modality = "subway", city = "Arloheim"}
+arm_knz = {name = "Kanaalzij", code = "knz", modality = "subway", city = "Arloheim"}
+arm_rdn = {name = "Fort van Raduyn", code = "rdn", modality = "subway", city = "Arloheim"}
+arm_lhv = {name = "Luchthaven", code = "lhv", modality = "subway", city = "Arloheim"}
+arm_vgh = {name = "Vliegerhorst", code = "vgh", modality = "subway", city = "Arloheim"}
+arm_odb = {name = "Oldenburg", code = "odb", modality = "subway", city = "Arloheim"}
+arm_ahm = {name = "Aronshym", code = "ahm", modality = "subway", city = "Arloheim"}
+arm_ost = {name = "Ou-Steyn", code = "ost", modality = "subway", city = "Arloheim"}
+arm_stn = {name = "Steyn", code = "stn", modality = "subway", city = "Arloheim"}
+arm_bkc = {name = "Bovenkamp Centrum", code = "bkc", modality = "subway", city = "Arloheim"}
+arm_bkv = {name = "Bovenkamp Vaarthof", code = "bkv", modality = "subway", city = "Arloheim"}
+arm_cps = {name = "Campus", code = "cps", modality = "subway", city = "Arloheim"}
+arm_pss = {name = "Persikstaaf", code = "pss", modality = "subway", city = "Arloheim"}
+arm_ldw = {name = "Lodewijk", code = "ldw", modality = "subway", city = "Arloheim"}
+arm_atv = {name = "Aalsterve", code = "atv", modality = "subway", city = "Arloheim"}
+arm_psz = {name = "Pauszande", code = "psz", modality = "subway", city = "Arloheim"}
+arm_ndr = {name = "Nedelrand", code = "ndr", modality = "subway", city = "Nedelrand"}
+arm_sg = {name = "Slinger", code = "sg", modality = "subway", city = "Slinger"}
+arm_sgb = {name = "Slingerbeek", code = "sgb", modality = "subway", city = "Slinger"}
+arm_mdz = {name = "Mijdezinder", code = "mdz", modality = "subway", city = "Mijdezinder"}
+arm_sta = {name = "Sub Terra", code = "sta", modality = "subway", city = "Sub Terra"}
+arm_dbm = {name = "Den Boom", code = "sbm", modality = "subway", city = "Arloheim"}
+arm_uhh = {name = "Ulstheim Holst", code = "uhh", modality = "subway", city = "Ulstheim"}
+arm_uhs = {name = "Ulstheim Station", code = "uhs", modality = "subway", city = "Ulstheim"}
+arm_uhc = {name = "Ulstheim Centrum", code = "uhc", modality = "subway", city = "Ulstheim"}
+arm_lvn = {name = "Lavijn", code = "lvn", modality = "subway", city = "Lavijn"}
+arm_cs = {name = "Centraal Station", code = "cs", modality = "subway", city = "Arloheim"}
+arm_mpl = {name = "Museumplein", code = "mpl", modality = "subway", city = "Arloheim"}
+arm_mst = {name = "Morgenster", code = "mst", modality = "subway", city = "Arloheim"}
+arm_sdg = {name = "Scheiding", code = "sdg", modality = "subway", city = "Arloheim"}
 
 # Tram Arloheim
-art_ehv = {name = "Arloheim, Elfshaven", modality = "tram", location = "Arloheim"}
-art_bpl = {name = "Arloheim, De Blauwe Pael", modality = "tram", location = "Arloheim"}
-art_sta = {name = "Arloheim, Stadion", modality = "tram", location = "Arloheim"}
-art_bkv = {name = "Arloheim, Bovenkamp Vaarthof",modality = "tram", location = "Arloheim"}
-art_wte = {name = "Westerenk, Westerenk", modality = "tram", location = "Westerenk"}
-art_gkp = {name = "Westerenk, Groenkapel", modality = "tram", location = "Westerenk"}
-art_whk = {name = "Waardse Hoek, Waardse Hoek", modality = "tram", location = "Waardse Hoek"}
-art_wvg = {name = "Welving, Welving", modality = "tram", location = "Welving"}
-art_swb = {name = "Nedersalwey, Salweybrug", modality = "tram", location = "Nedersalwey"}
-art_wdk = {name = "Arloheim, Wadekwartier", modality = "tram", location = "Arloheim"}
-art_for = {name = "Arloheim, Forum", modality = "tram", location = "Arloheim"}
-art_kst = {name = "Arloheim, Keisteen", modality = "tram", location = "Arloheim"}
-art_cll = {name = "Arloheim, Coollaan", modality = "tram", location = "Arloheim"}
-art_mkn = {name = "Arloheim, Muysken", modality = "tram", location = "Arloheim"}
-art_umc = {name = "Arloheim, UMC", modality = "tram", location = "Arloheim"}
-art_ngf = {name = "Arloheim, Nauwgraaf / UR", modality = "tram", location = "Arloheim"}
-art_cps = {name = "Arloheim, Campus", modality = "tram", location = "Arloheim"}
-art_pss = {name = "Arloheim, Persikstaaf", modality = "tram", location = "Arloheim"}
-art_vg = {name = "Arloheim, Vlorring", modality = "tram", location = "Arloheim"}
-art_wbz = {name = "Arloheim, Weesburg Zuid", modality = "tram", location = "Arloheim"}
-art_hz = {name = "Arloheim, Halenz", modality = "tram", location = "Arloheim"}
-art_mlw = {name = "Arloheim, Molenweg", modality = "tram", location = "Arloheim"}
-art_lan = {name = "Arloheim, Land van Nooid", modality = "tram", location = "Arloheim"}
-art_cs = {name = "Arloheim, Centraal Station", modality = "tram", location = "Arloheim"}
-art_cslz = {name = "Arloheim, Centraal Station (Luneriazijde)", modality = "tram", location = "Arloheim"}
-art_lhv = {name = "Arloheim, Luchthaven", modality = "tram", location = "Arloheim"}
-art_psw = {name = "Arloheim, Passewijde", modality = "tram", location = "Arloheim"}
-art_nvh = {name = "Arloheim, Nijverheid", modality = "tram", location = "Arloheim"}
-art_zb = {name = "Arloheim, Zuiderbank", modality = "tram", location = "Arloheim"}
-art_dwk = {name = "Arloheim, Dokwerker", modality = "tram", location = "Arloheim"}
-art_hwd = {name = "Arloheim, Haagweide", modality = "tram", location = "Arloheim"}
-art_mst = {name = "Arloheim, Morgenster", modality = "tram", location = "Arloheim"}
-art_odb = {name = "Arloheim, Oldenburg", modality = "tram", location = "Arloheim"}
-art_drt = {name = "Arloheim, Dierentuin", modality = "tram", location = "Arloheim"}
-art_ebk = {name = "Arloheim, Elsbeek", modality = "tram", location = "Arloheim"}
-art_ldw = {name = "Arloheim, Lodewijk", modality = "tram", location = "Arloheim"}
-art_bwk = {name = "Arloheim, Brandwijk", modality = "tram", location = "Arloheim"}
-art_bbn = {name = "Arloheim, Bosbaan", modality = "tram", location = "Arloheim"}
-art_dmn = {name = "Arloheim, Dreesmann", modality = "tram", location = "Arloheim"}
-art_zhs = {name = "Arloheim, Zandhaas", modality = "tram", location = "Arloheim"}
-art_ost = {name = "Arloheim, Ou-Steyn", modality = "tram", location = "Arloheim"}
-art_vmt = {name = "Arloheim, Vismarkt", modality = "tram", location = "Arloheim"}
-art_gnv = {name = "Arloheim, Genova (Station Steyn)", modality = "tram", location = "Arloheim"}
-art_otb = {name = "Arloheim, Oosterbad", modality = "tram", location = "Arloheim"}
-art_atv = {name = "Arloheim, Aalsterve", modality = "tram", location = "Arloheim"}
-art_dbk = {name = "Arloheim, Duinbeek", modality = "tram", location = "Arloheim"}
-art_vtr = {name = "Arloheim, Vuurtoren", modality = "tram", location = "Arloheim"}
-art_stn = {name = "Arloheim, Steyn", modality = "tram", location = "Arloheim"}
-art_cyp = {name = "Arloheim, Cyprian", modality = "tram", location = "Arloheim"}
-art_ktw = {name = "Arloheim, Korteweg", modality = "tram", location = "Arloheim"}
-art_ksm = {name = "Arloheim, Kersemus", modality = "tram", location = "Arloheim"}
-art_rtr = {name = "Arloheim, De Ruyter", modality = "tram", location = "Arloheim"}
-art_rdn = {name = "Arloheim, Fort van Raduyn", modality = "tram", location = "Arloheim"}
+art_ehv = {name = "Arloheim, Elfshaven", modality = "tram", city = "Arloheim"}
+art_bpl = {name = "Arloheim, De Blauwe Pael", modality = "tram", city = "Arloheim"}
+art_sta = {name = "Arloheim, Stadion", modality = "tram", city = "Arloheim"}
+art_bkv = {name = "Arloheim, Bovenkamp Vaarthof",modality = "tram", city = "Arloheim"}
+art_wte = {name = "Westerenk, Westerenk", modality = "tram", city = "Westerenk"}
+art_gkp = {name = "Westerenk, Groenkapel", modality = "tram", city = "Westerenk"}
+art_whk = {name = "Waardse Hoek, Waardse Hoek", modality = "tram", city = "Waardse Hoek"}
+art_wvg = {name = "Welving, Welving", modality = "tram", city = "Welving"}
+art_swb = {name = "Nedersalwey, Salweybrug", modality = "tram", city = "Nedersalwey"}
+art_wdk = {name = "Arloheim, Wadekwartier", modality = "tram", city = "Arloheim"}
+art_for = {name = "Arloheim, Forum", modality = "tram", city = "Arloheim"}
+art_kst = {name = "Arloheim, Keisteen", modality = "tram", city = "Arloheim"}
+art_cll = {name = "Arloheim, Coollaan", modality = "tram", city = "Arloheim"}
+art_mkn = {name = "Arloheim, Muysken", modality = "tram", city = "Arloheim"}
+art_umc = {name = "Arloheim, UMC", modality = "tram", city = "Arloheim"}
+art_ngf = {name = "Arloheim, Nauwgraaf / UR", modality = "tram", city = "Arloheim"}
+art_cps = {name = "Arloheim, Campus", modality = "tram", city = "Arloheim"}
+art_pss = {name = "Arloheim, Persikstaaf", modality = "tram", city = "Arloheim"}
+art_vg = {name = "Arloheim, Vlorring", modality = "tram", city = "Arloheim"}
+art_wbz = {name = "Arloheim, Weesburg Zuid", modality = "tram", city = "Arloheim"}
+art_hz = {name = "Arloheim, Halenz", modality = "tram", city = "Arloheim"}
+art_mlw = {name = "Arloheim, Molenweg", modality = "tram", city = "Arloheim"}
+art_lan = {name = "Arloheim, Land van Nooid", modality = "tram", city = "Arloheim"}
+art_cs = {name = "Arloheim, Centraal Station", modality = "tram", city = "Arloheim"}
+art_cslz = {name = "Arloheim, Centraal Station (Luneriazijde)", modality = "tram", city = "Arloheim"}
+art_lhv = {name = "Arloheim, Luchthaven", modality = "tram", city = "Arloheim"}
+art_psw = {name = "Arloheim, Passewijde", modality = "tram", city = "Arloheim"}
+art_nvh = {name = "Arloheim, Nijverheid", modality = "tram", city = "Arloheim"}
+art_zb = {name = "Arloheim, Zuiderbank", modality = "tram", city = "Arloheim"}
+art_dwk = {name = "Arloheim, Dokwerker", modality = "tram", city = "Arloheim"}
+art_hwd = {name = "Arloheim, Haagweide", modality = "tram", city = "Arloheim"}
+art_mst = {name = "Arloheim, Morgenster", modality = "tram", city = "Arloheim"}
+art_odb = {name = "Arloheim, Oldenburg", modality = "tram", city = "Arloheim"}
+art_drt = {name = "Arloheim, Dierentuin", modality = "tram", city = "Arloheim"}
+art_ebk = {name = "Arloheim, Elsbeek", modality = "tram", city = "Arloheim"}
+art_ldw = {name = "Arloheim, Lodewijk", modality = "tram", city = "Arloheim"}
+art_bwk = {name = "Arloheim, Brandwijk", modality = "tram", city = "Arloheim"}
+art_bbn = {name = "Arloheim, Bosbaan", modality = "tram", city = "Arloheim"}
+art_dmn = {name = "Arloheim, Dreesmann", modality = "tram", city = "Arloheim"}
+art_zhs = {name = "Arloheim, Zandhaas", modality = "tram", city = "Arloheim"}
+art_ost = {name = "Arloheim, Ou-Steyn", modality = "tram", city = "Arloheim"}
+art_vmt = {name = "Arloheim, Vismarkt", modality = "tram", city = "Arloheim"}
+art_gnv = {name = "Arloheim, Genova (Station Steyn)", modality = "tram", city = "Arloheim"}
+art_otb = {name = "Arloheim, Oosterbad", modality = "tram", city = "Arloheim"}
+art_atv = {name = "Arloheim, Aalsterve", modality = "tram", city = "Arloheim"}
+art_dbk = {name = "Arloheim, Duinbeek", modality = "tram", city = "Arloheim"}
+art_vtr = {name = "Arloheim, Vuurtoren", modality = "tram", city = "Arloheim"}
+art_stn = {name = "Arloheim, Steyn", modality = "tram", city = "Arloheim"}
+art_cyp = {name = "Arloheim, Cyprian", modality = "tram", city = "Arloheim"}
+art_ktw = {name = "Arloheim, Korteweg", modality = "tram", city = "Arloheim"}
+art_ksm = {name = "Arloheim, Kersemus", modality = "tram", city = "Arloheim"}
+art_rtr = {name = "Arloheim, De Ruyter", modality = "tram", city = "Arloheim"}
+art_rdn = {name = "Arloheim, Fort van Raduyn", modality = "tram", city = "Arloheim"}
 
 # Funiculaires Arloheim
-arf_hvk = {name = "Arloheim, Heuvelkwartier", modality = "funicular", location = "Arloheim"}
-arf_odb = {name = "Arloheim, Oldenburg", modality = "funicular", location = "Arloheim"}
-arf_bwk = {name = "Arloheim, Brandwijk", modality = "funicular", location = "Arloheim"}
-arf_geo = {name = "Arloheim, Geologie", modality = "funicular", location = "Arloheim"}
-arf_trc = {name = "Arloheim, Triarchie", modality = "funicular", location = "Arloheim"}
-arf_mzt	= {name = "Arloheim, Maanzigt", modality = "funicular", location = "Arloheim"}
+arf_hvk = {name = "Arloheim, Heuvelkwartier", modality = "funicular", city = "Arloheim"}
+arf_odb = {name = "Arloheim, Oldenburg", modality = "funicular", city = "Arloheim"}
+arf_bwk = {name = "Arloheim, Brandwijk", modality = "funicular", city = "Arloheim"}
+arf_geo = {name = "Arloheim, Geologie", modality = "funicular", city = "Arloheim"}
+arf_trc = {name = "Arloheim, Triarchie", modality = "funicular", city = "Arloheim"}
+arf_mzt	= {name = "Arloheim, Maanzigt", modality = "funicular", city = "Arloheim"}
 
 # Liften Arloheim
-arl_mzt = {name = "Arloheim, Maanzigt", modality = "elevator", location = "Arloheim"}
-arl_nwd = {name = "Arloheim, Nieuwedal", modality = "elevator", location = "Arloheim"}
-arl_for = {name = "Arloheim, Forum", modality = "elevator", location = "Arloheim"}
-arl_obs = {name = "Arloheim, Observatorium", modality = "elevator", location = "Arloheim"}
+arl_mzt = {name = "Arloheim, Maanzigt", modality = "elevator", city = "Arloheim"}
+arl_nwd = {name = "Arloheim, Nieuwedal", modality = "elevator", city = "Arloheim"}
+arl_for = {name = "Arloheim, Forum", modality = "elevator", city = "Arloheim"}
+arl_obs = {name = "Arloheim, Observatorium", modality = "elevator", city = "Arloheim"}
 
 # Tram Amsvorde
-avt_ktk = {name = "Amsvorde, Kamtsjatka", modality = "tram", location = "Amsvorde"}
-avt_yct = {name = "Amsvorde, Yucatán", modality = "tram", location = "Amsvorde"}
-avt_ksh = {name = "Amsvorde, Kleine Sahara", modality = "tram", location = "Amsvorde"}
-avt_plp = {name = "Amsvorde, Peloponnesos", modality = "tram", location = "Amsvorde"}
-avt_dns = {name = "Amsvorde, Duinstraat", modality = "tram", location = "Amsvorde"}
-avt_rhp = {name = "Amsvorde, Raadhuisplein", modality = "tram", location = "Amsvorde"}
-avt_av = {name = "Amsvorde, Centraal Station", modality = "tram", location = "Amsvorde"}
-avt_lto = {name = "Amsvorde, Laan van Triomf", modality = "tram", location = "Amsvorde"}
-avt_lzd = {name = "Amsvorde, Laan van Zuid", modality = "tram", location = "Amsvorde"}
-avt_stt = {name = "Amsvorde, Springtijtunnel", modality = "tram", location = "Amsvorde"}
-avt_ins = {name = "Amsvorde, Ignalinastraat", modality = "tram", location = "Amsvorde"}
-avt_sls = {name = "Amsvorde, Sluis", modality = "tram", location = "Amsvorde"}
-avt_ehv = {name = "Amsvorde, Ertshaven", modality = "tram", location = "Amsvorde"}
-avt_zhv = {name = "Amsvorde, Zandhaven", modality = "tram", location = "Amsvorde"}
-avt_ncb = {name = "Amsvorde, St. Nicolaasbrug", modality = "tram", location = "Amsvorde"}
-avt_mls = {name = "Amsvorde, Málagastraat", modality = "tram", location = "Amsvorde"}
-avt_avi = {name = "Amsvorde, Iberiëstation", modality = "tram", location = "Amsvorde"}
-avt_bcs = {name = "Amsvorde, Barcelonastraat", modality = "tram", location = "Amsvorde"}
-avt_ssw = {name = "Amsvorde, Sluisweg", modality = "tram", location = "Amsvorde"}
-avt_avo = {name = "Amsvorde, Oosterstation", modality = "tram", location = "Amsvorde"}
-avt_pms = {name = "Amsvorde, Permstraat", modality = "tram", location = "Amsvorde"}
-avt_iqs = {name = "Amsvorde, Burg. F.L. Icqueurstraat", modality = "tram", location = "Amsvorde"}
-avt_wnw = {name = "Amsvorde, Weenisweg", modality = "tram", location = "Amsvorde"}
-avt_hrk = {name = "Amsvorde, Hizerijnkant", modality = "tram", location = "Amsvorde"}
-avt_rvn = {name = "Amsvorde, Ravijn", modality = "tram", location = "Amsvorde"}
-avt_avv = {name = "Amsvorde, Venpoort", modality = "tram", location = "Amsvorde"}
-avt_vt = {name = "Vittoria, Vittoria", modality = "tram", location = "Vittoria"}
+avt_ktk = {name = "Amsvorde, Kamtsjatka", modality = "tram", city = "Amsvorde"}
+avt_yct = {name = "Amsvorde, Yucatán", modality = "tram", city = "Amsvorde"}
+avt_ksh = {name = "Amsvorde, Kleine Sahara", modality = "tram", city = "Amsvorde"}
+avt_plp = {name = "Amsvorde, Peloponnesos", modality = "tram", city = "Amsvorde"}
+avt_dns = {name = "Amsvorde, Duinstraat", modality = "tram", city = "Amsvorde"}
+avt_rhp = {name = "Amsvorde, Raadhuisplein", modality = "tram", city = "Amsvorde"}
+avt_av = {name = "Amsvorde, Centraal Station", modality = "tram", city = "Amsvorde"}
+avt_lto = {name = "Amsvorde, Laan van Triomf", modality = "tram", city = "Amsvorde"}
+avt_lzd = {name = "Amsvorde, Laan van Zuid", modality = "tram", city = "Amsvorde"}
+avt_stt = {name = "Amsvorde, Springtijtunnel", modality = "tram", city = "Amsvorde"}
+avt_ins = {name = "Amsvorde, Ignalinastraat", modality = "tram", city = "Amsvorde"}
+avt_sls = {name = "Amsvorde, Sluis", modality = "tram", city = "Amsvorde"}
+avt_ehv = {name = "Amsvorde, Ertshaven", modality = "tram", city = "Amsvorde"}
+avt_zhv = {name = "Amsvorde, Zandhaven", modality = "tram", city = "Amsvorde"}
+avt_ncb = {name = "Amsvorde, St. Nicolaasbrug", modality = "tram", city = "Amsvorde"}
+avt_mls = {name = "Amsvorde, Málagastraat", modality = "tram", city = "Amsvorde"}
+avt_avi = {name = "Amsvorde, Iberiëstation", modality = "tram", city = "Amsvorde"}
+avt_bcs = {name = "Amsvorde, Barcelonastraat", modality = "tram", city = "Amsvorde"}
+avt_ssw = {name = "Amsvorde, Sluisweg", modality = "tram", city = "Amsvorde"}
+avt_avo = {name = "Amsvorde, Oosterstation", modality = "tram", city = "Amsvorde"}
+avt_pms = {name = "Amsvorde, Permstraat", modality = "tram", city = "Amsvorde"}
+avt_iqs = {name = "Amsvorde, Burg. F.L. Icqueurstraat", modality = "tram", city = "Amsvorde"}
+avt_wnw = {name = "Amsvorde, Weenisweg", modality = "tram", city = "Amsvorde"}
+avt_hrk = {name = "Amsvorde, Hizerijnkant", modality = "tram", city = "Amsvorde"}
+avt_rvn = {name = "Amsvorde, Ravijn", modality = "tram", city = "Amsvorde"}
+avt_avv = {name = "Amsvorde, Venpoort", modality = "tram", city = "Amsvorde"}
+avt_vt = {name = "Vittoria, Vittoria", modality = "tram", city = "Vittoria"}
 
 # Veerdiensten
-fer_str = {name = "Stachteren, Veerhaven", modality = "ferry"}
-fer_ng = {name = "Negenaar, Veerhaven", modality = "ferry"}
-fer_oh = {name = "Ockholm, Veerhaven", modality = "ferry"}
-fer_nszw = {name = "Noordersluizen-West, Veerhaven", modality = "ferry"}
-fer_nszo = {name = "Noordersluizen-Oost, Veerhaven", modality = "ferry"}
+fer_str = {name = "Stachteren, Veerhaven", modality = "ferry", city = "Stachteren"}
+fer_ng = {name = "Negenaar, Veerhaven", modality = "ferry", city = "Negenaar"}
+fer_oh = {name = "Ockholm, Veerhaven", modality = "ferry", city = "Ockholm"}
+fer_nszw = {name = "Noordersluizen-West, Veerhaven", modality = "ferry", city = "Noordersluizen"}
+fer_nszo = {name = "Noordersluizen-Oost, Veerhaven", modality = "ferry", city = "Noordersluizen"}
 
 # Hyperloop
-hyp_arfo = {name = "Arloheim Forum", modality = "hyperloop", location = "Arloheim"}
-hyp_gth = {name = "Gaterade Haven", modality = "hyperloop", location = "Gaterade"}
+hyp_arfo = {name = "Arloheim Forum", modality = "hyperloop", city = "Arloheim"}
+hyp_gth = {name = "Gaterade Haven", modality = "hyperloop", city = "Gaterade"}
 
 # Flexpaard-hubs
-eqh_qs = {name = "Al-Qusur", modality = "horse_rental"}
-eqh_lvn = {name = "Lavijn", modality = "horse_rental"}
-eqh_avi = {name = "Amsvorde Iberië", modality = "horse_rental"}
-eqh_sg = {name = "Slinger", modality = "horse_rental"}
-eqh_vt = {name = "Vittoria", modality = "horse_rental"}
-eqh_mdz = {name = "Mijdezinder", modality = "horse_rental"}
-eqh_gth = {name = "Gaterade Haven", modality = "horse_rental"}
-eqh_dd = {name = "Dinsdrecht", modality = "horse_rental"}
-eqh_wl = {name = "Woenslaken", modality = "horse_rental"}
-eqh_sti = {name = "Storia Infinita", modality = "horse_rental"}
+eqh_qs = {name = "Al-Qusur", modality = "horse_rental", city = "Al-Qusur"}
+eqh_lvn = {name = "Lavijn", modality = "horse_rental", city = "LAvijn"}
+eqh_avi = {name = "Amsvorde Iberië", modality = "horse_rental", city = "Amsvorde"}
+eqh_sg = {name = "Slinger", modality = "horse_rental", city = "Slinger"}
+eqh_vt = {name = "Vittoria", modality = "horse_rental", city = "Vittoria"}
+eqh_mdz = {name = "Mijdezinder", modality = "horse_rental", city = "Mijdezinder"}
+eqh_gth = {name = "Gaterade Haven", modality = "horse_rental", city = "Gaterade"}
+eqh_dd = {name = "Dinsdrecht", modality = "horse_rental", city = "Dinsdrecht"}
+eqh_wl = {name = "Woenslaken", modality = "horse_rental", city = "Woenslaken"}
+eqh_sti = {name = "Storia Infinita", modality = "horse_rental", city = "Storia Infinita"}
 
 # Steden, dorpen en wijken
-cty_abd = {name = "Abende"}
-cty_fdp = {name = "Ferdrop"}
-cty_mqd = {name = "Ma'bad Qadim"}
-cty_mea = {name = "Meander"}
-cty_ngv = {name = "Negenervroente"}
-cty_ndh = {name = "Noordenhoek"}
-cty_nszw = {name = "Noordersluizen-West"}
-cty_nszo = {name = "Noordersluizen-Oost"}
-cty_pdm = {name = "Punto del Mare"}
-cty_rmn = {name = "Ramune"}
-cty_sjo = {name = "Sint Jan bij de Oase"}
-cty_wp = {name = "Witte Paarden"}
-cty_zd = {name = "'t Zand"}
-cty_znd = {name = "Zechenidì"}
-cty_ztm = {name = "Zwettem"}
+cty_abd = {name = "Abende", city = "Stachteren"}
+cty_fdp = {name = "Ferdrop", city = "Ferdrop"}
+cty_mqd = {name = "Ma'bad Qadim", city = "Ma'bad Qadim"}
+cty_mea = {name = "Meander", city = "Meander"}
+cty_ngv = {name = "Negenervroente", city = "Negenervroente"}
+cty_ndh = {name = "Noordenhoek", city = "Noordenhoek"}
+cty_nszw = {name = "Noordersluizen-West", city = "Noordersluizen"}
+cty_nszo = {name = "Noordersluizen-Oost", city = "Noordersluizen"}
+cty_pdm = {name = "Punto del Mare", city = "Punto del Mare"}
+cty_rmn = {name = "Ramune", city = "Ramune"}
+cty_sjo = {name = "Sint Jan bij de Oase", city = "Sint Jan bij de Oase"}
+cty_wp = {name = "Witte Paarden", city = "Westerenk"}
+cty_zd = {name = "'t Zand", city = "Nipsen"}
+cty_znd = {name = "Zechenidì", city = "Zechenidì"}
+cty_ztm = {name = "Zwettem", city = "Zwettem"}
 
 # Points of interest
-poi_arbnl = {name = "Arloheim, Bijnlaan", location = "Arloheim", icon = "building"}
-poi_arobs = {name = "Arloheim, Observatorium", location = "Arloheim", icon = "landmark"}
-poi_armzt = {name = "Arloheim, Maanzigt", location = "Arloheim", icon = "tree"}
-poi_arjkrk = {name = "Arloheim, Sint-Janskerk", location = "Arloheim", icon = "landmark"}
-poi_arttr = {name = "Arloheim, Theater", location = "Arloheim", icon = "landmark"}
-poi_aramb = {name = "Arloheim, Ambassades", location = "Arloheim", icon = "building"}
-poi_ngmmk = {name = "Negenaar, Museum voor Moderne Kunst", location = "Negenaar", icon = "landmark"}
-poi_arfca = {name = "Arloheim, FC Arloheim", location = "Arloheim", icon = "futbol"}
-poi_arikea = {name = "Arloheim, IKEA", location = "Arloheim", icon = "bag-shopping"}
-poi_armtn = {name = "Arloheim, Maantuinen", location = "Arloheim", icon = "tree"}
-poi_armhl = {name = "Arloheim, Markthal", location = "Arloheim", icon = "landmark"}
-poi_arplm = {name = "Arloheim, Parlement", location = "Arloheim", icon = "landmark"}
-poi_arbpk = {name = "Arloheim, Business Park", location = "Arloheim", icon = "building"}
-poi_arzoo = {name = "Arloheim, Dierentuin", location = "Arloheim", icon = "landmark"}
-poi_arsstn = {name = "Arloheim, Strand van Steyn", location = "Arloheim", icon = "umbrella-beach"}
-poi_argnv = {name = "Arloheim, Genova", location = "Arloheim", icon = "landmark"}
-poi_arbkw = {name = "Arloheim, Bovenkampse Wateren", location = "Arloheim", icon = "tree"}
-poi_aruva = {name = "Arloheim, Universiteit van Arloheim", location = "Arloheim", icon = "landmark"}
-poi_arvg = {name = "Arloheim, Vlorring", location = "Arloheim", icon = "city"}
-poi_arwpss = {name = "Arloheim, Winkelhart Persikstaaf", location = "Arloheim", icon = "bag-shopping"}
-poi_arkldw = {name = "Arloheim, Kasteel en Catacomben van Lodewijk", location = "Arloheim", icon = "landmark"}
-poi_arwtm = {name = "Arloheim, Woestijnmuseum", location = "Arloheim", icon = "landmark"}
-poi_lvnktb = {name = "Lavijn, Kattenbron", location = "Lavijn", icon = "tree"}
+poi_arbnl = {name = "Arloheim, Bijnlaan", city = "Arloheim", icon = "building"}
+poi_arobs = {name = "Arloheim, Observatorium", city = "Arloheim", icon = "landmark"}
+poi_armzt = {name = "Arloheim, Maanzigt", city = "Arloheim", icon = "tree"}
+poi_arjkrk = {name = "Arloheim, Sint-Janskerk", city = "Arloheim", icon = "landmark"}
+poi_arttr = {name = "Arloheim, Theater", city = "Arloheim", icon = "landmark"}
+poi_aramb = {name = "Arloheim, Ambassades", city = "Arloheim", icon = "building"}
+poi_ngmmk = {name = "Negenaar, Museum voor Moderne Kunst", city = "Negenaar", icon = "landmark"}
+poi_arfca = {name = "Arloheim, FC Arloheim", city = "Arloheim", icon = "futbol"}
+poi_arikea = {name = "Arloheim, IKEA", city = "Arloheim", icon = "bag-shopping"}
+poi_armtn = {name = "Arloheim, Maantuinen", city = "Arloheim", icon = "tree"}
+poi_armhl = {name = "Arloheim, Markthal", city = "Arloheim", icon = "landmark"}
+poi_arplm = {name = "Arloheim, Parlement", city = "Arloheim", icon = "landmark"}
+poi_arbpk = {name = "Arloheim, Business Park", city = "Arloheim", icon = "building"}
+poi_arzoo = {name = "Arloheim, Dierentuin", city = "Arloheim", icon = "landmark"}
+poi_arsstn = {name = "Arloheim, Strand van Steyn", city = "Arloheim", icon = "umbrella-beach"}
+poi_argnv = {name = "Arloheim, Genova", city = "Arloheim", icon = "landmark"}
+poi_arbkw = {name = "Arloheim, Bovenkampse Wateren", city = "Arloheim", icon = "tree"}
+poi_aruva = {name = "Arloheim, Universiteit van Arloheim", city = "Arloheim", icon = "landmark"}
+poi_arvg = {name = "Arloheim, Vlorring", city = "Arloheim", icon = "city"}
+poi_arwpss = {name = "Arloheim, Winkelhart Persikstaaf", city = "Arloheim", icon = "bag-shopping"}
+poi_arkldw = {name = "Arloheim, Kasteel en Catacomben van Lodewijk", city = "Arloheim", icon = "landmark"}
+poi_arwtm = {name = "Arloheim, Woestijnmuseum", city = "Arloheim", icon = "landmark"}
+poi_lvnktb = {name = "Lavijn, Kattenbron", city = "Lavijn", icon = "tree"}
 
 # Museumstations
-mus_hz = {name = "Halenz (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
-mus_gnd = {name = "Groenedal (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
-mus_vg = {name = "Vlorring (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
-mus_pss = {name = "Persikstaaf (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
-mus_wvg = {name = "Welving (Halenzer Stoomspoorwegen)", modality = "rail", location = "Arloheim"}
+mus_hz = {name = "Halenz (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim"}
+mus_gnd = {name = "Groenedal (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim"}
+mus_vg = {name = "Vlorring (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim"}
+mus_pss = {name = "Persikstaaf (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim"}
+mus_wvg = {name = "Welving (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim"}

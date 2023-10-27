@@ -29,11 +29,11 @@ arl_for_hyp_arfo = {between = "arl_for", and = "hyp_arfo", time = 360, separate 
 nsb_arp_arm_pdb = {between = "nsb_arp", and = "arm_pdb", time = 120}
 # Arloheim Centraal / Centraal Station
 nsb_ar_arm_cs = {between = "nsb_ar", and = "arm_cs", time = 60}
-nsb_ar_art_cs = {between = "nsb_ar", and = "art_cs", time = 60}
-nsb_ar_art_cslz = {between = "nsb_ar", and = "art_cslz", time = 90}
+nsb_ar_art_cs = {between = "nsb_ar", and = "art_cs", time = 120}
+nsb_ar_art_cslz = {between = "nsb_ar", and = "art_cslz", time = 120}
 arm_cs_art_cs = {between = "arm_cs", and = "art_cs", time = 60}
-arm_cs_art_cslz = {between = "arm_cs", and = "art_cslz", time = 90}
-art_cs_art_cslz = {between = "art_cs", and = "art_cslz", time = 60}
+arm_cs_art_cslz = {between = "arm_cs", and = "art_cslz", time = 120}
+art_cs_art_cslz = {between = "art_cs", and = "art_cslz", time = 120}
 # Gaterade Haven (+ hyperloop)
 nsb_gth_hyp_gth = {between = "nsb_gth", and = "hyp_gth", time = 300, separate = true}
 # Lavijn / Lavijn
