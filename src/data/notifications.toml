@@ -26,7 +26,7 @@ affectedRoutes = ["nsb_d1_a", "nsb_d1_b"]
 [no_horses_allowed]
 name = "Meenemen van flexpaarden is niet toegestaan"
 icon = "circle-xmark"
-affectedRoutes = ["fer_str_ng_oh", "fer_str_ng_oh", "fer_nszw_nszo", "fer_nszo_nszw"]
+affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_nszw"]
 
 
 # Storingen en werkzaamheden
