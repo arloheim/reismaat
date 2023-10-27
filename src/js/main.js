@@ -96,7 +96,14 @@ $(function() {
 
     let nodeRoutes = node?.routesExcludingNonHalts
       .map(route => ({route, stop: route.getStopAtNode(node)}))
-      .toSorted((a, b) => a.stop.platform.localeCompare(b.stop.platform));
+      .toSorted((a, b) => {
+        if (a.stop.platform === undefined)
+          return 1;
+        else if (b.stop.platform === undefined)
+          return -1;
+        else
+          return a.stop.platform.localeCompare(b.stop.platform);
+      });
 
     return {node, nodeRoutes};
   }
