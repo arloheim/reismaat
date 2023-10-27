@@ -94,15 +94,15 @@ $(function() {
     if (nodeId === undefined || node === undefined)
       throw new NotFoundError(`Could not find node with id '${nodeId}'`);
 
-    let nodeRoutes = node?.routesExcludingNonHalts
-      .map(route => ({route, stop: route.getStopAtNode(node)}))
+    let nodeRoutes = [node, ...node.transferNodesExcludingSeparate]
+      .flatMap(n => n.routesExcludingNonHalts.map(r => ({route: r, stop: r.getStopAtNode(n)})))
       .toSorted((a, b) => {
         if (a.stop.platform === undefined)
           return 1;
         else if (b.stop.platform === undefined)
           return -1;
         else
-          return a.stop.platform.localeCompare(b.stop.platform);
+          return a.stop.platform.localeCompare(b.stop.platform, undefined, {numeric: true, sensitivity: 'base'});
       });
 
     return {node, nodeRoutes};

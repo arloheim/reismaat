@@ -74,6 +74,11 @@ class Node
     return this._feed.getTransfersIncludingNode(this, true);
   }
 
+  // Return the transfer nodes of the node
+  get transferNodesExcludingSeparate() {
+    return this.transfersExcludingSeparate.map(t => t.getOppositeNode(this));
+  }
+
   // Return the routes that have a stop at the node
   get routes() {
     return this._feed.getRoutesWithStopAtNode(this);
