@@ -28,6 +28,7 @@ const _templates = {
   'tiles/action_tickets': fs.readFileSync('src/templates/tiles/action_tickets.mustache', 'utf-8'),
   'tiles/nodes_details_routes': fs.readFileSync('src/templates/tiles/nodes_details_routes.mustache', 'utf-8'),
   'tiles/nodes_details_services': fs.readFileSync('src/templates/tiles/nodes_details_services.mustache', 'utf-8'),
+  'tiles/nodes_details_transfers': fs.readFileSync('src/templates/tiles/nodes_details_transfers.mustache', 'utf-8'),
   'tiles/notifications_details': fs.readFileSync('src/templates/tiles/notifications_details.mustache', 'utf-8'),
   'tiles/routes_details_stops': fs.readFileSync('src/templates/tiles/routes_details_stops.mustache', 'utf-8'),
   'tiles/routes_details_summary': fs.readFileSync('src/templates/tiles/routes_details_summary.mustache', 'utf-8'),

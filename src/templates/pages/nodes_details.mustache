@@ -4,7 +4,7 @@
 
 {{#node}}
   <div class="box has-background-white">
-    <h2 class="mb-0">
+    <h2 class="mb-2">
       <span class="icon-text">
         <span class="icon mr-4">
           <i class="fa-solid fa-{{icon}}"></i>
@@ -12,10 +12,20 @@
         <span>{{name}}</span>
       </span>
     </h2>
+
+    <p>
+      {{modalityNodeName}}
+      {{#city}}in {{.}}{{/city}}
+      dat wordt bediend door {{nodeRoutes.length}} lijnen.
+    </p>
   </div>
 
   <div class="tile is-ancestor">
-    <div class="tile is-6 is-parent">
+    <div class="tile is-6 is-vertical is-parent">
+      {{#transferNodes.length}}
+        {{> tiles/nodes_details_transfers}}
+      {{/transferNodes.length}}
+
       {{> tiles/nodes_details_routes}}
     </div>
 

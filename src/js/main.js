@@ -95,9 +95,13 @@ $(function() {
       throw new NotFoundError(`Could not find node with id '${nodeId}'`);
 
     let nodeRoutes = [node, ...node.transferNodesExcludingSeparate]
-      .flatMap(n => n.routesExcludingNonHalts.map(r => ({route: r, stop: r.getStopAtNode(n)})))
+      .flatMap(n => n.routesExcludingNonHalts.map(r => ({route: r, stop: r.getStopAtNode(n), isTransfer: n !== node})))
       .toSorted((a, b) => {
-        if (a.stop.platform === undefined)
+        if (a.isTransfer)
+          return 1;
+        else if (b.isTransfer)
+          return -1;
+        else if (a.stop.platform === undefined)
           return 1;
         else if (b.stop.platform === undefined)
           return -1;

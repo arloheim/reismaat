@@ -2,12 +2,14 @@
   <h3>dienstregeling</h3>
 
   {{#nodeRoutes}}
-    <div class="journey-row">
-      {{> components/journey_cell_route}}
+    {{^stop.isLastStop}}
+      <div class="journey-row">
+        {{> components/journey_cell_route}}
 
-      {{#stop.platform}}
-        {{> components/journey_cell_platform}}
-      {{/stop.platform}}
-    </div>
+        {{#stop.platform}}
+          {{> components/journey_cell_platform}}
+        {{/stop.platform}}
+      </div>
+    {{/stop.isLastStop}}
   {{/nodeRoutes}}
 </div>

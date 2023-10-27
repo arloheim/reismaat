@@ -69,12 +69,17 @@ class Node
     return this._feed.getTransfersIncludingNode(this);
   }
 
+  // Return the transfer nodes of the node
+  get transferNodes() {
+    return this.transfers.map(t => t.getOppositeNode(this));
+  }
+
   // Return the transfers that include the node exluding separate transfers
   get transfersExcludingSeparate() {
     return this._feed.getTransfersIncludingNode(this, true);
   }
 
-  // Return the transfer nodes of the node
+  // Return the transfer nodes exluding separate transfers of the node
   get transferNodesExcludingSeparate() {
     return this.transfersExcludingSeparate.map(t => t.getOppositeNode(this));
   }

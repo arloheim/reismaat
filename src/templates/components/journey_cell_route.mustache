@@ -2,6 +2,10 @@
   {{^stop.cancelled}}
     {{#route}}
       <p>{{> feed/route_long_link}}</p>
+
+      {{#isTransfer}}
+        <p class="is-muted is-size-7 ml-5">vertrekt vanaf {{stop.node.modalityNodeName}} {{stop.node.name}}</p>
+      {{/isTransfer}}
     {{/route}}
   {{/stop.cancelled}}
 
@@ -11,6 +15,10 @@
         <span class="is-cancelled">{{> feed/route_long_link}}</span>
         <span class="has-text-danger-dark has-text-weight-bold">(rijdt niet)</span>
       </p>
+
+      {{#isTransfer}}
+        <p class="is-muted is-size-7 ml-5">vertrekt vanaf {{stop.node.modalityNodeName}} {{stop.node.name}}</p>
+      {{/isTransfer}}
     {{/route}}
   {{/stop.cancelled}}
 </div>

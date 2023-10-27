@@ -1,0 +1,9 @@
+<div class="tile is-child box is-flex-grow-0 has-background-white">
+  <h3>overstaphaltes</h3>
+
+  <p>Vanaf deze halte kun je overstappen op de volgende haltes:</p>
+
+  {{#transferNodes}}
+    <p class="mb-0">{{> feed/node_long}}</p>
+  {{/transferNodes}}
+</div>
