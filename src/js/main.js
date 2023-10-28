@@ -23,7 +23,7 @@ $(function() {
   router.addRoute('planner', {path: '/reisadvies', template: 'pages/planner', data: collectPlannerData});
   router.addRoute('notifications', {path: '/meldingen', template: 'pages/notifications'});
   router.addRoute('tickets', {path: '/tickets', template: 'pages/tickets'});
-  router.addRoute('routes', {path: '/dienstregeling', template: 'pages/routes', data: collectRoutesData});
+  router.addRoute('routes', {path: '/dienstregeling', template: 'pages/routes'});
   router.addRoute('routes_details', {path: '/dienstregeling/:id', template: 'pages/routes_details', data: collectRoutesDetailsData});
   router.addRoute('nodes', {path: '/stations', template: 'pages/nodes'});
   router.addRoute('nodes_details', {path: '/stations/:id', template: 'pages/nodes_details', data: collectNodesDetailsData});
@@ -62,21 +62,6 @@ $(function() {
     return {from, to, datetime, journeys};
   }
 
-  // Collect data for the routes page
-  function collectRoutesData(match) {
-    return {
-      routes: _.chain(feed.includedRoutes)
-        .groupBy(r => r.agency.id)
-        .pairs()
-        .map(([agencyId, agencyRoutes]) => ({agency: feed.getAgency(agencyId), agencyModalities: _.chain(agencyRoutes)
-          .groupBy(r => r.modality.id)
-          .pairs()
-          .map(([modalityId, modalityRoutes]) => ({modality: feed.getModality(modalityId), modalityRoutes}))
-          .value()}))
-        .value()
-    };
-  }
-
   // Collect data for the routes details page
   function collectRoutesDetailsData(match) {
     let routeId = match.data?.id;
@@ -95,11 +80,7 @@ $(function() {
       throw new NotFoundError(`Could not find node with id '${nodeId}'`);
 
     function mapRoutes(routes, node) {
-      return routes.map(mapRoute(node)).filter(r => !r.stop.last).toSorted(sortByPlatform);
-    }
-
-    function mapRoute(node) {
-      return r => ({route: r, stop: r.getStopAtNode(node)});
+      return routes.filter(r => !r.stop.last).toSorted(sortByPlatform);
     }
 
     function sortByPlatform(a, b) {
@@ -113,7 +94,7 @@ $(function() {
         return a.stop.platform.localeCompare(b.stop.platform, undefined, {numeric: true, sensitivity: 'base'});
     }
 
-    let allTransferNodes = node.transfers.map(t => ({node: t.getOppositeNode(node), transfer: t})).filter(t => t.node.include);
+    let allTransferNodes = node.transferNodes.filter(t => t.node.include);
     let allOwnRoutes = mapRoutes(node.routes, node);
     let allTransferRoutes = allTransferNodes.map(t => ({node: t.node, routes: mapRoutes(t.node.routes, t.node)}));
 

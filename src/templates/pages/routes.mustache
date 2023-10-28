@@ -2,32 +2,16 @@
   <img src="/assets/images/header-routes.png">
 </header>
 
-<div class="box has-background-white">
-  <h2 class="mb-2">
-    <span class="icon-text">
-      <span class="icon mr-4">
-        <i class="fa-solid fa-timeline"></i>
-      </span>
-      <span>dienstregeling</span>
-    </span>
-  </h2>
-
-  <p>Hier vind je informatie over trein, metro en tram en een overzicht van alle lijnen en vervoerders.</p>
-</div>
-
-{{#routes}}
-  <div class="box has-background-white">
-    <h4 class="mb-2">{{{agency.name}}}</h4>
-
-    <div class="columns is-multiline">
-      {{#agencyModalities}}
-        <div class="column is-4">
-          <h5 class="mb-2">{{modality.name}}</h5>
-          {{#modalityRoutes}}
-            <p class="mb-0">{{> feed/route_long_link}}</p>
-          {{/modalityRoutes}}
-        </div>
-      {{/agencyModalities}}
+<div class="tile is-ancestor">
+  <div class="tile is-vertical">
+    <div class="tile is-parent">
+      {{> pages/routes/title}}
     </div>
+
+    {{#feed.agencies}}
+      {{#includedRoutes.length}}
+        {{> pages/routes/agency}}
+      {{/includedRoutes.length}}
+    {{/feed.agencies}}
   </div>
-{{/routes}}
+</div>

@@ -33,6 +33,26 @@ class Agency
     this.description = props.description;
     this.url = props.url;
   }
+
+  // Return the routes of the agency
+  get routes() {
+    return this._feed.getRoutesForAgency(this);
+  }
+
+  // Return the routes of the agency that are included in the overview
+  get includedRoutes() {
+    return this._feed.getIncludedRoutesForAgency(this);
+  }
+
+  // Return the routes of the agency, grouped by their modality
+  get routesGroupedByModality() {
+    return Object.entries(_.groupBy(this.routes, r => r.modality?.id)).map(([id, routes]) => ({modality: this._feed.getModality(id), routes: routes}));
+  }
+
+  // Return the routes of the agency that are included in the overview, grouped by their modality
+  get includedRoutesGroupedByModality() {
+    return Object.entries(_.groupBy(this.includedRoutes, r => r.modality?.id)).map(([id, routes]) => ({modality: this._feed.getModality(id), routes: routes}));
+  }
 }
 
 
@@ -75,12 +95,12 @@ class Node
 
   // Return the routes that have a stop at the node
   get routes() {
-    return this._feed.getRoutesWithStopAtNode(this);
+    return this._feed.getRoutesWithStopAtNode(this).map(r => ({route: r, stop: r.getStopAtNode(this)}));
   }
 
   // Return the routes that have a stop at the node exclding non halting stops
   get routesExcludingNonHalts() {
-    return this._feed.getRoutesWithStopAtNode(this, true);
+    return this._feed.getRoutesWithStopAtNode(this, true).map(r => ({route: r, stop: r.getStopAtNode(this)}));
   }
 
   // Return the transfers that include the node
@@ -88,26 +108,25 @@ class Node
     return this._feed.getTransfersIncludingNode(this);
   }
 
-  // Return the transfer nodes of the node
-  get transferNodes() {
-    return this.transfers.map(t => t.getOppositeNode(this));
-  }
-
-  // Return the transfers that include the node exluding separate transfers
-  get transfersExcludingSeparate() {
+  // Return the direct transfers that include the node
+  get directTransfers() {
     return this._feed.getTransfersIncludingNode(this, true);
   }
 
+  // Return the transfer nodes of the node
+  get transferNodes() {
+    return this.transfers.map(t => ({transfer: t, node: t.getOppositeNode(this)}));
+  }
+
   // Return the transfer nodes exluding separate transfers of the node
-  get transferNodesExcludingSeparate() {
-    return this.transfersExcludingSeparate.map(t => t.getOppositeNode(this));
+  get directTransferNodes() {
+    return this.directTransfers.map(t => ({transfer: t, node: t.getOppositeNode(this)}));
   }
 
   // Return the notifications that affect the node
   get notifications() {
     return this._feed.getNotificationsThatAffectNode(this);
   }
-
 
   // Return the subtitle of the node
   get subtitle() {
@@ -290,9 +309,9 @@ class Transfer
     this.between = props.between;
     this.and = props.and;
     this.time = props.time;
-    this.separate = props.separate;
-    this.initialTime = props.initialTime ?? 0;
+    this.direct = props.direct ?? true;
 
+    this.initialTime = props.initialTime ?? 0;
     this.cumulativeTime = this.initialTime + this.time;
     this.formattedTime = undefined;
   }
@@ -444,6 +463,7 @@ class Feed
     this._nodesIndex.addAll(Object.values(this.nodes));
   }
 
+
   // Return the agencies in the feed
   get agencies() {
     return Object.values(this._agencies);
@@ -456,6 +476,7 @@ class Feed
       console.warn(`Could not find agency with id '${id}'`);
     return agency;
   }
+
 
   // Return the modalities in the feed
   get modalities() {
@@ -472,6 +493,7 @@ class Feed
       console.warn(`Could not find modality with id '${id}'`);
     return modality;
   }
+
 
   // Return the nodes in the feed
   get nodes() {
@@ -499,6 +521,7 @@ class Feed
     return this._nodesIndex.search(query);
   }
 
+
   // Return the routes in the feed
   get routes() {
     return Object.values(this._routes);
@@ -506,7 +529,7 @@ class Feed
 
   // Return the routes that are included in the overview in the feed
   get includedRoutes() {
-    return this.routes.filter(r => r.include);
+    return this.routes.filter(route => route.include);
   }
 
   // Return the route with the specified id in the feed
@@ -520,14 +543,30 @@ class Feed
     return route;
   }
 
+  // Return the routes for the specified agency in the feed
+  getRoutesForAgency(agency) {
+    return this.routes.filter(route => route.agency.id === agency.id);
+  }
+
+  // Return the routes for the specified agency that are included in the overview in the feed
+  getIncludedRoutesForAgency(agency) {
+    return this.includedRoutes.filter(route => route.agency.id === agency.id);
+  }
+
   // Return the routes that have a stop at the specified node in the feed
   getRoutesWithStopAtNode(node, excludeNonHalts = false) {
     return this.routes.filter(route => route.getStopAtNode(node, excludeNonHalts) !== undefined);
   }
 
+
   // Return the transfers in the feed
   get transfers() {
     return Object.values(this._transfers);
+  }
+
+  // Return the direct transfers in the feed
+  get directTransfers() {
+    return this.transfers.filter(transfer => transfer.direct);
   }
 
   // Return the transfer with the specified id in the feed
@@ -542,14 +581,25 @@ class Feed
   }
 
   // Return the transfers that include the specified node in the feed
-  getTransfersIncludingNode(node, excludeSeparate = false) {
-    return this.transfers.filter(transfer => (transfer.between.id === node.id || transfer.and.id === node.id) && (!excludeSeparate || (excludeSeparate && !transfer.separate)));
+  getTransfersIncludingNode(node) {
+    return this.transfers.filter(transfer => (transfer.between.id === node.id || transfer.and.id === node.id));
   }
 
-  // Return the transfers between the specified nodes in the feed
-  getTransferBetweenNodes(between, and, excludeSeparate = false) {
-    return this.transfers.filter(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id)) && (!excludeSeparate || (excludeSeparate && !transfer.separate))).shift();
+  // Return the direct transfers that include the specified node in the feed
+  getDirectTransfersIncludingNode(node) {
+    return this.directTransfers.filter(transfer => (transfer.between.id === node.id || transfer.and.id === node.id));
   }
+
+  // Return the transfer between the specified nodes in the feed
+  getTransferBetweenNodes(between, and) {
+    return this.transfers.filter(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id))).shift();
+  }
+
+  // Return the direct transfer between the specified nodes in the feed
+  getDirectTransferBetweenNodes(between, and) {
+    return this.directTransfers.filter(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id))).shift();
+  }
+
 
   // Return the notification types in the feed
   get notificationTypes() {
@@ -567,6 +617,7 @@ class Feed
     return notificationType;
   }
 
+
   // Return the service types in the feed
   get serviceTypes() {
     return Object.values(this._serviceTypes);
@@ -583,6 +634,7 @@ class Feed
     return serviceType;
   }
 
+
   // Return the services in the feed
   get services() {
     return Object.values(this._services);
@@ -598,6 +650,7 @@ class Feed
       console.warn(`Could not find services for node with id '${id}'`);
     return services;
   }
+
 
   // Return the notifications in the feed
   get notifications() {

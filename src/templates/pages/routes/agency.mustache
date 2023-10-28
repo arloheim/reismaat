@@ -1,0 +1,47 @@
+<div class="tile">
+  <div class="tile is-4 is-parent">
+    <div class="tile is-child box has-background-white">
+      <div class="media block is-align-items-center">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="/assets/images/logo_{{id}}.png" alt="{{name}}">
+          </figure>
+        </div>
+
+        <div class="media-content">
+          <h4 class="mb-0">{{name}}</h4>
+
+          {{#description}}
+            <p class="is-muted">{{.}}</p>
+          {{/description}}
+        </div>
+      </div>
+
+      {{#url}}
+        <a class="button is-dark is-rounded" target="_blank" href={{.}}>
+          <span>Bezoek de website</span>
+          <span class="icon">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
+      {{/url}}
+    </div>
+  </div>
+
+  <div class="tile is-8 is-parent">
+    <div class="tile is-child box has-background-white">
+      <h4 class="mb-2">lijnen</h4>
+
+      <div class="columns is-multiline">
+        {{#includedRoutesGroupedByModality}}
+          <div class="column is-12 is-6-widescreen">
+            <h5 class="mb-2">{{modality.name}}</h5>
+            {{#routes}}
+              <p class="mb-0">{{> feed/route_long_link}}</p>
+            {{/routes}}
+          </div>
+        {{/includedRoutesGroupedByModality}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -965,7 +965,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 agency = "arlov"
 modality = "tram"
 name = "Tram 837 (Morgenster ⟶ Steyn ⟶ Morgenster)"
-headsign = "Steyn"
+headsign = "Morgenster via Steyn"
 abbr = "837"
 color = {background = "#cd87de", text = "#ffffff"}
 
@@ -1149,6 +1149,7 @@ name = "Funiculaire 667 (Triarchie ⟶ Maanzigt)"
 headsign = "Maanzigt"
 abbr = "667"
 color = {background = "#2a889f", text = "#ffffff"}
+include = false
 
 [arf_667_a.stops]
 01 = {node = "arf_trc", time = 0}
@@ -1161,6 +1162,7 @@ name = "Funiculaire 667 (Maanzigt ⟶ Triarchie)"
 headsign = "Triarchie"
 abbr = "667"
 color = {background = "#2a889f", text = "#ffffff"}
+include = false
 
 [arf_667_b.stops]
 01 = {node = "arf_mzt", time = 0}
@@ -1173,6 +1175,7 @@ name = "Funiculaire 669 (Brandwijk ⟶ Geologie)"
 headsign = "Geologie"
 abbr = "669"
 color = {background = "#2a889f", text = "#ffffff"}
+include = false
 
 [arf_669_a.stops]
 01 = {node = "arf_bwk", time = 0}
@@ -1185,6 +1188,7 @@ name = "Funiculaire 669 (Geologie ⟶ Brandwijk)"
 headsign = "Brandwijk"
 abbr = "669"
 color = {background = "#2a889f", text = "#ffffff"}
+include = false
 
 [arf_669_b.stops]
 01 = {node = "arf_geo", time = 0}
@@ -1197,6 +1201,7 @@ name = "Funiculaire 670 (Oldenburg ⟶ Heuvelkwartier)"
 headsign = "Heuvelkwartier"
 abbr = "670"
 color = {background = "#2a889f", text = "#ffffff"}
+include = false
 
 [arf_670_a.stops]
 01 = {node = "arf_odb", time = 0}
@@ -1209,6 +1214,7 @@ name = "Funiculaire 670 (Heuvelkwartier ⟶ Oldenburg)"
 headsign = "Oldenburg"
 abbr = "670"
 color = {background = "#2a889f", text = "#ffffff"}
+include = false
 
 [arf_670_b.stops]
 01 = {node = "arf_hvk", time = 0}
@@ -1223,6 +1229,7 @@ name = "Lift 404 (Forum ⟶ Observatorium)"
 headsign = "Observatorium"
 abbr = "404"
 color = {background = "#aac735", text = "#ffffff"}
+include = false
 
 [arl_404_a.stops]
 01 = {node = "arl_for", time = 0}
@@ -1235,6 +1242,7 @@ name = "Lift 404 (Observatorium ⟶ Forum)"
 headsign = "Forum"
 abbr = "404"
 color = {background = "#aac735", text = "#ffffff"}
+include = false
 
 [arl_404_b.stops]
 01 = {node = "arl_obs", time = 0}
@@ -1247,6 +1255,7 @@ name = "Lift 420 (Nieuwedal ⟶ Maanzigt)"
 headsign = "Maanzigt"
 abbr = "420"
 color = {background = "#aac735", text = "#ffffff"}
+include = false
 
 [arl_420_a.stops]
 01 = {node = "arl_nwd", time = 0}
@@ -1259,6 +1268,7 @@ name = "Lift 420 (Maanzigt ⟶ Nieuwedal)"
 headsign = "Nieuwedal"
 abbr = "420"
 color = {background = "#aac735", text = "#ffffff"}
+include = false
 
 [arl_420_b.stops]
 01 = {node = "arl_mzt", time = 0}

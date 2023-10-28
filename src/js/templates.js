@@ -7,31 +7,35 @@ const path = require('path');
 const _templates = {
   // Normal pages
   'pages/home': fs.readFileSync('src/templates/pages/home.mustache', 'utf-8'),
+  'pages/home/planner': fs.readFileSync('src/templates/pages/home/planner.mustache', 'utf-8'),
+  'pages/home/notifications': fs.readFileSync('src/templates/pages/home/notifications.mustache', 'utf-8'),
+  'pages/home/actions': fs.readFileSync('src/templates/pages/home/actions.mustache', 'utf-8'),
+  'pages/home/tickets': fs.readFileSync('src/templates/pages/home/tickets.mustache', 'utf-8'),
+  'pages/home/routes': fs.readFileSync('src/templates/pages/home/routes.mustache', 'utf-8'),
+  'pages/home/nodes': fs.readFileSync('src/templates/pages/home/nodes.mustache', 'utf-8'),
   'pages/planner': fs.readFileSync('src/templates/pages/planner.mustache', 'utf-8'),
   'pages/notifications': fs.readFileSync('src/templates/pages/notifications.mustache', 'utf-8'),
+  'pages/notifications/title': fs.readFileSync('src/templates/pages/notifications/title.mustache', 'utf-8'),
+  'pages/notifications/notification': fs.readFileSync('src/templates/pages/notifications/notification.mustache', 'utf-8'),
   'pages/tickets': fs.readFileSync('src/templates/pages/tickets.mustache', 'utf-8'),
   'pages/routes': fs.readFileSync('src/templates/pages/routes.mustache', 'utf-8'),
+  'pages/routes/title': fs.readFileSync('src/templates/pages/routes/title.mustache', 'utf-8'),
+  'pages/routes/agency': fs.readFileSync('src/templates/pages/routes/agency.mustache', 'utf-8'),
   'pages/routes_details': fs.readFileSync('src/templates/pages/routes_details.mustache', 'utf-8'),
+  'pages/routes_details/route': fs.readFileSync('src/templates/pages/routes_details/route.mustache', 'utf-8'),
+  'pages/routes_details/stops': fs.readFileSync('src/templates/pages/routes_details/stops.mustache', 'utf-8'),
   'pages/nodes': fs.readFileSync('src/templates/pages/nodes.mustache', 'utf-8'),
+  'pages/nodes/title': fs.readFileSync('src/templates/pages/nodes/title.mustache', 'utf-8'),
   'pages/nodes_details': fs.readFileSync('src/templates/pages/nodes_details.mustache', 'utf-8'),
+  'pages/nodes_details/title': fs.readFileSync('src/templates/pages/nodes_details/title.mustache', 'utf-8'),
+  'pages/nodes_details/routes': fs.readFileSync('src/templates/pages/nodes_details/routes.mustache', 'utf-8'),
+  'pages/nodes_details/services': fs.readFileSync('src/templates/pages/nodes_details/services.mustache', 'utf-8'),
+  'pages/nodes_details/transfers': fs.readFileSync('src/templates/pages/nodes_details/transfers.mustache', 'utf-8'),
   'pages/about': fs.readFileSync('src/templates/pages/about.mustache', 'utf-8'),
 
   // Error pages
   'pages/errors/404': fs.readFileSync('src/templates/pages/errors/404.mustache', 'utf-8'),
   'pages/errors/500': fs.readFileSync('src/templates/pages/errors/500.mustache', 'utf-8'),
-
-  // Tiles
-  'tiles/action_nodes': fs.readFileSync('src/templates/tiles/action_nodes.mustache', 'utf-8'),
-  'tiles/action_notifications': fs.readFileSync('src/templates/tiles/action_notifications.mustache', 'utf-8'),
-  'tiles/action_planner': fs.readFileSync('src/templates/tiles/action_planner.mustache', 'utf-8'),
-  'tiles/action_routes': fs.readFileSync('src/templates/tiles/action_routes.mustache', 'utf-8'),
-  'tiles/action_tickets': fs.readFileSync('src/templates/tiles/action_tickets.mustache', 'utf-8'),
-  'tiles/nodes_details_routes': fs.readFileSync('src/templates/tiles/nodes_details_routes.mustache', 'utf-8'),
-  'tiles/nodes_details_services': fs.readFileSync('src/templates/tiles/nodes_details_services.mustache', 'utf-8'),
-  'tiles/nodes_details_transfers': fs.readFileSync('src/templates/tiles/nodes_details_transfers.mustache', 'utf-8'),
-  'tiles/notifications_details': fs.readFileSync('src/templates/tiles/notifications_details.mustache', 'utf-8'),
-  'tiles/routes_details_stops': fs.readFileSync('src/templates/tiles/routes_details_stops.mustache', 'utf-8'),
-  'tiles/routes_details_summary': fs.readFileSync('src/templates/tiles/routes_details_summary.mustache', 'utf-8'),
 
   // Components
   'components/journey_details': fs.readFileSync('src/templates/components/journey_details.mustache', 'utf-8'),

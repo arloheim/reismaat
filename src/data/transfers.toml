@@ -18,13 +18,13 @@ arm_cps_art_cps = {between = "arm_cps", and = "art_cps", time = 120}
 nsb_arfo_arm_for = {between = "nsb_arfo", and = "arm_for", time = 60}
 nsb_arfo_art_for = {between = "nsb_arfo", and = "art_for", time = 120}
 arm_for_art_for = {between = "arm_for", and = "art_for", time = 120}
-nsb_arfo_arl_for = {between = "nsb_arfo", and = "arl_for", time = 240, separate = true}
-arm_arfo_arl_for = {between = "arm_for", and = "arl_for", time = 240, separate = true}
-art_for_arl_for = {between = "art_for", and = "arl_for", time = 120, separate = true}
-nsb_arfo_hyp_arfo = {between = "nsb_arfo", and = "hyp_arfo", time = 300, separate = true}
-arm_arfo_hyp_arfo = {between = "arm_for", and = "hyp_arfo", time = 300, separate = true}
-art_for_hyp_arfo = {between = "art_for", and = "hyp_arfo", time = 360, separate = true}
-arl_for_hyp_arfo = {between = "arl_for", and = "hyp_arfo", time = 360, separate = true}
+nsb_arfo_arl_for = {between = "nsb_arfo", and = "arl_for", time = 240, direct = false}
+arm_arfo_arl_for = {between = "arm_for", and = "arl_for", time = 240, direct = false}
+art_for_arl_for = {between = "art_for", and = "arl_for", time = 120, direct = false}
+nsb_arfo_hyp_arfo = {between = "nsb_arfo", and = "hyp_arfo", time = 300, direct = false}
+arm_arfo_hyp_arfo = {between = "arm_for", and = "hyp_arfo", time = 300, direct = false}
+art_for_hyp_arfo = {between = "art_for", and = "hyp_arfo", time = 360, direct = false}
+arl_for_hyp_arfo = {between = "arl_for", and = "hyp_arfo", time = 360, direct = false}
 # Arloheim Panderberg / Panderberg
 nsb_arp_arm_pdb = {between = "nsb_arp", and = "arm_pdb", time = 120}
 # Arloheim Centraal / Centraal Station
@@ -35,7 +35,7 @@ arm_cs_art_cs = {between = "arm_cs", and = "art_cs", time = 60}
 arm_cs_art_cslz = {between = "arm_cs", and = "art_cslz", time = 120}
 art_cs_art_cslz = {between = "art_cs", and = "art_cslz", time = 120}
 # Gaterade Haven (+ hyperloop)
-nsb_gth_hyp_gth = {between = "nsb_gth", and = "hyp_gth", time = 300, separate = true}
+nsb_gth_hyp_gth = {between = "nsb_gth", and = "hyp_gth", time = 300, direct = false}
 # Lavijn / Lavijn
 nsb_lvn_arm_lvn = {between = "nsb_lvn", and = "arm_lvn", time = 120}
 # Nedelrand / Nedelrand
@@ -51,9 +51,9 @@ nsb_uh_arm_uhs = {between = "nsb_uh", and = "arm_uhs", time = 120}
 # Wadekwartier
 arm_wdk_art_wdk = {between = "arm_wdk", and = "art_wdk", time = 60}
 # Nieuwedal (+ lift)
-arm_nwd_arl_nwd = {between = "arm_nwd", and = "arl_nwd", time = 120, separate = true}
+arm_nwd_arl_nwd = {between = "arm_nwd", and = "arl_nwd", time = 120, direct = false}
 # Triarchie (+ funiculaire)
-arm_trc_arl_trc = {between = "arm_trc", and = "arf_trc", time = 150, separate = true}
+arm_trc_arl_trc = {between = "arm_trc", and = "arf_trc", time = 150, direct = false}
 # Passewijde
 arm_psw_art_psw = {between = "arm_psw", and = "art_psw", time = 60}
 # Elfshaven
@@ -61,17 +61,17 @@ arm_ehv_art_ehv = {between = "arm_ehv", and = "art_ehv", time = 120}
 # Halenz
 arm_hz_art_hz = {between = "arm_hz", and = "art_hz", time = 60}
 # Heuvelkwartier (+ funiculaire)
-arm_hvk_arf_hvk = {between = "arm_hvk", and = "arf_hvk", time = 120, separate = true}
+arm_hvk_arf_hvk = {between = "arm_hvk", and = "arf_hvk", time = 120, direct = false}
 # Vrijhof / Museumplein
-arm_vhf_arm_mpl = {between = "arm_vhf", and = "arm_mpl", time = 120, separate = true}
+arm_vhf_arm_mpl = {between = "arm_vhf", and = "arm_mpl", time = 120, direct = false}
 # Zuiderbank
 arm_zb_art_zb = {between = "arm_zb", and = "art_zb", time = 60}
 # Luchthaven
 arm_lhv_art_lhv = {between = "arm_lhv", and = "art_lhv", time = 60}
 # Oldenburg (+ funiculaire)
 arm_odb_art_odb = {between = "arm_odb", and = "art_odb", time = 60}
-arm_odb_arf_odb = {between = "arm_odb", and = "arf_odb", time = 60, separate = true}
-art_odb_arf_odb = {between = "art_odb", and = "arf_odb", time = 120, separate = true}
+arm_odb_arf_odb = {between = "arm_odb", and = "arf_odb", time = 60, direct = false}
+art_odb_arf_odb = {between = "art_odb", and = "arf_odb", time = 120, direct = false}
 # Ou-Steyn
 arm_ost_art_ost = {between = "arm_ost", and = "art_ost", time = 60}
 # Steyn / Genova
@@ -87,60 +87,60 @@ arm_ldw_art_ldw = {between = "arm_ldw", and = "art_ldw", time = 60}
 # Aalsterve
 arm_atv_art_atv = {between = "arm_atv", and = "art_atv", time = 60}
 # Den Boom / De Blauwe Pael
-arm_dbm_art_bpl = {between = "arm_dbm", and = "art_bpl", time = 90, separate = true}
+arm_dbm_art_bpl = {between = "arm_dbm", and = "art_bpl", time = 90, direct = false}
 # Morgenster
 arm_mst_art_mst = {between = "arm_mst", and = "art_mst", time = 60}
 # Oosterbad / Cyprian
 art_otb_art_cyp = {between = "art_otb", and = "art_cyp", time = 60}
 # Brandwijk (+ funiculaire)
-art_bwk_arf_bwk = {between = "art_bwk", and = "arf_bwk", time = 60, separate = true}
+art_bwk_arf_bwk = {between = "art_bwk", and = "arf_bwk", time = 60, direct = false}
 # Maanzigt (+ funiculaire + lift)
-arf_mzt_arl_mzt = {between = "arf_mzt", and = "arl_mzt", time = 60, separate = true}
+arf_mzt_arl_mzt = {between = "arf_mzt", and = "arl_mzt", time = 60, direct = false}
 
 
 # Stadsvervoer Amsvorde
 
 # Sluisweg / Weenisweg
-avt_ssw_avt_wnw = {between = "avt_ssw", and = "avt_wnw", time = 60, separate = true}
+avt_ssw_avt_wnw = {between = "avt_ssw", and = "avt_wnw", time = 60, direct = false}
 
 
 # Veerdiensten
 # Stachteren
-fer_str_nsb_str = {between = "fer_str", and = "nsb_str", time = 60, separate = true}
+fer_str_nsb_str = {between = "fer_str", and = "nsb_str", time = 60, direct = false}
 # Negenaar
-fer_ng_arm_ng = {between = "fer_ng", and = "arm_ng", time = 120, separate = true}
+fer_ng_arm_ng = {between = "fer_ng", and = "arm_ng", time = 120, direct = false}
 # Ockholm
-fer_oh_nsb_oh = {between = "fer_oh", and = "nsb_oh", time = 120, separate = true}
+fer_oh_nsb_oh = {between = "fer_oh", and = "nsb_oh", time = 120, direct = false}
 # Noordersluizen-Oost
-fer_nszo_cty_nszo = {between = "fer_nszo", and = "cty_nszo", time = 60, separate = true}
+fer_nszo_cty_nszo = {between = "fer_nszo", and = "cty_nszo", time = 60, direct = false}
 # Noordersluizen-West
-fer_nszw_cty_nszw = {between = "fer_nszw", and = "cty_nszw", time = 60, separate = true}
+fer_nszw_cty_nszw = {between = "fer_nszw", and = "cty_nszw", time = 60, direct = false}
 
 
 # Flexpaard-hubs
 
 # Al-Qusur
-eqh_qs_nsb_qs = {between = "eqh_qs", and = "nsb_qs", time = 60, separate = true}
-eqh_qs_arm_qsr = {between = "eqh_qs", and = "arm_qsr", time = 60, separate = true}
+eqh_qs_nsb_qs = {between = "eqh_qs", and = "nsb_qs", time = 60, direct = false}
+eqh_qs_arm_qsr = {between = "eqh_qs", and = "arm_qsr", time = 60, direct = false}
 # Lavijn
-eqh_lvn_nsb_lvn = {between = "eqh_lvn", and = "nsb_lvn", time = 120, separate = true}
-eqh_lvn_arm_lvn = {between = "eqh_lvn", and = "arm_lvn", time = 60, separate = true}
+eqh_lvn_nsb_lvn = {between = "eqh_lvn", and = "nsb_lvn", time = 120, direct = false}
+eqh_lvn_arm_lvn = {between = "eqh_lvn", and = "arm_lvn", time = 60, direct = false}
 # Amsvorde Iberië
-eqh_avi_nsb_avi = {between = "eqh_avi", and = "nsb_avi", time = 60, separate = true}
-eqh_avi_avt_avi = {between = "eqh_avi", and = "avt_avi", time = 60, separate = true}
+eqh_avi_nsb_avi = {between = "eqh_avi", and = "nsb_avi", time = 60, direct = false}
+eqh_avi_avt_avi = {between = "eqh_avi", and = "avt_avi", time = 60, direct = false}
 # Slinger
-eqh_sg_nsb_sg = {between = "eqh_sg", and = "nsb_sg", time = 300, separate = true}
-eqh_sg_arm_sg = {between = "eqh_sg", and = "arm_sg", time = 60, separate = true}
+eqh_sg_nsb_sg = {between = "eqh_sg", and = "nsb_sg", time = 300, direct = false}
+eqh_sg_arm_sg = {between = "eqh_sg", and = "arm_sg", time = 60, direct = false}
 # Vittoria
-eqh_vt_nsb_vt = {between = "eqh_vt", and = "nsb_vt", time = 60, separate = true}
+eqh_vt_nsb_vt = {between = "eqh_vt", and = "nsb_vt", time = 60, direct = false}
 # Mijdezinder
-eqh_mdz_arm_mdz = {between = "eqh_mdz", and = "arm_mdz", time = 60, separate = true}
+eqh_mdz_arm_mdz = {between = "eqh_mdz", and = "arm_mdz", time = 60, direct = false}
 # Gaterade haven
-eqh_gth_nsb_gth = {between = "eqh_gth", and = "nsb_gth", time = 60, separate = true}
-eqh_gth_hyp_gth = {between = "eqh_gth", and = "hyp_gth", time = 300, separate = true}
+eqh_gth_nsb_gth = {between = "eqh_gth", and = "nsb_gth", time = 60, direct = false}
+eqh_gth_hyp_gth = {between = "eqh_gth", and = "hyp_gth", time = 300, direct = false}
 # Dinsdrecht
-eqh_dd_nsb_dd = {between = "eqh_dd", and = "nsb_dd", time = 60, separate = true}
+eqh_dd_nsb_dd = {between = "eqh_dd", and = "nsb_dd", time = 60, direct = false}
 # Woenslaken
-eqh_wl_nsb_wl = {between = "eqh_wl", and = "nsb_wl", time = 60, separate = true}
+eqh_wl_nsb_wl = {between = "eqh_wl", and = "nsb_wl", time = 60, direct = false}
 # Storia Infinita
-eqh_sti_nsb_sti = {between = "eqh_sti", and = "nsb_sti", time = 60, separate = true}
+eqh_sti_nsb_sti = {between = "eqh_sti", and = "nsb_sti", time = 60, direct = false}
