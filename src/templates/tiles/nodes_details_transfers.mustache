@@ -3,7 +3,10 @@
 
   <p>Vanaf deze halte kun je overstappen op de volgende haltes:</p>
 
-  {{#transferNodes}}
-    <p class="mb-0">{{> feed/node_long}}</p>
-  {{/transferNodes}}
+  {{#allTransferNodes}}
+    <p class="mb-0">
+      {{#node}}{{> feed/node_long}}{{/node}}
+      {{#transfer.separate}}<span class="is-muted"> &middot; indirecte overstap</span>{{/transfer.separate}}
+    </p>
+  {{/allTransferNodes}}
 </div>

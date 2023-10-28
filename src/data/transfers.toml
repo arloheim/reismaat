@@ -18,9 +18,9 @@ arm_cps_art_cps = {between = "arm_cps", and = "art_cps", time = 120}
 nsb_arfo_arm_for = {between = "nsb_arfo", and = "arm_for", time = 60}
 nsb_arfo_art_for = {between = "nsb_arfo", and = "art_for", time = 120}
 arm_for_art_for = {between = "arm_for", and = "art_for", time = 120}
-nsb_arfo_arl_for = {between = "nsb_arfo", and = "arl_for", time = 240}
-arm_arfo_arl_for = {between = "arm_for", and = "arl_for", time = 240}
-art_for_arl_for = {between = "art_for", and = "arl_for", time = 120}
+nsb_arfo_arl_for = {between = "nsb_arfo", and = "arl_for", time = 240, separate = true}
+arm_arfo_arl_for = {between = "arm_for", and = "arl_for", time = 240, separate = true}
+art_for_arl_for = {between = "art_for", and = "arl_for", time = 120, separate = true}
 nsb_arfo_hyp_arfo = {between = "nsb_arfo", and = "hyp_arfo", time = 300, separate = true}
 arm_arfo_hyp_arfo = {between = "arm_for", and = "hyp_arfo", time = 300, separate = true}
 art_for_hyp_arfo = {between = "art_for", and = "hyp_arfo", time = 360, separate = true}
@@ -51,9 +51,9 @@ nsb_uh_arm_uhs = {between = "nsb_uh", and = "arm_uhs", time = 120}
 # Wadekwartier
 arm_wdk_art_wdk = {between = "arm_wdk", and = "art_wdk", time = 60}
 # Nieuwedal (+ lift)
-arm_nwd_arl_nwd = {between = "arm_nwd", and = "arl_nwd", time = 120}
+arm_nwd_arl_nwd = {between = "arm_nwd", and = "arl_nwd", time = 120, separate = true}
 # Triarchie (+ funiculaire)
-arm_trc_arl_trc = {between = "arm_trc", and = "arf_trc", time = 150}
+arm_trc_arl_trc = {between = "arm_trc", and = "arf_trc", time = 150, separate = true}
 # Passewijde
 arm_psw_art_psw = {between = "arm_psw", and = "art_psw", time = 60}
 # Elfshaven
@@ -61,7 +61,7 @@ arm_ehv_art_ehv = {between = "arm_ehv", and = "art_ehv", time = 120}
 # Halenz
 arm_hz_art_hz = {between = "arm_hz", and = "art_hz", time = 60}
 # Heuvelkwartier (+ funiculaire)
-arm_hvk_arf_hvk = {between = "arm_hvk", and = "arf_hvk", time = 120}
+arm_hvk_arf_hvk = {between = "arm_hvk", and = "arf_hvk", time = 120, separate = true}
 # Vrijhof / Museumplein
 arm_vhf_arm_mpl = {between = "arm_vhf", and = "arm_mpl", time = 120, separate = true}
 # Zuiderbank
@@ -70,8 +70,8 @@ arm_zb_art_zb = {between = "arm_zb", and = "art_zb", time = 60}
 arm_lhv_art_lhv = {between = "arm_lhv", and = "art_lhv", time = 60}
 # Oldenburg (+ funiculaire)
 arm_odb_art_odb = {between = "arm_odb", and = "art_odb", time = 60}
-arm_odb_arf_odb = {between = "arm_odb", and = "arf_odb", time = 60}
-art_odb_arf_odb = {between = "art_odb", and = "arf_odb", time = 120}
+arm_odb_arf_odb = {between = "arm_odb", and = "arf_odb", time = 60, separate = true}
+art_odb_arf_odb = {between = "art_odb", and = "arf_odb", time = 120, separate = true}
 # Ou-Steyn
 arm_ost_art_ost = {between = "arm_ost", and = "art_ost", time = 60}
 # Steyn / Genova
@@ -93,9 +93,9 @@ arm_mst_art_mst = {between = "arm_mst", and = "art_mst", time = 60}
 # Oosterbad / Cyprian
 art_otb_art_cyp = {between = "art_otb", and = "art_cyp", time = 60}
 # Brandwijk (+ funiculaire)
-art_bwk_arf_bwk = {between = "art_bwk", and = "arf_bwk", time = 60}
+art_bwk_arf_bwk = {between = "art_bwk", and = "arf_bwk", time = 60, separate = true}
 # Maanzigt (+ funiculaire + lift)
-arf_mzt_arl_mzt = {between = "arf_mzt", and = "arl_mzt", time = 60}
+arf_mzt_arl_mzt = {between = "arf_mzt", and = "arl_mzt", time = 60, separate = true}
 
 
 # Stadsvervoer Amsvorde

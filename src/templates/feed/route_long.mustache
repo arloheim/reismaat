@@ -5,6 +5,6 @@
   <span>
     {{^abbr}}{{modalityName}}{{/abbr}}
     {{#abbr}}<span class="route-abbr" style="background: {{color.background}}; color: {{color.text}};">{{abbr}}</span>{{/abbr}}
-    richting {{firstStop.headsign}}
+    richting {{#stop}}{{headsign}}{{/stop}} {{^stop}}{{headsign}}{{/stop}}
   </span>
 </span>

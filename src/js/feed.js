@@ -62,6 +62,7 @@ class Node
     this.modalityNodeName = props.modalityNodeName ?? this.modality?.nodeName;
     this.icon = props.icon ?? this.modality?.icon ?? 'location-dot';
     this.city = props.city;
+    this.showInOverview = props.showInOverview ?? true;
   }
 
   // Return the transfers that include the node
@@ -134,6 +135,7 @@ class Transfer
     this.between = props.between;
     this.and = props.and;
     this.time = props.time;
+    this.separate = props.separate;
     this.initialTime = props.initialTime ?? 0;
 
     // Calculate the cumulative time of the transfer
@@ -426,12 +428,12 @@ class Feed
 
   // Return the transfers that include the specified node in the feed
   getTransfersIncludingNode(node, excludeSeparate = false) {
-    return this.transfers.filter(transfer => (transfer.between.id === node.id || transfer.and.id === node.id) && (!excludeSeparate || !transfer.separate));
+    return this.transfers.filter(transfer => (transfer.between.id === node.id || transfer.and.id === node.id) && (!excludeSeparate || (excludeSeparate && !transfer.separate)));
   }
 
   // Return the transfers between the specified nodes in the feed
   getTransferBetweenNodes(between, and, excludeSeparate = false) {
-    return this.transfers.filter(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id)) && (!excludeSeparate || !transfer.separate)).shift();
+    return this.transfers.filter(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id)) && (!excludeSeparate || (excludeSeparate && !transfer.separate))).shift();
   }
 
   // Return the routes in the feed
@@ -457,7 +459,7 @@ class Feed
 
   // Return the routes that have a stop at the specified node in the feed
   getRoutesWithStopAtNode(node, excludeNonHalts = false) {
-    return this.routes.filter(route => route.getStopAtNode(node) !== undefined);
+    return this.routes.filter(route => route.getStopAtNode(node, excludeNonHalts) !== undefined);
   }
 
   // Return the notifications in the feed

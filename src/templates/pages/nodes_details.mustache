@@ -9,27 +9,25 @@
         <span class="icon mr-4">
           <i class="fa-solid fa-{{icon}}"></i>
         </span>
-        <span>{{name}}</span>
+        <span>{{modalityNodeName}} {{name}}</span>
       </span>
     </h2>
 
     <p>
-      {{modalityNodeName}}
-      {{#city}}in {{.}}{{/city}}
-      dat wordt bediend door {{nodeRoutes.length}} lijnen.
+      {{modalityNodeName}} {{#city}}in {{.}}{{/city}}, bediend door {{allOwnRoutes.length}} lijnen.
     </p>
   </div>
 
   <div class="tile is-ancestor">
-    <div class="tile is-6 is-vertical is-parent">
-      {{#transferNodes.length}}
+    <div class="tile is-7 is-vertical is-parent">
+      {{#allTransferNodes.length}}
         {{> tiles/nodes_details_transfers}}
-      {{/transferNodes.length}}
+      {{/allTransferNodes.length}}
 
       {{> tiles/nodes_details_routes}}
     </div>
 
-    <div class="tile is-6 is-parent">
+    <div class="tile is-5 is-parent">
       {{> tiles/nodes_details_services}}
     </div>
   </div>

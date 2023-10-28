@@ -8,11 +8,9 @@ name = "Voor deze rit is een zitplaatsreservering verplicht"
 
 [supplement_required]
 name = "Voor deze rit dient een toeslag te worden betaald"
-icon = "receipt"
 
 [separate_ticket_required]
 name = "Voor deze rit is een apart ticket nodig"
-icon = "receipt"
 affectedRoutes = ["hyp_a", "hyp_b"]
 
 [second_class_only]
@@ -25,7 +23,7 @@ affectedRoutes = ["nsb_d1_a", "nsb_d1_b"]
 
 [no_horses_allowed]
 name = "Meenemen van flexpaarden is niet toegestaan"
-icon = "circle-xmark"
+icon = "ban"
 affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_nszw"]
 
 

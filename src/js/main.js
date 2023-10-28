@@ -94,22 +94,30 @@ $(function() {
     if (nodeId === undefined || node === undefined)
       throw new NotFoundError(`Could not find node with id '${nodeId}'`);
 
-    let nodeRoutes = [node, ...node.transferNodesExcludingSeparate]
-      .flatMap(n => n.routesExcludingNonHalts.map(r => ({route: r, stop: r.getStopAtNode(n), isTransfer: n !== node})))
-      .toSorted((a, b) => {
-        if (a.isTransfer)
-          return 1;
-        else if (b.isTransfer)
-          return -1;
-        else if (a.stop.platform === undefined)
-          return 1;
-        else if (b.stop.platform === undefined)
-          return -1;
-        else
-          return a.stop.platform.localeCompare(b.stop.platform, undefined, {numeric: true, sensitivity: 'base'});
-      });
+    function mapRoutes(routes, node) {
+      return routes.map(mapRoute(node)).filter(r => !r.stop.isLastStop).toSorted(sortByPlatform);
+    }
 
-    return {node, nodeRoutes};
+    function mapRoute(node) {
+      return r => ({route: r, stop: r.getStopAtNode(node)});
+    }
+
+    function sortByPlatform(a, b) {
+      if (a.stop.platform === undefined && b.stop.platform === undefined)
+        return 0;
+      else if (a.stop.platform === undefined)
+        return 1;
+      else if (b.stop.platform === undefined)
+        return -1;
+      else
+        return a.stop.platform.localeCompare(b.stop.platform, undefined, {numeric: true, sensitivity: 'base'});
+    }
+
+    let allTransferNodes = node.transfers.map(t => ({node: t.getOppositeNode(node), transfer: t})).filter(t => t.node.showInOverview);
+    let allOwnRoutes = mapRoutes(node.routes, node);
+    let allTransferRoutes = allTransferNodes.map(t => ({node: t.node, routes: mapRoutes(t.node.routes, t.node)}));
+
+    return {node, allTransferNodes, allOwnRoutes, allTransferRoutes};
   }
 
 
