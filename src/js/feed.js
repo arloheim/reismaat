@@ -6,10 +6,16 @@ const toml = require('toml');
 const MiniSearch = require('minisearch');
 
 
-// Map of the defined notification types
-const _notificationTypes = {
-  disruption: {icon: 'triangle-exclamation', color: 'danger', name: "Storing"},
-  construction: {icon: 'triangle-exclamation', color: 'warning', name: "Werkzaamheden"},
+// Object that contains the available files
+const _files = {
+  'agencies': fs.readFileSync('src/data/agencies.toml', 'utf-8'),
+  'modalities': fs.readFileSync('src/data/modalities.toml', 'utf-8'),
+  'nodes': fs.readFileSync('src/data/nodes.toml', 'utf-8'),
+  'notifications': fs.readFileSync('src/data/notifications.toml', 'utf-8'),
+  'notifications_types': fs.readFileSync('src/data/notifications_types.toml', 'utf-8'),
+  'routes': fs.readFileSync('src/data/routes.toml', 'utf-8'),
+  'services_types': fs.readFileSync('src/data/services_types.toml', 'utf-8'),
+  'transfers': fs.readFileSync('src/data/transfers.toml', 'utf-8'),
 };
 
 
@@ -301,6 +307,23 @@ class RouteStop
   }
 }
 
+
+// Class that defines the type of a notification in a feed
+class NotificationType
+{
+  // Constructor
+  constructor(feed, props) {
+    this._feed = feed;
+
+    this.name = props.name;
+    this.icon = props.icon;
+    this.color = props.color;
+    this.include = props.include ?? true;
+    this.severe = props.severe ?? false;
+  }
+}
+
+
 // Class that defines a notification in a feed
 class Notification
 {
@@ -308,7 +331,8 @@ class Notification
   constructor(feed, props) {
     this._feed = feed;
 
-    this.type = _notificationTypes[props.type];
+    this.type = props.type;
+    this.typeName = props.typeName ?? this.type?.name;
     this.name = props.name ?? this.type?.name;
     this.description = props.description;
     this.period = props.period;
@@ -316,7 +340,8 @@ class Notification
     this.affectedRoutes = props.affectedRoutes ?? [];
     this.icon = props.icon ?? this.type?.icon ?? 'circle-info';
     this.color = props.color ?? this.type?.color ?? 'info';
-    this.showInOverview = props.showInOverview ?? false;
+    this.include = props.include ?? this.type?.include ?? true;
+    this.severe = props.severe ?? this.type?.severe ?? false;
   }
 
   // Return if the notification has affected nodes
@@ -340,17 +365,19 @@ class Notification
   }
 }
 
+
 // Class that defines a feed
 class Feed
 {
   // Constructor
   constructor(props = {}) {
-    this._agencies = this._loadAgencies();
-    this._modalities = this._loadModalities();
-    this._nodes = this._loadNodes();
-    this._transfers = this._loadTransfers();
-    this._routes = this._loadRoutes();
-    this._notifications = this._loadNotifications();
+    this._agencies = this._parseTomlFile('agencies', this._parseAgency);
+    this._modalities = this._parseTomlFile('modalities', this._parseModality);
+    this._nodes = this._parseTomlFile('nodes', this._parseNode);
+    this._transfers = this._parseTomlFile('transfers', this._parseTransfer);
+    this._routes = this._parseTomlFile('routes', this._parseRoute);
+    this._notificationTypes = this._parseTomlFile('notifications_types', this._parseNotificationType);
+    this._notifications = this._parseTomlFile('notifications', this._parseNotification);
 
     this._nodesIndex = new MiniSearch({
       fields: ['name', 'city', 'code'],
@@ -462,14 +489,35 @@ class Feed
     return this.routes.filter(route => route.getStopAtNode(node, excludeNonHalts) !== undefined);
   }
 
+  // Return the notification types in the feed
+  get notificationTypes() {
+    return Object.values(this._notificationTypes);
+  }
+
+  // Return the notification type with the specified id in the feed
+  getNotificationType(id) {
+    if (id === undefined)
+      return undefined;
+
+    let notificationType = this._notificationTypes[id];
+    if (notificationType === undefined)
+      console.warn(`Could not find notification type with id '${id}'`);
+    return notificationType;
+  }
+
   // Return the notifications in the feed
   get notifications() {
     return Object.values(this._notifications);
   }
 
-  // Return the notifications that are shown in the overview in the feed
-  get notificationsInOverview() {
-    return this.notifications.filter(n => n.showInOverview);
+  // Return the notifications that are included in the overview in the feed
+  get includedNotifications() {
+    return this.notifications.filter(n => n.include);
+  }
+
+  // Return the notifications that are included in the overview and severe in the feed
+  get severeNotifications() {
+    return this.notifications.filter(n => n.include && n.severe);
   }
 
   // Return the notification with the specified id in the feed
@@ -494,7 +542,12 @@ class Feed
   }
 
 
-  // Parse
+  // Parse a file as TOML
+  _parseTomlFile(file, parser) {
+    return _.mapObject(toml.parse(_files[file]), parser.bind(this));
+  }
+
+  // Parse an agency from an object
   _parseAgency(agency, id) {
     return new Agency(this, {id, ...agency});
   }
@@ -531,44 +584,21 @@ class Feed
     return new RouteStop(this, {sequence, ...stop});
   }
 
+  // Parse a notification type from an objec
+  _parseNotificationType(notificationType, id) {
+    return new NotificationType(this, {id, ...notificationType});
+  }
+
   // Parse a notification from an object
   _parseNotification(notification, id) {
+    notification.type = this.getNotificationType(notification.type);
     notification.affectedNodes = notification.affectedNodes?.map(n => this.getNode(n)) ?? [];
     notification.affectedRoutes = notification.affectedRoutes?.map(r => this.getRoute(r)) ?? [];
     return new Notification(this, {id, ...notification})
   }
 
 
-  // Load the agencies from the data file
-  _loadAgencies() {
-    return _.mapObject(toml.parse(fs.readFileSync('src/data/agencies.toml', 'utf-8')), this._parseAgency.bind(this));
-  }
-
-  // Load the modalities from the data file
-  _loadModalities() {
-    return _.mapObject(toml.parse(fs.readFileSync('src/data/modalities.toml', 'utf-8')), this._parseModality.bind(this));
-  }
-
-  // Load the nodes from the data file
-  _loadNodes() {
-    return _.mapObject(toml.parse(fs.readFileSync('src/data/nodes.toml', 'utf-8')), this._parseNode.bind(this));
-  }
-
-  // Load the transfers
-  _loadTransfers() {
-    return _.mapObject(toml.parse(fs.readFileSync('src/data/transfers.toml', 'utf-8')), this._parseTransfer.bind(this));
-  }
-
-  // Load the routes from the data file
-  _loadRoutes() {
-    return _.mapObject(toml.parse(fs.readFileSync('src/data/routes.toml', 'utf-8')), this._parseRoute.bind(this));
-  }
-
-  // Load the nodes from the data file
-  _loadNotifications() {
-    return _.mapObject(toml.parse(fs.readFileSync('src/data/notifications.toml', 'utf-8')), this._parseNotification.bind(this));
-  }
-
+  // Function to boost a node document in a search index
   _boostNodeDocument(id, term, storedFields) {
     let modalityIndex = this.modalities.findIndex(m => m.id === storedFields.modality?.id);
     if (storedFields.modality !== undefined && modalityIndex > -1)

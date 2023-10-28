@@ -1,0 +1,10 @@
+# Informatieve meldingen
+info = {icon = "circle-info", color = "info", include = false}
+disallowance = {icon = "ban", color = "info", include = false}
+
+# Nieuwsmeldingen
+news = {name = "Nieuws", icon = "square-rss", color = "info", include = true}
+
+# Storingen en werkzaamheden
+disruption = {name = "Storing", icon = "triangle-exclamation", color = "danger", include = true, severe = true}
+construction = {name = "Werkzaamheden", icon = "triangle-exclamation", color = "warning", include = true, severe = true}

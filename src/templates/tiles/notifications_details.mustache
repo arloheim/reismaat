@@ -1,7 +1,11 @@
-<div class="tile is-child box has-background-white">
-  <p class="has-text-weight-bold has-text-{{color}}-dark mb-0">{{type.name}}</p>
+<div class="tile is-child box has-background-{{color}}-light">
+  {{#typeName}}
+    <p class="has-text-weight-bold has-text-{{color}}-dark mb-0">{{.}}</p>
+  {{/typeName}}
 
-  <h4 class="mt-0 mb-2">{{name}}</h4>
+  {{#name}}
+    <h4 class="mt-0 mb-2">{{.}}</h4>
+  {{/name}}
 
   {{#description}}
     <p>{{description}}</p>

@@ -54,7 +54,6 @@ const _templates = {
 };
 
 
-
 // Return if a template exists
 function templateExists(template) {
   return _templates[template] !== undefined;
