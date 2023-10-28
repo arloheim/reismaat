@@ -1,22 +1,22 @@
 # Dienstverlening
-tickets_nsb_fu = {name = "Kaartautomaat", icon = "ticket", agency = "nsb_fu"}
-tickets_nsb_is = {name = "Kaartautomaat", icon = "ticket", agency = "nsb_is"}
-tickets_arlov = {name = "Kaartautomaat", icon = "ticket", agency = "arlov"}
-tickets_vara = {name = "Kaartautomaat", icon = "ticket", agency = "vara"}
-service_nsb_fu = {name = "Tickets & Service", icon = "circle-info", agency = "nsb_fu"}
-service_nsb_is = {name = "Tickets & Service", icon = "circle-info", agency = "nsb_is"}
-service_arlov = {name = "Servicewinkel", icon = "circle-info", agency = "arlov"}
-service_vara = {name = "Informatiepunt", icon = "circle-info", agency = "vara"}
-sos_phone = {name = "Alarmzuil", icon = "bell"}
-first_aid = {name = "EHBO-post", icon = "kit-medical"}
-fire_extinguisher = {name = "Brandblusser", icon = "fire-extinguisher"}
+tickets_nsb_fu = {name = "Kaartautomaat", icon = "receipt", agency = "nsb_fu", color = "info"}
+tickets_nsb_is = {name = "Kaartautomaat", icon = "receipt", agency = "nsb_is", color = "info"}
+tickets_arlov = {name = "Kaartautomaat", icon = "receipt", agency = "arlov", color = "info"}
+tickets_vara = {name = "Kaartautomaat", icon = "receipt", agency = "vara", color = "info"}
+service_nsb_fu = {name = "Tickets & Service", icon = "circle-info", agency = "nsb_fu", color = "info"}
+service_nsb_is = {name = "Tickets & Service", icon = "circle-info", agency = "nsb_is", color = "info"}
+service_arlov = {name = "Servicewinkel", icon = "circle-info", agency = "arlov", color = "info"}
+service_vara = {name = "Informatiepunt", icon = "circle-info", agency = "vara", color = "info"}
+sos_phone = {name = "Alarmzuil", icon = "bell", color = "info"}
+first_aid = {name = "EHBO-post", icon = "kit-medical", color = "info"}
+fire_extinguisher = {name = "Brandblusser", icon = "fire-extinguisher", color = "info"}
 
 # Toegankelijkheid
-turnstile = {name = "Tourniquets", icon = "door-open"}
-stairs = {name = "Vaste trap naar perrons", icon = "stairs"}
-elevator = {name = "Lift naar perrons", icon = "elevator"}
-toilet = {name = "Openbaar toilet", icon = "restroom"}
-waiting_room = {name = "Wachtruimte", icon = "clock"}
+turnstile = {name = "Tourniquets", icon = "door-open", color = "success"}
+stairs = {name = "Vaste trap naar perrons", icon = "stairs", color = "success"}
+elevator = {name = "Lift naar perrons", icon = "elevator", color = "success"}
+toilet = {name = "Openbaar toilet", icon = "toilet-paper", color = "success"}
+waiting_room = {name = "Wachtruimte", icon = "clock", color = "success"}
 
 # Communicatie
 phone_booth = {name = "Telefooncel", icon = "phone"}
@@ -32,6 +32,7 @@ water_tap = {name = "Watertappunt", icon = "bottle-water"}
 coffee_shop = {name = "Koffiekiosk", icon = "mug-hot"}
 deli_shop = {name = "Broodjeszaak", icon = "bread-slice"}
 fast_food_shop = {name = "Fastfoodrestaurant", icon = "burger"}
+restaurant = {name = "Stationsrestauratie", icon = "utensils"}
 supermarket = {name = "Supermarkt", icon = "cart-shopping"}
 bookstore = {name = "Boekenwinkel", icon = "book"}
 newsstand = {name = "Krantenkiosk", icon = "newspaper"}

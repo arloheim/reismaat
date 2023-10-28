@@ -128,6 +128,11 @@ class Node
     return this._feed.getNotificationsThatAffectNode(this);
   }
 
+  // Return the services for the node
+  get services() {
+    return this._feed.getServicesForNode(this);
+  }
+
   // Return the subtitle of the node
   get subtitle() {
     let parts = [];
@@ -363,6 +368,7 @@ class ServiceType
 
     this.name = props.name;
     this.icon = props.icon;
+    this.color = props.color;
     this.agency = props.agency;
   }
 }
@@ -378,6 +384,7 @@ class Service
     this.type = props.type;
     this.name = props.name ?? this.type?.name;
     this.icon = props.icon ?? this.type?.icon;
+    this.color = props.color ?? this.type?.color;
   }
 }
 
@@ -641,13 +648,10 @@ class Feed
   }
 
   // Return the service for the specified node in the feed
-  getServicesForNode(id) {
-    if (id === undefined)
-      return undefined;
-
-    let services = this._services[id];
+  getServicesForNode(node) {
+    let services = this._services[node.id];
     if (services === undefined)
-      console.warn(`Could not find services for node with id '${id}'`);
+      console.warn(`Could not find services for node with id '${node.id}'`);
     return services;
   }
 
@@ -733,6 +737,7 @@ class Feed
 
   // Parse a service type from an object
   _parseServiceType(serviceType, id) {
+    serviceType.agency = this.getAgency(serviceType.agency);
     return new ServiceType(this, {id, ...serviceType});
   }
 
