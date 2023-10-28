@@ -1,12 +1,12 @@
 # Dienstverlening
-tickets_nsb_fu = {name = "Kaartautomaat", icon = "receipt", agency = "nsb_fu", color = "info"}
-tickets_nsb_is = {name = "Kaartautomaat", icon = "receipt", agency = "nsb_is", color = "info"}
-tickets_arlov = {name = "Kaartautomaat", icon = "receipt", agency = "arlov", color = "info"}
-tickets_vara = {name = "Kaartautomaat", icon = "receipt", agency = "vara", color = "info"}
-service_nsb_fu = {name = "Tickets & Service", icon = "circle-info", agency = "nsb_fu", color = "info"}
-service_nsb_is = {name = "Tickets & Service", icon = "circle-info", agency = "nsb_is", color = "info"}
-service_arlov = {name = "Servicewinkel", icon = "circle-info", agency = "arlov", color = "info"}
-service_vara = {name = "Informatiepunt", icon = "circle-info", agency = "vara", color = "info"}
+tickets_nsb_fu = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "nsb_fu"}
+tickets_nsb_is = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "nsb_is"}
+tickets_arlov = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "arlov"}
+tickets_vara = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "vara"}
+service_nsb_fu = {name = "Tickets & Service", icon = "circle-info", color = "info", agency = "nsb_fu"}
+service_nsb_is = {name = "Tickets & Service", icon = "circle-info", color = "info", agency = "nsb_is"}
+service_arlov = {name = "Servicewinkel", icon = "circle-info", color = "info", agency = "arlov"}
+service_vara = {name = "Informatiepunt", icon = "circle-info", color = "info", agency = "vara"}
 sos_phone = {name = "Alarmzuil", icon = "bell", color = "info"}
 first_aid = {name = "EHBO-post", icon = "kit-medical", color = "info"}
 fire_extinguisher = {name = "Brandblusser", icon = "fire-extinguisher", color = "info"}
@@ -24,15 +24,16 @@ post_office = {name = "Postkantoor", icon = "envelopes-bulk"}
 atm = {name = "Geldautomaat", icon = "credit-card"}
 
 # Natransport
-horse_rental = {name = "Flexpaard-hub", icon = "horse"}
+horse_rental = {name = "Flexpaard-hub", icon = "horse", agency = "equual"}
 
 # Winkels, eten en drinken
 lounge = {name = "Lounge voor 1e-klasreizigers", icon = "couch"}
 water_tap = {name = "Watertappunt", icon = "bottle-water"}
 coffee_shop = {name = "Koffiekiosk", icon = "mug-hot"}
+bar = {name = "Café", icon = "martini-glass"}
 deli_shop = {name = "Broodjeszaak", icon = "bread-slice"}
 fast_food_shop = {name = "Fastfoodrestaurant", icon = "burger"}
 restaurant = {name = "Stationsrestauratie", icon = "utensils"}
 supermarket = {name = "Supermarkt", icon = "cart-shopping"}
-bookstore = {name = "Boekenwinkel", icon = "book"}
 newsstand = {name = "Krantenkiosk", icon = "newspaper"}
+bookstore = {name = "Boekenwinkel", icon = "book"}
