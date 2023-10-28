@@ -14,6 +14,7 @@ const _files = {
   'notifications': fs.readFileSync('src/data/notifications.toml', 'utf-8'),
   'notifications_types': fs.readFileSync('src/data/notifications_types.toml', 'utf-8'),
   'routes': fs.readFileSync('src/data/routes.toml', 'utf-8'),
+  'services': fs.readFileSync('src/data/services.toml', 'utf-8'),
   'services_types': fs.readFileSync('src/data/services_types.toml', 'utf-8'),
   'transfers': fs.readFileSync('src/data/transfers.toml', 'utf-8'),
 };
@@ -332,6 +333,36 @@ class Transfer
     return this._copy({initialTime});
   }
 }
+
+
+// Class that defines the type of a service in a feed
+class ServiceType
+{
+  // Constructor
+  constructor(feed, props) {
+    this._feed = feed;
+
+    this.name = props.name;
+    this.icon = props.icon;
+    this.agency = props.agency;
+  }
+}
+
+
+// Class that defines a service in a feed
+class Service
+{
+  // Constructor
+  constructor(feed, props) {
+    this._feed = feed;
+
+    this.type = props.type;
+    this.name = props.name ?? this.type?.name;
+    this.icon = props.icon ?? this.type?.icon;
+  }
+}
+
+
 // Class that defines the type of a notification in a feed
 class NotificationType
 {
@@ -400,6 +431,8 @@ class Feed
     this._nodes = this._parseTomlFile('nodes', this._parseNode);
     this._routes = this._parseTomlFile('routes', this._parseRoute);
     this._transfers = this._parseTomlFile('transfers', this._parseTransfer);
+    this._serviceTypes = this._parseTomlFile('services_types', this._parseServiceType);
+    this._services = this._parseTomlFile('services', this._parseServices);
     this._notificationTypes = this._parseTomlFile('notifications_types', this._parseNotificationType);
     this._notifications = this._parseTomlFile('notifications', this._parseNotification);
 
@@ -534,6 +567,38 @@ class Feed
     return notificationType;
   }
 
+  // Return the service types in the feed
+  get serviceTypes() {
+    return Object.values(this._serviceTypes);
+  }
+
+  // Return the service type with the specified id in the feed
+  getServiceType(id) {
+    if (id === undefined)
+      return undefined;
+
+    let serviceType = this._serviceTypes[id];
+    if (serviceType === undefined)
+      console.warn(`Could not find service type with id '${id}'`);
+    return serviceType;
+  }
+
+  // Return the services in the feed
+  get services() {
+    return Object.values(this._services);
+  }
+
+  // Return the service for the specified node in the feed
+  getServicesForNode(id) {
+    if (id === undefined)
+      return undefined;
+
+    let services = this._services[id];
+    if (services === undefined)
+      console.warn(`Could not find services for node with id '${id}'`);
+    return services;
+  }
+
   // Return the notifications in the feed
   get notifications() {
     return Object.values(this._notifications);
@@ -613,7 +678,22 @@ class Feed
     return new RouteStop(this, {sequence, ...stop});
   }
 
-  // Parse a notification type from an objec
+  // Parse a service type from an object
+  _parseServiceType(serviceType, id) {
+    return new ServiceType(this, {id, ...serviceType});
+  }
+
+  // Parse services from an object
+  _parseServices(services, id) {
+    return services.map(service => {
+      if (typeof service === 'string')
+        service = {type: service};
+      service.type = this.getServiceType(service.type);
+      return new Service(this, {id, ...service})
+    });
+  }
+
+  // Parse a notification type from an object
   _parseNotificationType(notificationType, id) {
     return new NotificationType(this, {id, ...notificationType});
   }
