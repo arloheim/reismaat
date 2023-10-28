@@ -1,0 +1,91 @@
+// Html layout
+html {
+  overflow-y: auto;
+}
+
+// Body layout
+body {
+  background: $background;
+  min-height: 100vh;
+}
+
+// Navbar layout
+.navbar {
+  @extend .box;
+  @extend .is-white;
+  @extend .p-2;
+
+  // Navbar item styling
+  .navbar-item {
+    @extend .has-text-weight-light;
+  }
+
+  // Navbar dropdown styling
+  .navbar-dropdown {
+    @extend .is-shadowless;
+
+    border-top-color: $primary;
+  }
+
+  // Navbar brand styling
+  .navbar-brand {
+    @extend .is-unselectable;
+
+    img {
+      max-height: 2.25rem;
+
+      @extend .mr-3;
+      @extend .p-0;
+    }
+
+    p {
+      @extend .is-size-4;
+      @extend .has-text-primary;
+      @extend .has-text-weight-normal;
+    }
+  }
+
+  // Navbar burger styling
+  .navbar-burger {
+    border-bottom: none;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  // Mavbar menu styling
+  .navbar-menu {
+    @extend .is-shadowless;
+  }
+}
+
+// Header layout
+.header {
+  @extend .block;
+  @extend .is-hidden-mobile;
+
+  height: 15rem;
+
+  img {
+    @extend .box;
+    @extend .p-0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Footer layout
+.footer {
+  @extend .p-0;
+
+  background: transparent;
+
+  p {
+    @extend .block;
+    @extend .is-size-7;
+    @extend .has-text-centered;
+    @extend .has-text-grey;
+    @extend .mb-3;
+  }
+}

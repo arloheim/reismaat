@@ -172,18 +172,18 @@ art_rtr = {name = "Arloheim, De Ruyter", modality = "tram", city = "Arloheim"}
 art_rdn = {name = "Arloheim, Fort van Raduyn", modality = "tram", city = "Arloheim"}
 
 # Funiculaires Arloheim
-arf_hvk = {name = "Arloheim, Heuvelkwartier", modality = "funicular", city = "Arloheim", showInOverview = false}
-arf_odb = {name = "Arloheim, Oldenburg", modality = "funicular", city = "Arloheim", showInOverview = false}
-arf_bwk = {name = "Arloheim, Brandwijk", modality = "funicular", city = "Arloheim", showInOverview = false}
-arf_geo = {name = "Arloheim, Geologie", modality = "funicular", city = "Arloheim", showInOverview = false}
-arf_trc = {name = "Arloheim, Triarchie", modality = "funicular", city = "Arloheim", showInOverview = false}
-arf_mzt	= {name = "Arloheim, Maanzigt", modality = "funicular", city = "Arloheim", showInOverview = false}
+arf_hvk = {name = "Arloheim, Heuvelkwartier", modality = "funicular", city = "Arloheim", include = false}
+arf_odb = {name = "Arloheim, Oldenburg", modality = "funicular", city = "Arloheim", include = false}
+arf_bwk = {name = "Arloheim, Brandwijk", modality = "funicular", city = "Arloheim", include = false}
+arf_geo = {name = "Arloheim, Geologie", modality = "funicular", city = "Arloheim", include = false}
+arf_trc = {name = "Arloheim, Triarchie", modality = "funicular", city = "Arloheim", include = false}
+arf_mzt	= {name = "Arloheim, Maanzigt", modality = "funicular", city = "Arloheim", include = false}
 
 # Liften Arloheim
-arl_mzt = {name = "Arloheim, Maanzigt", modality = "elevator", city = "Arloheim", showInOverview = false}
-arl_nwd = {name = "Arloheim, Nieuwedal", modality = "elevator", city = "Arloheim", showInOverview = false}
-arl_for = {name = "Arloheim, Forum", modality = "elevator", city = "Arloheim", showInOverview = false}
-arl_obs = {name = "Arloheim, Observatorium", modality = "elevator", city = "Arloheim", showInOverview = false}
+arl_mzt = {name = "Arloheim, Maanzigt", modality = "elevator", city = "Arloheim", include = false}
+arl_nwd = {name = "Arloheim, Nieuwedal", modality = "elevator", city = "Arloheim", include = false}
+arl_for = {name = "Arloheim, Forum", modality = "elevator", city = "Arloheim", include = false}
+arl_obs = {name = "Arloheim, Observatorium", modality = "elevator", city = "Arloheim", include = false}
 
 # Tram Amsvorde
 avt_ktk = {name = "Amsvorde, Kamtsjatka", modality = "tram", city = "Amsvorde"}
@@ -226,62 +226,62 @@ hyp_arfo = {name = "Arloheim Forum", modality = "hyperloop", city = "Arloheim"}
 hyp_gth = {name = "Gaterade Haven", modality = "hyperloop", city = "Gaterade"}
 
 # Flexpaard-hubs
-eqh_qs = {name = "Al-Qusur", modality = "horse_rental", city = "Al-Qusur", showInOverview = false}
-eqh_lvn = {name = "Lavijn", modality = "horse_rental", city = "Lavijn", showInOverview = false}
-eqh_avi = {name = "Amsvorde Iberië", modality = "horse_rental", city = "Amsvorde", showInOverview = false}
-eqh_sg = {name = "Slinger", modality = "horse_rental", city = "Slinger", showInOverview = false}
-eqh_vt = {name = "Vittoria", modality = "horse_rental", city = "Vittoria", showInOverview = false}
-eqh_mdz = {name = "Mijdezinder", modality = "horse_rental", city = "Mijdezinder", showInOverview = false}
-eqh_gth = {name = "Gaterade Haven", modality = "horse_rental", city = "Gaterade", showInOverview = false}
-eqh_dd = {name = "Dinsdrecht", modality = "horse_rental", city = "Dinsdrecht", showInOverview = false}
-eqh_wl = {name = "Woenslaken", modality = "horse_rental", city = "Woenslaken", showInOverview = false}
-eqh_sti = {name = "Storia Infinita", modality = "horse_rental", city = "Storia Infinita", showInOverview = false}
+eqh_qs = {name = "Al-Qusur", modality = "horse_rental", city = "Al-Qusur", include = false}
+eqh_lvn = {name = "Lavijn", modality = "horse_rental", city = "Lavijn", include = false}
+eqh_avi = {name = "Amsvorde Iberië", modality = "horse_rental", city = "Amsvorde", include = false}
+eqh_sg = {name = "Slinger", modality = "horse_rental", city = "Slinger", include = false}
+eqh_vt = {name = "Vittoria", modality = "horse_rental", city = "Vittoria", include = false}
+eqh_mdz = {name = "Mijdezinder", modality = "horse_rental", city = "Mijdezinder", include = false}
+eqh_gth = {name = "Gaterade Haven", modality = "horse_rental", city = "Gaterade", include = false}
+eqh_dd = {name = "Dinsdrecht", modality = "horse_rental", city = "Dinsdrecht", include = false}
+eqh_wl = {name = "Woenslaken", modality = "horse_rental", city = "Woenslaken", include = false}
+eqh_sti = {name = "Storia Infinita", modality = "horse_rental", city = "Storia Infinita", include = false}
 
 # Steden, dorpen en wijken
-cty_abd = {name = "Abende", city = "Stachteren", showInOverview = false}
-cty_fdp = {name = "Ferdrop", city = "Ferdrop", showInOverview = false}
-cty_mqd = {name = "Ma'bad Qadim", city = "Ma'bad Qadim", showInOverview = false}
-cty_mea = {name = "Meander", city = "Meander", showInOverview = false}
-cty_ngv = {name = "Negenervroente", city = "Negenervroente", showInOverview = false}
-cty_ndh = {name = "Noordenhoek", city = "Noordenhoek", showInOverview = false}
-cty_nszw = {name = "Noordersluizen-West", city = "Noordersluizen", showInOverview = false}
-cty_nszo = {name = "Noordersluizen-Oost", city = "Noordersluizen", showInOverview = false}
-cty_pdm = {name = "Punto del Mare", city = "Punto del Mare", showInOverview = false}
-cty_rmn = {name = "Ramune", city = "Ramune", showInOverview = false}
-cty_sjo = {name = "Sint Jan bij de Oase", city = "Sint Jan bij de Oase", showInOverview = false}
-cty_wp = {name = "Witte Paarden", city = "Westerenk", showInOverview = false}
-cty_zd = {name = "'t Zand", city = "Nipsen", showInOverview = false}
-cty_znd = {name = "Zechenidì", city = "Zechenidì", showInOverview = false}
-cty_ztm = {name = "Zwettem", city = "Zwettem", showInOverview = false}
+cty_abd = {name = "Abende", city = "Stachteren", include = false}
+cty_fdp = {name = "Ferdrop", city = "Ferdrop", include = false}
+cty_mqd = {name = "Ma'bad Qadim", city = "Ma'bad Qadim", include = false}
+cty_mea = {name = "Meander", city = "Meander", include = false}
+cty_ngv = {name = "Negenervroente", city = "Negenervroente", include = false}
+cty_ndh = {name = "Noordenhoek", city = "Noordenhoek", include = false}
+cty_nszw = {name = "Noordersluizen-West", city = "Noordersluizen", include = false}
+cty_nszo = {name = "Noordersluizen-Oost", city = "Noordersluizen", include = false}
+cty_pdm = {name = "Punto del Mare", city = "Punto del Mare", include = false}
+cty_rmn = {name = "Ramune", city = "Ramune", include = false}
+cty_sjo = {name = "Sint Jan bij de Oase", city = "Sint Jan bij de Oase", include = false}
+cty_wp = {name = "Witte Paarden", city = "Westerenk", include = false}
+cty_zd = {name = "'t Zand", city = "Nipsen", include = false}
+cty_znd = {name = "Zechenidì", city = "Zechenidì", include = false}
+cty_ztm = {name = "Zwettem", city = "Zwettem", include = false}
 
 # Points of interest
-poi_arbnl = {name = "Arloheim, Bijnlaan", city = "Arloheim", icon = "building", showInOverview = false}
-poi_arobs = {name = "Arloheim, Observatorium", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_armzt = {name = "Arloheim, Maanzigt", city = "Arloheim", icon = "tree", showInOverview = false}
-poi_arjkrk = {name = "Arloheim, Sint-Janskerk", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_arttr = {name = "Arloheim, Theater", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_aramb = {name = "Arloheim, Ambassades", city = "Arloheim", icon = "building", showInOverview = false}
-poi_ngmmk = {name = "Negenaar, Museum voor Moderne Kunst", city = "Negenaar", icon = "landmark", showInOverview = false}
-poi_arfca = {name = "Arloheim, FC Arloheim", city = "Arloheim", icon = "futbol", showInOverview = false}
-poi_arikea = {name = "Arloheim, IKEA", city = "Arloheim", icon = "bag-shopping", showInOverview = false}
-poi_armtn = {name = "Arloheim, Maantuinen", city = "Arloheim", icon = "tree", showInOverview = false}
-poi_armhl = {name = "Arloheim, Markthal", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_arplm = {name = "Arloheim, Parlement", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_arbpk = {name = "Arloheim, Business Park", city = "Arloheim", icon = "building", showInOverview = false}
-poi_arzoo = {name = "Arloheim, Dierentuin", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_arsstn = {name = "Arloheim, Strand van Steyn", city = "Arloheim", icon = "umbrella-beach", showInOverview = false}
-poi_argnv = {name = "Arloheim, Genova", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_arbkw = {name = "Arloheim, Bovenkampse Wateren", city = "Arloheim", icon = "tree", showInOverview = false}
-poi_aruva = {name = "Arloheim, Universiteit van Arloheim", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_arvg = {name = "Arloheim, Vlorring", city = "Arloheim", icon = "city", showInOverview = false}
-poi_arwpss = {name = "Arloheim, Winkelhart Persikstaaf", city = "Arloheim", icon = "bag-shopping", showInOverview = false}
-poi_arkldw = {name = "Arloheim, Kasteel en Catacomben van Lodewijk", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_arwtm = {name = "Arloheim, Woestijnmuseum", city = "Arloheim", icon = "landmark", showInOverview = false}
-poi_lvnktb = {name = "Lavijn, Kattenbron", city = "Lavijn", icon = "tree", showInOverview = false}
+poi_arbnl = {name = "Arloheim, Bijnlaan", city = "Arloheim", icon = "building", include = false}
+poi_arobs = {name = "Arloheim, Observatorium", city = "Arloheim", icon = "landmark", include = false}
+poi_armzt = {name = "Arloheim, Maanzigt", city = "Arloheim", icon = "tree", include = false}
+poi_arjkrk = {name = "Arloheim, Sint-Janskerk", city = "Arloheim", icon = "landmark", include = false}
+poi_arttr = {name = "Arloheim, Theater", city = "Arloheim", icon = "landmark", include = false}
+poi_aramb = {name = "Arloheim, Ambassades", city = "Arloheim", icon = "building", include = false}
+poi_ngmmk = {name = "Negenaar, Museum voor Moderne Kunst", city = "Negenaar", icon = "landmark", include = false}
+poi_arfca = {name = "Arloheim, FC Arloheim", city = "Arloheim", icon = "futbol", include = false}
+poi_arikea = {name = "Arloheim, IKEA", city = "Arloheim", icon = "bag-shopping", include = false}
+poi_armtn = {name = "Arloheim, Maantuinen", city = "Arloheim", icon = "tree", include = false}
+poi_armhl = {name = "Arloheim, Markthal", city = "Arloheim", icon = "landmark", include = false}
+poi_arplm = {name = "Arloheim, Parlement", city = "Arloheim", icon = "landmark", include = false}
+poi_arbpk = {name = "Arloheim, Business Park", city = "Arloheim", icon = "building", include = false}
+poi_arzoo = {name = "Arloheim, Dierentuin", city = "Arloheim", icon = "landmark", include = false}
+poi_arsstn = {name = "Arloheim, Strand van Steyn", city = "Arloheim", icon = "umbrella-beach", include = false}
+poi_argnv = {name = "Arloheim, Genova", city = "Arloheim", icon = "landmark", include = false}
+poi_arbkw = {name = "Arloheim, Bovenkampse Wateren", city = "Arloheim", icon = "tree", include = false}
+poi_aruva = {name = "Arloheim, Universiteit van Arloheim", city = "Arloheim", icon = "landmark", include = false}
+poi_arvg = {name = "Arloheim, Vlorring", city = "Arloheim", icon = "city", include = false}
+poi_arwpss = {name = "Arloheim, Winkelhart Persikstaaf", city = "Arloheim", icon = "bag-shopping", include = false}
+poi_arkldw = {name = "Arloheim, Kasteel en Catacomben van Lodewijk", city = "Arloheim", icon = "landmark", include = false}
+poi_arwtm = {name = "Arloheim, Woestijnmuseum", city = "Arloheim", icon = "landmark", include = false}
+poi_lvnktb = {name = "Lavijn, Kattenbron", city = "Lavijn", icon = "tree", include = false}
 
 # Museumstations
-mus_hz = {name = "Halenz (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", showInOverview = false}
-mus_gnd = {name = "Groenedal (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", showInOverview = false}
-mus_vg = {name = "Vlorring (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", showInOverview = false}
-mus_pss = {name = "Persikstaaf (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", showInOverview = false}
-mus_wvg = {name = "Welving (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", showInOverview = false}
+mus_hz = {name = "Halenz (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", include = false}
+mus_gnd = {name = "Groenedal (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", include = false}
+mus_vg = {name = "Vlorring (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", include = false}
+mus_pss = {name = "Persikstaaf (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", include = false}
+mus_wvg = {name = "Welving (Halenzer Stoomspoorwegen)", modality = "rail", city = "Arloheim", include = false}

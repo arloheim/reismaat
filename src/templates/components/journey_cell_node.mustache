@@ -1,19 +1,20 @@
 <div class="journey-cell is-node">
-  {{^cancelled}}
-    <p>{{> feed/node_short}}</p>
+  <p>
+    <span {{#status}}class="is-{{.}}"{{/status}}>{{> feed/node_short_link}}</span>
 
-    {{#isLastStop}}
-      {{#alightDirection}}
-        {{#alightLeft}}<p class="is-muted">Links uitstappen</p>{{/alightLeft}}
-        {{#alightRight}}<p class="is-muted">Rechts uitstappen</p>{{/alightRight}}
-      {{/alightDirection}}
-    {{/isLastStop}}
-  {{/cancelled}}
+    {{#additional}}
+      <span class="is-additional-label">(extra stop)</span>
+    {{/additional}}
 
-  {{#cancelled}}
-    <p>
-      <span class="is-cancelled">{{> feed/node_short}}</span>
-      <span class="has-text-danger-dark has-text-weight-bold">(vervalt)</span>
-    </p>
-  {{/cancelled}}
+    {{#cancelled}}
+      <span class="is-cancelled-label">(vervalt)</span>
+    {{/cancelled}}
+  </p>
+
+  {{#last}}
+    {{#alightDirection}}
+      {{#alightLeft}}<p class="is-muted">Links uitstappen</p>{{/alightLeft}}
+      {{#alightRight}}<p class="is-muted">Rechts uitstappen</p>{{/alightRight}}
+    {{/alightDirection}}
+  {{/last}}
 </div>

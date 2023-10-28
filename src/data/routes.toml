@@ -70,8 +70,13 @@ color = {background = "#4d1515", text = "#ffffff"}
 02 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
 03 = {node = "nsb_arc", time = 30, platform = "6", alightDirection = "right"}
 04 = {node = "nsb_wl", time = 330, platform = "2", alightDirection = "left"}
-05 = {node = "nsb_gd", time = 210, platform = "1", alightDirection = "right"}
-06 = {node = "nsb_gdz", time = 30, platform = "2", alightDirection = "left"}
+# extra stops vanwege werkzaamheden
+05 = {node = "nsb_rdk", time = 90, platform = "1", alightDirection = "left", status = "additional"}
+06 = {node = "nsb_dd", time = 105, platform = "1", alightDirection = "right", status = "additional"}
+07 = {node = "nsb_gd", time = 30, platform = "1", alightDirection = "right"}
+#05 = {node = "nsb_gd", time = 210, platform = "1", alightDirection = "right"}
+# einde extra stops vanwege werkzaamheden
+08 = {node = "nsb_gdz", time = 30, platform = "2", alightDirection = "left"}
 
 [nsb_d7_b]
 agency = "nsb_is"
@@ -84,10 +89,15 @@ color = {background = "#4d1515", text = "#ffffff"}
 [nsb_d7_b.stops]
 01 = {node = "nsb_gdz", time = 0, platform = "2"}
 02 = {node = "nsb_gd", time = 30, platform = "2", alightDirection = "right"}
-03 = {node = "nsb_wl", time = 210, platform = "1", alightDirection = "right"}
-04 = {node = "nsb_arc", time = 330, platform = "3", alightDirection = "right"}
-05 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
-06 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
+# extra stops vanwege werkzaamheden
+03 = {node = "nsb_dd", time = 30, platform = "2", alightDirection = "right", status = "additional"}
+04 = {node = "nsb_rdk", time = 105, platform = "1", alightDirection = "right", status = "additional"}
+05 = {node = "nsb_wl", time = 90, platform = "1", alightDirection = "right"}
+#03 = {node = "nsb_wl", time = 210, platform = "1", alightDirection = "right"}
+# einde extra stops vanwege werkzaamheden
+06 = {node = "nsb_arc", time = 330, platform = "3", alightDirection = "right"}
+07 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
+08 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
 
 [nsb_d8_a]
 agency = "nsb_is"
@@ -361,9 +371,9 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_sb", time = 60, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_tp", time = 30, platform = "1", alightDirection = "left"}
 07 = {node = "nsb_mso", time = 60, platform = "1", alightDirection = "right"}
-08 = {node = "nsb_css", time = 0, platform = "", cancelled = "true"}
-09 = {node = "nsb_alt", time = 0, platform = "", cancelled = "true"}
-10 = {node = "nsb_fta", time = 0, platform = "", cancelled = "true"}
+08 = {node = "nsb_css", time = 0, platform = "", status = "cancelled"}
+09 = {node = "nsb_alt", time = 0, platform = "", status = "cancelled"}
+10 = {node = "nsb_fta", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s17_b]
 agency = "nsb_fu"
@@ -374,9 +384,9 @@ abbr = "S17"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s17_b.stops]
-01 = {node = "nsb_fta", time = 0, platform = "", cancelled = "true"}
-02 = {node = "nsb_alt", time = 0, platform = "", cancelled = "true"}
-03 = {node = "nsb_css", time = 0, platform = "", cancelled = "true"}
+01 = {node = "nsb_fta", time = 0, platform = "", status = "cancelled"}
+02 = {node = "nsb_alt", time = 0, platform = "", status = "cancelled"}
+03 = {node = "nsb_css", time = 0, platform = "", status = "cancelled"}
 04 = {node = "nsb_mso", time = 0, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_tp", time = 60, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_sb", time = 30, platform = "2", alightDirection = "right"}
@@ -397,9 +407,9 @@ color = {background = "#2b7749", text = "#ffffff"}
 01 = {node = "nsb_vt", time = 0, platform = "3"}
 02 = {node = "nsb_vd", time = 75, platform = "1", alightDirection = "right"}
 03 = {node = "nsb_snz", time = 60, platform = "1", alightDirection = "right"}
-04 = {node = "nsb_snn", time = 0, platform = "", cancelled = "true"}
-05 = {node = "nsb_lr", time = 0, platform = "", cancelled = "true"}
-06 = {node = "nsb_gnl", time = 0, platform = "", cancelled = "true"}
+04 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
+05 = {node = "nsb_lr", time = 0, platform = "", status = "cancelled"}
+06 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s97_b]
 agency = "nsb_fu"
@@ -410,9 +420,9 @@ abbr = "S97"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s97_b.stops]
-01 = {node = "nsb_gnl", time = 0, platform = "", cancelled = "true"}
-02 = {node = "nsb_lr", time = 0, platform = "", cancelled = "true"}
-03 = {node = "nsb_snn", time = 0, platform = "", cancelled = "true"}
+01 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
+02 = {node = "nsb_lr", time = 0, platform = "", status = "cancelled"}
+03 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
 04 = {node = "nsb_snz", time = 0, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_vd", time = 60, platform = "1", alightDirection = "left"}
 06 = {node = "nsb_vt", time = 75, platform = "3", alightDirection = "left"}
@@ -481,7 +491,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 11 = {node = "nsb_bg", time = 60, platform = "1", alightDirection = "right"}
 12 = {node = "nsb_dw", time = 30, platform = "2", alightDirection = "right"}
 # [...]
-13 = {node = "nsb_zms", time = 0, platform = "", cancelled = "true"}
+13 = {node = "nsb_zms", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s21_b]
 agency = "nsb_is"
@@ -492,7 +502,7 @@ abbr = "S21"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s21_b.stops]
-01 = {node = "nsb_zms", time = 0, platform = "", cancelled = "true"}
+01 = {node = "nsb_zms", time = 0, platform = "", status = "cancelled"}
 # [...]
 02 = {node = "nsb_dw", time = 0, platform = "3"}
 03 = {node = "nsb_bg", time = 30, platform = "2", alightDirection = "right"}
@@ -523,9 +533,9 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_pry", time = 45, platform = "2", alightDirection = "right"}
 06 = {node = "nsb_kdk", time = 60, platform = "1", alightDirection = "right"}
 07 = {node = "nsb_wl", time = 60, platform = "1", alightDirection = "right"}
-08 = {node = "nsb_hmr", time = 0, platform = "", cancelled = "true"}
-09 = {node = "nsb_whk", time = 0, platform = "", cancelled = "true"}
-10 = {node = "nsb_gvn", time = 0, platform = "", cancelled = "true"}
+08 = {node = "nsb_hmr", time = 0, platform = "", status = "cancelled"}
+09 = {node = "nsb_whk", time = 0, platform = "", status = "cancelled"}
+10 = {node = "nsb_gvn", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s22_b]
 agency = "nsb_is"
@@ -536,9 +546,9 @@ abbr = "S22"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s22_b.stops]
-01 = {node = "nsb_gvn", time = 0, platform = "", cancelled = "true"}
-02 = {node = "nsb_whk", time = 0, platform = "", cancelled = "true"}
-03 = {node = "nsb_hmr", time = 0, platform = "", cancelled = "true"}
+01 = {node = "nsb_gvn", time = 0, platform = "", status = "cancelled"}
+02 = {node = "nsb_whk", time = 0, platform = "", status = "cancelled"}
+03 = {node = "nsb_hmr", time = 0, platform = "", status = "cancelled"}
 04 = {node = "nsb_wl", time = 0, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_kdk", time = 60, platform = "1", alightDirection = "left"}
 06 = {node = "nsb_pry", time = 60, platform = "1", alightDirection = "right"}
@@ -586,9 +596,9 @@ abbr = "S30"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s30_a.stops]
-01 = {node = "nsb_mmz", time = 0, platform = "", cancelled = "true"}
-02 = {node = "nsb_mm", time = 0, platform = "", cancelled = "true"}
-03 = {node = "nsb_hk", time = 0, platform = "", cancelled = "true"}
+01 = {node = "nsb_mmz", time = 0, platform = "", status = "cancelled"}
+02 = {node = "nsb_mm", time = 0, platform = "", status = "cancelled"}
+03 = {node = "nsb_hk", time = 0, platform = "", status = "cancelled"}
 04 = {node = "nsb_dw", time = 0, platform = "6", alightDirection = "right"}
 05 = {node = "nsb_dwo", time = 15, platform = "2", alightDirection = "right"}
 06 = {node = "nsb_aur", time = 30, platform = "2", alightDirection = "right"}
@@ -621,9 +631,9 @@ color = {background = "#2b7749", text = "#ffffff"}
 09 = {node = "nsb_aur", time = 30, platform = "1", alightDirection = "right"}
 10 = {node = "nsb_dwo", time = 30, platform = "1", alightDirection = "right"}
 11 = {node = "nsb_dw", time = 15, platform = "5", alightDirection = "right"}
-12 = {node = "nsb_hk", time = 0, platform = "", cancelled = "true"}
-13 = {node = "nsb_mm", time = 0, platform = "", cancelled = "true"}
-14 = {node = "nsb_mmz", time = 0, platform = "", cancelled = "true"}
+12 = {node = "nsb_hk", time = 0, platform = "", status = "cancelled"}
+13 = {node = "nsb_mm", time = 0, platform = "", status = "cancelled"}
+14 = {node = "nsb_mmz", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s31_a]
 agency = "nsb_is"
@@ -634,7 +644,7 @@ abbr = "S31"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s31_a.stops]
-01 = {node = "nsb_fm", time = 0, platform = "", cancelled = "true"}
+01 = {node = "nsb_fm", time = 0, platform = "", status = "cancelled"}
 02 = {node = "nsb_fmc", time = 0, platform = "2", alightDirection = "right"}
 03 = {node = "nsb_rks", time = 60, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_md", time = 30, platform = "2", alightDirection = "right"}
@@ -657,7 +667,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 04 = {node = "nsb_md", time = 60, platform = "1", alightDirection = "right"}
 05 = {node = "nsb_rks", time = 30, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_fmc", time = 60, platform = "1", alightDirection = "right"}
-07 = {node = "nsb_fm", time = 0, platform = "", cancelled = "true"}
+07 = {node = "nsb_fm", time = 0, platform = "", status = "cancelled"}
 
 
 # Metro Arloheim
@@ -1448,7 +1458,7 @@ modality = "horse_rental"
 name = "Flexpaard (Al-Qusur ⟶ Ma'bad Qadim)"
 headsign = "Ma'bad Qadim"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_qs_mqd.stops]
 01 = {node = "eqh_qs", time = 0}
@@ -1460,7 +1470,7 @@ modality = "horse_rental"
 name = "Flexpaard (Lavijn ⟶ Noordersluizen-West)"
 headsign = "Noordersluizen-West"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_lvn_nszw.stops]
 01 = {node = "eqh_lvn", time = 0}
@@ -1472,7 +1482,7 @@ modality = "horse_rental"
 name = "Flexpaard (Lavijn ⟶ Zwettem)"
 headsign = "Zwettem"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_lvn_ztm.stops]
 01 = {node = "eqh_lvn", time = 0}
@@ -1484,7 +1494,7 @@ modality = "horse_rental"
 name = "Flexpaard (Amsvorde Iberië ⟶ Noordersluizen-West)"
 headsign = "Noordersluizen-West"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_avi_nszw.stops]
 01 = {node = "eqh_avi", time = 0}
@@ -1496,7 +1506,7 @@ modality = "horse_rental"
 name = "Flexpaard (Amsvorde Iberië ⟶ Zwettem)"
 headsign = "Zwettem"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_avi_ztm.stops]
 01 = {node = "eqh_avi", time = 0}
@@ -1508,7 +1518,7 @@ modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ Meander)"
 headsign = "Meander"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_sg_mea.stops]
 01 = {node = "eqh_sg", time = 0}
@@ -1520,7 +1530,7 @@ modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ 't Zand)"
 headsign = "'t Zand"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_sg_zd.stops]
 01 = {node = "eqh_sg", time = 0}
@@ -1532,7 +1542,7 @@ modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ Abende)"
 headsign = "Abende"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_sg_abd.stops]
 01 = {node = "eqh_sg", time = 0}
@@ -1544,7 +1554,7 @@ modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ Sint Jan bij de Oase)"
 headsign = "Sint Jan bij de Oase"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_sg_sjo.stops]
 01 = {node = "eqh_sg", time = 0}
@@ -1556,7 +1566,7 @@ modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ Ferdrop)"
 headsign = "Ferdrop"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_sg_fdp.stops]
 01 = {node = "eqh_sg", time = 0}
@@ -1568,7 +1578,7 @@ modality = "horse_rental"
 name = "Flexpaard (Vittoria ⟶ Noordersluizen-Oost)"
 headsign = "Noordersluizen-Oost"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_vt_nszo.stops]
 01 = {node = "eqh_vt", time = 0}
@@ -1580,7 +1590,7 @@ modality = "horse_rental"
 name = "Flexpaard (Vittoria ⟶ Noordenhoek)"
 headsign = "Noordenhoek"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_vt_ndh.stops]
 01 = {node = "eqh_vt", time = 0}
@@ -1592,7 +1602,7 @@ modality = "horse_rental"
 name = "Flexpaard (Mijdezinder ⟶ Witte Paarden)"
 headsign = "Witte Paarden"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_mdz_wp.stops]
 01 = {node = "eqh_mdz", time = 0}
@@ -1604,7 +1614,7 @@ modality = "horse_rental"
 name = "Flexpaard (Mijdezinder ⟶ Negenervroente)"
 headsign = "Negenervroente"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_mdz_ngv.stops]
 01 = {node = "eqh_mdz", time = 0}
@@ -1616,7 +1626,7 @@ modality = "horse_rental"
 name = "Flexpaard (Mijdezinder ⟶ Ferdrop)"
 headsign = "Ferdrop"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_mdz_fdp.stops]
 01 = {node = "eqh_mdz", time = 0}
@@ -1628,7 +1638,7 @@ modality = "horse_rental"
 name = "Flexpaard (Storia Infinita ⟶ Ramune)"
 headsign = "Ramune"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_sti_rmn.stops]
 01 = {node = "eqh_sti", time = 0}
@@ -1640,7 +1650,7 @@ modality = "horse_rental"
 name = "Flexpaard (Storia Infinita ⟶ Zechenidi)"
 headsign = "Zechenidi"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_sti_znd.stops]
 01 = {node = "eqh_sti", time = 0}
@@ -1652,7 +1662,7 @@ modality = "horse_rental"
 name = "Flexpaard (Storia Infinita ⟶ Punto del Mare)"
 headsign = "Punto del Mare"
 color = {background = "#892ca0", text = "#ffffff"}
-showInOverview = false
+include = false
 
 [eqh_sti_pdm.stops]
 01 = {node = "eqh_sti", time = 0}

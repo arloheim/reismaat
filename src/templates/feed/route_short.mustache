@@ -4,6 +4,6 @@
   </span>
   <span>
     {{^abbr}}{{modalityName}}{{/abbr}}
-    {{#abbr}}<span class="route-abbr" style="background: {{color.background}}; color: {{color.text}};">{{abbr}}</span>{{/abbr}}
+    {{#abbr}}{{> feed/route_abbr}}{{/abbr}}
   </span>
 </span>

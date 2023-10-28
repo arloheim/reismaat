@@ -1,0 +1,27 @@
+// Lead text styling
+.is-lead {
+  @extend .is-size-5;
+  @extend .has-text-weight-light;
+}
+
+// Muted text styling
+.is-muted {
+  @extend .has-text-grey;
+  @extend .has-text-weight-normal;
+}
+
+// Icon text styling
+.icon-text {
+  span:not(.icon) {
+    text-wrap: wrap;
+  }
+}
+
+// Route abbreviation text styling
+.is-route-abbreviation {
+  @extend .has-text-weight-bold;
+  @extend .mr-1;
+  @extend .px-1;
+
+  border-radius: 3px;
+}

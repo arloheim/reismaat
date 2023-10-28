@@ -47,7 +47,6 @@ class Modality
     this.nodeName = props.nodeName;
     this.abbr = props.abbr;
     this.description = props.description;
-    this.url = props.url;
     this.icon = props.icon;
   }
 }
@@ -63,12 +62,24 @@ class Node
     this.id = props.id;
     this.name = props.name;
     this.code = props.code;
+    this.abbr = props.abbr;
+    this.description = props.description;
     this.url = props.url;
     this.modality = props.modality;
     this.modalityNodeName = props.modalityNodeName ?? this.modality?.nodeName;
     this.icon = props.icon ?? this.modality?.icon ?? 'location-dot';
     this.city = props.city;
-    this.showInOverview = props.showInOverview ?? true;
+    this.include = props.include ?? true;
+  }
+
+  // Return the routes that have a stop at the node
+  get routes() {
+    return this._feed.getRoutesWithStopAtNode(this);
+  }
+
+  // Return the routes that have a stop at the node exclding non halting stops
+  get routesExcludingNonHalts() {
+    return this._feed.getRoutesWithStopAtNode(this, true);
   }
 
   // Return the transfers that include the node
@@ -91,24 +102,14 @@ class Node
     return this.transfersExcludingSeparate.map(t => t.getOppositeNode(this));
   }
 
-  // Return the routes that have a stop at the node
-  get routes() {
-    return this._feed.getRoutesWithStopAtNode(this);
-  }
-
-  // Return the routes that have a stop at the node exclding non halting stops
-  get routesExcludingNonHalts() {
-    return this._feed.getRoutesWithStopAtNode(this, true);
-  }
-
   // Return the notifications that affect the node
   get notifications() {
     return this._feed.getNotificationsThatAffectNode(this);
   }
 
 
-  // Return the description of the node
-  get description() {
+  // Return the subtitle of the node
+  get subtitle() {
     let parts = [];
     if (this.modalityNodeName !== undefined)
       parts.push(this.modalityNodeName);
@@ -125,62 +126,7 @@ class Node
         .append($('<i class="fas fa-fw fa-xl">').addClass(`fa-${this.icon}`)))
       .append($('<div class="is-flex is-flex-direction-column">')
         .append($('<span>').html(this.name))
-        .append($('<span class="is-size-7 has-text-grey">').html(this.description)));
-  }
-}
-
-
-// Class that defines a transfer in a feed
-class Transfer
-{
-  // Constructor
-  constructor(feed, props) {
-    this._feed = feed;
-
-    this.id = props.id;
-    this.between = props.between;
-    this.and = props.and;
-    this.time = props.time;
-    this.separate = props.separate;
-    this.initialTime = props.initialTime ?? 0;
-
-    // Calculate the cumulative time of the transfer
-    this.cumulativeTime = this.initialTime + this.time;
-  }
-
-  // Get the opposite node of the speficied node in the transfer
-  getOppositeNode(node) {
-    if (this.between.id === node.id)
-      return this.and;
-    else if (this.and.id === node.id)
-      return this.between;
-    else
-      return undefined;
-  }
-
-  // Copy the transfer
-  copy(modifiedProps = {}) {
-    return new Transfer(this._feed, {...this, ...modifiedProps});
-  }
-
-  // Align the transfer to the specified node
-  alignToNode(node) {
-    if (this.between.id === node.id)
-      return this.copy();
-    else if (this.and.id === node.id)
-      return this.copy({between: this.and, and: this.between});
-    else
-      return undefined;
-  }
-
-  // Align the transfer to the opposite node of the specified node
-  alignToOppositeNode(node) {
-    return this.alignToNode(this.getOppositeNode(node));
-  }
-
-  // Apply an initial time to the transfer
-  withInitialTime(initialTime) {
-    return this.copy({initialTime});
+        .append($('<span class="is-size-7 has-text-grey">').html(this.subtitle)));
   }
 }
 
@@ -195,6 +141,7 @@ class Route
     this.id = props.id;
     this.name = props.name;
     this.abbr = props.abbr;
+    this.description = props.description;
     this.url = props.url;
     this.agency = props.agency;
     this.modality = props.modality;
@@ -202,9 +149,10 @@ class Route
     this.icon = props.icon ?? this.modality?.icon;
     this.headsign = props.headsign;
     this.color = {background: '#ffffff', text: '#000000', ...props.color};
-    this.stops = props.stops.map(s => s.copy());
+    this.include = props.include ?? true;
+    this.stops = props.stops.map(s => s._copy());
+
     this.initialTime = props.initialTime ?? 0;
-    this.showInOverview = props.showInOverview ?? true;
 
     // Calculate cumulative time for the stops of the route
     let lastHeadsign = this.headsign;
@@ -217,7 +165,7 @@ class Route
         stop.headsign = lastHeadsign;
 
       // Set the last flag of the last stop
-      stop.isLastStop = index === this.stops.length - 1;
+      stop.last = index === this.stops.length - 1;
 
       // Set the time of the first stop
       stop.time = index > 0 ? stop.time : 0;
@@ -257,28 +205,30 @@ class Route
     return this.stops.findIndex(s => s.node.id === node.id && (!excludeNonHalts || s.halts));
   }
 
+
   // Copy the route
-  copy(modifiedProps = {}) {
+  _copy(modifiedProps = {}) {
     return new Route(this._feed, {...this, ...modifiedProps});
   }
 
   // Slice the route to begin at the specified node
-  sliceBeginningAtNode(node) {
+  _sliceBeginningAtNode(node) {
     let index = this.getStopIndexAtNode(node);
-    return index > -1 ? this.copy({stops: this.stops.slice(index)}) : this.copy();
+    return index > -1 ? this._copy({stops: this.stops.slice(index)}) : this._copy();
   }
 
   // Slice the route to end at the specified node
-  sliceEndingAtNode(node) {
+  _sliceEndingAtNode(node) {
     let index = this.getStopIndexAtNode(node);
-    return index > -1 ? this.copy({stops: this.stops.slice(0, index + 1)}) : this.copy();
+    return index > -1 ? this._copy({stops: this.stops.slice(0, index + 1)}) : this._copy();
   }
 
   // Apply an initial time to the route
-  withInitialTime(initialTime) {
-    return this.copy({initialTime});
+  _withInitialTime(initialTime) {
+    return this._copy({initialTime});
   }
 }
+
 
 // Class that defines a stop in a route
 class RouteStop
@@ -291,23 +241,97 @@ class RouteStop
     this.node = props.node;
     this.time = props.time ?? 0;
     this.halts = props.halts ?? true;
-    this.cancelled = props.cancelled ?? false;
     this.platform = props.platform || undefined;
     this.headsign = props.headsign;
     this.alightDirection = props.alightDirection;
-    this.alightLeft = this.alightDirection !== undefined ? this.alightDirection === 'left' : undefined;
-    this.alightRight = this.alightDirection !== undefined ? this.alightDirection === 'right' : undefined;
+    this.status = props.status;
 
-    this.isLastStop = false;
+    this.last = false;
+    this.formattedTime = undefined;
   }
 
+  // Return if the alight direction of the stop is on the left side
+  get alightLeft() {
+    return this.alightDirection !== undefined ? this.alightDirection === 'left' : undefined;;
+  }
+
+  // Return if the alight direction of the stop is on the right side
+  get alightRight() {
+    return this.alightDirection !== undefined ? this.alightDirection === 'right' : undefined;;
+  }
+
+  // Return if the stop is cancelled
+  get cancelled() {
+    return this.status === 'cancelled';
+  }
+
+  // Return if the stop is an extra stop
+  get additional() {
+    return this.status === 'additional';
+  }
+
+
   // Copy the stop
-  copy(modifiedProps = {}) {
+  _copy(modifiedProps = {}) {
     return new RouteStop(this._feed, {...this, modifiedProps});
   }
 }
 
 
+// Class that defines a transfer in a feed
+class Transfer
+{
+  // Constructor
+  constructor(feed, props) {
+    this._feed = feed;
+
+    this.id = props.id;
+    this.between = props.between;
+    this.and = props.and;
+    this.time = props.time;
+    this.separate = props.separate;
+    this.initialTime = props.initialTime ?? 0;
+
+    this.cumulativeTime = this.initialTime + this.time;
+    this.formattedTime = undefined;
+  }
+
+  // Get the opposite node of the speficied node in the transfer
+  getOppositeNode(node) {
+    if (this.between.id === node.id)
+      return this.and;
+    else if (this.and.id === node.id)
+      return this.between;
+    else
+      return undefined;
+  }
+
+
+  // Copy the transfer
+  _copy(modifiedProps = {}) {
+    return new Transfer(this._feed, {...this, ...modifiedProps});
+  }
+
+  // Align the transfer to the specified node
+  _alignToNode(node) {
+    if (this.between.id === node.id)
+      return this._copy();
+    else if (this.and.id === node.id)
+      return this._copy({between: this.and, and: this.between});
+    else
+      return undefined;
+  }
+
+  // Align the transfer to the opposite node of the specified node
+  _alignToOppositeNode(node) {
+    return this._alignToNode(this.getOppositeNode(node));
+  }
+
+  // Apply an initial time to the transfer
+  _withInitialTime(initialTime) {
+    return this._copy({initialTime});
+  }
+}
 // Class that defines the type of a notification in a feed
 class NotificationType
 {
@@ -374,8 +398,8 @@ class Feed
     this._agencies = this._parseTomlFile('agencies', this._parseAgency);
     this._modalities = this._parseTomlFile('modalities', this._parseModality);
     this._nodes = this._parseTomlFile('nodes', this._parseNode);
-    this._transfers = this._parseTomlFile('transfers', this._parseTransfer);
     this._routes = this._parseTomlFile('routes', this._parseRoute);
+    this._transfers = this._parseTomlFile('transfers', this._parseTransfer);
     this._notificationTypes = this._parseTomlFile('notifications_types', this._parseNotificationType);
     this._notifications = this._parseTomlFile('notifications', this._parseNotification);
 
@@ -421,6 +445,11 @@ class Feed
     return Object.values(this._nodes);
   }
 
+  // Return the nodes that are included in the overview in the feed
+  get includedNodes() {
+    return this.nodes.filter(n => n.include);
+  }
+
   // Return the node with the specified id in the feed
   getNode(id) {
     if (id === undefined)
@@ -435,6 +464,32 @@ class Feed
   // Return the nodes that match the search query in the feed
   searchNodes(query) {
     return this._nodesIndex.search(query);
+  }
+
+  // Return the routes in the feed
+  get routes() {
+    return Object.values(this._routes);
+  }
+
+  // Return the routes that are included in the overview in the feed
+  get includedRoutes() {
+    return this.routes.filter(r => r.include);
+  }
+
+  // Return the route with the specified id in the feed
+  getRoute(id) {
+    if (id === undefined)
+      return undefined;
+
+    let route = this._routes[id];
+    if (route === undefined)
+      console.warn(`Could not find route with id '${id}'`);
+    return route;
+  }
+
+  // Return the routes that have a stop at the specified node in the feed
+  getRoutesWithStopAtNode(node, excludeNonHalts = false) {
+    return this.routes.filter(route => route.getStopAtNode(node, excludeNonHalts) !== undefined);
   }
 
   // Return the transfers in the feed
@@ -461,32 +516,6 @@ class Feed
   // Return the transfers between the specified nodes in the feed
   getTransferBetweenNodes(between, and, excludeSeparate = false) {
     return this.transfers.filter(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id)) && (!excludeSeparate || (excludeSeparate && !transfer.separate))).shift();
-  }
-
-  // Return the routes in the feed
-  get routes() {
-    return Object.values(this._routes);
-  }
-
-  // Return the routes that are shown in the overview in the feed
-  get routesInOverview() {
-    return this.routes.filter(r => r.showInOverview);
-  }
-
-  // Return the route with the specified id in the feed
-  getRoute(id) {
-    if (id === undefined)
-      return undefined;
-
-    let route = this._routes[id];
-    if (route === undefined)
-      console.warn(`Could not find route with id '${id}'`);
-    return route;
-  }
-
-  // Return the routes that have a stop at the specified node in the feed
-  getRoutesWithStopAtNode(node, excludeNonHalts = false) {
-    return this.routes.filter(route => route.getStopAtNode(node, excludeNonHalts) !== undefined);
   }
 
   // Return the notification types in the feed

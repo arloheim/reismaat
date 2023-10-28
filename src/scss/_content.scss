@@ -1,0 +1,38 @@
+// Content styling
+.content {
+  // Headings
+  @for $i from 1 through 6 {
+    h#{$i} {
+      @if $i <= 2 {
+        @extend .has-text-weight-light;
+        @extend .has-text-primary;
+      }
+      @if $i > 2 {
+        @extend .has-text-weight-normal;
+      }
+    }
+  }
+
+  // Link
+  a.is-plain {
+    color: $text;
+  }
+
+  // Figure
+  figure {
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Unordered list
+  ul {
+    @extend .mt-0;
+    @extend .ml-5;
+  }
+}

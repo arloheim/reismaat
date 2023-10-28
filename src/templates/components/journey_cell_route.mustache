@@ -1,24 +1,15 @@
 <div class="journey-cell is-node">
-  {{^stop.cancelled}}
-    {{#route}}
-      <p>{{> feed/route_long_link}}</p>
+  {{#route}}
+    <p>
+      <span {{#stop.status}}class="is-{{.}}"{{/stop.status}}>{{> feed/route_long_link}}</span>
 
-      {{#isTransfer}}
-        <p class="is-muted is-size-7 ml-5">vertrekt vanaf {{stop.node.modalityNodeName}} {{stop.node.name}}</p>
-      {{/isTransfer}}
-    {{/route}}
-  {{/stop.cancelled}}
+      {{#stop.additional}}
+        <span class="is-additional-label">(extra stop)</span>
+      {{/stop.additional}}
 
-  {{#stop.cancelled}}
-    {{#route}}
-      <p>
-        <span class="is-cancelled">{{> feed/route_long_link}}</span>
-        <span class="has-text-danger-dark has-text-weight-bold">(rijdt niet)</span>
-      </p>
-
-      {{#isTransfer}}
-        <p class="is-muted is-size-7 ml-5">vertrekt vanaf {{stop.node.modalityNodeName}} {{stop.node.name}}</p>
-      {{/isTransfer}}
-    {{/route}}
-  {{/stop.cancelled}}
+      {{#stop.cancelled}}
+        <span class="is-cancelled-label">(rijdt niet)</span>
+      {{/stop.cancelled}}
+    </p>
+  {{/route}}
 </div>

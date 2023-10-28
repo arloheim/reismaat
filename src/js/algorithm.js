@@ -10,6 +10,8 @@ class RouteLeg
   // Constructor
   constructor(route) {
     this.route = route;
+
+    this.last = false;
   }
 
   // Get the cumulative time of the route
@@ -35,6 +37,8 @@ class TransferLeg
   // Constructor
   constructor(transfer) {
     this.transfer = transfer;
+
+    this.last = false;
   }
 
   // Get the cumulative time of the transfer
@@ -76,19 +80,19 @@ class Journey
     // Iterate over the legs
     for (let [index, leg] of this.legs.entries()) {
       // Set the last flag of the last leg
-      leg.isLast = this.legs.indexOf(leg) === this.legs.length - 1;
+      leg.last = this.legs.indexOf(leg) === this.legs.length - 1;
 
       // Check the type of the leg
       if (leg instanceof RouteLeg) {
         // Copy the route
-        leg.route = leg.route.copy();
+        leg.route = leg.route._copy();
 
         // Iterate over the stops of the route and set the formatted time
         for (let stop of leg.route.stops)
           stop.formattedTime = this.departureTime.add(stop.cumulativeTime, 'seconds').format('H:mm');
       } else if (leg instanceof TransferLeg) {
         // Copy the transfer
-        leg.transfer = leg.transfer.copy();
+        leg.transfer = leg.transfer._copy();
 
         // Set the formatted time
         leg.transfer.formattedTime = Math.ceil(leg.transfer.time / 60);
@@ -189,7 +193,7 @@ class RaptorAlgorithm
     for (let transfer of departureNode.transfers) {
       // Apply the time to the transfer
       let transferNode = transfer.getOppositeNode(departureNode);
-      transfer = transfer.copy();
+      transfer = transfer._copy();
 
       // Update the time to travel to the transfer node
       kTimes.get(0).set(transferNode, transfer.cumulativeTime);
@@ -229,7 +233,7 @@ class RaptorAlgorithm
         let route = this.feed.getRoute(routeId);
 
         // Apply the time to the route
-        route = route.sliceBeginningAtNode(routeNode).withInitialTime(kTimes.get(k - 1).get(routeNode) + (k > 1 ? 60 : 0));
+        route = route._sliceBeginningAtNode(routeNode)._withInitialTime(kTimes.get(k - 1).get(routeNode) + (k > 1 ? 60 : 0));
 
         // Iterate over the stops in the route starting at routeNode
         for (let stop of route.stops) {
@@ -242,7 +246,7 @@ class RaptorAlgorithm
             // Update the connection of the node of the stop
             if (!kConnections.has(stop.node))
               kConnections.set(stop.node, new Map());
-            kConnections.get(stop.node).set(k, route.sliceEndingAtNode(stop.node));
+            kConnections.get(stop.node).set(k, route._sliceEndingAtNode(stop.node));
 
             // Mark the node of the stop
             if (markedNodes.find(n => n.id === stop.node.id) === undefined)
@@ -257,7 +261,7 @@ class RaptorAlgorithm
         for (let transfer of node.transfers) {
           // Apply the time to the transfer
           let transferNode = transfer.getOppositeNode(node);
-          transfer = transfer.withInitialTime(kTimes.get(k).get(node));
+          transfer = transfer._withInitialTime(kTimes.get(k).get(node));
 
           // Improve the time of the transfer node if it is shorter than the best time
           if (transfer.cumulativeTime < kTimes.get(k).get(transferNode)) {
