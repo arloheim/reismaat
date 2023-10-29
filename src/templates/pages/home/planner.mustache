@@ -8,7 +8,19 @@
 
         <div class="dropdown is-fullwidth">
           <div class="dropdown-trigger">
-            <input class="input node-input" type="text" value="{{from.name}}" placeholder="van station, halte of plaats" id="from">
+            <div class="field has-addons">
+              <div class="control is-expanded">
+                <input class="input node-input" type="text" value="{{from.name}}" placeholder="van station, halte of plaats" id="from">
+              </div>
+
+              <div class="control">
+                <a class="button is-dark is-outlined" id="switch">
+                  <span class="icon">
+                    <i class="fa-solid fa-arrow-down-up-across-line"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -30,11 +42,15 @@
 
         <div class="field has-addons">
           <div class="control is-expanded">
-            <input class="input" type="datetime-local" value="{{datetime}}" id="datetime">
+            <input class="input" type="datetime-local" value="{{date}}" id="datetime">
           </div>
 
           <div class="control">
-            <a class="button is-dark" id="now">Nu</a>
+            <a class="button is-dark is-outlined" id="now">
+              <span class="icon">
+                <i class="fa-solid fa-calendar-day"></i>
+              </span>
+            </a>
           </div>
         </div>
       </div>

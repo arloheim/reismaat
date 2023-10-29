@@ -42,24 +42,24 @@ $(function() {
 
   // Collect data for the home page
   function collectHomeData(match) {
-    return {
-      datetime: dayjs().format('YYYY-MM-DDTHH:mm')
-    }
+    let date = dayjs().format('YYYY-MM-DDTHH:mm');
+
+    return {date};
   };
 
   // Collect data for the planner page
   function collectPlannerData(match) {
-    let from = feed.getNode(match.params?.van);
-    let to = feed.getNode(match.params?.naar);
-    let datetime = match.params?.datum;
+    let from = feed.getNode(match.params?.f);
+    let to = feed.getNode(match.params?.t);
+    let date = match.params?.d;
 
-    if (from === undefined && to === undefined)
+    if (from === undefined || to === undefined)
       throw new NotFoundError(`Could not find nodes to plan between`);
 
     let algo = new RaptorAlgorithm(feed);
-    let journeys = algo.calculate(from, to, dayjs(datetime));
+    let journeys = algo.calculate(from, to, dayjs(date));
 
-    return {from, to, datetime, journeys};
+    return {from, to, date, journeys};
   }
 
   // Collect data for the routes details page
@@ -113,9 +113,31 @@ $(function() {
     // Show the first element of a collapse group
     $el.find('.collapse[data-group]').first().show();
 
+    // Handle switching the from and to fields
+    $el.find('form#planner #switch').on('click', function() {
+      let temp = $el.find('#from').val();;
+      $el.find('#from').val($el.find('#to').val());
+      $el.find('#to').val(temp);
+    });
+
     // Handle setting the date field to the current time
-    $el.find('#now').on('click', function() {
+    $el.find('form#planner #now').on('click', function() {
       $el.find('#datetime').val(dayjs().format('YYYY-MM-DDTHH:mm'));
+    });
+
+    // Plan a trip when the planner form is submitted
+    $el.find('form#planner').on('submit', function(e) {
+      e.preventDefault();
+
+      // Get the params from the form
+      let from = $(this).find('#from').val();
+      let to = $(this).find('#to').val();
+      let datetime = $(this).find('#datetime').val();
+
+      from = feed.searchNodes(from)[0]?.id;
+      to = feed.searchNodes(to)[0]?.id;
+
+      router.navigateToPath(`/reisadvies?f=${from}&t=${to}&d=${datetime}`);
     });
 
     // Toggle a collapse element when the corresponding link is clicked
@@ -182,23 +204,6 @@ $(function() {
       // Hide the dropdown
       let $dropdown = $(this).parents('.dropdown').removeClass('is-active').hide();
     }, 100));
-
-    // Plan a trip when the planner form is submitted
-    $el.find('form#planner').on('submit', function(e) {
-      e.preventDefault();
-
-      // Get the params from the form
-      let from = $(this).find('#from').val();
-      let to = $(this).find('#to').val();
-      let datetime = $(this).find('#datetime').val();
-
-      from = feed.searchNodes(from)[0]?.id;
-      to = feed.searchNodes(to)[0]?.id;
-
-      console.log(from, to);
-
-      router.navigateToPath(`/reisadvies?van=${from}&naar=${to}&datum=${datetime}`);
-    });
   }
 
 
