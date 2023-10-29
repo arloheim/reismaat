@@ -28,6 +28,11 @@ name = "Giedrechtse Vervoersdienst"
 description = "stadsvervoer in Giedrecht"
 abbr = "GVD"
 
+[stm]
+name = "STM | CTS"
+description = "stadsvervoer in Schieren"
+abbr = "STM"
+
 
 # Veerdiensten
 [fer_nos]
