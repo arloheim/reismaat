@@ -222,7 +222,7 @@ class RaptorAlgorithm
       let queue = new Map();
       while (markedNodes.length > 0) {
         let node = markedNodes.shift();
-        for (let route of node.routesExcludingNonHalts) {
+        for (let {route} of node.routesExcludingNonHalts) {
           if (!queue.has(route.id) || this._isNodeBefore(route, node, queue.get(route.id)))
             queue.set(route.id, node);
         }
