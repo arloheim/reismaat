@@ -1,0 +1,75 @@
+<div class="tile is-child">
+  <div class="journey-box is-header">
+    <h3 class="has-text-white mb-1">reisadvies van {{from.name}} naar {{to.name}}</h3>
+
+    <p class="has-text-white mb-0">
+      <span class="icon-text">
+        <span>{{formattedDepartureTime}}</span>
+        <span class="icon">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+        <span class="mr-3">{{formattedArrivalTime}}</span>
+
+        <span class="icon">
+          <i class="fa-solid fa-clock"></i>
+        </span>
+        <span class="mr-3">{{formattedDuration}}</span>
+
+        <span class="icon">
+          <i class="fa-solid fa-repeat"></i>
+        </span>
+        <span>{{transfers}}&times; overstappen</span>
+      </span>
+    </p>
+  </div>
+
+  {{#firstLegIsTransfer}}
+    <div class="journey-box is-route">
+      <div class="journey-row route-node is-bold">
+        {{#formattedDepartureTime}}
+          {{> components/journey_cell_time}}
+        {{/formattedDepartureTime}}
+
+        <div class="journey-cell is-line">
+          <span class="icon has-text-primary">
+            <i class="fa-solid fa-fw fa-circle-dot"></i>
+          </span>
+        </div>
+
+        {{#departureNode}}
+          {{> components/journey_cell_node}}
+        {{/departureNode}}
+      </div>
+    </div>
+  {{/firstLegIsTransfer}}
+
+  {{#legs}}
+    {{#route}}
+      {{> components/journey_box_route}}
+    {{/route}}
+
+    {{#transfer}}
+      {{> components/journey_box_transfer}}
+    {{/transfer}}
+  {{/legs}}
+
+  {{#lastLegIsTransfer}}
+    <div class="journey-box is-route">
+      <div class="journey-row route-node is-bold">
+        {{#formattedArrivalTime}}
+          {{> components/journey_cell_time}}
+        {{/formattedArrivalTime}}
+
+        <div class="journey-cell is-line">
+          <span class="icon has-text-primary">
+            <i class="fa-solid fa-fw fa-circle-dot"></i>
+          </span>
+        </div>
+
+        {{#arrivalNode}}
+          {{> components/journey_cell_node}}
+        {{/arrivalNode}}
+      </div>
+    </div>
+  {{/lastLegIsTransfer}}
+</div>

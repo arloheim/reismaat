@@ -1,6 +1,6 @@
 <div class="tile is-ancestor">
   <div class="tile is-4 is-vertical is-parent">
-    <div class="tile is-child is-flex-grow-0 box has-background-white">
+    <div class="tile is-child box is-flex-grow-0">
       <h3>reisadviezen</h3>
 
       {{#journeys}}
@@ -11,15 +11,11 @@
     {{> pages/home/planner}}
   </div>
 
-  <div class="tile is-8 is-parent">
-    <div class="tile is-child box has-background-primary">
-      <h3 class="has-text-white mb-4">reisadvies van {{from.name}} naar {{to.name}}</h3>
-
-      {{#journeys}}
-        <div class="collapse" id="journey_{{index}}" data-group="journeys">
-          {{> components/journey_details}}
-        </div>
-      {{/journeys}}
-    </div>
+  <div class="tile is-8 is-vertical is-parent">
+    {{#journeys}}
+      <div class="collapse" id="journey_{{index}}" data-group="journeys">
+        {{> pages/planner/journey}}
+      </div>
+    {{/journeys}}
   </div>
 </div>

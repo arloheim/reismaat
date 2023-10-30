@@ -14,6 +14,7 @@ const _templates = {
   'pages/home/routes': fs.readFileSync('src/templates/pages/home/routes.mustache', 'utf-8'),
   'pages/home/nodes': fs.readFileSync('src/templates/pages/home/nodes.mustache', 'utf-8'),
   'pages/planner': fs.readFileSync('src/templates/pages/planner.mustache', 'utf-8'),
+  'pages/planner/journey': fs.readFileSync('src/templates/pages/planner/journey.mustache', 'utf-8'),
   'pages/notifications': fs.readFileSync('src/templates/pages/notifications.mustache', 'utf-8'),
   'pages/notifications/title': fs.readFileSync('src/templates/pages/notifications/title.mustache', 'utf-8'),
   'pages/notifications/notification': fs.readFileSync('src/templates/pages/notifications/notification.mustache', 'utf-8'),
@@ -38,7 +39,6 @@ const _templates = {
   'pages/errors/500': fs.readFileSync('src/templates/pages/errors/500.mustache', 'utf-8'),
 
   // Components
-  'components/journey_details': fs.readFileSync('src/templates/components/journey_details.mustache', 'utf-8'),
   'components/journey_box_route': fs.readFileSync('src/templates/components/journey_box_route.mustache', 'utf-8'),
   'components/journey_box_transfer': fs.readFileSync('src/templates/components/journey_box_transfer.mustache', 'utf-8'),
   'components/journey_cell_node': fs.readFileSync('src/templates/components/journey_cell_node.mustache', 'utf-8'),

@@ -1,41 +1,49 @@
 <div class="journey-link is-active">
   <a class="is-overlay" data-collapse="journey_{{index}}"></a>
 
-  <div class="level is-mobile mb-2">
-    <div class="level-left">
-      <p class="level-item has-text-weight-bold">
-        <span class="icon-text">
-          <span>{{formattedDepartureTime}}</span>
-          <span class="icon">
-            <i class="fa-solid fa-arrow-right"></i>
-          </span>
-          <span>{{formattedArrivalTime}}</span>
-        </span>
-      </p>
-    </div>
+  <p class="mb-2">
+    <span class="icon-text">
+      <span class="has-text-weight-bold">{{formattedDepartureTime}}</span>
+      <span class="icon">
+        <i class="fa-solid fa-arrow-right"></i>
+      </span>
+      <span class="has-text-weight-bold mr-3">{{formattedArrivalTime}}</span>
 
-    <div class="level-right">
-      <p class="level-item">
-        <span class="icon-text">
-          <span class="icon">
-            <i class="fa-solid fa-clock"></i>
-          </span>
-          <span class="mr-2">{{formattedDuration}}</span>
-          <span class="icon">
-            <i class="fa-solid fa-repeat"></i>
-          </span>
-          <span>{{transfers}}</span>
-        </span>
-      </p>
-    </div>
-  </div>
+      <span class="icon">
+        <i class="fa-solid fa-clock"></i>
+      </span>
+      <span class="mr-3">{{formattedDuration}}</span>
+
+      <span class="icon">
+        <i class="fa-solid fa-repeat"></i>
+      </span>
+      <span>{{transfers}}</span>
+    </span>
+  </p>
 
   <p>
     {{#legs}}
       {{#route}}
         {{> feed/route_short}}
-        {{^last}}&nbsp;+&nbsp;{{/last}}
+
+        {{^last}}
+          <span class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+        {{/last}}
       {{/route}}
+
+      {{#transfer}}
+        <span class="icon">
+          <i class="fa-solid fa-person-walking"></i>
+        </span>
+
+        {{^last}}
+          <span class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+        {{/last}}
+      {{/transfer}}
     {{/legs}}
   </p>
 </div>

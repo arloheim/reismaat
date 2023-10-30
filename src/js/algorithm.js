@@ -14,17 +14,17 @@ class RouteLeg
     this.last = false;
   }
 
-  // Get the cumulative time of the route
+  // Return the cumulative time of the route
   get cumulativeTime() {
     return this.route.lastStop.cumulativeTime;
   }
 
-  // Get the departure node of the route
+  // Return the departure node of the route
   get departureNode() {
     return this.route.firstStop.node;
   }
 
-  // Get the arrival node of the route
+  // Return the arrival node of the route
   get arrivalNode() {
     return this.route.lastStop.node;
   }
@@ -41,17 +41,17 @@ class TransferLeg
     this.last = false;
   }
 
-  // Get the cumulative time of the transfer
+  // Return the cumulative time of the transfer
   get cumulativeTime() {
     return this.transfer.cumulativeTime;
   }
 
-  // Get the departure node of the transfer
+  // Return the departure node of the transfer
   get departureNode() {
     return this.transfer.between;
   }
 
-  // Get the arrival node of the transfer
+  // Return the arrival node of the transfer
   get arrivalNode() {
     return this.transfer.and;
   }
@@ -102,12 +102,12 @@ class Journey
 
   // Return if the first leg is a transfer
   get firstLegIsTransfer() {
-    return this.legs.at(0).type === 'transfer';
+    return this.legs.at(0) instanceof TransferLeg;
   }
 
   // Return if the last leg is a transfer
   get lastLegIsTransfer() {
-    return this.legs.at(-1).type === 'transfer';
+    return this.legs.at(-1) instanceof TransferLeg;
   }
 }
 

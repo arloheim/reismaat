@@ -19,29 +19,44 @@
 .journey-box {
   @extend .box;
   @extend .mb-0;
-  @extend .p-2;
+
+  // Header box styling
+  &.is-header {
+    @extend .has-background-primary;
+  }
 
   // Route box styling
   &.is-route {
     @extend .has-background-white;
+    @extend .p-2;
+
+    // Border for consecutive route boxes
+    & + & {
+      border-top: 0.25rem solid $grey-lighter;
+    }
   }
 
   // Transfer box styling
   &.is-transfer {
-    @extend .has-background-light;
+    @extend .has-background-grey-lighter;
     @extend .has-text-grey;
+    @extend .px-2;
+    @extend .py-3;
   }
 
   // Negating border radius
-  &:not(:first-child) {
-    border-top: 4px solid $light;
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
+  @include mobile {
+    border-radius: 0 !important;
   }
-  &:not(:last-child) {
-    border-bottom: 4px solid $light;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+  @include tablet {
+    &:not(:first-child) {
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+    }
+    &:not(:last-child) {
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
   }
 }
 

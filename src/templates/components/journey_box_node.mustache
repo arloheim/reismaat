@@ -1,0 +1,19 @@
+<div class="journey-box is-route">
+  <!-- Node {{name}} -->
+  <div class="journey-row route-node is-bold">
+    {{#formattedTime}}
+      {{> components/journey_cell_time}}
+    {{/formattedTime}}
+
+    <div class="journey-cell is-line">
+      <span class="line is-start"></span>
+      <span class="icon has-text-primary">
+        <i class="fa-solid fa-fw fa-circle-dot"></i>
+      </span>
+    </div>
+
+    {{#node}}
+      {{> components/journey_cell_node}}
+    {{/node}}
+  </div>
+</div>

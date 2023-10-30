@@ -1,3 +1,6 @@
+@use 'sass:list';
+
+
 // Import custom variables
 @import 'variables';
 
@@ -38,9 +41,40 @@
   }
 }
 
+
+// Section styling
+.section {
+  // Negate section padding on mobile devices
+  padding: 0;
+
+  // Include section padding on non-mobile devices
+  @include tablet {
+    padding: $section-padding-desktop;
+  }
+}
+
+
 // Box styling
 .box {
-  @extend .is-shadowless;
+  // Negate border radius for mobile devices
+  border-radius: 0;
+
+  // Include border radius for non-mobile devices
+  @include tablet {
+    border-radius: $radius-large;
+  }
+
+  // Include border radius for nested boxes
+  .box {
+    border-radius: $radius-large;
+  }
+
+  // Colored box styling
+  @each $name, $colors in $colors {
+    &.is-#{$name} {
+      @extend .has-background-#{$name};
+    }
+  }
 }
 
 // Loading styling
