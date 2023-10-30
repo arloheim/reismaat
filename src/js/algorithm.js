@@ -148,14 +148,12 @@ class RaptorAlgorithm
 
         // Prepend a new leg
         if (connection instanceof feed.Route) {
-          let fromNode = connection.stops[0].node;
           legs.unshift(new RouteLeg(connection));
-          toNode = fromNode;
+          toNode = connection.stops[0].node;
           k --;
         } else if (connection instanceof feed.Transfer) {
-          let fromNode = connection.getOppositeNode(toNode);
-          legs.unshift(new TransferLeg(connection.alignToNode(fromNode)));
-          toNode = fromNode;
+          legs.unshift(new TransferLeg(connection._alignToOppositeNode(toNode)));
+          toNode = connection.getOppositeNode(toNode);
         } else {
           console.warn(`Found unrecognized connection type`, connection);
           break;
