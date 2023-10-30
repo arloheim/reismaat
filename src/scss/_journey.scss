@@ -72,7 +72,7 @@
       @extend .is-flex-grow-0;
       @extend .has-text-right;
 
-      width: 4rem;
+      width: 3.5rem;
     }
 
     // Line cell
@@ -120,11 +120,8 @@
 
     // Node cell
     &.is-node {
-      @extend .is-flex-shrink-0;
+      @extend .is-flex-shrink-1;
       @extend .is-flex-grow-1;
-
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
     // Platform cell
