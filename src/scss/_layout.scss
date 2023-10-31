@@ -26,11 +26,20 @@ body {
   .navbar-brand {
     @extend .is-unselectable;
 
-    img {
-      max-height: 2.25rem;
-
+    .icon {
       @extend .mr-3;
-      @extend .p-0;
+
+      width: 2.25rem;
+      height: 2.25rem;
+
+      img, svg {
+        @extend .p-0;
+        max-height: 2.25rem;
+      }
+
+      svg {
+        font-size: 2.25rem !important;
+      }
     }
 
     p {

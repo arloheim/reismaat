@@ -11,6 +11,9 @@ require('./styles.js');
 
 // Event handler when the document is ready
 $(function() {
+  // Inline SVG image tags
+  inlineSVG();
+
   // Create the feed
   let feed = new Feed();
   console.log('Feed:', feed);
@@ -102,6 +105,29 @@ $(function() {
   }
 
 
+  // Function to convert SVG image tags to inline SVG
+  function inlineSVG(query, callback) {
+    $('img.svg-icon').each(function() {
+      fetch(this.src)
+        .then(res => res.text())
+        .then(data => {
+          const parser = new DOMParser();
+          const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+
+          svg.width = this.offsetWidth;
+          svg.height = this.offsetHeight;
+          if (this.id)
+            svg.id = this.id;
+          if (this.className)
+            svg.classList = this.classList;
+          svg.classList.add('svg-inline--fa');
+
+          this.parentNode.replaceChild(svg, this);
+        })
+        .catch(error => console.error(error));
+    });
+  }
+
   // Hook for when the router is done routing
   function afterRouting() {
     // Scroll to the top of the page
@@ -110,6 +136,9 @@ $(function() {
 
   // Hook for when the router is done rendering
   function afterRendering($el) {
+    // Inline SVG image tags
+    inlineSVG();
+
     // Show the first element of a collapse group
     $el.find('.collapse[data-group]').first().show();
 
