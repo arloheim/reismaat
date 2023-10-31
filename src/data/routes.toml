@@ -1472,7 +1472,7 @@ include = false
 
 [eqh_qs_mqd.stops]
 01 = {node = "eqh_qs", time = 0}
-02 = {node = "cty_mqd", time = 0}
+02 = {node = "cty_mqd", time = 75}
 
 [eqh_lvn_nszw]
 agency = "equual"
@@ -1484,7 +1484,7 @@ include = false
 
 [eqh_lvn_nszw.stops]
 01 = {node = "eqh_lvn", time = 0}
-02 = {node = "cty_nszw", time = 0}
+02 = {node = "cty_nszw", time = 75}
 
 [eqh_lvn_ztm]
 agency = "equual"
@@ -1496,7 +1496,7 @@ include = false
 
 [eqh_lvn_ztm.stops]
 01 = {node = "eqh_lvn", time = 0}
-02 = {node = "cty_ztm", time = 0}
+02 = {node = "cty_ztm", time = 30}
 
 [eqh_avi_nszw]
 agency = "equual"
@@ -1508,7 +1508,7 @@ include = false
 
 [eqh_avi_nszw.stops]
 01 = {node = "eqh_avi", time = 0}
-02 = {node = "cty_nszw", time = 0}
+02 = {node = "cty_nszw", time = 120}
 
 [eqh_avi_ztm]
 agency = "equual"
@@ -1520,7 +1520,7 @@ include = false
 
 [eqh_avi_ztm.stops]
 01 = {node = "eqh_avi", time = 0}
-02 = {node = "cty_ztm", time = 0}
+02 = {node = "cty_ztm", time = 105}
 
 [eqh_sg_mea]
 agency = "equual"
@@ -1592,7 +1592,7 @@ include = false
 
 [eqh_vt_nszo.stops]
 01 = {node = "eqh_vt", time = 0}
-02 = {node = "cty_nszo", time = 0}
+02 = {node = "cty_nszo", time = 60}
 
 [eqh_vt_ndh]
 agency = "equual"
@@ -1604,7 +1604,7 @@ include = false
 
 [eqh_vt_ndh.stops]
 01 = {node = "eqh_vt", time = 0}
-02 = {node = "cty_ndh", time = 0}
+02 = {node = "cty_ndh", time = 135}
 
 [eqh_mdz_wp]
 agency = "equual"
@@ -1652,7 +1652,7 @@ include = false
 
 [eqh_sti_rmn.stops]
 01 = {node = "eqh_sti", time = 0}
-02 = {node = "cty_rmn", time = 0}
+02 = {node = "cty_rmn", time = 75}
 
 [eqh_sti_znd]
 agency = "equual"
@@ -1664,7 +1664,7 @@ include = false
 
 [eqh_sti_znd.stops]
 01 = {node = "eqh_sti", time = 0}
-02 = {node = "cty_znd", time = 0}
+02 = {node = "cty_znd", time = 135}
 
 [eqh_sti_pdm]
 agency = "equual"
@@ -1676,4 +1676,4 @@ include = false
 
 [eqh_sti_pdm.stops]
 01 = {node = "eqh_sti", time = 0}
-02 = {node = "cty_pdm", time = 0}
+02 = {node = "cty_pdm", time = 375}
