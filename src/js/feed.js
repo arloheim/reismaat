@@ -315,6 +315,7 @@ class Transfer
     this.and = props.and;
     this.time = props.time;
     this.direct = props.direct ?? true;
+    this.icon = props.icon ?? 'person-walking';
 
     this.initialTime = props.initialTime ?? 0;
     this.cumulativeTime = this.initialTime + this.time;
