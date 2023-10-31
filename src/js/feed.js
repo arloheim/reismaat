@@ -32,6 +32,7 @@ class Agency
     this.abbr = props.abbr;
     this.description = props.description;
     this.url = props.url;
+    this.icon = props.icon;
   }
 
   // Return the routes of the agency

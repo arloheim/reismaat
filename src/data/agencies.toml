@@ -4,12 +4,14 @@ name = "Ferrovie Urbignesi"
 abbr = "FU"
 description = "treinvervoer in Ihlane"
 url = "https://arloheim.nl/wiki/Ferrovie_Urbignesi"
+icon = "svg:agency_nsb_fu"
 
 [nsb_is]
 name = "Ihlaanse Spoorwegen"
 abbr = "IS"
 description = "treinvervoer in Ihlane"
 url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
+icon = "svg:agency_nsb_is"
 
 
 # Stadsvervoer
@@ -17,21 +19,25 @@ url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
 name = "ArlOV"
 description = "stadsvervoer in Arloheim"
 url = "https://arloheim.nl/wiki/ArlOV"
+icon = "svg:agency_arlov"
 
 [vara]
 name = "Vara"
 description = "stadsvervoer in Amsvorde"
 url = "https://arloheim.nl/wiki/Vara"
+icon = "svg:agency_vara"
 
 [gvd]
 name = "Giedrechtse Vervoersdienst"
 description = "stadsvervoer in Giedrecht"
 abbr = "GVD"
+icon = "svg:agency_gvd"
 
 [stm]
 name = "STM | CTS"
 description = "stadsvervoer in Schieren"
 abbr = "STM"
+icon = "svg:agency_stm"
 
 
 # Veerdiensten
@@ -39,19 +45,23 @@ abbr = "STM"
 name = "Rederij N-O-S"
 description = "veerdienst Stachteren-Negenaar-Ockholm"
 abbr = "N-O-S"
+icon = "svg:agency_fer_nos"
 
 [fer_smijn]
 name = "SMIJN"
 description = "veerdienst Noordersluizen"
+icon = "svg:agency_smijn"
 
 
 # Besloten vervoer
 [hyp]
 name = "hyperloop.ih"
 description = "snelle en comfortabele verbindingen"
+icon = "svg:agency_hyp"
 
 
 # Natransport
 [equual]
 name = "Equual"
 description = "aanbieder van flexpaarden als deelvervoer"
+icon = "svg:agency_equual"
