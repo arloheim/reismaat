@@ -1419,7 +1419,7 @@ headsign = "Stachteren"
 03 = {node = "fer_str", time = 120}
 
 [fer_nszw_nszo]
-agency = "fer_nsz"
+agency = "fer_smijn"
 modality = "ferry"
 name = "Veerboot (Noordersluizen-West ⟶ Noordersluizen-Oost)"
 headsign = "Noordersluizen-Oost"
@@ -1429,7 +1429,7 @@ headsign = "Noordersluizen-Oost"
 02 = {node = "fer_nszo", time = 30}
 
 [fer_nszo_nszw]
-agency = "fer_nsz"
+agency = "fer_smijn"
 modality = "ferry"
 name = "Veerboot (Noordersluizen-Oost ⟶ Noordersluizen-West)"
 headsign = "Noordersluizen-West"
