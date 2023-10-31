@@ -1,7 +1,7 @@
 <p class="{{#color}}has-text-{{.}}-dark{{/color}} mb-0">
   <span class="icon-text">
     <span class="icon">
-      <i class="fa-solid fa-{{icon}}"></i>
+      {{#renderIcon}}{{/renderIcon}}
     </span>
     <span>{{#type.name}}{{.}}:{{/type.name}} {{name}}</span>
   </span>

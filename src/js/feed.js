@@ -19,6 +19,21 @@ const _files = {
   'transfers': fs.readFileSync('src/data/transfers.toml', 'utf-8'),
 };
 
+// Function that returns HTML for an icon
+function _iconToHTML(icon, classes) {
+  let match = icon.match(/^(?:(fa|svg):)?(.*)$/);
+
+  let type = match !== null && match[1] !== undefined ? match[1] : 'fa';
+  let id = match !== null ? match[2] : icon;
+
+  if (type === 'fa')
+    return `<i class="fa-solid ${classes} fa-${id}"></i>`;
+  else if (type === 'svg')
+    return `<img class="svg-icon ${classes}" src=/assets/images/icons/${id}.svg>`;
+  else
+    return null;
+}
+
 
 // Class that defines an agency in a feed
 class Agency
@@ -54,6 +69,11 @@ class Agency
   get includedRoutesGroupedByModality() {
     return Object.entries(_.groupBy(this.includedRoutes, r => r.modality?.id)).map(([id, routes]) => ({modality: this._feed.getModality(id), routes: routes}));
   }
+
+  // Return HTML for the icon
+  renderIcon() {
+    return (classes) => _iconToHTML(this.icon, classes);
+  }
 }
 
 
@@ -70,6 +90,11 @@ class Modality
     this.abbr = props.abbr;
     this.description = props.description;
     this.icon = props.icon;
+  }
+
+  // Return HTML for the icon
+  renderIcon() {
+    return (classes) => _iconToHTML(this.icon, classes);
   }
 }
 
@@ -142,6 +167,11 @@ class Node
     if (this.city !== undefined)
       parts.push(this.city);
     return parts.join(' &middot; ');
+  }
+
+  // Return HTML for the icon
+  renderIcon() {
+    return (classes) => _iconToHTML(this.icon, classes);
   }
 
   // Return HTML for rendering a dropdown item
@@ -229,6 +259,11 @@ class Route
   // Return the index of the stop of the route that halts at the specified node
   getStopIndexAtNode(node, excludeNonHalts = false) {
     return this.stops.findIndex(s => s.node.id === node.id && (!excludeNonHalts || s.halts));
+  }
+
+  // Return HTML for the icon
+  renderIcon() {
+    return (classes) => _iconToHTML(this.icon, classes);
   }
 
 
@@ -333,6 +368,11 @@ class Transfer
       return undefined;
   }
 
+  // Return HTML for the icon
+  renderIcon() {
+    return (classes) => _iconToHTML(this.icon, classes);
+  }
+
 
   // Copy the transfer
   _copy(modifiedProps = {}) {
@@ -373,6 +413,11 @@ class ServiceType
     this.color = props.color;
     this.agency = props.agency;
   }
+
+  // Return HTML for the icon
+  renderIcon() {
+    return (classes) => _iconToHTML(this.icon, classes);
+  }
 }
 
 
@@ -387,6 +432,11 @@ class Service
     this.name = props.name ?? this.type?.name;
     this.icon = props.icon ?? this.type?.icon;
     this.color = props.color ?? this.type?.color;
+  }
+
+  // Return HTML for the icon
+  renderIcon() {
+    return (classes) => _iconToHTML(this.icon, classes);
   }
 }
 
@@ -445,6 +495,11 @@ class Notification
   // Return if the notification affects the specified route
   affectsRoute(route) {
     return this.affectedRoutes.find(r => r.id === route.id) !== undefined;
+  }
+
+  // Return HTML for the icon
+  renderIcon() {
+    return (classes) => _iconToHTML(this.icon, classes);
   }
 }
 
@@ -739,7 +794,8 @@ class Feed
 
   // Parse a service type from an object
   _parseServiceType(serviceType, id) {
-    serviceType.agency = this.getAgency(serviceType.agency);
+    if (serviceType.agency !== undefined)
+      serviceType.agency = this.getAgency(serviceType.agency);
     return new ServiceType(this, {id, ...serviceType});
   }
 

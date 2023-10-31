@@ -85,5 +85,21 @@ function renderErrorTemplate(element, error, callback) {
 }
 
 
+// Function that returns HTML for an icon
+function iconToHTML(icon, classes) {
+  let match = icon.match(/^(?:(fa|svg):)?(.*)$/);
+
+  let type = match !== null && match[1] !== undefined ? match[1] : 'fa';
+  let id = match !== null ? match[2] : icon;
+
+  if (type === 'fa')
+    return `<i class="fa-solid ${classes} fa-${id}"></i>`;
+  else if (type === 'svg')
+    return `<img class="svg-icon ${classes}" src=/assets/images/icons/${id}.svg>`;
+  else
+    return null;
+}
+
+
 // Define the exports
 module.exports = {templateExists, renderTemplate, renderNotFoundTemplate, renderErrorTemplate};

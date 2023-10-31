@@ -50,7 +50,7 @@ icon = "svg:agency_fer_nos"
 [fer_smijn]
 name = "SMIJN"
 description = "veerdienst Noordersluizen"
-icon = "svg:agency_smijn"
+icon = "svg:agency_fer_smijn"
 
 
 # Besloten vervoer
