@@ -106,8 +106,13 @@ $(function() {
 
 
   // Function to convert SVG image tags to inline SVG
-  function inlineSVG(query, callback) {
-    $('img.svg-icon').each(function() {
+  function inlineSVG($el) {
+    $el = $el ?? $(':root');
+
+    $el.find('img.svg-icon').each(function() {
+      if (this.parentNode === null)
+        return;
+
       fetch(this.src)
         .then(res => res.text())
         .then(data => {
@@ -137,7 +142,7 @@ $(function() {
   // Hook for when the router is done rendering
   function afterRendering($el) {
     // Inline SVG image tags
-    inlineSVG();
+    inlineSVG($el);
 
     // Show the first element of a collapse group
     $el.find('.collapse[data-group]').first().show();

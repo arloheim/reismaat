@@ -8,10 +8,8 @@
       {{> pages/routes/title}}
     </div>
 
-    {{#feed.agencies}}
-      {{#includedRoutes.length}}
-        {{> pages/routes/agency}}
-      {{/includedRoutes.length}}
-    {{/feed.agencies}}
+    {{#feed.agenciesWithIncludedRoutes}}
+      {{> pages/routes/agency}}
+    {{/feed.agenciesWithIncludedRoutes}}
   </div>
 </div>

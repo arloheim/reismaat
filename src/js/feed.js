@@ -21,15 +21,22 @@ const _files = {
 
 // Function that returns HTML for an icon
 function _iconToHTML(icon, classes) {
-  let match = icon.match(/^(?:(fa|svg):)?(.*)$/);
+  if (icon === undefined)
+    return null;
 
-  let type = match !== null && match[1] !== undefined ? match[1] : 'fa';
+  let match = icon.match(/^(?:(fa[srb]|svg):)?(.*)$/);
+
+  let type = match !== null && match[1] !== undefined ? match[1] : 'fas';
   let id = match !== null ? match[2] : icon;
 
-  if (type === 'fa')
+  if (type === 'fas')
     return `<i class="fa-solid ${classes} fa-${id}"></i>`;
+  else if (type === 'far')
+    return `<i class="fa-regular ${classes} fa-${id}"></i>`;
+  else if (type === 'fab')
+    return `<i class="fa-brands ${classes} fa-${id}"></i>`;
   else if (type === 'svg')
-    return `<img class="svg-icon ${classes}" src=/assets/images/icons/${id}.svg>`;
+    return `<img class="svg-icon ${classes}" src="/assets/images/icons/${id}.svg">`;
   else
     return null;
 }
@@ -531,6 +538,16 @@ class Feed
   // Return the agencies in the feed
   get agencies() {
     return Object.values(this._agencies);
+  }
+
+  // Return the agencies that have routes in the feed
+  get agenciesWithRoutes() {
+    return this.agencies.filter(a => a.routes.length > 0);
+  }
+
+  // Return the agencies that have included routes in the feed
+  get agenciesWithIncludedRoutes() {
+    return this.agencies.filter(a => a.includedRoutes.length > 0);
   }
 
   // Return the agency with the specified id in the feed
