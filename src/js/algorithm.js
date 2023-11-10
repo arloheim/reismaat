@@ -126,7 +126,7 @@ class RaptorAlgorithm
   calculate(departureNode, arrivalNode, dateTime) {
     // Get all labels from the departure node
     let kLabels = this._scan(departureNode);
-    
+
     // Iterate over the labels from the departure node to the arrival node
     let journeys = [];
     for (let k = 1; k < kLabels.length; k ++) {
@@ -136,8 +136,17 @@ class RaptorAlgorithm
 
       // Get the trace of k trips and append it to the journeys
       let trace = this._traceBack(kLabels, arrivalNode, k).slice(1);
-      if (trace.length > 0)
-        journeys.push(new Journey(journeys.length, trace.map(t => t.leg), dateTime ?? dayjs()));
+      if (trace.length > 0) {
+        let legs = trace.map(label => {
+          if (label.route !== undefined)
+            return new RouteLeg(label.route);
+          else if (label.transfer !== undefined)
+            return new TransferLeg(label.transfer);
+          else
+            return undefined;
+        });
+        journeys.push(new Journey(journeys.length, legs, dateTime ?? dayjs()));
+      }
     }
 
     // Sort the journeys by total time
@@ -187,8 +196,18 @@ class RaptorAlgorithm
       queue.clear();
       for (let node of markedNodes) {
         for (let {route, stop} of node.routesExcludingNonHalts) {
+          // Don't process the route if the stop is the last stop of the route
           if (stop.last)
             continue;
+
+          // Don't process the route if it is the same one as in the last round
+          if (kLabels[k - 1].has(node)) {
+            let label = kLabels[k - 1].get(stop.node);
+            if (label.route?.id === route.id)
+              continue;
+          }
+
+          // Update the route based on the earliest node that is encountered
           if (!queue.has(route.id) || this._isNodeBefore(route, node, queue.get(route.id)))
             queue.set(route.id, node);
         }
@@ -203,9 +222,14 @@ class RaptorAlgorithm
         route = route._sliceBeginningAtNode(routeNode)._withInitialTime(kLabels[k - 1].get(routeNode).cumulativeTime + (k > 1 ? 60 : 0));
 
         // Iterate over the stops in the route starting at routeNode
-        let stopIndex = 1;
+        let stopIndex = 0;
         while (stopIndex < route.stops.length) {
+          stopIndex ++;
           let stop = route.stops[stopIndex];
+
+          // Check if the stop is defined
+          if (stop === undefined)
+            break;
 
           // Check if there is a faster route to the node of the stop
           if (kLabels[k - 1].has(stop.node)) {
@@ -228,18 +252,16 @@ class RaptorAlgorithm
             let routeSoFar = route._sliceEndingAtNode(stop.node);
 
             // Check if the route has more than one stop
-            if (routeSoFar.stops.length > 1) {
-              // Update the time to travel to the node of the stop
-              kLabels[k].set(stop.node, {node: routeNode, route: routeSoFar, leg: new RouteLeg(routeSoFar), cumulativeTime: stop.cumulativeTime});
-              bestLabels.set(stop.node, {node: routeNode, route: routeSoFar, leg: new RouteLeg(routeSoFar), cumulativeTime: stop.cumulativeTime});
+            if (routeSoFar.stops.length <= 1)
+              continue;
 
-              // Mark the node of the stop
-              markedNodes.add(stop.node);
-            }
+            // Update the time to travel to the node of the stop
+            kLabels[k].set(stop.node, {node: routeNode, route: routeSoFar, cumulativeTime: stop.cumulativeTime});
+            bestLabels.set(stop.node, {node: routeNode, route: routeSoFar, cumulativeTime: stop.cumulativeTime});
+
+            // Mark the node of the stop
+            markedNodes.add(stop.node);
           }
-
-          // Increase the stopIndex
-          stopIndex ++;
         }
       }
 
@@ -251,7 +273,7 @@ class RaptorAlgorithm
 
           // Check for cyclic labels
           let trace = this._traceBack(kLabels, node, k);
-          if (trace.find(label => label.leg instanceof TransferLeg && label.node === transferNode))
+          if (trace.some(label => label.node?.id === transferNode.id))
             continue;
 
           // Apply the time to the transfer
@@ -260,8 +282,9 @@ class RaptorAlgorithm
           // Improve the time of the transfer node if it is shorter than the best time
           if (transfer.cumulativeTime < (bestLabels.get(transferNode)?.cumulativeTime ?? Infinity)) {
             // Update the time to travel to the transfer node
-            let alignedTransfer = transfer._alignToNode(transferNode);
-            kLabels[k].set(transferNode, {node: node, transfer: alignedTransfer, leg: new TransferLeg(alignedTransfer), cumulativeTime: alignedTransfer.cumulativeTime});
+            let alignedTransfer = transfer._alignToNode(node);
+            kLabels[k].set(transferNode, {node: node, transfer: alignedTransfer, cumulativeTime: alignedTransfer.cumulativeTime});
+            bestLabels.set(transferNode, {node: node, transfer: alignedTransfer, cumulativeTime: alignedTransfer.cumulativeTime});
 
             // Mark the transfer node
             markedNodes.add(transferNode);
@@ -294,7 +317,7 @@ class RaptorAlgorithm
       // Prepend the label
       trace.unshift(previousLabel);
       previousNode = previousLabel.node;
-      if (!(previousLabel.leg instanceof TransferLeg))
+      if (previousLabel.transfer === undefined)
         k --;
     }
 
