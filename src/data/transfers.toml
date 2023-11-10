@@ -63,7 +63,7 @@ arm_hz_art_hz = {between = "arm_hz", and = "art_hz", time = 60}
 # Heuvelkwartier (+ funiculaire)
 arm_hvk_arf_hvk = {between = "arm_hvk", and = "arf_hvk", time = 120, direct = false}
 # Vrijhof / Museumplein
-arm_vhf_arm_mpl = {between = "arm_vhf", and = "arm_mpl", time = 120, direct = false}
+arm_vhf_arm_mpl = {between = "arm_vhf", and = "arm_mpl", time = 60, direct = false}
 # Zuiderbank
 arm_zb_art_zb = {between = "arm_zb", and = "art_zb", time = 60}
 # Luchthaven
