@@ -144,3 +144,7 @@ eqh_dd_nsb_dd = {between = "eqh_dd", and = "nsb_dd", time = 60, direct = false}
 eqh_wl_nsb_wl = {between = "eqh_wl", and = "nsb_wl", time = 60, direct = false}
 # Storia Infinita
 eqh_sti_nsb_sti = {between = "eqh_sti", and = "nsb_sti", time = 60, direct = false}
+# Bovenkamp Centrum
+eqh_bkc_arm_bkc = {between = "eqh_bkc", and = "arm_bkc", time = 60, direct = false}
+# Al-Diyar Al-Bayda
+eqh_db_nsb_db = {between = "eqh_db", and = "nsb_db", time = 60, direct = false}

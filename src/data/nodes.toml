@@ -236,10 +236,13 @@ eqh_gth = {name = "Gaterade Haven", modality = "horse_rental", city = "Gaterade"
 eqh_dd = {name = "Dinsdrecht", modality = "horse_rental", city = "Dinsdrecht", include = false}
 eqh_wl = {name = "Woenslaken", modality = "horse_rental", city = "Woenslaken", include = false}
 eqh_sti = {name = "Storia Infinita", modality = "horse_rental", city = "Storia Infinita", include = false}
+eqh_bkc = {name = "Bovenkamp Centrum", modality = "horse_rental", city = "Arloheim", include = false}
+eqh_db = {name = "Al-Diyar Al-Bayda", modality = "horse_rental", city = "Al-Diyar Al-Bayda", include = false}
 
 # Steden, dorpen en wijken
 cty_abd = {name = "Abende", city = "Stachteren", include = false}
 cty_fdp = {name = "Ferdrop", city = "Ferdrop", include = false}
+cty_fsp = {name = "Ferspeet", city = "Ferspeet", include = false}
 cty_mqd = {name = "Ma'bad Qadim", city = "Ma'bad Qadim", include = false}
 cty_mea = {name = "Meander", city = "Meander", include = false}
 cty_ngv = {name = "Negenervroente", city = "Negenervroente", include = false}

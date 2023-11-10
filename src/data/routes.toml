@@ -1503,7 +1503,6 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Al-Qusur ⟶ Ma'bad Qadim)"
 headsign = "Ma'bad Qadim"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_qs_mqd.stops]
@@ -1515,7 +1514,6 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Lavijn ⟶ Noordersluizen-West)"
 headsign = "Noordersluizen-West"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_lvn_nszw.stops]
@@ -1527,7 +1525,6 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Lavijn ⟶ Zwettem)"
 headsign = "Zwettem"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_lvn_ztm.stops]
@@ -1539,7 +1536,6 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Amsvorde Iberië ⟶ Noordersluizen-West)"
 headsign = "Noordersluizen-West"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_avi_nszw.stops]
@@ -1551,7 +1547,6 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Amsvorde Iberië ⟶ Zwettem)"
 headsign = "Zwettem"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_avi_ztm.stops]
@@ -1563,67 +1558,72 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ Meander)"
 headsign = "Meander"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_sg_mea.stops]
 01 = {node = "eqh_sg", time = 0}
-02 = {node = "cty_mea", time = 0}
+02 = {node = "cty_mea", time = 60}
 
 [eqh_sg_zd]
 agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ 't Zand)"
 headsign = "'t Zand"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_sg_zd.stops]
 01 = {node = "eqh_sg", time = 0}
-02 = {node = "cty_zd", time = 0}
+02 = {node = "cty_zd", time = 180}
 
 [eqh_sg_abd]
 agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ Abende)"
 headsign = "Abende"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_sg_abd.stops]
 01 = {node = "eqh_sg", time = 0}
-02 = {node = "cty_abd", time = 0}
+02 = {node = "cty_abd", time = 255}
 
 [eqh_sg_sjo]
 agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ Sint Jan bij de Oase)"
 headsign = "Sint Jan bij de Oase"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_sg_sjo.stops]
 01 = {node = "eqh_sg", time = 0}
-02 = {node = "cty_sjo", time = 0}
+02 = {node = "cty_sjo", time = 435}
 
 [eqh_sg_fdp]
 agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Slinger ⟶ Ferdrop)"
 headsign = "Ferdrop"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_sg_fdp.stops]
 01 = {node = "eqh_sg", time = 0}
-02 = {node = "cty_fdp", time = 0}
+02 = {node = "cty_fdp", time = 75}
+
+[eqh_sg_fsp]
+agency = "equual"
+modality = "horse_rental"
+name = "Flexpaard (Slinger ⟶ Ferspeet)"
+headsign = "Ferspeet"
+include = false
+
+[eqh_sg_fdp.stops]
+01 = {node = "eqh_sg", time = 0}
+02 = {node = "cty_fsp", time = 465}
 
 [eqh_vt_nszo]
 agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Vittoria ⟶ Noordersluizen-Oost)"
 headsign = "Noordersluizen-Oost"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_vt_nszo.stops]
@@ -1635,7 +1635,6 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Vittoria ⟶ Noordenhoek)"
 headsign = "Noordenhoek"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_vt_ndh.stops]
@@ -1647,43 +1646,39 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Mijdezinder ⟶ Witte Paarden)"
 headsign = "Witte Paarden"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_mdz_wp.stops]
 01 = {node = "eqh_mdz", time = 0}
-02 = {node = "cty_wp", time = 0}
+02 = {node = "cty_wp", time = 45}
 
 [eqh_mdz_ngv]
 agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Mijdezinder ⟶ Negenervroente)"
 headsign = "Negenervroente"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_mdz_ngv.stops]
 01 = {node = "eqh_mdz", time = 0}
-02 = {node = "cty_ngv", time = 0}
+02 = {node = "cty_ngv", time = 60}
 
 [eqh_mdz_fdp]
 agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Mijdezinder ⟶ Ferdrop)"
 headsign = "Ferdrop"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_mdz_fdp.stops]
 01 = {node = "eqh_mdz", time = 0}
-02 = {node = "cty_fdp", time = 0}
+02 = {node = "cty_fdp", time = 75}
 
 [eqh_sti_rmn]
 agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Storia Infinita ⟶ Ramune)"
 headsign = "Ramune"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_sti_rmn.stops]
@@ -1695,7 +1690,6 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Storia Infinita ⟶ Zechenidi)"
 headsign = "Zechenidi"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_sti_znd.stops]
@@ -1707,9 +1701,19 @@ agency = "equual"
 modality = "horse_rental"
 name = "Flexpaard (Storia Infinita ⟶ Punto del Mare)"
 headsign = "Punto del Mare"
-color = {background = "#892ca0", text = "#ffffff"}
 include = false
 
 [eqh_sti_pdm.stops]
 01 = {node = "eqh_sti", time = 0}
 02 = {node = "cty_pdm", time = 375}
+
+[eqh_bkc_ngv]
+agency = "equual"
+modality = "horse_rental"
+name = "Flexpaard (Bovenkamp Centrum ⟶ Negenervroente)"
+headsign = "Negenervroente"
+include = false
+
+[eqh_sti_pdm.stops]
+01 = {node = "eqh_kbc", time = 0}
+02 = {node = "cty_ngv", time = 45}
