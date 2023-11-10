@@ -114,6 +114,7 @@ class Node
     this._feed = feed;
 
     this.id = props.id;
+    this.internalId = props.internalId;
     this.name = props.name;
     this.code = props.code;
     this.abbr = props.abbr;

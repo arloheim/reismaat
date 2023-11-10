@@ -1,5 +1,6 @@
 # Trein (D-treinen)
 [nsb_d1_a]
+internalId = "D1_Av"
 agency = "nsb_fu"
 modality = "rail"
 name = "D1 (Arloheim Campus ⟶ Amsvorde Centraal)"
@@ -14,6 +15,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 04 = {node = "nsb_av", time = 180, platform = "6", alightDirection = "left"}
 
 [nsb_d1_b]
+internalId = "D1_Arc"
 agency = "nsb_fu"
 modality = "rail"
 name = "D1 (Amsvorde Centraal ⟶ Arloheim Campus)"
@@ -28,6 +30,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 04 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
 
 [nsb_d2_a]
+internalId = "D2_Oh"
 agency = "nsb_fu"
 modality = "rail"
 name = "D2 (Arloheim Campus ⟶ Ockholm)"
@@ -43,6 +46,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 05 = {node = "nsb_oh", time = 75, platform = "2", alightDirection = "right"}
 
 [nsb_d2_b]
+internalId = "D1_Arc"
 agency = "nsb_fu"
 modality = "rail"
 name = "D2 (Ockholm ⟶ Arloheim Campus)"
@@ -58,6 +62,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 05 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
 
 [nsb_d7_a]
+internalId = "D7_Gdz"
 agency = "nsb_is"
 modality = "rail"
 name = "D7 (Arloheim Centraal ⟶ Giedrecht Zuid)"
@@ -79,6 +84,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 08 = {node = "nsb_gdz", time = 30, platform = "2", alightDirection = "left"}
 
 [nsb_d7_b]
+internalId = "D7_Ar"
 agency = "nsb_is"
 modality = "rail"
 name = "D7 (Giedrecht Zuid ⟶ Arloheim Centraal)"
@@ -100,6 +106,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 08 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
 
 [nsb_d8_a]
+internalId = "D8_Dw"
 agency = "nsb_is"
 modality = "rail"
 name = "D8 (Arloheim Centraal ⟶ Danewolde)"
@@ -115,6 +122,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 05 = {node = "nsb_dw", time = 180, platform = "1", alightDirection = "left"}
 
 [nsb_d8_b]
+internalId = "D8_Ar"
 agency = "nsb_is"
 modality = "rail"
 name = "D8 (Danewolde ⟶ Arloheim Centraal)"
@@ -130,6 +138,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 05 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
 
 [nsb_d9_a]
+internalId = "D9_Gth"
 agency = "nsb_is"
 modality = "rail"
 name = "D9 (Arloheim Centraal ⟶ Gaterade Haven)"
@@ -146,6 +155,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 06 = {node = "nsb_gth", time = 30, platform = "1", alightDirection = "left"}
 
 [nsb_d9_b]
+internalId = "D9_Ar"
 agency = "nsb_is"
 modality = "rail"
 name = "D9 (Gaterade Haven ⟶ Arloheim Centraal)"
@@ -164,6 +174,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 # Trein (S-treinen)
 [nsb_s10_a]
+internalId = "S10_Ur"
 agency = "nsb_fu"
 modality = "rail"
 name = "S10 (Arloheim Centraal ⟶ Urbigno)"
@@ -186,6 +197,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 12 = {node = "nsb_ub", time = 75, platform = "2", alightDirection = "right"}
 
 [nsb_s10_b]
+internalId = "S10_Ar"
 agency = "nsb_fu"
 modality = "rail"
 name = "S10 (Urbigno ⟶ Arloheim Centraal)"
@@ -208,6 +220,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 12 = {node = "nsb_ar", time = 30, platform = "2", alightDirection = "right"}
 
 [nsb_s11_a]
+internalId = "S11_Oh"
 agency = "nsb_fu"
 modality = "rail"
 name = "S11 (Nedelrand ⟶ Ockholm)"
@@ -228,6 +241,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_oh", time = 75, platform = "2", alightDirection = "right"}
 
 [nsb_s11_b]
+internalId = "S11_Ndr"
 agency = "nsb_fu"
 modality = "rail"
 name = "S11 (Ockholm ⟶ Nedelrand)"
@@ -248,6 +262,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_ndr", time = 60, platform = "3B", alightDirection = "right"}
 
 [nsb_s12_a]
+internalId = "S12_Avv"
 agency = "nsb_fu"
 modality = "rail"
 name = "S12 (Arloheim Campus ⟶ Amsvorde Venpoort)"
@@ -269,6 +284,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 11 = {node = "nsb_avv", time = 30, platform = "1", alightDirection = "right"}
 
 [nsb_s12_b]
+internalId = "S12_Arc"
 agency = "nsb_fu"
 modality = "rail"
 name = "S12 (AmsvordeVenpoort ⟶ Arloheim Campus)"
@@ -290,6 +306,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 11 = {node = "nsb_arc", time = 30, platform = "4", alightDirection = "left"}
 
 [nsb_s15_a]
+internalId = "S15_Uh"
 agency = "nsb_fu"
 modality = "rail"
 name = "S15 (Amsvorde Venpoort ⟶ Ulstheim)"
@@ -307,6 +324,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 07 = {node = "nsb_uh", time = 15, platform = "5", alightDirection = "left"}
 
 [nsb_s15_b]
+internalId = "S15_Avv"
 agency = "nsb_fu"
 modality = "rail"
 name = "S15 (Ulstheim ⟶ Amsvorde Venpoort)"
@@ -324,6 +342,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 07 = {node = "nsb_avv", time = 30, platform = "1", alightDirection = "right"}
 
 [nsb_s16_a]
+internalId = "S16_Lvn"
 agency = "nsb_fu"
 modality = "rail"
 name = "S16 (Amsvorde Venpoort ⟶ Lavijn)"
@@ -340,6 +359,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 06 = {node = "nsb_lvn", time = 45, platform = "1", alightDirection = "left"}
 
 [nsb_s16_b]
+internalId = "S16_Avv"
 agency = "nsb_fu"
 modality = "rail"
 name = "S16 (Lavijn ⟶ Amsvorde Venpoort)"
@@ -356,6 +376,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 06 = {node = "nsb_avv", time = 30, platform = "1", alightDirection = "right"}
 
 [nsb_s17_a]
+internalId = "S17_Fta"
 agency = "nsb_fu"
 modality = "rail"
 name = "S17 (Amsvorde Centraal ⟶ Finiterra)"
@@ -376,6 +397,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_fta", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s17_b]
+internalId = "S17_Av"
 agency = "nsb_fu"
 modality = "rail"
 name = "S17 (Finiterra ⟶ Amsvorde Centraal)"
@@ -396,6 +418,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_av", time = 30, platform = "2", alightDirection = "right"}
 
 [nsb_s97_a]
+internalId = "S97_Gnl"
 agency = "nsb_fu"
 modality = "rail"
 name = "S97 (Vittoria ⟶ Greneylant)"
@@ -412,6 +435,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 06 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s97_b]
+internalId = "S97_Vt"
 agency = "nsb_fu"
 modality = "rail"
 name = "S97 (Greneylant ⟶ Vittoria)"
@@ -428,6 +452,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 06 = {node = "nsb_vt", time = 75, platform = "3", alightDirection = "left"}
 
 [nsb_s20_a]
+internalId = "S20_Gth"
 agency = "nsb_is"
 modality = "rail"
 name = "S20 (Arloheim Forum ⟶ Gaterade Haven)"
@@ -449,6 +474,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 11 = {node = "nsb_gth", time = 30, platform = "1", alightDirection = "left"}
 
 [nsb_s20_b]
+internalId = "S20_Arfo"
 agency = "nsb_is"
 modality = "rail"
 name = "S20 (Gaterade Haven ⟶ Arloheim Forum)"
@@ -470,6 +496,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 11 = {node = "nsb_arfo", time = 30, platform = "3B", alightDirection = "left"}
 
 [nsb_s21_a]
+internalId = "S21_Zms"
 agency = "nsb_is"
 modality = "rail"
 name = "S21 (Arloheim Forum ⟶ Zonnemarsen)"
@@ -494,6 +521,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 13 = {node = "nsb_zms", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s21_b]
+internalId = "S21_Arfo"
 agency = "nsb_is"
 modality = "rail"
 name = "S21 (Zonnemarsen ⟶ Arloheim Forum)"
@@ -518,6 +546,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 13 = {node = "nsb_arfo", time = 30, platform = "3B", alightDirection = "left"}
 
 [nsb_s22_a]
+internalId = "S22_Gvn"
 agency = "nsb_is"
 modality = "rail"
 name = "S22 (Arloheim Campus ⟶ 's-Groevenisse)"
@@ -538,6 +567,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_gvn", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s22_b]
+internalId = "S22_Arc"
 agency = "nsb_is"
 modality = "rail"
 name = "S22 ('s-Groevenisse ⟶ Arloheim Campus)"
@@ -558,6 +588,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_arc", time = 60, platform = "2", alightDirection = "right"}
 
 [nsb_s23_a]
+internalId = "S23_Str"
 agency = "nsb_is"
 modality = "rail"
 name = "S23 (Arloheim Campus ⟶ Stachteren)"
@@ -573,6 +604,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_str", time = 75, platform = "2", alightDirection = "right"}
 
 [nsb_s23_b]
+internalId = "S23_Arc"
 agency = "nsb_is"
 modality = "rail"
 name = "S23 (Stachteren ⟶ Arloheim Campus)"
@@ -588,6 +620,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_arc", time = 60, platform = "2", alightDirection = "right"}
 
 [nsb_s30_a]
+internalId = "S30_Wl"
 agency = "nsb_is"
 modality = "rail"
 name = "S30 (Malmen Zuid ⟶ Woenslaken)"
@@ -612,6 +645,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 14 = {node = "nsb_wl", time = 90, platform = "1", alightDirection = "right"}
 
 [nsb_s30_b]
+internalId = "S30_Mmz"
 agency = "nsb_is"
 modality = "rail"
 name = "S30 (Woenslaken ⟶ Malmen Zuid)"
@@ -636,6 +670,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 14 = {node = "nsb_mmz", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s31_a]
+internalId = "S31_Bkh"
 agency = "nsb_is"
 modality = "rail"
 name = "S31 (Fremond aan Zee ⟶ Berkenhoven)"
@@ -653,6 +688,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 07 = {node = "nsb_bkh", time = 60, platform = "34", alightDirection = "right"}
 
 [nsb_s31_b]
+internalId = "S31_Fm"
 agency = "nsb_is"
 modality = "rail"
 name = "S31 (Berkenhoven ⟶ Fremond aan Zee)"
