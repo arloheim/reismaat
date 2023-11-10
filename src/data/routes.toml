@@ -1615,7 +1615,7 @@ name = "Flexpaard (Slinger ⟶ Ferspeet)"
 headsign = "Ferspeet"
 include = false
 
-[eqh_sg_fdp.stops]
+[eqh_sg_fsp.stops]
 01 = {node = "eqh_sg", time = 0}
 02 = {node = "cty_fsp", time = 465}
 
@@ -1714,6 +1714,6 @@ name = "Flexpaard (Bovenkamp Centrum ⟶ Negenervroente)"
 headsign = "Negenervroente"
 include = false
 
-[eqh_sti_pdm.stops]
-01 = {node = "eqh_kbc", time = 0}
+[eqh_bkc_ngv.stops]
+01 = {node = "eqh_bkc", time = 0}
 02 = {node = "cty_ngv", time = 45}
