@@ -1092,8 +1092,8 @@ color = {background = "#c8ab37", text = "#ffffff"}
 [art_841_b]
 agency = "arlov"
 modality = "tram"
-name = "Tram 841 (Wadekwartier ⟶ Elfshaven)"
-headsign = "Elfshaven"
+name = "Tram 841 (Elfshaven ⟶ Wadekwartier)"
+headsign = "Wadekwartier"
 abbr = "841"
 color = {background = "#c8ab37", text = "#ffffff"}
 
