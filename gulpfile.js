@@ -17,7 +17,7 @@ function handleError(err) {
 
 
 async function js() {
-  const b = browserify('./src/js/main.js');
+  const b = browserify('./src/js/main.js', {debug: true});
   b.transform('brfs');
 
   return b.bundle()
