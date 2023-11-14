@@ -540,7 +540,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 07 = {node = "nsb_hak", time = 45, platform = "2", alightDirection = "left"}
 08 = {node = "nsb_bkh", time = 60, platform = "3", alightDirection = "right"}
 09 = {node = "nsb_lvl", time = 30, platform = "2", alightDirection = "right"}
-10 = {node = "nsb_gn", time = 30, platform = "2", alightDirection = "right"}1
+10 = {node = "nsb_gn", time = 30, platform = "2", alightDirection = "right"}
 11 = {node = "nsb_gbk", time = 45, platform = "2", alightDirection = "right"}
 12 = {node = "nsb_bw", time = 30, platform = "2", alightDirection = "right"}
 13 = {node = "nsb_ndr", time = 45, platform = "1A", alightDirection = "right"}
