@@ -517,8 +517,9 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_vhz", time = 45, platform = "2", alightDirection = "left"}
 11 = {node = "nsb_bg", time = 60, platform = "1", alightDirection = "right"}
 12 = {node = "nsb_dw", time = 30, platform = "2", alightDirection = "right"}
-# [...]
-13 = {node = "nsb_zms", time = 0, platform = "", status = "cancelled"}
+13 = {node = "nsb_rhn", time = 45, platform = "1", alightDirection = "left"}
+14 = {node = "nsb_vgn", time = 60, platform = "", status = "cancelled"}
+15 = {node = "nsb_zms", time = 60, platform = "", status = "cancelled"}
 
 [nsb_s21_b]
 internalId = "S21_Arfo"
@@ -531,19 +532,20 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s21_b.stops]
 01 = {node = "nsb_zms", time = 0, platform = "", status = "cancelled"}
-# [...]
-02 = {node = "nsb_dw", time = 0, platform = "3"}
-03 = {node = "nsb_bg", time = 30, platform = "2", alightDirection = "right"}
-04 = {node = "nsb_vhz", time = 60, platform = "5", alightDirection = "left"}
-05 = {node = "nsb_hak", time = 45, platform = "2", alightDirection = "left"}
-06 = {node = "nsb_bkh", time = 60, platform = "3", alightDirection = "right"}
-07 = {node = "nsb_lvl", time = 30, platform = "2", alightDirection = "right"}
-08 = {node = "nsb_gn", time = 30, platform = "2", alightDirection = "right"}
-09 = {node = "nsb_gbk", time = 45, platform = "2", alightDirection = "right"}
-10 = {node = "nsb_bw", time = 30, platform = "2", alightDirection = "right"}
-11 = {node = "nsb_ndr", time = 45, platform = "1A", alightDirection = "right"}
-12 = {node = "nsb_arc", time = 60, platform = "4", alightDirection = "left"}
-13 = {node = "nsb_arfo", time = 30, platform = "3B", alightDirection = "left"}
+02 = {node = "nsb_vgn", time = 60, platform = "", status = "cancelled"}
+03 = {node = "nsb_rhn", time = 60, platform = "2", alightDirection = "left"}
+04 = {node = "nsb_dw", time = 45, platform = "3", alightDirection = "right"}
+05 = {node = "nsb_bg", time = 30, platform = "2", alightDirection = "right"}
+06 = {node = "nsb_vhz", time = 60, platform = "5", alightDirection = "left"}
+07 = {node = "nsb_hak", time = 45, platform = "2", alightDirection = "left"}
+08 = {node = "nsb_bkh", time = 60, platform = "3", alightDirection = "right"}
+09 = {node = "nsb_lvl", time = 30, platform = "2", alightDirection = "right"}
+10 = {node = "nsb_gn", time = 30, platform = "2", alightDirection = "right"}1
+11 = {node = "nsb_gbk", time = 45, platform = "2", alightDirection = "right"}
+12 = {node = "nsb_bw", time = 30, platform = "2", alightDirection = "right"}
+13 = {node = "nsb_ndr", time = 45, platform = "1A", alightDirection = "right"}
+14 = {node = "nsb_arc", time = 60, platform = "4", alightDirection = "left"}
+15 = {node = "nsb_arfo", time = 30, platform = "3B", alightDirection = "left"}
 
 [nsb_s22_a]
 internalId = "S22_Gvn"

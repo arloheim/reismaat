@@ -124,6 +124,8 @@ class Node
     this.modalityNodeName = props.modalityNodeName ?? this.modality?.nodeName;
     this.icon = props.icon ?? this.modality?.icon ?? 'location-dot';
     this.city = props.city;
+    this.x = props.x;
+    this.y = props.y;
     this.include = props.include ?? true;
   }
 

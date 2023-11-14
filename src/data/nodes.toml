@@ -1,71 +1,73 @@
 # Trein
-nsb_afv = {name = "De Afval", code = "afv", modality = "rail", city = "De Afval"}
-nsb_db = {name = "Al-Diyar Al-Bayda", code = "db", modality = "rail", city = "Al-Diyar Al-Bayda"}
-nsb_qs = {name = "Al-Qusur", code = "qs", modality = "rail", city = "Al-Qusur"}
-nsb_wh = {name = "Al-Waha", code = "wh", modality = "rail", city = "Al-Waha"}
-nsb_akh = {name = "Alkenholt", code = "akh", modality = "rail", city = "Alkenholt"}
+nsb_afv = {name = "De Afval", code = "afv", modality = "rail", city = "De Afval", x = -1578, y = 58}
+nsb_db = {name = "Al-Diyar Al-Bayda", code = "db", modality = "rail", city = "Al-Diyar Al-Bayda", x = 754, y = 4}
+nsb_qs = {name = "Al-Qusur", code = "qs", modality = "rail", city = "Al-Qusur", x = 294, y = 283}
+nsb_wh = {name = "Al-Waha", code = "wh", modality = "rail", city = "Al-Waha", x = 525, y = 222}
+nsb_akh = {name = "Alkenholt", code = "akh", modality = "rail", city = "Alkenholt", x = -1493, y = 2278}
 nsb_alt = {name = "Altione", code = "alt", modality = "rail", city = "Altione"}
-nsb_av = {name = "Amsvorde Centraal", code = "av", modality = "rail", city = "Amsvorde"}
-nsb_avi = {name = "Amsvorde Iberië", code = "avi", modality = "rail", city = "Amsvorde"}
-nsb_avo = {name = "Amsvorde Oost", code = "avo", modality = "rail", city = "Amsvorde"}
-nsb_avv = {name = "Amsvorde Venpoort", code = "avv", modality = "rail", city = "Amsvorde"}
-nsb_arc = {name = "Arloheim Campus", code = "arc", modality = "rail", city = "Arloheim"}
-nsb_ar = {name = "Arloheim Centraal", code = "ar", modality = "rail", city = "Arloheim"}
-nsb_arfo = {name = "Arloheim Forum", code = "arfo", modality = "rail", city = "Arloheim"}
-nsb_arp = {name = "Arloheim Panderberg", code = "arp", modality = "rail", city = "Arloheim"}
-nsb_aur = {name = "Aurora", code = "aur", modality = "rail", city = "Roodkastel"}
-nsb_bw = {name = "Berg en Waes", code = "bw", modality = "rail", city = "Berg en Waes"}
-nsb_bkh = {name = "Berkenhoven", code = "bkh", modality = "rail", city = "Berkenhoven"}
-nsb_bg = {name = "Bugel", code = "bg", modality = "rail", city = "Danewolde"}
+nsb_av = {name = "Amsvorde Centraal", code = "av", modality = "rail", city = "Amsvorde", x = 1299, y = 109}
+nsb_avi = {name = "Amsvorde Iberië", code = "avi", modality = "rail", city = "Amsvorde", x = 1140, y = 93}
+nsb_avo = {name = "Amsvorde Oost", code = "avo", modality = "rail", city = "Amsvorde", x = 1469, y = 46}
+nsb_avv = {name = "Amsvorde Venpoort", code = "avv", modality = "rail", city = "Amsvorde", x = 1469, y = -131}
+nsb_arc = {name = "Arloheim Campus", code = "arc", modality = "rail", city = "Arloheim", x = -366, y = 84}
+nsb_ar = {name = "Arloheim Centraal", code = "ar", modality = "rail", city = "Arloheim", x = 105, y = 259}
+nsb_arfo = {name = "Arloheim Forum", code = "arfo", modality = "rail", city = "Arloheim", x = -292, y = 271}
+nsb_arp = {name = "Arloheim Panderberg", code = "arp", modality = "rail", city = "Arloheim", x = -139, y = 64}
+nsb_aur = {name = "Aurora", code = "aur", modality = "rail", city = "Roodkastel", x = -1288, y = 3033}
+nsb_bw = {name = "Berg en Waes", code = "bw", modality = "rail", city = "Berg en Waes", x = -1289, y = 58}
+nsb_bkh = {name = "Berkenhoven", code = "bkh", modality = "rail", city = "Berkenhoven", x = -1090, y = 1238}
+nsb_bg = {name = "Bugel", code = "bg", modality = "rail", city = "Danewolde", x = -935, y = 2798}
 nsb_css = {name = "Casesecce", code = "css", modality = "rail", city = "Casesecce"}
-nsb_dw = {name = "Danewolde", code = "dw", modality = "rail", city = "Danewolde"}
-nsb_dwo = {name = "Danewolde Overwaer", code = "swo", modality = "rail", city = "Danewolde"}
-nsb_dd = {name = "Dinsdrecht", code = "ss", modality = "rail", city = "Dinsdrecht"}
+nsb_dw = {name = "Danewolde", code = "dw", modality = "rail", city = "Danewolde", x = -934, y = 3033}
+nsb_dwo = {name = "Danewolde Overwaer", code = "swo", modality = "rail", city = "Danewolde", x = -1077, y = 3033}
+nsb_dd = {name = "Dinsdrecht", code = "ss", modality = "rail", city = "Dinsdrecht", x = -2316, y = 1729}
 nsb_fta = {name = "Finiterra", code = "fta", modality = "rail", city = "Finiterra"}
 nsb_fm = {name = "Fremond aan Zee", code = "fm", modality = "rail", city = "Fremond"}
-nsb_fmc = {name = "Fremond Centrum", code = "fmc", modality = "rail", city = "Fremond"}
-nsb_gt = {name = "Gaterade", code = "gt", modality = "rail", city = "Gaterade"}
-nsb_gth = {name = "Gaterade Haven", code = "gth", modality = "rail", city = "Gaterade"}
-nsb_gtp = {name = "Gaterade Poort", code = "gtp", modality = "rail", city = "Gaterade"}
-nsb_gd = {name = "Giedrecht", code = "gd", modality = "rail", city = "Giedrecht"}
-nsb_gdz = {name = "Giedrecht Zuid", code = "gdz", modality = "rail", city = "Giedrecht"}
-nsb_gn = {name = "Goningen", code = "gn", modality = "rail", city = "Gonigen"}
+nsb_fmc = {name = "Fremond Centrum", code = "fmc", modality = "rail", city = "Fremond", x = -1502, y = 3200}
+nsb_gt = {name = "Gaterade", code = "gt", modality = "rail", city = "Gaterade", x = -493, y = 1270}
+nsb_gth = {name = "Gaterade Haven", code = "gth", modality = "rail", city = "Gaterade", x = -327, y = 1269}
+nsb_gtp = {name = "Gaterade Poort", code = "gtp", modality = "rail", city = "Gaterade", x = -617, y = 1267}
+nsb_gd = {name = "Giedrecht", code = "gd", modality = "rail", city = "Giedrecht", x = -2316, y = 1898}
+nsb_gdz = {name = "Giedrecht Zuid", code = "gdz", modality = "rail", city = "Giedrecht", x = -2230, y = 2011}
+nsb_gn = {name = "Goningen", code = "gn", modality = "rail", city = "Gonigen", x = -1272, y = 821}
 nsb_gnl = {name = "Greneylant", code = "gnl", modality = "rail", city = "Greneylant"}
 nsb_gvn = {name = "'s-Groevenisse", code = "gvn", modality = "rail", city = "'s-Groevenisse"}
-nsb_gbk = {name = "Grote Bladik", code = "gbk", modality = "rail", city = "Grote Bladik"}
-nsb_hak = {name = "Hoogalken", code = "hak", modality = "rail", city = "Hoogalken"}
+nsb_gbk = {name = "Grote Bladik", code = "gbk", modality = "rail", city = "Grote Bladik", x = -1356, y = 384}
+nsb_hak = {name = "Hoogalken", code = "hak", modality = "rail", city = "Hoogalken", x = -1097, y = 1939}
 nsb_hk = {name = "Hoorink", code = "hk", modality = "rail", city = "Malmen"}
 nsb_hmr = {name = "Hoortmeer", code = "hmr", modality = "rail", city = "Hoortmeer"}
-nsb_kdk = {name = "Kuindijk", code = "kdk", modality = "rail", city = "Polraaij"}
-nsb_lvl = {name = "Laagvliet", code = "lvl", modality = "rail", city = "Laagvliet"}
+nsb_kdk = {name = "Kuindijk", code = "kdk", modality = "rail", city = "Polraaij", x = -2072, y = 448}
+nsb_lvl = {name = "Laagvliet", code = "lvl", modality = "rail", city = "Laagvliet", x = -1097, y = 1014}
 nsb_lr = {name = "Landraaf", code = "lr", modality = "rail", city = "Landraaf"}
-nsb_lvn = {name = "Lavijn", code = "lvn", modality = "rail", city = "Lavijn"}
+nsb_lvn = {name = "Lavijn", code = "lvn", modality = "rail", city = "Lavijn", x = 803, y = -279}
 nsb_mm = {name = "Malmen", code = "mm", modality = "rail", city = "Malmen"}
 nsb_mmz = {name = "Malmen Zuid", code = "mmz", modality = "rail", city = "Malmen"}
-nsb_mso = {name = "Masarino", code = "mso", modality = "rail", city = "Masarino"}
-nsb_md = {name = "Meede", code = "md", modality = "rail", city = "Roodkastel"}
-nsb_ndr = {name = "Nedelrand", code = "ndr", modality = "rail", city = "Nedelrand"}
-nsb_np = {name = "Nipsen", code = "np", modality = "rail", city = "Nipsen"}
-nsb_oh = {name = "Ockholm", code = "oh", modality = "rail", city = "Ockholm"}
-nsb_pry = {name = "Polraaij", code = "pry", modality = "rail", city = "Polraaij"}
-nsb_rdk = {name = "Roodekerken", code = "rdk", modality = "rail", city = "Roodekerken"}
-nsb_rks = {name = "Roodkastel", code = "rks", modality = "rail", city = "Roodkastel"}
-nsb_sb = {name = "Sabbiane", code = "sb", modality = "rail", city = "Sabbiane"}
+nsb_mso = {name = "Masarino", code = "mso", modality = "rail", city = "Masarino", x = 1850, y = 662}
+nsb_md = {name = "Meede", code = "md", modality = "rail", city = "Roodkastel", x = -1360, y = 2948}
+nsb_ndr = {name = "Nedelrand", code = "ndr", modality = "rail", city = "Nedelrand", x = -892, y = 59}
+nsb_np = {name = "Nipsen", code = "np", modality = "rail", city = "Nipsen", x = -962, y = -908}
+nsb_oh = {name = "Ockholm", code = "oh", modality = "rail", city = "Ockholm", x = 525, y = -706}
+nsb_pry = {name = "Polraaij", code = "pry", modality = "rail", city = "Polraaij", x = -1941, y = 57}
+nsb_rhn = {name = "Rhaan", code = "rhn", modality = "rail", city = "Danewolde", x = -936, y = 3372}
+nsb_rdk = {name = "Roodekerken", code = "rdk", modality = "rail", city = "Roodekerken", x = -2171, y = 1120}
+nsb_rks = {name = "Roodkastel", code = "rks", modality = "rail", city = "Roodkastel", x = -1360, y = 2729}
+nsb_sb = {name = "Sabbiane", code = "sb", modality = "rail", city = "Sabbiane", x = 1775, y = 66}
 nsb_snn = {name = "Schieren Noord", code = "snn", modality = "rail", city = "Schieren"}
-nsb_snz = {name = "Schieren Zuid", code = "snz", modality = "rail", city = "Schieren"}
-nsb_sg = {name = "Slinger", code = "sg", modality = "rail", city = "Slinger"}
-nsb_str = {name = "Stachteren", code = "str", modality = "rail", city = "Stachteren"}
-nsb_sti = {name = "Storia Infinita", code = "sti", modality = "rail", city = "Storia Infinita"}
-nsb_tp = {name = "Il Tempio", code = "up", modality = "rail", city = "Sabbiane"}
-nsb_uh = {name = "Ulstheim", code = "uh", modality = "rail", city = "Ulstheim"}
-nsb_uhz = {name = "Ulstheim Zuid", code = "uhz", modality = "rail", city = "Ulstheim"}
-nsb_ub = {name = "Urbigno", code = "ub", modality = "rail", city = "Urbigno"}
-nsb_vhz = {name = "Valkenhuizen", code = "vhz", modality = "rail", city = "Valkenhuizen"}
-nsb_vv = {name = "Valverde", code = "vv", modality = "rail", city = "Valverede"}
-nsb_vd = {name = "Valle Deserta", code = "vd", modality = "rail", city = "Sabbiane"}
-nsb_vt = {name = "Vittoria", code = "vt", modality = "rail", city = "Vittoria"}
+nsb_snz = {name = "Schieren Zuid", code = "snz", modality = "rail", city = "Schieren", x = -2111, y = -724}
+nsb_sg = {name = "Slinger", code = "sg", modality = "rail", city = "Slinger", x = -959, y = -193}
+nsb_str = {name = "Stachteren", code = "str", modality = "rail", city = "Stachteren", x = -577, y = -905}
+nsb_sti = {name = "Storia Infinita", code = "sti", modality = "rail", city = "Storia Infinita", x = 3615, y = -311}
+nsb_tp = {name = "Il Tempio", code = "up", modality = "rail", city = "Sabbiane", x = 1786, y = 269}
+nsb_uh = {name = "Ulstheim", code = "uh", modality = "rail", city = "Ulstheim", x = 525, y = -146}
+nsb_uhz = {name = "Ulstheim Zuid", code = "uhz", modality = "rail", city = "Ulstheim", x = 525, y = -20}
+nsb_ub = {name = "Urbigno", code = "ub", modality = "rail", city = "Urbigno", x = 4174, y = -344}
+nsb_vhz = {name = "Valkenhuizen", code = "vhz", modality = "rail", city = "Valkenhuizen", x = -1097, y = 2553}
+nsb_vv = {name = "Valverde", code = "vv", modality = "rail", city = "Valverede", x = 3074, y = -249}
+nsb_vd = {name = "Valle Deserta", code = "vd", modality = "rail", city = "Sabbiane", x = 2111, y = -330}
+nsb_vt = {name = "Vittoria", code = "vt", modality = "rail", city = "Vittoria", x = 1582, y = -247}
+nsb_vgn = {name = "Vlieringen", code = "vgn", modality = "rail", city = "Vlieringen"}
 nsb_whk = {name = "Westhoornik", code = "whk", modality = "rail", city = "Westhoornik"}
-nsb_wl = {name = "Woenslaken", code = "wl", modality = "rail", city = "Woenslaken"}
+nsb_wl = {name = "Woenslaken", code = "wl", modality = "rail", city = "Woenslaken", x = -2334, y = 743}
 nsb_zms = {name = "Zonnemarsen", code = "zms", modality = "rail", city = "Zonnemarsen"}
 
 # Metro Arloheim
