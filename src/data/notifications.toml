@@ -46,14 +46,6 @@ period = "tot nader order"
 affectedNodes = ["nsb_rdk", "nsb_dd"]
 affectedRoutes = ["nsb_d7_a", "nsb_d7_b"]
 
-[nsb_d9_s20_disrupted]
-type = "construction"
-name = "Gaterade - Gaterade Haven"
-description = "Door werkzaamheden wordt het treinstation Gaterade Haven niet bediend. Trein D9 rijdt van Arloheim Centraal tot Gaterade v.v. en trein S20 rijdt van Arloheim Forum tot Gaterade v.v. Reizigers vanuit Arloheim kunnen ook gebruikmaken van de hyperloop vanaf Arloheim Forum."
-period = "tot nader order"
-affectedNodes = ["nsb_gth"]
-affectedRoutes = ["nsb_d9_a", "nsb_d9_b", "nsb_s20_a", "nsb_s20_b"]
-
 [nsb_s17_disrupted]
 type = "construction"
 name = "Masarino - Finiterra"
