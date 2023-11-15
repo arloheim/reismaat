@@ -54,14 +54,6 @@ period = "tot nader order"
 affectedNodes = ["nsb_css", "nsb_alt", "nsb_fta"]
 affectedRoutes = ["nsb_s17_a", "nsb_s17_b"]
 
-[nsb_s21_disrupted]
-type = "construction"
-name = "Danewolde - Zonnemarsen"
-description = "Door werkzaamheden wordt het treinstation Zonnemarsen niet bediend. Trein S21 rijdt van Arloheim Forum tot Danewolde v.v."
-period = "tot nader order"
-affectedNodes = ["nsb_zms"]
-affectedRoutes = ["nsb_s21_a", "nsb_s21_b"]
-
 [nsb_s22_disrupted]
 type = "construction"
 name = "Woenslaken - 's-Groevenisse"

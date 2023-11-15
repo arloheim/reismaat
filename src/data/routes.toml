@@ -518,8 +518,8 @@ color = {background = "#2b7749", text = "#ffffff"}
 11 = {node = "nsb_bg", time = 60, platform = "1", alightDirection = "right"}
 12 = {node = "nsb_dw", time = 30, platform = "2", alightDirection = "right"}
 13 = {node = "nsb_rhn", time = 45, platform = "1", alightDirection = "left"}
-14 = {node = "nsb_vgn", time = 60, platform = "", status = "cancelled"}
-15 = {node = "nsb_zms", time = 60, platform = "", status = "cancelled"}
+14 = {node = "nsb_vgn", time = 60, platform = "1", alightDirection = "right"}
+15 = {node = "nsb_zms", time = 60, platform = "1", alightDirection = "left"}
 
 [nsb_s21_b]
 internalId = "S21_Arfo"
@@ -531,8 +531,8 @@ abbr = "S21"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s21_b.stops]
-01 = {node = "nsb_zms", time = 0, platform = "", status = "cancelled"}
-02 = {node = "nsb_vgn", time = 60, platform = "", status = "cancelled"}
+01 = {node = "nsb_zms", time = 0, platform = "4"}
+02 = {node = "nsb_vgn", time = 60, platform = "2", alightDirection = "right"}
 03 = {node = "nsb_rhn", time = 60, platform = "2", alightDirection = "left"}
 04 = {node = "nsb_dw", time = 45, platform = "3", alightDirection = "right"}
 05 = {node = "nsb_bg", time = 30, platform = "2", alightDirection = "right"}
