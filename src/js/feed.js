@@ -261,6 +261,16 @@ class Route
     return this._feed.getNotificationsThatAffectRoute(this);
   }
 
+  // Return the stop of the route with the specified sequence
+  getStopWithSequence(sequence, excludeNonHalts = false) {
+    return this.stops.find(s => s.sequence === sequence && (!excludeNonHalts || s.halts));
+  }
+
+  // Return the index of the stop of the route with the specified sequence
+  getStopIndexWithSequence(sequence, excludeNonHalts = false) {
+    return this.stops.findIndex(s => s.sequence === sequence && (!excludeNonHalts || s.halts));
+  }
+
   // Return the stop of the route that halts at the specified node
   getStopAtNode(node, excludeNonHalts = false) {
     return this.stops.find(s => s.node.id === node.id && (!excludeNonHalts || s.halts));
@@ -280,6 +290,18 @@ class Route
   // Copy the route
   _copy(modifiedProps = {}) {
     return new Route(this._feed, {...this, ...modifiedProps});
+  }
+
+  // Slice the route to begin at the specified sequence
+  _sliceBeginningAtSequence(seqence) {
+    let index = this.getStopIndexWithSequence(seqence);
+    return index > -1 ? this._copy({stops: this.stops.slice(index)}) : this._copy();
+  }
+
+  // Slice the route to end at the specified sequence
+  _sliceEndingAtSequence(seqence) {
+    let index = this.getStopIndexWithSequence(seqence);
+    return index > -1 ? this._copy({stops: this.stops.slice(0, index + 1)}) : this._copy();
   }
 
   // Slice the route to begin at the specified node

@@ -1,8 +1,6 @@
 const _ = require('underscore');
 const dayjs = require('dayjs');
 
-const feed = require('./feed.js');
-
 
 // Class that defines a route leg of a journey
 class RouteLeg
@@ -237,8 +235,9 @@ class RaptorAlgorithm
 
             // Check if the node can be reached faster using the label
             if (label.cumulativeTime < stop.cumulativeTime) {
+
               // Slice the route with the better time
-              route = route._sliceBeginningAtNode(stop.node)._withInitialTime(label.cumulativeTime + (k > 1 ? 60 : 0));
+              route = route._sliceBeginningAtSequence(stop.sequence)._withInitialTime(label.cumulativeTime + (k > 1 ? 60 : 0));
 
               // Update the route-dependent variables
               routeNode = stop.node;
