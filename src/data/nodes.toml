@@ -36,7 +36,7 @@ nsb_gbk = {name = "Grote Bladik", code = "gbk", modality = "rail", city = "Grote
 nsb_hak = {name = "Hoogalken", code = "hak", modality = "rail", city = "Hoogalken", x = -1097, y = 1939}
 nsb_hk = {name = "Hoorink", code = "hk", modality = "rail", city = "Malmen"}
 nsb_hmr = {name = "Hoortmeer", code = "hmr", modality = "rail", city = "Hoortmeer"}
-nsb_kdk = {name = "Kuindijk", code = "kdk", modality = "rail", city = "Polraaij", x = -2072, y = 448}
+nsb_kdk = {name = "Kuindijk", code = "kdk", modality = "rail", city = "Kuindijk", x = -2072, y = 448}
 nsb_lvl = {name = "Laagvliet", code = "lvl", modality = "rail", city = "Laagvliet", x = -1097, y = 1014}
 nsb_lr = {name = "Landraaf", code = "lr", modality = "rail", city = "Landraaf"}
 nsb_lvn = {name = "Lavijn", code = "lvn", modality = "rail", city = "Lavijn", x = 803, y = -279}
@@ -62,13 +62,13 @@ nsb_uh = {name = "Ulstheim", code = "uh", modality = "rail", city = "Ulstheim", 
 nsb_uhz = {name = "Ulstheim Zuid", code = "uhz", modality = "rail", city = "Ulstheim", x = 525, y = -20}
 nsb_ub = {name = "Urbigno", code = "ub", modality = "rail", city = "Urbigno", x = 4174, y = -344}
 nsb_vhz = {name = "Valkenhuizen", code = "vhz", modality = "rail", city = "Valkenhuizen", x = -1097, y = 2553}
-nsb_vv = {name = "Valverde", code = "vv", modality = "rail", city = "Valverede", x = 3074, y = -249}
+nsb_vv = {name = "Valverde", code = "vv", modality = "rail", city = "Valverde", x = 3074, y = -249}
 nsb_vd = {name = "Valle Deserta", code = "vd", modality = "rail", city = "Sabbiane", x = 2111, y = -330}
 nsb_vt = {name = "Vittoria", code = "vt", modality = "rail", city = "Vittoria", x = 1582, y = -247}
-nsb_vgn = {name = "Vlieringen", code = "vgn", modality = "rail", city = "Vlieringen"}
+nsb_vgn = {name = "Vlieringen", code = "vgn", modality = "rail", city = "Vlieringen", x = -976, y = 3798}
 nsb_whk = {name = "Westhoornik", code = "whk", modality = "rail", city = "Westhoornik"}
 nsb_wl = {name = "Woenslaken", code = "wl", modality = "rail", city = "Woenslaken", x = -2334, y = 743}
-nsb_zms = {name = "Zonnemarsen", code = "zms", modality = "rail", city = "Zonnemarsen"}
+nsb_zms = {name = "Zonnemarsen", code = "zms", modality = "rail", city = "Zonnemarsen", x = -1197, y = 4048}
 
 # Metro Arloheim
 arm_nsw = {name = "Nedersalwey", code = "nsw", modality = "subway", city = "Nedersalwey"}

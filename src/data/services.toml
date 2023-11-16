@@ -65,10 +65,10 @@ nsb_vhz = ["tickets_nsb_is", "stairs", "waiting_room"]
 nsb_vv = ["tickets_nsb_fu"]
 nsb_vd = ["tickets_nsb_fu"]
 nsb_vt = ["horse_rental", "tickets_nsb_fu"]
-nsb_vgn = []
+nsb_vgn = ["tickets_nsb_is", "waiting_room", "coffee_shop"]
 nsb_whk = []
 nsb_wl = ["trains_long_distance_nsb_is", "horse_rental", "tickets_nsb_is", "service_nsb_is", "stairs", "waiting_room"]
-nsb_zms = []
+nsb_zms = ["tickets_nsb_is", "service_nsb_is", "waiting_room", "coffee_shop"]
 
 # Metro Arloheim
 arm_nsw = ["tickets_arlov", "service_arlov", "stairs", "waiting_room", "fast_food_shop"]
