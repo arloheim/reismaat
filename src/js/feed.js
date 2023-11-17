@@ -5,6 +5,8 @@ const toml = require('toml');
 
 const MiniSearch = require('minisearch');
 
+const {sanitize, renderIcon} = require('./utils');
+
 
 // Object that contains the available files
 const _files = {
@@ -18,28 +20,6 @@ const _files = {
   'services_types': fs.readFileSync('src/data/services_types.toml', 'utf-8'),
   'transfers': fs.readFileSync('src/data/transfers.toml', 'utf-8'),
 };
-
-// Function that returns HTML for an icon
-function _iconToHTML(icon, classes) {
-  if (icon === undefined)
-    return null;
-
-  let match = icon.match(/^(?:(fa[srb]|svg):)?(.*)$/);
-
-  let type = match !== null && match[1] !== undefined ? match[1] : 'fas';
-  let id = match !== null ? match[2] : icon;
-
-  if (type === 'fas')
-    return `<i class="fa-solid ${classes} fa-${id}"></i>`;
-  else if (type === 'far')
-    return `<i class="fa-regular ${classes} fa-${id}"></i>`;
-  else if (type === 'fab')
-    return `<i class="fa-brands ${classes} fa-${id}"></i>`;
-  else if (type === 'svg')
-    return `<img class="svg-icon ${classes}" src="/assets/images/icons/${id}.svg">`;
-  else
-    return null;
-}
 
 
 // Class that defines an agency in a feed
@@ -79,7 +59,7 @@ class Agency
 
   // Return HTML for the icon
   renderIcon() {
-    return (classes) => _iconToHTML(this.icon, classes);
+    return (classes) => renderIcon(this.icon, classes);
   }
 }
 
@@ -101,7 +81,7 @@ class Modality
 
   // Return HTML for the icon
   renderIcon() {
-    return (classes) => _iconToHTML(this.icon, classes);
+    return (classes) => renderIcon(this.icon, classes);
   }
 }
 
@@ -115,6 +95,7 @@ class Node
 
     this.id = props.id;
     this.internalId = props.internalId;
+    this.slug = props.slug;
     this.name = props.name;
     this.code = props.code;
     this.abbr = props.abbr;
@@ -181,7 +162,7 @@ class Node
 
   // Return HTML for the icon
   renderIcon() {
-    return (classes) => _iconToHTML(this.icon, classes);
+    return (classes) => renderIcon(this.icon, classes);
   }
 
   // Return HTML for rendering a dropdown item
@@ -205,6 +186,7 @@ class Route
     this._feed = feed;
 
     this.id = props.id;
+    this.slug = props.slug;
     this.name = props.name;
     this.abbr = props.abbr;
     this.description = props.description;
@@ -283,7 +265,7 @@ class Route
 
   // Return HTML for the icon
   renderIcon() {
-    return (classes) => _iconToHTML(this.icon, classes);
+    return (classes) => renderIcon(this.icon, classes);
   }
 
 
@@ -402,7 +384,7 @@ class Transfer
 
   // Return HTML for the icon
   renderIcon() {
-    return (classes) => _iconToHTML(this.icon, classes);
+    return (classes) => renderIcon(this.icon, classes);
   }
 
 
@@ -448,7 +430,7 @@ class ServiceType
 
   // Return HTML for the icon
   renderIcon() {
-    return (classes) => _iconToHTML(this.icon, classes);
+    return (classes) => renderIcon(this.icon, classes);
   }
 }
 
@@ -468,7 +450,7 @@ class Service
 
   // Return HTML for the icon
   renderIcon() {
-    return (classes) => _iconToHTML(this.icon, classes);
+    return (classes) => renderIcon(this.icon, classes);
   }
 }
 
@@ -531,7 +513,7 @@ class Notification
 
   // Return HTML for the icon
   renderIcon() {
-    return (classes) => _iconToHTML(this.icon, classes);
+    return (classes) => renderIcon(this.icon, classes);
   }
 }
 
@@ -540,7 +522,7 @@ class Notification
 class Feed
 {
   // Constructor
-  constructor(props = {}) {
+  constructor() {
     this._agencies = this._parseTomlFile('agencies', this._parseAgency);
     this._modalities = this._parseTomlFile('modalities', this._parseModality);
     this._nodes = this._parseTomlFile('nodes', this._parseNode);
@@ -551,12 +533,53 @@ class Feed
     this._notificationTypes = this._parseTomlFile('notifications_types', this._parseNotificationType);
     this._notifications = this._parseTomlFile('notifications', this._parseNotification);
 
+    // Generate slugs for the nodes and routes
+    this._generateSlugsForNodes();
+    this._generateSlugsForRoutes();
+
+    // Create the search index for the nodes
     this._nodesIndex = new MiniSearch({
       fields: ['name', 'city', 'code'],
       storeFields: ['modality'],
       searchOptions: {prefix: true, fuzzy: 0.1, combineWith: 'AND', boost: {name: 2}, boostDocument: this._boostNodeDocument.bind(this)}
     });
-    this._nodesIndex.addAll(Object.values(this.nodes));
+    this._nodesIndex.addAll(this.nodes);
+  }
+
+  // Generate slugs for nodes
+  _generateSlugsForNodes() {
+    let slugsInUse = this.nodes.map(n => n.slug).filter(slug => slug !== undefined);
+
+    for (let [slug, nodes] of Object.entries(_.groupBy(this.nodes.filter(n => n.slug === undefined), n => sanitize(n.name)))) {
+      let suffix = 0;
+      for (let node of nodes) {
+        let nodeSlug = slugsInUse.includes(slug) && node.modalityNodeName !== undefined ? `${sanitize(node.modalityNodeName)}-${slug}` : slug;
+        if (slugsInUse.includes(nodeSlug)) {
+          suffix ++;
+          nodeSlug = `${nodeSlug}-${suffix}`;
+        }
+        node.slug = nodeSlug;
+        slugsInUse.push(nodeSlug);
+      }
+    }
+  }
+
+  // Generate slugs for routes
+  _generateSlugsForRoutes() {
+    let slugsInUse = this.routes.map(r => r.slug).filter(slug => slug !== undefined);
+
+    for (let [slug, routes] of Object.entries(_.groupBy(this.routes.filter(r => r.slug === undefined), r => sanitize(`${r.modality.name} ${r.abbr ?? ""} ${r.headsign}`)))) {
+      let suffix = 0;
+      for (let route of routes) {
+        let routeSlug = slug;
+        if (slugsInUse.includes(routeSlug)) {
+          suffix ++;
+          routeSlug = `${routeSlug}-${suffix}`;
+        }
+        route.slug = routeSlug;
+        slugsInUse.push(routeSlug);
+      }
+    }
   }
 
 
@@ -622,6 +645,11 @@ class Feed
     return node;
   }
 
+  // Return the node with the specified slug in the feed
+  getNodeWithSlug(slug) {
+    return this.nodes.find(n => n.slug === slug);
+  }
+
   // Return the nodes that match the search query in the feed
   searchNodes(query) {
     return this._nodesIndex.search(query);
@@ -647,6 +675,11 @@ class Feed
     if (route === undefined)
       console.warn(`Could not find route with id '${id}'`);
     return route;
+  }
+
+  // Return the route with the specified slug in the feed
+  getRouteWithSlug(slug) {
+    return this.routes.find(r => r.slug === slug);
   }
 
   // Return the routes for the specified agency in the feed
@@ -698,29 +731,12 @@ class Feed
 
   // Return the transfer between the specified nodes in the feed
   getTransferBetweenNodes(between, and) {
-    return this.transfers.filter(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id))).shift();
+    return this.transfers.find(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id)));
   }
 
   // Return the direct transfer between the specified nodes in the feed
   getDirectTransferBetweenNodes(between, and) {
-    return this.directTransfers.filter(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id))).shift();
-  }
-
-
-  // Return the notification types in the feed
-  get notificationTypes() {
-    return Object.values(this._notificationTypes);
-  }
-
-  // Return the notification type with the specified id in the feed
-  getNotificationType(id) {
-    if (id === undefined)
-      return undefined;
-
-    let notificationType = this._notificationTypes[id];
-    if (notificationType === undefined)
-      console.warn(`Could not find notification type with id '${id}'`);
-    return notificationType;
+    return this.directTransfers.find(transfer => ((transfer.between.id === between.id && transfer.and.id === and.id) || (transfer.between.id === and.id && transfer.and.id === between.id)));
   }
 
 
@@ -752,6 +768,23 @@ class Feed
     if (services === undefined)
       console.warn(`Could not find services for node with id '${node.id}'`);
     return services;
+  }
+
+
+  // Return the notification types in the feed
+  get notificationTypes() {
+    return Object.values(this._notificationTypes);
+  }
+
+  // Return the notification type with the specified id in the feed
+  getNotificationType(id) {
+    if (id === undefined)
+      return undefined;
+
+    let notificationType = this._notificationTypes[id];
+    if (notificationType === undefined)
+      console.warn(`Could not find notification type with id '${id}'`);
+    return notificationType;
   }
 
 
