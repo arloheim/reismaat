@@ -5,13 +5,13 @@ nsb_qs = {name = "Al-Qusur", code = "qs", modality = "rail", city = "Al-Qusur", 
 nsb_wh = {name = "Al-Waha", code = "wh", modality = "rail", city = "Al-Waha", x = 525, y = 222}
 nsb_akh = {name = "Alkenholt", code = "akh", modality = "rail", city = "Alkenholt", x = -1493, y = 2278}
 nsb_alt = {name = "Altione", code = "alt", modality = "rail", city = "Altione"}
-nsb_av = {name = "Amsvorde Centraal", code = "av", modality = "rail", city = "Amsvorde", x = 1299, y = 109}
+nsb_av = {name = "Amsvorde Centraal", code = "av", slug = "amsvorde-centraal", modality = "rail", city = "Amsvorde", x = 1299, y = 109}
 nsb_avi = {name = "Amsvorde Iberië", code = "avi", modality = "rail", city = "Amsvorde", x = 1140, y = 93}
 nsb_avo = {name = "Amsvorde Oost", code = "avo", modality = "rail", city = "Amsvorde", x = 1469, y = 46}
 nsb_avv = {name = "Amsvorde Venpoort", code = "avv", modality = "rail", city = "Amsvorde", x = 1469, y = -131}
-nsb_arc = {name = "Arloheim Campus", code = "arc", modality = "rail", city = "Arloheim", x = -366, y = 84}
-nsb_ar = {name = "Arloheim Centraal", code = "ar", modality = "rail", city = "Arloheim", x = 105, y = 259}
-nsb_arfo = {name = "Arloheim Forum", code = "arfo", modality = "rail", city = "Arloheim", x = -292, y = 271}
+nsb_arc = {name = "Arloheim Campus", code = "arc", slug = "arloheim-campus", modality = "rail", city = "Arloheim", x = -366, y = 84}
+nsb_ar = {name = "Arloheim Centraal", code = "ar", slug = "arloheim-centraal", modality = "rail", city = "Arloheim", x = 105, y = 259}
+nsb_arfo = {name = "Arloheim Forum", code = "arfo", slug = "arloheim-forum", modality = "rail", city = "Arloheim", x = -292, y = 271}
 nsb_arp = {name = "Arloheim Panderberg", code = "arp", modality = "rail", city = "Arloheim", x = -139, y = 64}
 nsb_aur = {name = "Aurora", code = "aur", modality = "rail", city = "Roodkastel", x = -1288, y = 3033}
 nsb_bw = {name = "Berg en Waes", code = "bw", modality = "rail", city = "Berg en Waes", x = -1289, y = 58}
@@ -242,7 +242,7 @@ eqh_bkc = {name = "Bovenkamp Centrum", modality = "horse_rental", city = "Arlohe
 eqh_db = {name = "Al-Diyar Al-Bayda", modality = "horse_rental", city = "Al-Diyar Al-Bayda", include = false}
 
 # Steden, dorpen en wijken
-cty_abd = {name = "Abende", city = "Stachteren", include = false}
+cty_abd = {name = "Abende", city = "Abende", include = false}
 cty_fdp = {name = "Ferdrop", city = "Ferdrop", include = false}
 cty_fsp = {name = "Ferspeet", city = "Ferspeet", include = false}
 cty_mqd = {name = "Ma'bad Qadim", city = "Ma'bad Qadim", include = false}
@@ -255,7 +255,7 @@ cty_pdm = {name = "Punto del Mare", city = "Punto del Mare", include = false}
 cty_rmn = {name = "Ramune", city = "Ramune", include = false}
 cty_sjo = {name = "Sint Jan bij de Oase", city = "Sint Jan bij de Oase", include = false}
 cty_wp = {name = "Witte Paarden", city = "Westerenk", include = false}
-cty_zd = {name = "'t Zand", city = "Nipsen", include = false}
+cty_zd = {name = "'t Zand", city = "'t Zand", include = false}
 cty_znd = {name = "Zechenidì", city = "Zechenidì", include = false}
 cty_ztm = {name = "Zwettem", city = "Zwettem", include = false}
 

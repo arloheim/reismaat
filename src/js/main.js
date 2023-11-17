@@ -27,9 +27,9 @@ $(function() {
   router.addRoute('notifications', {path: '/meldingen', template: 'pages/notifications'});
   router.addRoute('tickets', {path: '/tickets', template: 'pages/tickets'});
   router.addRoute('routes', {path: '/dienstregeling', template: 'pages/routes'});
-  router.addRoute('routes_details', {path: '/dienstregeling/:id', template: 'pages/routes_details', data: collectRoutesDetailsData});
+  router.addRoute('routes_details', {path: '/dienstregeling/:slug', template: 'pages/routes_details', data: collectRoutesDetailsData});
   router.addRoute('nodes', {path: '/stations', template: 'pages/nodes'});
-  router.addRoute('nodes_details', {path: '/stations/:id', template: 'pages/nodes_details', data: collectNodesDetailsData});
+  router.addRoute('nodes_details', {path: '/stations/:slug', template: 'pages/nodes_details', data: collectNodesDetailsData});
   router.addRoute('about', {path: '/over', template: 'pages/about'});
 
   // Add hooks to the router
@@ -52,8 +52,8 @@ $(function() {
 
   // Collect data for the planner page
   function collectPlannerData(match) {
-    let from = feed.getNode(match.params?.f);
-    let to = feed.getNode(match.params?.t);
+    let from = feed.getNodeWithSlug(match.params?.f);
+    let to = feed.getNodeWithSlug(match.params?.t);
     let date = match.params?.d;
 
     if (from === undefined || to === undefined)
@@ -67,20 +67,20 @@ $(function() {
 
   // Collect data for the routes details page
   function collectRoutesDetailsData(match) {
-    let routeId = match.data?.id;
-    let route = feed.getRoute(routeId);
-    if (routeId === undefined || route === undefined)
-      throw new NotFoundError(`Could not find route with id '${routeId}'`);
+    let slug = match.data?.slug;
+    let route = feed.getRouteWithSlug(slug);
+    if (slug === undefined || route === undefined)
+      throw new NotFoundError(`Could not find route with slug '${slug}'`);
 
     return {route};
   }
 
   // Collect data for the nodes details page
   function collectNodesDetailsData(match) {
-    let nodeId = match.data?.id;
-    let node = feed.getNode(nodeId);
-    if (nodeId === undefined || node === undefined)
-      throw new NotFoundError(`Could not find node with id '${nodeId}'`);
+    let slug = match.data?.slug;
+    let node = feed.getNodeWithSlug(slug);
+    if (slug === undefined || node === undefined)
+      throw new NotFoundError(`Could not find node with slug '${slug}'`);
 
     function mapRoutes(routes, node) {
       return routes.filter(r => !r.stop.last).toSorted(sortByPlatform);
