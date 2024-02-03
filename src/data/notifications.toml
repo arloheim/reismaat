@@ -28,16 +28,15 @@ name = "Meenemen van flexpaarden is niet toegestaan"
 affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_nszw"]
 
 
-# Nieuws
-[nsb_d1_extended_to_snn]
-type = "news"
-name = "Trein D1 wordt verlengd naar Schieren Noord"
-description = "Met ingang van de dienstregeling 2024 per 10 december a.s. wordt trein D1 verlengd van Amsvorde Centraal naar Schieren Noord. De trein zal na Amsvorde Centraal stoppen in Schieren Zuid en Schieren Noord."
-affectedNodes = ["nsb_snz", "nsb_snn"]
-affectedRoutes = ["nsb_d1_a", "nsb_d1_b"]
-
-
 # Storingen en werkzaamheden
+[nsb_d1_s97_disrupted]
+type = "construction"
+name = "Schieren Zuid - Greneylant"
+description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein D1 rijdt van Arloheim Campus tot Schieren Zuid v.v., trein S97 rijdt van Vittoria tot Schieren Zuid v.v."
+period = "tot nader order"
+affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
+affectedRoutes = ["nsb_d1_a", "nsb_d1_b", "nsb_s97_a", "nsb_s97_b"]
+
 [nsb_d7_changed]
 type = "construction"
 name = "Woenslaken - Giedrecht"
@@ -77,11 +76,3 @@ description = "Door werkzaamheden wordt het treinstation Fremond aan Zee niet be
 period = "tot nader order"
 affectedNodes = ["nsb_fm"]
 affectedRoutes = ["nsb_s31_a", "nsb_s31_b"]
-
-[nsb_s97_disrupted]
-type = "construction"
-name = "Schieren Zuid - Greneylant (S97)"
-description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein S97 rijdt van Vittoria tot Schieren Zuid."
-period = "tot nader order"
-affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
-affectedRoutes = ["nsb_s97_a", "nsb_s97_b"]

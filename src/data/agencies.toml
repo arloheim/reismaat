@@ -29,22 +29,22 @@ icon = "svg:agency_vara"
 
 [gvd]
 name = "Giedrechtse Vervoersdienst"
-description = "stadsvervoer in Giedrecht"
 abbr = "GVD"
+description = "stadsvervoer in Giedrecht"
 icon = "svg:agency_gvd"
 
 [stm]
 name = "STM | CTS"
-description = "stadsvervoer in Schieren"
 abbr = "STM"
+description = "stadsvervoer in Schieren"
 icon = "svg:agency_stm"
 
 
 # Veerdiensten
 [fer_nos]
 name = "Rederij N-O-S"
-description = "veerdienst Stachteren-Negenaar-Ockholm"
 abbr = "N-O-S"
+description = "veerdienst Stachteren-Negenaar-Ockholm"
 icon = "svg:agency_fer_nos"
 
 [fer_smijn]

@@ -143,7 +143,7 @@ art_hz = {name = "Arloheim, Halenz", modality = "tram", city = "Arloheim"}
 art_mlw = {name = "Arloheim, Molenweg", modality = "tram", city = "Arloheim"}
 art_lan = {name = "Arloheim, Land van Nooid", modality = "tram", city = "Arloheim"}
 art_cs = {name = "Arloheim, Centraal Station", modality = "tram", city = "Arloheim"}
-art_cslz = {name = "Arloheim, Centraal Station (Luneriazijde)", modality = "tram", city = "Arloheim"}
+art_cslz = {name = "Arloheim, Centraal Station - Luneriazijde", modality = "tram", city = "Arloheim"}
 art_lhv = {name = "Arloheim, Luchthaven", modality = "tram", city = "Arloheim"}
 art_psw = {name = "Arloheim, Passewijde", modality = "tram", city = "Arloheim"}
 art_nvh = {name = "Arloheim, Nijverheid", modality = "tram", city = "Arloheim"}
@@ -161,7 +161,7 @@ art_dmn = {name = "Arloheim, Dreesmann", modality = "tram", city = "Arloheim"}
 art_zhs = {name = "Arloheim, Zandhaas", modality = "tram", city = "Arloheim"}
 art_ost = {name = "Arloheim, Ou-Steyn", modality = "tram", city = "Arloheim"}
 art_vmt = {name = "Arloheim, Vismarkt", modality = "tram", city = "Arloheim"}
-art_gnv = {name = "Arloheim, Genova (Station Steyn)", modality = "tram", city = "Arloheim"}
+art_gnv = {name = "Arloheim, Genova - Station Steyn", modality = "tram", city = "Arloheim"}
 art_otb = {name = "Arloheim, Oosterbad", modality = "tram", city = "Arloheim"}
 art_atv = {name = "Arloheim, Aalsterve", modality = "tram", city = "Arloheim"}
 art_dbk = {name = "Arloheim, Duinbeek", modality = "tram", city = "Arloheim"}

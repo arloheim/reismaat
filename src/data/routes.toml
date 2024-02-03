@@ -3,8 +3,8 @@
 internalId = "D1_Av"
 agency = "nsb_fu"
 modality = "rail"
-name = "D1 (Arloheim Campus ⟶ Amsvorde Centraal)"
-headsign = "Amsvorde Centraal"
+name = "D1 (Arloheim Campus ⟶ Schieren Noord)"
+headsign = "Schieren Noord"
 abbr = "D1"
 color = {background = "#4d1515", text = "#ffffff"}
 
@@ -13,21 +13,25 @@ color = {background = "#4d1515", text = "#ffffff"}
 02 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
 03 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
 04 = {node = "nsb_av", time = 180, platform = "6", alightDirection = "left"}
+05 = {node = "nsb_snz", time = 0, platform = "1", alightDirection = "right"}
+06 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
 
 [nsb_d1_b]
 internalId = "D1_Arc"
 agency = "nsb_fu"
 modality = "rail"
-name = "D1 (Amsvorde Centraal ⟶ Arloheim Campus)"
+name = "D1 (Schieren Noord ⟶ Arloheim Campus)"
 headsign = "Arloheim Campus"
 abbr = "D1"
 color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d1_b.stops]
-01 = {node = "nsb_av", time = 0, platform = "6"}
-02 = {node = "nsb_ar", time = 180, platform = "6", alightDirection = "left"}
-03 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
-04 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
+01 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
+02 = {node = "nsb_snz", time = 0, platform = "2", alightDirection = "right"}
+03 = {node = "nsb_av", time = 0, platform = "6", alightDirection = "right"}
+04 = {node = "nsb_ar", time = 180, platform = "6", alightDirection = "left"}
+05 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
+06 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
 
 [nsb_d2_a]
 internalId = "D2_Oh"
@@ -287,7 +291,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 internalId = "S12_Arc"
 agency = "nsb_fu"
 modality = "rail"
-name = "S12 (AmsvordeVenpoort ⟶ Arloheim Campus)"
+name = "S12 (Amsvorde Venpoort ⟶ Arloheim Campus)"
 headsign = "Arloheim Campus"
 abbr = "S12"
 color = {background = "#2b7749", text = "#ffffff"}
@@ -813,7 +817,7 @@ color = {background = "#2ad4ff", text = "#ffffff"}
 agency = "arlov"
 modality = "subway"
 name = "Metro C (Steyn ⟶ Luchthaven)"
-headsign = "Steyn"
+headsign = "Luchthaven"
 abbr = "C"
 color = {background = "#2ad4ff", text = "#ffffff"}
 
