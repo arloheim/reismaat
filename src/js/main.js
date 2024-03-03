@@ -16,7 +16,6 @@ $(function() {
 
   // Create the feed
   let feed = new Feed();
-  console.log('Feed:', feed);
 
   // Create the router
   let router = new Router('/', $('#view'));
@@ -147,33 +146,6 @@ $(function() {
     // Show the first element of a collapse group
     $el.find('.collapse[data-group]').first().show();
 
-    // Handle switching the from and to fields
-    $el.find('form#planner #switch').on('click', function() {
-      let temp = $el.find('#from').val();;
-      $el.find('#from').val($el.find('#to').val());
-      $el.find('#to').val(temp);
-    });
-
-    // Handle setting the date field to the current time
-    $el.find('form#planner #now').on('click', function() {
-      $el.find('#datetime').val(dayjs().format('YYYY-MM-DDTHH:mm'));
-    });
-
-    // Plan a trip when the planner form is submitted
-    $el.find('form#planner').on('submit', function(e) {
-      e.preventDefault();
-
-      // Get the params from the form
-      let from = $(this).find('#from').val();
-      let to = $(this).find('#to').val();
-      let datetime = $(this).find('#datetime').val();
-
-      from = feed.searchNodes(from)[0]?.id;
-      to = feed.searchNodes(to)[0]?.id;
-
-      router.navigateToPath(`/reisadvies?f=${from}&t=${to}&d=${datetime}`);
-    });
-
     // Toggle a collapse element when the corresponding link is clicked
     $el.find('a[data-collapse]').on('click', function() {
       let collapseElement = $(this).data('collapse');
@@ -194,17 +166,45 @@ $(function() {
       $(this).find('.icon > svg').toggleClass('fa-chevron-down fa-chevron-up');
     });
 
+    // Plan a trip when the planner form is submitted
+    $el.find('form#planner').on('submit', function(e) {
+      e.preventDefault();
+
+      // Get the params from the form
+      let fromId = $(this).find('#from').data('id');
+      let from = feed.getNode(fromId);
+      let toId = $(this).find('#to').data('id');
+      let to = feed.getNode(toId);
+      let datetime = $(this).find('#datetime').val();
+
+      if (from !== undefined && to !== undefined)
+        router.navigateToPath(`/reisadvies?f=${from.slug}&t=${to.slug}&d=${datetime}`);
+      else
+        console.log();
+    });
+
+    // Handle switching the from and to fields
+    $el.find('form#planner #switch').on('click', function() {
+      let temp = $el.find('#from').val();;
+      $el.find('#from').val($el.find('#to').val());
+      $el.find('#to').val(temp);
+    });
+
+    // Handle setting the date field to the current time
+    $el.find('form#planner #now').on('click', function() {
+      $el.find('#datetime').val(dayjs().format('YYYY-MM-DDTHH:mm'));
+    });
+
     // Event handler for when a node input changes
-    $el.find('.node-input').on('input change', _.debounce(function() {
-      var $el = $(this);
+    $el.find('.node-input').on('input', _.debounce(function() {
+      var $input = $(this);
 
-      var input = $el.val();
-      var foundNodes = feed.searchNodes(input);
+      // Clear the stored id
+      $input.data('id', undefined);
 
-      // Get the dropdown
-      let $dropdown = $el.parents('.dropdown');
+      // Get the dropdown and create the dropdown content
+      let $dropdown = $input.parents('.dropdown');
 
-      // Create the dropdown content
       let $dropdownMenu = $dropdown.find('.dropdown-menu');
       if ($dropdownMenu.length === 0)
         $dropdownMenu = $('<div class="dropdown-menu">').appendTo($dropdown);
@@ -214,35 +214,54 @@ $(function() {
         $dropdownContent = $('<div class="dropdown-content">').appendTo($dropdownMenu);
 
       // Function that defines an event handler when a dropdown item is clicked
-      function dropdownItemClick() {
+      let dropdownItemClick = function() {
+        let id = $(this).data('id');
+
         $dropdown.hide().removeClass('is-active');
-        $el.val(feed.getNode($(this).data('id')).name);
+        $input.data('id', id);
+        $input.val(feed.getNode(id).name);
       }
 
-      // Clear the dropdown content
-      $dropdownContent.empty();
+      // Get the query of the input and search for matching nodes
+      var query = $input.val();
+      var foundNodes = feed.searchNodes(query);
 
-      // Add the nodes to the dropdown content
-      for (let foundNode of foundNodes.slice(0, 10)) {
-        feed.getNode(foundNode.id).renderDropdownItem()
-          .on('click', dropdownItemClick)
-          .appendTo($dropdownContent);
+      if (query === "" || foundNodes.length === 0) {
+        // Hide the dropdown
+        $dropdown.removeClass('is-active').hide();
+      } else {
+        // Clear the dropdown content
+        $dropdownContent.empty();
+
+        // Add the nodes to the dropdown content
+        for (let foundNode of foundNodes.slice(0, 10)) {
+          feed.getNode(foundNode.id).renderDropdownItem()
+            .on('click', dropdownItemClick)
+            .appendTo($dropdownContent);
+        }
+
+        // Activate the dropdown
+        $dropdown.show().addClass('is-active');
       }
-
-      // Activate the dropdown
-      $dropdown.show().addClass('is-active');
     }, 500));
 
     // Event handler for when a node input loses focus
     $el.find('.node-input').on('blur', _.debounce(function() {
+      let $input = $(this);
       // Hide the dropdown
-      let $dropdown = $(this).parents('.dropdown').removeClass('is-active').hide();
+      $input.parents('.dropdown').removeClass('is-active').hide();
+
+      // Check if the input has an attached id
+      if ($input.data('id') === undefined)
+        $input.addClass('is-danger');
+      else
+        $input.removeClass('is-danger');
     }, 100));
   }
 
 
   // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function() {
+  $(".navbar-burger").on('click', function() {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
     $(".navbar-burger").toggleClass("is-active");
     $(".navbar-menu").toggleClass("is-active");

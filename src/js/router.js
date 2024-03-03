@@ -94,7 +94,7 @@ class Router
   }
 
   // Return a generated link for a route
-  link(name, data) {
+  link(path, options) {
     if (this._navigo === undefined)
       this._navigo = this._createRouter();
 
