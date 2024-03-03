@@ -29,22 +29,6 @@ affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_n
 
 
 # Storingen en werkzaamheden
-[nsb_d1_s97_disrupted]
-type = "construction"
-name = "Schieren Zuid - Greneylant"
-description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein D1 rijdt van Arloheim Campus tot Schieren Zuid v.v., trein S97 rijdt van Vittoria tot Schieren Zuid v.v."
-period = "tot nader order"
-affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
-affectedRoutes = ["nsb_d1_a", "nsb_d1_b", "nsb_s97_a", "nsb_s97_b"]
-
-[nsb_d7_changed]
-type = "construction"
-name = "Woenslaken - Giedrecht"
-description = "Door werkzaamheden stopt trein D7 tussen Woenslaken en Giedrecht op alle tussengelegen treinstations, te weten Roodekerken en Dinsdrecht."
-period = "tot nader order"
-affectedNodes = ["nsb_rdk", "nsb_dd"]
-affectedRoutes = ["nsb_d7_a", "nsb_d7_b"]
-
 [nsb_s17_disrupted]
 type = "construction"
 name = "Masarino - Finiterra"
@@ -61,18 +45,10 @@ period = "tot nader order"
 affectedNodes = ["nsb_hmr", "nsb_whk", "nsb_gvn"]
 affectedRoutes = ["nsb_s22_a", "nsb_s22_b"]
 
-[nsb_s30_disrupted]
+[nsb_d1_s97_disrupted]
 type = "construction"
-name = "Malmen Zuid - Danewolde"
-description = "Door werkzaamheden worden de treinstations Malmen Zuid, Malmen en Hoorink niet bediend. Trein S30 rijdt van Danewolde tot Woenslaken v.v."
+name = "Schieren Zuid - Greneylant"
+description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein S97 rijdt van Vittoria tot Schieren Zuid v.v."
 period = "tot nader order"
-affectedNodes = ["nsb_mmz", "nsb_mm", "nsb_hk"]
-affectedRoutes = ["nsb_s30_a", "nsb_s30_b"]
-
-[nsb_s31_disrupted]
-type = "construction"
-name = "Fremond aan Zee - Fremond Centrum"
-description = "Door werkzaamheden wordt het treinstation Fremond aan Zee niet bediend. Trein S31 rijdt van Fremond Centrum tot Berkenhoven v.v."
-period = "tot nader order"
-affectedNodes = ["nsb_fm"]
-affectedRoutes = ["nsb_s31_a", "nsb_s31_b"]
+affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
+affectedRoutes = ["nsb_s97_a", "nsb_s97_b"]

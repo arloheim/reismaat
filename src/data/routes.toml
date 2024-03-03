@@ -3,8 +3,8 @@
 internalId = "D1_Av"
 agency = "nsb_fu"
 modality = "rail"
-name = "D1 (Arloheim Campus ⟶ Schieren Noord)"
-headsign = "Schieren Noord"
+name = "D1 (Arloheim Campus ⟶ Amsvorde Centraal)"
+headsign = "Amsvorde Centraal"
 abbr = "D1"
 color = {background = "#4d1515", text = "#ffffff"}
 
@@ -13,25 +13,21 @@ color = {background = "#4d1515", text = "#ffffff"}
 02 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
 03 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
 04 = {node = "nsb_av", time = 180, platform = "6", alightDirection = "left"}
-05 = {node = "nsb_snz", time = 0, platform = "1", alightDirection = "right"}
-06 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
 
 [nsb_d1_b]
 internalId = "D1_Arc"
 agency = "nsb_fu"
 modality = "rail"
-name = "D1 (Schieren Noord ⟶ Arloheim Campus)"
+name = "D1 (Amsvorde Centraal ⟶ Arloheim Campus)"
 headsign = "Arloheim Campus"
 abbr = "D1"
 color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d1_b.stops]
-01 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
-02 = {node = "nsb_snz", time = 0, platform = "2", alightDirection = "right"}
-03 = {node = "nsb_av", time = 0, platform = "6", alightDirection = "right"}
-04 = {node = "nsb_ar", time = 180, platform = "6", alightDirection = "left"}
-05 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
-06 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
+01 = {node = "nsb_av", time = 0, platform = "6", alightDirection = "right"}
+02 = {node = "nsb_ar", time = 180, platform = "6", alightDirection = "left"}
+03 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
+04 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
 
 [nsb_d2_a]
 internalId = "D2_Oh"
@@ -79,13 +75,8 @@ color = {background = "#4d1515", text = "#ffffff"}
 02 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
 03 = {node = "nsb_arc", time = 30, platform = "6", alightDirection = "right"}
 04 = {node = "nsb_wl", time = 330, platform = "2", alightDirection = "left"}
-# extra stops vanwege werkzaamheden
-05 = {node = "nsb_rdk", time = 90, platform = "1", alightDirection = "left", status = "additional"}
-06 = {node = "nsb_dd", time = 105, platform = "1", alightDirection = "right", status = "additional"}
-07 = {node = "nsb_gd", time = 30, platform = "1", alightDirection = "right"}
-#05 = {node = "nsb_gd", time = 210, platform = "1", alightDirection = "right"}
-# einde extra stops vanwege werkzaamheden
-08 = {node = "nsb_gdz", time = 30, platform = "2", alightDirection = "left"}
+05 = {node = "nsb_gd", time = 210, platform = "1", alightDirection = "right"}
+06 = {node = "nsb_gdz", time = 30, platform = "2", alightDirection = "left"}
 
 [nsb_d7_b]
 internalId = "D7_Ar"
@@ -99,15 +90,10 @@ color = {background = "#4d1515", text = "#ffffff"}
 [nsb_d7_b.stops]
 01 = {node = "nsb_gdz", time = 0, platform = "2"}
 02 = {node = "nsb_gd", time = 30, platform = "2", alightDirection = "right"}
-# extra stops vanwege werkzaamheden
-03 = {node = "nsb_dd", time = 30, platform = "2", alightDirection = "right", status = "additional"}
-04 = {node = "nsb_rdk", time = 105, platform = "1", alightDirection = "right", status = "additional"}
-05 = {node = "nsb_wl", time = 90, platform = "1", alightDirection = "right"}
-#03 = {node = "nsb_wl", time = 210, platform = "1", alightDirection = "right"}
-# einde extra stops vanwege werkzaamheden
-06 = {node = "nsb_arc", time = 330, platform = "3", alightDirection = "right"}
-07 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
-08 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
+03 = {node = "nsb_wl", time = 210, platform = "1", alightDirection = "right"}
+04 = {node = "nsb_arc", time = 330, platform = "3", alightDirection = "right"}
+05 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
+06 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
 
 [nsb_d8_a]
 internalId = "D8_Dw"
@@ -635,10 +621,10 @@ abbr = "S30"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s30_a.stops]
-01 = {node = "nsb_mmz", time = 0, platform = "", status = "cancelled"}
-02 = {node = "nsb_mm", time = 0, platform = "", status = "cancelled"}
-03 = {node = "nsb_hk", time = 0, platform = "", status = "cancelled"}
-04 = {node = "nsb_dw", time = 0, platform = "6", alightDirection = "right"}
+01 = {node = "nsb_mmz", time = 0, platform = "2"}
+02 = {node = "nsb_mm", time = 15, platform = "2", alightDirection = "right"}
+03 = {node = "nsb_hk", time = 45, platform = "3", alightDirection = "right"}
+04 = {node = "nsb_dw", time = 60, platform = "6", alightDirection = "right"}
 05 = {node = "nsb_dwo", time = 15, platform = "2", alightDirection = "right"}
 06 = {node = "nsb_aur", time = 30, platform = "2", alightDirection = "right"}
 07 = {node = "nsb_rks", time = 30, platform = "2", alightDirection = "right"}
@@ -671,9 +657,9 @@ color = {background = "#2b7749", text = "#ffffff"}
 09 = {node = "nsb_aur", time = 30, platform = "1", alightDirection = "right"}
 10 = {node = "nsb_dwo", time = 30, platform = "1", alightDirection = "right"}
 11 = {node = "nsb_dw", time = 15, platform = "5", alightDirection = "right"}
-12 = {node = "nsb_hk", time = 0, platform = "", status = "cancelled"}
-13 = {node = "nsb_mm", time = 0, platform = "", status = "cancelled"}
-14 = {node = "nsb_mmz", time = 0, platform = "", status = "cancelled"}
+12 = {node = "nsb_hk", time = 60, platform = "1", alightDirection = "right"}
+13 = {node = "nsb_mm", time = 45, platform = "1", alightDirection = "right"}
+14 = {node = "nsb_mmz", time = 15, platform = "1", alightDirection = "left"}
 
 [nsb_s31_a]
 internalId = "S31_Bkh"
@@ -685,8 +671,8 @@ abbr = "S31"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s31_a.stops]
-01 = {node = "nsb_fm", time = 0, platform = "", status = "cancelled"}
-02 = {node = "nsb_fmc", time = 0, platform = "2", alightDirection = "right"}
+01 = {node = "nsb_fm", time = 0, platform = "1"}
+02 = {node = "nsb_fmc", time = 45, platform = "2", alightDirection = "right"}
 03 = {node = "nsb_rks", time = 60, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_md", time = 30, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_vhz", time = 60, platform = "6", alightDirection = "right"}
@@ -709,7 +695,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 04 = {node = "nsb_md", time = 60, platform = "1", alightDirection = "right"}
 05 = {node = "nsb_rks", time = 30, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_fmc", time = 60, platform = "1", alightDirection = "right"}
-07 = {node = "nsb_fm", time = 0, platform = "", status = "cancelled"}
+07 = {node = "nsb_fm", time = 45, platform = "1", alightDirection = "right"}
 
 
 # Metro Arloheim
