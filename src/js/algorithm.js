@@ -73,7 +73,7 @@ class Journey
 
     this.formattedDepartureTime = this.departureTime.format('H:mm');
     this.formattedArrivalTime = this.arrivalTime.format('H:mm');
-    this.formattedDuration = `${Math.floor(this.duration / 3600)}:${Math.ceil(this.duration % 3600 / 60).toString().padStart(2, '0')}`;
+    this.formattedDuration = `${Math.floor(this.duration / 3600)}:${Math.floor(this.duration % 3600 / 60).toString().padStart(2, '0')}`;
 
     // Iterate over the legs
     for (let [index, leg] of this.legs.entries()) {
@@ -161,6 +161,17 @@ class RaptorAlgorithm
     return route.getStopIndexAtNode(node1) < route.getStopIndexAtNode(node2);
   }
 
+  // Return the earliest departure time when transfering
+  _earliestDepartureTime(arrivalTime, k = 1) {
+    if (k <= 1)
+      return arrivalTime;
+
+    let departureTime = arrivalTime + 60;
+    if (departureTime % 60 > 0)
+      departureTime -= (departureTime % 60);
+    return departureTime;
+  }
+
   // Return all possible labels at the specified departure node
   _scan(departureNode, rounds = 10) {
     // kLabels[i][node] denodes the label for node up to i trips
@@ -217,7 +228,7 @@ class RaptorAlgorithm
         let route = this.feed.getRoute(routeId);
 
         // Apply the time to the route
-        route = route._sliceBeginningAtNode(routeNode)._withInitialTime(kLabels[k - 1].get(routeNode).cumulativeTime + (k > 1 ? 60 : 0));
+        route = route._sliceBeginningAtNode(routeNode)._withInitialTime(this._earliestDepartureTime(kLabels[k - 1].get(routeNode).cumulativeTime, k));
 
         // Iterate over the stops in the route starting at routeNode
         let stopIndex = 0;
@@ -237,7 +248,7 @@ class RaptorAlgorithm
             if (label.cumulativeTime < stop.cumulativeTime) {
 
               // Slice the route with the better time
-              route = route._sliceBeginningAtSequence(stop.sequence)._withInitialTime(label.cumulativeTime + (k > 1 ? 60 : 0));
+              route = route._sliceBeginningAtSequence(stop.sequence)._withInitialTime(this._earliestDepartureTime(label.cumulativeTime, k));
 
               // Update the route-dependent variables
               routeNode = stop.node;
