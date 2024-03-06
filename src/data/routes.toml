@@ -305,20 +305,26 @@ abbr = "S15"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s15_a.stops]
-01 = {node = "nsb_avv", time = 0, platform = "1"}
-02 = {node = "nsb_avo", time = 30, platform = "1", alightDirection = "right"}
-03 = {node = "nsb_av", time = 30, platform = "2", alightDirection = "right"}
-04 = {node = "nsb_avi", time = 30, platform = "1", alightDirection = "right"}
-05 = {node = "nsb_db", time = 45, platform = "2", alightDirection = "right"}
-06 = {node = "nsb_uhz", time = 75, platform = "2", alightDirection = "right"}
-07 = {node = "nsb_uh", time = 15, platform = "5", alightDirection = "left"}
+01 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
+02 = {node = "nsb_lr", time = 0, platform = "", status = "cancelled"}
+03 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
+04 = {node = "nsb_snz", time = 0, platform = "2", alightDirection = "right"}
+05 = {node = "nsb_vd", time = 60, platform = "1", alightDirection = "left"}
+06 = {node = "nsb_vt", time = 75, platform = "2", alightDirection = "right"}
+07 = {node = "nsb_avv", time = 30, platform = "2", alightDirection = "right"}
+08 = {node = "nsb_avo", time = 30, platform = "1", alightDirection = "right"}
+09 = {node = "nsb_av", time = 30, platform = "2", alightDirection = "right"}
+10 = {node = "nsb_avi", time = 30, platform = "1", alightDirection = "right"}
+11 = {node = "nsb_db", time = 45, platform = "2", alightDirection = "right"}
+12 = {node = "nsb_uhz", time = 75, platform = "2", alightDirection = "right"}
+13 = {node = "nsb_uh", time = 15, platform = "5", alightDirection = "left"}
 
 [nsb_s15_b]
 internalId = "S15_Avv"
 agency = "nsb_fu"
 modality = "rail"
-name = "S15 (Ulstheim ⟶ Amsvorde Venpoort)"
-headsign = "Amsvorde Venpoort"
+name = "S15 (Ulstheim ⟶ Greneylant)"
+headsign = "Greneylant"
 abbr = "S15"
 color = {background = "#2b7749", text = "#ffffff"}
 
@@ -329,7 +335,13 @@ color = {background = "#2b7749", text = "#ffffff"}
 04 = {node = "nsb_avi", time = 45, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_av", time = 30, platform = "7", alightDirection = "right"}
 06 = {node = "nsb_avo", time = 30, platform = "2", alightDirection = "right"}
-07 = {node = "nsb_avv", time = 30, platform = "1", alightDirection = "right"}
+07 = {node = "nsb_avv", time = 30, platform = "3", alightDirection = "right"}
+08 = {node = "nsb_vt", time = 30, platform = "1", alightDirection = "right"}
+09 = {node = "nsb_vd", time = 75, platform = "1", alightDirection = "right"}
+10 = {node = "nsb_snz", time = 60, platform = "1", alightDirection = "right"}
+11 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
+12 = {node = "nsb_lr", time = 0, platform = "", status = "cancelled"}
+13 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s16_a]
 internalId = "S16_Lvn"
@@ -382,9 +394,9 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_sb", time = 60, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_tp", time = 30, platform = "1", alightDirection = "left"}
 07 = {node = "nsb_mso", time = 60, platform = "1", alightDirection = "right"}
-08 = {node = "nsb_css", time = 0, platform = "", status = "cancelled"}
-09 = {node = "nsb_alt", time = 0, platform = "", status = "cancelled"}
-10 = {node = "nsb_fta", time = 0, platform = "", status = "cancelled"}
+08 = {node = "nsb_css", time = 75, platform = "1", alightDirection = "left"}
+09 = {node = "nsb_alt", time = 75, platform = "1", alightDirection = "right"}
+10 = {node = "nsb_fta", time = 90, platform = "1", alightDirection = "left"}
 
 [nsb_s17_b]
 internalId = "S17_Av"
@@ -396,50 +408,16 @@ abbr = "S17"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s17_b.stops]
-01 = {node = "nsb_fta", time = 0, platform = "", status = "cancelled"}
-02 = {node = "nsb_alt", time = 0, platform = "", status = "cancelled"}
-03 = {node = "nsb_css", time = 0, platform = "", status = "cancelled"}
-04 = {node = "nsb_mso", time = 0, platform = "2", alightDirection = "right"}
+01 = {node = "nsb_fta", time = 0, platform = "1"}
+02 = {node = "nsb_alt", time = 90, platform = "2", alightDirection = "right"}
+03 = {node = "nsb_css", time = 75, platform = "1", alightDirection = "right"}
+04 = {node = "nsb_mso", time = 75, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_tp", time = 60, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_sb", time = 30, platform = "2", alightDirection = "right"}
 07 = {node = "nsb_vt", time = 60, platform = "2", alightDirection = "right"}
 08 = {node = "nsb_avv", time = 30, platform = "2", alightDirection = "right"}
 09 = {node = "nsb_avo", time = 30, platform = "1", alightDirection = "right"}
 10 = {node = "nsb_av", time = 30, platform = "2", alightDirection = "right"}
-
-[nsb_s97_a]
-internalId = "S97_Gnl"
-agency = "nsb_fu"
-modality = "rail"
-name = "S97 (Vittoria ⟶ Greneylant)"
-headsign = "Greneylant"
-abbr = "S97"
-color = {background = "#2b7749", text = "#ffffff"}
-
-[nsb_s97_a.stops]
-01 = {node = "nsb_vt", time = 0, platform = "3"}
-02 = {node = "nsb_vd", time = 75, platform = "1", alightDirection = "right"}
-03 = {node = "nsb_snz", time = 60, platform = "1", alightDirection = "right"}
-04 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
-05 = {node = "nsb_lr", time = 0, platform = "", status = "cancelled"}
-06 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
-
-[nsb_s97_b]
-internalId = "S97_Vt"
-agency = "nsb_fu"
-modality = "rail"
-name = "S97 (Greneylant ⟶ Vittoria)"
-headsign = "Vittoria"
-abbr = "S97"
-color = {background = "#2b7749", text = "#ffffff"}
-
-[nsb_s97_b.stops]
-01 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
-02 = {node = "nsb_lr", time = 0, platform = "", status = "cancelled"}
-03 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
-04 = {node = "nsb_snz", time = 0, platform = "2", alightDirection = "right"}
-05 = {node = "nsb_vd", time = 60, platform = "1", alightDirection = "left"}
-06 = {node = "nsb_vt", time = 75, platform = "3", alightDirection = "left"}
 
 [nsb_s20_a]
 internalId = "S20_Gth"

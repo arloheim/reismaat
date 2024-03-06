@@ -29,13 +29,13 @@ affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_n
 
 
 # Storingen en werkzaamheden
-[nsb_s17_disrupted]
+[nsb_s15_disrupted]
 type = "construction"
-name = "Masarino - Finiterra"
-description = "Door werkzaamheden worden de treinstations Casesecce, Altione en Finiterra niet bediend. Trein S17 rijdt van Amsvorde Centraal tot Masarino v.v."
+name = "Schieren Zuid - Greneylant"
+description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein S15 rijdt van Ulstheim tot Schieren Zuid v.v."
 period = "tot nader order"
-affectedNodes = ["nsb_css", "nsb_alt", "nsb_fta"]
-affectedRoutes = ["nsb_s17_a", "nsb_s17_b"]
+affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
+affectedRoutes = ["nsb_s15_a", "nsb_s15_b"]
 
 [nsb_s22_disrupted]
 type = "construction"
@@ -44,11 +44,3 @@ description = "Door werkzaamheden worden de treinstations Hoortmeer, Westhoornik
 period = "tot nader order"
 affectedNodes = ["nsb_hmr", "nsb_whk", "nsb_gvn"]
 affectedRoutes = ["nsb_s22_a", "nsb_s22_b"]
-
-[nsb_d1_s97_disrupted]
-type = "construction"
-name = "Schieren Zuid - Greneylant"
-description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein S97 rijdt van Vittoria tot Schieren Zuid v.v."
-period = "tot nader order"
-affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
-affectedRoutes = ["nsb_s97_a", "nsb_s97_b"]
