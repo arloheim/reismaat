@@ -299,16 +299,16 @@ color = {background = "#2b7749", text = "#ffffff"}
 internalId = "S15_Uh"
 agency = "nsb_fu"
 modality = "rail"
-name = "S15 (Amsvorde Venpoort ⟶ Ulstheim)"
+name = "S15 (Greneylant ⟶ Ulstheim)"
 headsign = "Ulstheim"
 abbr = "S15"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s15_a.stops]
 01 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
-02 = {node = "nsb_lr", time = 0, platform = "", status = "cancelled"}
-03 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
-04 = {node = "nsb_snz", time = 0, platform = "2", alightDirection = "right"}
+02 = {node = "nsb_lr", time = 0, platform = "3", alightDirection = "right"}
+03 = {node = "nsb_snn", time = 45, platform = "2", alightDirection = "right"}
+04 = {node = "nsb_snz", time = 30, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_vd", time = 60, platform = "1", alightDirection = "left"}
 06 = {node = "nsb_vt", time = 75, platform = "2", alightDirection = "right"}
 07 = {node = "nsb_avv", time = 30, platform = "2", alightDirection = "right"}
@@ -339,8 +339,8 @@ color = {background = "#2b7749", text = "#ffffff"}
 08 = {node = "nsb_vt", time = 30, platform = "1", alightDirection = "right"}
 09 = {node = "nsb_vd", time = 75, platform = "1", alightDirection = "right"}
 10 = {node = "nsb_snz", time = 60, platform = "1", alightDirection = "right"}
-11 = {node = "nsb_snn", time = 0, platform = "", status = "cancelled"}
-12 = {node = "nsb_lr", time = 0, platform = "", status = "cancelled"}
+11 = {node = "nsb_snn", time = 30, platform = "1", alightDirection = "right"}
+12 = {node = "nsb_lr", time = 45, platform = "1", alightDirection = "left"}
 13 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
 
 [nsb_s16_a]
@@ -1423,6 +1423,26 @@ headsign = "Stachteren"
 01 = {node = "fer_oh", time = 0, headsign = "Stachteren via Negenaar"}
 02 = {node = "fer_ng", time = 135, headsign = "Stachteren"}
 03 = {node = "fer_str", time = 120}
+
+[fer_oh_uh]
+agency = "fer_nos"
+modality = "ferry"
+name = "Veerboot (Ockholm ⟶ Ulstheim)"
+headsign = "Ulstheim"
+
+[fer_oh_uh.stops]
+01 = {node = "fer_oh", time = 0}
+02 = {node = "fer_uh", time = 120}
+
+[fer_uh_oh]
+agency = "fer_nos"
+modality = "ferry"
+name = "Veerboot (Ulstheim ⟶ Ockholm)"
+headsign = "Ockholm"
+
+[fer_uh_oh.stops]
+01 = {node = "fer_uh", time = 0}
+02 = {node = "fer_oh", time = 120}
 
 [fer_nszw_nszo]
 agency = "fer_smijn"

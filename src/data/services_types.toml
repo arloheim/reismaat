@@ -12,6 +12,8 @@ tickets_arlov = {name = "Kaartautomaat", icon = "receipt", color = "info", agenc
 tickets_vara = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "vara"}
 tickets_gvd = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "gvd"}
 tickets_stm = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "stm"}
+tickets_fer_nos = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "fer_nos"}
+tickets_fer_smijn = {name = "Kaartautomaat", icon = "receipt", color = "info", agency = "fer_smijn"}
 service = {name = "Loket", icon = "circle-info", color = "info"}
 service_nsb_fu = {name = "Loket", icon = "svg:agency_nsb_fu", color = "info", agency = "nsb_fu"}
 service_nsb_is = {name = "Loket", icon = "svg:agency_nsb_is", color = "info", agency = "nsb_is"}
@@ -19,6 +21,8 @@ service_arlov = {name = "Servicewinkel", icon = "svg:agency_arlov", color = "inf
 service_vara = {name = "Informatiepunt", icon = "svg:agency_vara", color = "info", agency = "vara"}
 service_gvd = {name = "Loket", icon = "svg:agency_gvd", color = "info", agency = "gvd"}
 service_stm = {name = "Loket", icon = "svg:agency_stm", color = "info", agency = "stm"}
+service_fer_nos = {name = "Loket", icon = "svg:agency_fer_nos", color = "info", agency = "fer_nos"}
+service_fer_smijn = {name = "Loket", icon = "svg:agency_fer_smijn", color = "info", agency = "fer_smijn"}
 sos_phone = {name = "Alarmzuil", icon = "bell", color = "info"}
 first_aid = {name = "EHBO-post", icon = "kit-medical", color = "info"}
 fire_extinguisher = {name = "Brandblusser", icon = "fire-extinguisher", color = "info"}

@@ -105,12 +105,16 @@ avt_ssw_avt_wnw = {between = "avt_ssw", and = "avt_wnw", time = 60, direct = fal
 
 
 # Veerdiensten
+
 # Stachteren
 fer_str_nsb_str = {between = "fer_str", and = "nsb_str", time = 60, direct = false}
 # Negenaar
 fer_ng_arm_ng = {between = "fer_ng", and = "arm_ng", time = 120, direct = false}
 # Ockholm
 fer_oh_nsb_oh = {between = "fer_oh", and = "nsb_oh", time = 120, direct = false}
+# Ulstheim
+fer_uh_nsb_uh = {between = "fer_uh", and = "nsb_uh", time = 120, direct = false}
+fer_uh_arm_uhs = {between = "fer_uh", and = "arm_uhs", time = 180, direct = false}
 # Noordersluizen-Oost
 fer_nszo_cty_nszo = {between = "fer_nszo", and = "cty_nszo", time = 60, direct = false}
 # Noordersluizen-West

@@ -31,10 +31,10 @@ affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_n
 # Storingen en werkzaamheden
 [nsb_s15_disrupted]
 type = "construction"
-name = "Schieren Zuid - Greneylant"
-description = "Door werkzaamheden worden de treinstations Schieren Noord, Landraaf en Greneylant niet bediend. Trein S15 rijdt van Ulstheim tot Schieren Zuid v.v."
+name = "Landraaf - Greneylant"
+description = "Door werkzaamheden wordt het treinstation Greneylant niet bediend. Trein S15 rijdt van Ulstheim tot Landraaf v.v."
 period = "tot nader order"
-affectedNodes = ["nsb_snn", "nsb_lr", "nsb_gnl"]
+affectedNodes = ["nsb_gnl"]
 affectedRoutes = ["nsb_s15_a", "nsb_s15_b"]
 
 [nsb_s22_disrupted]
