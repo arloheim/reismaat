@@ -216,6 +216,19 @@ avt_rvn = {name = "Amsvorde, Ravijn", modality = "tram", city = "Amsvorde"}
 avt_avv = {name = "Amsvorde, Venpoort", modality = "tram", city = "Amsvorde"}
 avt_vt = {name = "Vittoria, Vittoria", modality = "tram", city = "Vittoria"}
 
+# Tram Giedrecht
+gdt_ddr = {name = "Dinsdrecht, Dinsdrecht", modality = "tram", city = "Dinsdrecht"}
+gdt_ndk = {name = "Giedrecht, Noorderkade", modality = "tram", city = "Giedrecht"}
+gdt_zk = {name = "Giedrecht, Zuil en Kerk", modality = "tram", city = "Giedrecht"}
+gdt_nfl = {name = "Giedrecht, Nymfenlaan", modality = "tram", city = "Giedrecht"}
+gdt_cs = {name = "Giedrecht, Station CS", modality = "tram", city = "Giedrecht"}
+gdt_zwp = {name = "Giedrecht, Zimt-Wuppi", modality = "tram", city = "Giedrecht"}
+gdt_bpl = {name = "Giedrecht, Bergplein", modality = "tram", city = "Giedrecht"}
+gdt_bhk = {name = "Giedrecht, Boshoek", modality = "tram", city = "Giedrecht"}
+gdt_str = {name = "Giedrecht, Strand", modality = "tram", city = "Giedrecht"}
+gdt_bg = {name = "Giedrecht, Brug", modality = "tram", city = "Giedrecht"}
+gdt_zd = {name = "Giedrecht, Zuidstation", modality = "tram", city = "Giedrecht"}
+
 # Veerdiensten
 fer_str = {name = "Stachteren, Veerhaven", modality = "ferry", city = "Stachteren"}
 fer_ng = {name = "Negenaar, Veerhaven", modality = "ferry", city = "Negenaar"}

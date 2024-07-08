@@ -61,6 +61,36 @@ color = {background = "#4d1515", text = "#ffffff"}
 04 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
 05 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
 
+[nsb_d5_a]
+internalId = "D5_Mmz"
+agency = "nsb_isis"
+modality = "rail"
+name = "D5 (Giedrecht ⟶ Malmen Zuid)"
+headsign = "Malmen Zuid"
+abbr = "D5"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d5_a.stops]
+01 = {node = "nsb_gd", time = 0, platform = "2"}
+02 = {node = "nsb_dw", time = 315, platform = "5", alightDirection = "right"}
+03 = {node = "nsb_mm", time = 405, platform = "2", alightDirection = "right"}
+04 = {node = "nsb_mmz", time = 420, platform = "1", alightDirection = "left"}
+
+[nsb_d5_b]
+internalId = "D5_Gd"
+agency = "nsb_isis"
+modality = "rail"
+name = "D5 (Malmen Zuid ⟶ Giedrecht)"
+headsign = "Giedrecht"
+abbr = "D5"
+color = {background = "#4d1515", text = "#ffffff"}
+
+[nsb_d5_b.stops]
+01 = {node = "nsb_mmz", time = 0, platform = "1"}
+02 = {node = "nsb_mm", time = 15, platform = "1", alightDirection = "right"}
+03 = {node = "nsb_dw", time = 105, platform = "6", alightDirection = "right"}
+04 = {node = "nsb_gd", time = 420, platform = "2", alightDirection = "left"}
+
 [nsb_d7_a]
 internalId = "D7_Gdz"
 agency = "nsb_is"
@@ -89,7 +119,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d7_b.stops]
 01 = {node = "nsb_gdz", time = 0, platform = "2"}
-02 = {node = "nsb_gd", time = 30, platform = "2", alightDirection = "right"}
+02 = {node = "nsb_gd", time = 30, platform = "3", alightDirection = "right"}
 03 = {node = "nsb_wl", time = 210, platform = "1", alightDirection = "right"}
 04 = {node = "nsb_arc", time = 330, platform = "3", alightDirection = "right"}
 05 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
@@ -591,7 +621,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s30_a]
 internalId = "S30_Wl"
-agency = "nsb_is"
+agency = "nsb_isis"
 modality = "rail"
 name = "S30 (Malmen Zuid ⟶ Woenslaken)"
 headsign = "Woenslaken"
@@ -609,14 +639,14 @@ color = {background = "#2b7749", text = "#ffffff"}
 08 = {node = "nsb_md", time = 30, platform = "2", alightDirection = "right"}
 09 = {node = "nsb_akh", time = 75, platform = "1", alightDirection = "right"}
 10 = {node = "nsb_gdz", time = 120, platform = "2", alightDirection = "right"}
-11 = {node = "nsb_gd", time = 30, platform = "2", alightDirection = "right"}
+11 = {node = "nsb_gd", time = 30, platform = "4", alightDirection = "right"}
 12 = {node = "nsb_dd", time = 30, platform = "2", alightDirection = "right"}
 13 = {node = "nsb_rdk", time = 105, platform = "1", alightDirection = "right"}
 14 = {node = "nsb_wl", time = 90, platform = "1", alightDirection = "right"}
 
 [nsb_s30_b]
 internalId = "S30_Mmz"
-agency = "nsb_is"
+agency = "nsb_isis"
 modality = "rail"
 name = "S30 (Woenslaken ⟶ Malmen Zuid)"
 headsign = "Malmen Zuid"
@@ -637,11 +667,11 @@ color = {background = "#2b7749", text = "#ffffff"}
 11 = {node = "nsb_dw", time = 15, platform = "5", alightDirection = "right"}
 12 = {node = "nsb_hk", time = 60, platform = "1", alightDirection = "right"}
 13 = {node = "nsb_mm", time = 45, platform = "1", alightDirection = "right"}
-14 = {node = "nsb_mmz", time = 15, platform = "1", alightDirection = "left"}
+14 = {node = "nsb_mmz", time = 15, platform = "2", alightDirection = "left"}
 
 [nsb_s31_a]
 internalId = "S31_Bkh"
-agency = "nsb_is"
+agency = "nsb_isis"
 modality = "rail"
 name = "S31 (Fremond aan Zee ⟶ Berkenhoven)"
 headsign = "Berkenhoven"
@@ -659,7 +689,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s31_b]
 internalId = "S31_Fm"
-agency = "nsb_is"
+agency = "nsb_isis"
 modality = "rail"
 name = "S31 (Berkenhoven ⟶ Fremond aan Zee)"
 headsign = "Fremond aan Zee"
@@ -1400,6 +1430,79 @@ color = {background = "#ff5555", text = "#ffffff"}
 06 = {node = "avt_iqs", time = 15}
 07 = {node = "avt_pms", time = 15}
 
+
+# Tram Giedrecht
+[gdt_1a]
+agency = "gvd"
+modality = "tram"
+name = "Tram 1A (Boshoek ⟶ Dinsdrecht)"
+headsign = "Dinsdrecht"
+abbr = "1A"
+color = {background = "#df3e23", text = "#ffffff"}
+
+[gdt_1a.stops]
+01 = {node = "gdt_bhk", time = 0, headsign = "Dinsdrecht via CS"}
+02 = {node = "gdt_str", time = 15, alightDirection = "left"}
+03 = {node = "gdt_bpl", time = 30, alightDirection = "right"}
+04 = {node = "gdt_zwp", time = 45, alightDirection = "right"}
+05 = {node = "gdt_cs", time = 60, alightDirection = "right", headsign = "Dinsdrecht"}
+06 = {node = "gdt_nfl", time = 75, alightDirection = "right"}
+07 = {node = "gdt_zk", time = 90, alightDirection = "right"}
+08 = {node = "gdt_ndk", time = 105, alightDirection = "right"}
+09 = {node = "gdt_ddr", time = 120, alightDirection = "left"}
+
+[gdt_1b]
+agency = "gvd"
+modality = "tram"
+name = "Tram 1B (Dinsdrecht ⟶ Strand)"
+headsign = "Strand"
+abbr = "1B"
+color = {background = "#df3e23", text = "#ffffff"}
+
+[gdt_1b.stops]
+01 = {node = "gdt_ddr", time = 0, headsign = "Bergplein via CS"}
+02 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
+03 = {node = "gdt_zk", time = 30, alightDirection = "right"}
+04 = {node = "gdt_nfl", time = 45, alightDirection = "right"}
+05 = {node = "gdt_cs", time = 60, alightDirection = "right", headsign = "Bergplein"}
+06 = {node = "gdt_zwp", time = 75, alightDirection = "right"}
+07 = {node = "gdt_bpl", time = 90, alightDirection = "right", headsign = "Strand via Boshoek"}
+08 = {node = "gdt_bhk", time = 105, alightDirection = "right"}
+
+[gdt_2a]
+agency = "gvd"
+modality = "tram"
+name = "Tram 2A (Boshoek ⟶ Zuiderstation)"
+headsign = "Zuiderstation"
+abbr = "2A"
+color = {background = "#285cc4", text = "#ffffff"}
+
+[gdt_2a.stops]
+01 = {node = "gdt_bhk", time = 0, headsign = "Zuidstation via CS"}
+02 = {node = "gdt_str", time = 15, alightDirection = "left"}
+03 = {node = "gdt_bpl", time = 30, alightDirection = "right"}
+04 = {node = "gdt_zwp", time = 45, alightDirection = "right"}
+05 = {node = "gdt_cs", time = 60, alightDirection = "right", headsign = "Zuidstation"}
+06 = {node = "gdt_nfl", time = 75, alightDirection = "right"}
+07 = {node = "gdt_bg", time = 90, alightDirection = "left"}
+08 = {node = "gdt_zd", time = 105, alightDirection = "right"}
+
+[gdt_2b]
+agency = "gvd"
+modality = "tram"
+name = "Tram 2B (Zuiderstation ⟶ Strand)"
+headsign = "Strand"
+abbr = "2B"
+color = {background = "#285cc4", text = "#ffffff"}
+
+[gdt_2b.stops]
+01 = {node = "gdt_zd", time = 0, headsign = "Bergplein via CS"}
+02 = {node = "gdt_bg", time = 15, alightDirection = "left"}
+03 = {node = "gdt_nfl", time = 30, alightDirection = "right"}
+04 = {node = "gdt_cs", time = 45, alightDirection = "right", headsign = "Bergplein"}
+05 = {node = "gdt_zwp", time = 60, alightDirection = "right"}
+06 = {node = "gdt_bpl", time = 75, alightDirection = "right", headsign = "Strand via Boshoek"}
+07 = {node = "gdt_bhk", time = 90, alightDirection = "right"}
 
 # Veerdiensten
 [fer_str_ng_oh]

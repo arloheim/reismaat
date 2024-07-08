@@ -34,8 +34,14 @@ nsb_ar_art_cslz = {between = "nsb_ar", and = "art_cslz", time = 120}
 arm_cs_art_cs = {between = "arm_cs", and = "art_cs", time = 60}
 arm_cs_art_cslz = {between = "arm_cs", and = "art_cslz", time = 120}
 art_cs_art_cslz = {between = "art_cs", and = "art_cslz", time = 120}
+# Dinsdrecht / Dinsdrecht
+nsb_dd_gdt_ddr = {between = "nsb_dd", and = "gdt_ddr", time = 60}
 # Gaterade Haven (+ hyperloop)
 nsb_gth_hyp_gth = {between = "nsb_gth", and = "hyp_gth", time = 300, direct = false}
+# Giedrecht / Station CS
+nsb_gd_gdt_cs = {between = "nsb_gd", and = "gdt_cs", time = 60}
+# Giedrecht Zuid / Zuidstation
+nsb_gdz_gdt_zd = {between = "nsb_gdz", and = "gdt_zd", time = 60}
 # Lavijn / Lavijn
 nsb_lvn_arm_lvn = {between = "nsb_lvn", and = "arm_lvn", time = 120}
 # Nedelrand / Nedelrand

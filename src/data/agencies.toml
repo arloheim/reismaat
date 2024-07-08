@@ -13,6 +13,13 @@ description = "treinvervoer in Ihlane"
 url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
 icon = "svg:agency_nsb_is"
 
+[nsb_isis]
+name = "Ihlaanse Spoorwegen - Interregionale Stadbaan"
+abbr = "ISIS"
+description = "treinvervoer in Ihlane"
+url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
+icon = "svg:agency_nsb_is"
+
 
 # Stadsvervoer
 [arlov]
@@ -31,6 +38,7 @@ icon = "svg:agency_vara"
 name = "Giedrechtse Vervoersdienst"
 abbr = "GVD"
 description = "stadsvervoer in Giedrecht"
+url = "https://arloheim.nl/wiki/Giedrechtse_Vervoersdienst"
 icon = "svg:agency_gvd"
 
 [stm]
