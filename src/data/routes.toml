@@ -73,8 +73,8 @@ color = {background = "#4d1515", text = "#ffffff"}
 [nsb_d5_a.stops]
 01 = {node = "nsb_gd", time = 0, platform = "2"}
 02 = {node = "nsb_dw", time = 315, platform = "5", alightDirection = "right"}
-03 = {node = "nsb_mm", time = 405, platform = "2", alightDirection = "right"}
-04 = {node = "nsb_mmz", time = 420, platform = "1", alightDirection = "left"}
+03 = {node = "nsb_mm", time = 90, platform = "2", alightDirection = "right"}
+04 = {node = "nsb_mmz", time = 15, platform = "1", alightDirection = "left"}
 
 [nsb_d5_b]
 internalId = "D5_Gd"
@@ -88,8 +88,8 @@ color = {background = "#4d1515", text = "#ffffff"}
 [nsb_d5_b.stops]
 01 = {node = "nsb_mmz", time = 0, platform = "1"}
 02 = {node = "nsb_mm", time = 15, platform = "1", alightDirection = "right"}
-03 = {node = "nsb_dw", time = 105, platform = "6", alightDirection = "right"}
-04 = {node = "nsb_gd", time = 420, platform = "2", alightDirection = "left"}
+03 = {node = "nsb_dw", time = 90, platform = "6", alightDirection = "right"}
+04 = {node = "nsb_gd", time = 315, platform = "2", alightDirection = "left"}
 
 [nsb_d7_a]
 internalId = "D7_Gdz"
@@ -1443,13 +1443,13 @@ color = {background = "#df3e23", text = "#ffffff"}
 [gdt_1a.stops]
 01 = {node = "gdt_bhk", time = 0, headsign = "Dinsdrecht via CS"}
 02 = {node = "gdt_str", time = 15, alightDirection = "left"}
-03 = {node = "gdt_bpl", time = 30, alightDirection = "right"}
-04 = {node = "gdt_zwp", time = 45, alightDirection = "right"}
-05 = {node = "gdt_cs", time = 60, alightDirection = "right", headsign = "Dinsdrecht"}
-06 = {node = "gdt_nfl", time = 75, alightDirection = "right"}
-07 = {node = "gdt_zk", time = 90, alightDirection = "right"}
-08 = {node = "gdt_ndk", time = 105, alightDirection = "right"}
-09 = {node = "gdt_ddr", time = 120, alightDirection = "left"}
+03 = {node = "gdt_bpl", time = 15, alightDirection = "right"}
+04 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
+05 = {node = "gdt_cs", time = 15, alightDirection = "right", headsign = "Dinsdrecht"}
+06 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
+07 = {node = "gdt_zk", time = 15, alightDirection = "right"}
+08 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
+09 = {node = "gdt_ddr", time = 15, alightDirection = "left"}
 
 [gdt_1b]
 agency = "gvd"
@@ -1462,12 +1462,12 @@ color = {background = "#df3e23", text = "#ffffff"}
 [gdt_1b.stops]
 01 = {node = "gdt_ddr", time = 0, headsign = "Bergplein via CS"}
 02 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
-03 = {node = "gdt_zk", time = 30, alightDirection = "right"}
-04 = {node = "gdt_nfl", time = 45, alightDirection = "right"}
-05 = {node = "gdt_cs", time = 60, alightDirection = "right", headsign = "Bergplein"}
-06 = {node = "gdt_zwp", time = 75, alightDirection = "right"}
-07 = {node = "gdt_bpl", time = 90, alightDirection = "right", headsign = "Strand via Boshoek"}
-08 = {node = "gdt_bhk", time = 105, alightDirection = "right"}
+03 = {node = "gdt_zk", time = 15, alightDirection = "right"}
+04 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
+05 = {node = "gdt_cs", time = 15, alightDirection = "right", headsign = "Bergplein"}
+06 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
+07 = {node = "gdt_bpl", time = 15, alightDirection = "right", headsign = "Strand via Boshoek"}
+08 = {node = "gdt_bhk", time = 15, alightDirection = "right"}
 
 [gdt_2a]
 agency = "gvd"
@@ -1480,12 +1480,12 @@ color = {background = "#285cc4", text = "#ffffff"}
 [gdt_2a.stops]
 01 = {node = "gdt_bhk", time = 0, headsign = "Zuidstation via CS"}
 02 = {node = "gdt_str", time = 15, alightDirection = "left"}
-03 = {node = "gdt_bpl", time = 30, alightDirection = "right"}
-04 = {node = "gdt_zwp", time = 45, alightDirection = "right"}
-05 = {node = "gdt_cs", time = 60, alightDirection = "right", headsign = "Zuidstation"}
-06 = {node = "gdt_nfl", time = 75, alightDirection = "right"}
-07 = {node = "gdt_bg", time = 90, alightDirection = "left"}
-08 = {node = "gdt_zd", time = 105, alightDirection = "right"}
+03 = {node = "gdt_bpl", time = 15, alightDirection = "right"}
+04 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
+05 = {node = "gdt_cs", time = 15, alightDirection = "right", headsign = "Zuidstation"}
+06 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
+07 = {node = "gdt_bg", time = 15, alightDirection = "left"}
+08 = {node = "gdt_zd", time = 15, alightDirection = "right"}
 
 [gdt_2b]
 agency = "gvd"
@@ -1498,11 +1498,11 @@ color = {background = "#285cc4", text = "#ffffff"}
 [gdt_2b.stops]
 01 = {node = "gdt_zd", time = 0, headsign = "Bergplein via CS"}
 02 = {node = "gdt_bg", time = 15, alightDirection = "left"}
-03 = {node = "gdt_nfl", time = 30, alightDirection = "right"}
-04 = {node = "gdt_cs", time = 45, alightDirection = "right", headsign = "Bergplein"}
-05 = {node = "gdt_zwp", time = 60, alightDirection = "right"}
-06 = {node = "gdt_bpl", time = 75, alightDirection = "right", headsign = "Strand via Boshoek"}
-07 = {node = "gdt_bhk", time = 90, alightDirection = "right"}
+03 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
+04 = {node = "gdt_cs", time = 15, alightDirection = "right", headsign = "Bergplein"}
+05 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
+06 = {node = "gdt_bpl", time = 15, alightDirection = "right", headsign = "Strand via Boshoek"}
+07 = {node = "gdt_bhk", time = 15, alightDirection = "right"}
 
 # Veerdiensten
 [fer_str_ng_oh]
