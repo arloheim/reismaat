@@ -10,6 +10,7 @@ class RouteLeg
     this.route = route;
 
     this.last = false;
+    this.useStopHeadsign = true;
   }
 
   // Return the cumulative time of the route
@@ -37,6 +38,7 @@ class TransferLeg
     this.transfer = transfer;
 
     this.last = false;
+    this.useStopHeadsign = true;
   }
 
   // Return the cumulative time of the transfer
@@ -78,7 +80,7 @@ class Journey
     // Iterate over the legs
     for (let [index, leg] of this.legs.entries()) {
       // Set the last flag of the last leg
-      leg.last = this.legs.indexOf(leg) === this.legs.length - 1;
+      leg.last = index === this.legs.length - 1;
 
       // Check the type of the leg
       if (leg instanceof RouteLeg) {

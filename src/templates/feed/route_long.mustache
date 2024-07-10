@@ -5,6 +5,6 @@
   <span>
     {{^abbr}}{{modalityName}}{{/abbr}}
     {{#abbr}}{{> feed/route_abbr}}{{/abbr}}
-    richting {{#stop}}{{headsign}}{{/stop}} {{^stop}}{{headsign}}{{/stop}}
+    richting {{#useStopHeadsign}}{{#firstStop}}{{headsign}}{{/firstStop}}{{/useStopHeadsign}} {{^useStopHeadsign}}{{headsign}}{{/useStopHeadsign}}
   </span>
 </span>

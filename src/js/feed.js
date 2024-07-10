@@ -206,12 +206,6 @@ class Route
     let lastHeadsign = this.headsign;
     for (let [index, stop] of this.stops.entries())
     {
-      // Set the headsign of the stop
-      if (stop.headsign !== undefined)
-        lastHeadsign = stop.headsign;
-      else
-        stop.headsign = lastHeadsign;
-
       // Set the last flag of the last stop
       stop.last = index === this.stops.length - 1;
 
@@ -220,6 +214,18 @@ class Route
 
       // Calculate cumulative time for the stop
       stop.cumulativeTime = index > 0 ? this.stops[index - 1].cumulativeTime + stop.time : this.initialTime + stop.time;
+
+      // Set the headsign of the stop
+      if (stop.headsign !== undefined)
+      {
+        console.log(this.id, stop.node.id, stop.headsign, stop.changedHeadsign);
+        stop.changedHeadsign = index > 0 && !stop.last && stop.headsign != lastHeadsign;
+        lastHeadsign = stop.headsign;
+      }
+      else
+      {
+        stop.headsign = lastHeadsign;
+      }
     }
   }
 
@@ -322,6 +328,7 @@ class RouteStop
     this.status = props.status;
 
     this.last = false;
+    this.changedHeadsign = false;
     this.formattedTime = undefined;
   }
 
