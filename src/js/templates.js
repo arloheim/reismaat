@@ -25,15 +25,15 @@ const _templates = {
   'pages/routes_details': fs.readFileSync('src/templates/pages/routes_details.mustache', 'utf-8'),
   'pages/routes_details/title': fs.readFileSync('src/templates/pages/routes_details/title.mustache', 'utf-8'),
   'pages/routes_details/stops': fs.readFileSync('src/templates/pages/routes_details/stops.mustache', 'utf-8'),
-  'pages/routes_details/route': fs.readFileSync('src/templates/pages/routes_details/route.mustache', 'utf-8'),
+  'pages/routes_details/agency': fs.readFileSync('src/templates/pages/routes_details/agency.mustache', 'utf-8'),
   'pages/routes_details/notifications': fs.readFileSync('src/templates/pages/routes_details/notifications.mustache', 'utf-8'),
   'pages/nodes': fs.readFileSync('src/templates/pages/nodes.mustache', 'utf-8'),
   'pages/nodes_details': fs.readFileSync('src/templates/pages/nodes_details.mustache', 'utf-8'),
   'pages/nodes_details/title': fs.readFileSync('src/templates/pages/nodes_details/title.mustache', 'utf-8'),
   'pages/nodes_details/transfers': fs.readFileSync('src/templates/pages/nodes_details/transfers.mustache', 'utf-8'),
   'pages/nodes_details/routes': fs.readFileSync('src/templates/pages/nodes_details/routes.mustache', 'utf-8'),
-  'pages/nodes_details/services': fs.readFileSync('src/templates/pages/nodes_details/services.mustache', 'utf-8'),
   'pages/nodes_details/notifications': fs.readFileSync('src/templates/pages/nodes_details/notifications.mustache', 'utf-8'),
+  'pages/nodes_details/services': fs.readFileSync('src/templates/pages/nodes_details/services.mustache', 'utf-8'),
   'pages/about': fs.readFileSync('src/templates/pages/about.mustache', 'utf-8'),
 
   // Error pages
@@ -51,6 +51,8 @@ const _templates = {
   'components/journey_link': fs.readFileSync('src/templates/components/journey_link.mustache', 'utf-8'),
 
   // Feed components
+  'feed/agency_link': fs.readFileSync('src/templates/feed/agency_link.mustache', 'utf-8'),
+  'feed/agency_box_link': fs.readFileSync('src/templates/feed/agency_box_link.mustache', 'utf-8'),
   'feed/node_long': fs.readFileSync('src/templates/feed/node_long.mustache', 'utf-8'),
   'feed/node_long_link': fs.readFileSync('src/templates/feed/node_long_link.mustache', 'utf-8'),
   'feed/node_short': fs.readFileSync('src/templates/feed/node_short.mustache', 'utf-8'),

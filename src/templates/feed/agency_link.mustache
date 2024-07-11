@@ -1,0 +1,19 @@
+<div class="media is-align-items-center is-relative">
+  {{#url}}
+    <a target="_blank" href="{{.}}" class="is-overlay"></a>
+  {{/url}}
+
+  <div class="media-left" style="height: 3rem;">
+    <span class="icon is-large">
+      {{#renderIcon}}fa-3x{{/renderIcon}}
+    </span>
+  </div>
+
+  <div class="media-content">
+    <p class="mb-0">{{name}}</p>
+
+    {{#description}}
+      <p class="is-muted is-size-7">{{.}}</p>
+    {{/description}}
+  </div>
+</div>

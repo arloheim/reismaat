@@ -38,27 +38,7 @@
         <div class="columns is-multiline">
           {{#feed.agencies}}
             <div class="column is-half-tablet is-one-third-widescreen">
-              <div class="box has-background-white is-flex is-align-items-center p-3 is-relative">
-                {{#url}}
-                  <a target="_blank" href="{{.}}" class="is-overlay"></a>
-                {{/url}}
-
-                <div class="media is-align-items-center">
-                  <div class="media-left" style="height: 3rem;">
-                    <span class="icon is-large">
-                      {{#renderIcon}}fa-3x{{/renderIcon}}
-                    </span>
-                  </div>
-
-                  <div class="media-content">
-                    <p class="mb-0">{{name}}</p>
-
-                    {{#description}}
-                      <p class="is-muted is-size-7">{{.}}</p>
-                    {{/description}}
-                  </div>
-                </div>
-              </div>
+              {{> feed/agency_box}}
             </div>
           {{/feed.agencies}}
         </div>

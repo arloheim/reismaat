@@ -1,13 +1,18 @@
-<div class="tile is-child box">
+<div class="tile is-child box is-flex-grow-0 {{#severeNotifications.length}}is-warning{{/severeNotifications.length}}">
   <h3 class="mb-4">meldingen</h3>
 
   {{#notifications.length}}
     {{#notifications}}
       {{> feed/notification}}
     {{/notifications}}
-  {{/notifications.length}}
 
-  {{^notifications.length}}
-    <p>Er zijn geen meldingen voor deze lijn.</p>
+    {{#severeNotifications.length}}
+      <a class="button is-dark is-rounded mt-4"  href="/meldingen" data-navigo>
+        <span>Bekijk de meldingen</span>
+        <span class="icon">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    {{/severeNotifications.length}}
   {{/notifications.length}}
 </div>

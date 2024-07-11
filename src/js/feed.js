@@ -115,9 +115,14 @@ class Node
     return this._feed.getRoutesWithStopAtNode(this).map(r => ({route: r, stop: r.getStopAtNode(this)}));
   }
 
-  // Return the routes that have a stop at the node exclding non halting stops
+  // Return the routes that have a stop at the node excluding non halting stops
   get routesExcludingNonHalts() {
     return this._feed.getRoutesWithStopAtNode(this, true).map(r => ({route: r, stop: r.getStopAtNode(this)}));
+  }
+
+  // Return the agencies of the routes that have a stop at the node
+  get agencies() {
+    return [...new Set(this._feed.getRoutesWithStopAtNode(this).map(r => r.agency))];
   }
 
   // Return the transfers that include the node
@@ -143,6 +148,11 @@ class Node
   // Return the notifications that affect the node
   get notifications() {
     return this._feed.getNotificationsThatAffectNode(this);
+  }
+
+  // Return the notifications that are included in the overview and severe that affect the node
+  get severeNotifications() {
+    return this.notifications.filter(n => n.include && n.severe);
   }
 
   // Return the services for the node
@@ -206,7 +216,8 @@ class Route
     let lastHeadsign = this.headsign;
     for (let [index, stop] of this.stops.entries())
     {
-      // Set the last flag of the last stop
+      // Set the flags of the first and last stops
+      stop.first = index === 0;
       stop.last = index === this.stops.length - 1;
 
       // Set the time of the first stop
@@ -218,7 +229,7 @@ class Route
       // Set the headsign of the stop
       if (stop.headsign !== undefined)
       {
-        stop.changedHeadsign = index > 0 && !stop.last && stop.headsign != lastHeadsign;
+        stop.changedHeadsign = !stop.last && stop.headsign != lastHeadsign;
         lastHeadsign = stop.headsign;
       }
       else
@@ -246,6 +257,11 @@ class Route
   // Return the notifications that affect the route
   get notifications() {
     return this._feed.getNotificationsThatAffectRoute(this);
+  }
+
+  // Return the notifications that are included in the overview and severe that affect the route
+  get severeNotifications() {
+    return this.notifications.filter(n => n.include && n.severe);
   }
 
   // Return the stop of the route with the specified sequence
@@ -326,6 +342,7 @@ class RouteStop
     this.alightDirection = props.alightDirection;
     this.status = props.status;
 
+    this.first = false;
     this.last = false;
     this.changedHeadsign = false;
     this.formattedTime = undefined;

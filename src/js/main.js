@@ -81,7 +81,7 @@ $(function() {
     if (slug === undefined || node === undefined)
       throw new NotFoundError(`Could not find node with slug '${slug}'`);
 
-    function mapRoutes(routes, node) {
+    function mapRoutes(routes) {
       return routes.filter(r => !r.stop.last).toSorted(sortByPlatform);
     }
 
@@ -97,8 +97,8 @@ $(function() {
     }
 
     let allTransferNodes = node.transferNodes.filter(t => t.node.include);
-    let allOwnRoutes = mapRoutes(node.routes, node);
-    let allTransferRoutes = allTransferNodes.map(t => ({node: t.node, routes: mapRoutes(t.node.routes, t.node)}));
+    let allOwnRoutes = mapRoutes(node.routes);
+    let allTransferRoutes = allTransferNodes.map(t => ({node: t.node, routes: mapRoutes(t.node.routes)}));
 
     return {node, allTransferNodes, allOwnRoutes, allTransferRoutes};
   }

@@ -15,9 +15,11 @@
         </div>
 
         <div class="tile is-6 is-vertical is-parent">
-          {{> pages/routes_details/route}}
-          
-          {{> pages/routes_details/notifications}}
+          {{#notifications.length}}
+            {{> pages/routes_details/notifications}}
+          {{/notifications.length}}
+
+          {{> pages/routes_details/agency}}
         </div>
       </div>
     </div>

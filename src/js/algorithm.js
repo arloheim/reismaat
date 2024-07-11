@@ -9,6 +9,7 @@ class RouteLeg
   constructor(route) {
     this.route = route;
 
+    this.first = false;
     this.last = false;
     this.useStopHeadsign = true;
   }
@@ -37,6 +38,7 @@ class TransferLeg
   constructor(transfer) {
     this.transfer = transfer;
 
+    this.first = false;
     this.last = false;
     this.useStopHeadsign = true;
   }
@@ -79,7 +81,8 @@ class Journey
 
     // Iterate over the legs
     for (let [index, leg] of this.legs.entries()) {
-      // Set the last flag of the last leg
+      // Set the flags of the first and last legs
+      leg.first = index === 0;
       leg.last = index === this.legs.length - 1;
 
       // Check the type of the leg

@@ -12,13 +12,23 @@
   </p>
 
   {{#changedHeadsign}}
-    <p class="is-muted">Rijdt vanaf hier richting {{headsign}}</p>
+    {{^useStopHeadsign}}
+      {{#first}}
+        <p class="is-muted">Rijdt richting {{headsign}}</p>
+      {{/first}}
+    {{/useStopHeadsign}}
+
+    {{^first}}
+      <p class="is-muted">Rijdt vanaf hier richting {{headsign}}</p>
+    {{/first}}
   {{/changedHeadsign}}
 
   {{#last}}
-    {{#alightDirection}}
-      {{#alightLeft}}<p class="is-muted">Links uitstappen</p>{{/alightLeft}}
-      {{#alightRight}}<p class="is-muted">Rechts uitstappen</p>{{/alightRight}}
-    {{/alightDirection}}
+    {{#useStopHeadsign}}
+      {{#alightDirection}}
+        {{#alightLeft}}<p class="is-muted">Links uitstappen</p>{{/alightLeft}}
+        {{#alightRight}}<p class="is-muted">Rechts uitstappen</p>{{/alightRight}}
+      {{/alightDirection}}
+    {{/useStopHeadsign}}
   {{/last}}
 </div>
