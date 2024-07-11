@@ -243,6 +243,7 @@ $(function() {
 
       // Get the query of the input and search for matching nodes
       var query = $input.val();
+      var includedOnly = $input.attr('data-only-included') !== undefined;
       var foundNodes = feed.searchNodes(query);
 
       if (query === "" || foundNodes.length === 0) {
@@ -253,7 +254,7 @@ $(function() {
         $dropdownContent.empty();
 
         // Add the nodes to the dropdown content
-        for (let foundNode of foundNodes.slice(0, 10)) {
+        for (let foundNode of foundNodes.filter(n => !includedOnly || (feed.getNode(n.id)?.include ?? false)).slice(0, 10)) {
           feed.getNode(foundNode.id).renderDropdownItem()
             .on('click', dropdownItemClick)
             .appendTo($dropdownContent);

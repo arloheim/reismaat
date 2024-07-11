@@ -1,3 +1,9 @@
-<a class="is-plain" href="/dienstregeling/{{slug}}" data-navigo>
+{{#include}}
+  <a class="is-plain" href="/dienstregeling/{{slug}}" data-navigo>
+    {{> feed/route_long}}
+  </a>
+{{/include}}
+
+{{^include}}
   {{> feed/route_long}}
-</a>
+{{/include}}
