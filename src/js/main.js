@@ -170,24 +170,30 @@ $(function() {
     $el.find('form#planner').on('submit', function(e) {
       e.preventDefault();
 
-      // Get the params from the form
-      let fromId = $(this).find('#from').data('id');
+      let $from = $el.find('#from');
+      let $to = $el.find('#to');
+
+      let fromId = $from.attr('data-id');
       let from = feed.getNode(fromId);
-      let toId = $(this).find('#to').data('id');
+      let toId = $to.attr('data-id');
       let to = feed.getNode(toId);
       let datetime = $(this).find('#datetime').val();
 
       if (from !== undefined && to !== undefined)
         router.navigateToPath(`/reisadvies?f=${from.slug}&t=${to.slug}&d=${datetime}`);
-      else
-        console.log();
     });
 
     // Handle switching the from and to fields
     $el.find('form#planner #switch').on('click', function() {
-      let temp = $el.find('#from').val();;
-      $el.find('#from').val($el.find('#to').val());
-      $el.find('#to').val(temp);
+      let $from = $el.find('#from');
+      let $to = $el.find('#to');
+
+      let temp = $from.attr('data-id');;
+      $from.attr('data-id', $to.attr('data-id'));
+      $to.attr('data-id', temp);
+
+      $from.val(feed.getNode($from.attr('data-id')).name);
+      $to.val(feed.getNode($to.attr('data-id')).name);
     });
 
     // Handle setting the date field to the current time
@@ -196,11 +202,11 @@ $(function() {
     });
 
     // Event handler for when a node input changes
-    $el.find('.node-input').on('input', _.debounce(function() {
+    $el.find('.node-input').on('focus input', _.debounce(function() {
       var $input = $(this);
 
       // Clear the stored id
-      $input.data('id', undefined);
+      $input.attr('data-id', undefined);
 
       // Get the dropdown and create the dropdown content
       let $dropdown = $input.parents('.dropdown');
@@ -215,11 +221,11 @@ $(function() {
 
       // Function that defines an event handler when a dropdown item is clicked
       let dropdownItemClick = function() {
-        let id = $(this).data('id');
+        let id = $(this).attr('data-id');
 
-        $dropdown.hide().removeClass('is-active');
-        $input.data('id', id);
+        $input.attr('data-id', id);
         $input.val(feed.getNode(id).name);
+        $dropdown.removeClass('is-active').hide();
       }
 
       // Get the query of the input and search for matching nodes
@@ -243,20 +249,21 @@ $(function() {
         // Activate the dropdown
         $dropdown.show().addClass('is-active');
       }
-    }, 500));
+    }, 200));
 
     // Event handler for when a node input loses focus
     $el.find('.node-input').on('blur', _.debounce(function() {
       let $input = $(this);
+      
       // Hide the dropdown
       $input.parents('.dropdown').removeClass('is-active').hide();
 
       // Check if the input has an attached id
-      if ($input.data('id') === undefined)
+      if ($input.attr('data-id') === undefined)
         $input.addClass('is-danger');
       else
         $input.removeClass('is-danger');
-    }, 100));
+    }, 200));
   }
 
 

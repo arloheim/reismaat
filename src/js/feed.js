@@ -168,7 +168,7 @@ class Node
   // Return HTML for rendering a dropdown item
   renderDropdownItem() {
     return $('<a class="dropdown-item">')
-      .data('id', this.id)
+      .attr('data-id', this.id)
       .append($('<div class="icon is-medium mr-2">')
         .append($('<i class="fas fa-fw fa-xl">').addClass(`fa-${this.icon}`)))
       .append($('<div class="is-flex is-flex-direction-column">')

@@ -10,7 +10,7 @@
           <div class="dropdown-trigger">
             <div class="field has-addons">
               <div class="control is-expanded">
-                <input class="input node-input" type="text" value="{{from.name}}" placeholder="van station, halte of plaats" id="from">
+                <input class="input node-input" type="text" {{#from}}value="{{name}}" data-id="{{id}}"{{/from}} placeholder="van station, halte of plaats" id="from">
               </div>
 
               <div class="control">
@@ -30,7 +30,7 @@
       <div class="control is-expanded">
         <div class="dropdown is-fullwidth">
           <div class="dropdown-trigger">
-            <input class="input node-input" type="text" value="{{to.name}}" placeholder="naar station, halte of plaats" id="to">
+            <input class="input node-input" type="text" {{#to}}value="{{name}}" data-id="{{id}}"{{/to}} placeholder="naar station, halte of plaats" id="to">
           </div>
         </div>
       </div>

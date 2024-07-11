@@ -19,9 +19,9 @@
     <li><a href="/meldingen" data-navigo>Bekijk actuele storingen en werkzaamheden</a></li>
   </ul>
 
-  {{#error.stack}}
+  {{#error}}
     <p>De fout heeft de volgende melding gegenereerd:</p>
 
     <pre class="has-background-danger-light has-text-danger">{{.}}</pre>
-  {{/error.stack}}
+  {{/error}}
 </div>
