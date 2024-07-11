@@ -13,12 +13,11 @@ description = "treinvervoer in Ihlane"
 url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
 icon = "svg:agency_nsb_is"
 
-[nsb_isis]
-name = "Ihlaanse Spoorwegen - Interregionale Stadbaan"
-abbr = "ISIS"
-description = "treinvervoer in Ihlane"
-url = "https://arloheim.nl/wiki/Ihlaanse_Spoorwegen"
-icon = "svg:agency_nsb_is"
+[nsb_cira]
+name = "CIRA"
+description = "regionaal treinvervoer in Ihlane"
+url = "https://arloheim.nl/wiki/CIRA"
+icon = "svg:agency_nsb_cira"
 
 
 # Stadsvervoer

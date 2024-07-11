@@ -5,6 +5,18 @@ nodeName = 'Treinstation'
 description = 'Railgebonden regionaal of interregionaal vervoer'
 icon = 'train'
 
+[rail_direct]
+name = 'Directe trein'
+nodeName = 'Treinstation'
+description = 'Railgebonden regionaal of interregionaal vervoer'
+icon = 'train'
+
+[rail_local]
+name = 'Stoptrein'
+nodeName = 'Treinstation'
+description = 'Railgebonden regionaal of interregionaal vervoer'
+icon = 'train'
+
 [subway]
 name = 'Metro'
 nodeName = 'Metrostation'
