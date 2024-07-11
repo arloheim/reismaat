@@ -1,0 +1,14 @@
+<div class="tile is-child box">
+  <h2 class="mb-2">
+    <span class="icon-text">
+      <span class="icon mr-4">
+        {{#renderIcon}}{{/renderIcon}}
+      </span>
+      <span>{{#abbr}}{{abbr}}{{/abbr}}{{^abbr}}{{modalityName}}{{/abbr}} richting {{headsign}}</span>
+    </span>
+  </h2>
+
+  <p>
+    {{modalityName}} van {{agency.name}}, stopt bij {{stops.length}} haltes.
+  </p>
+</div>

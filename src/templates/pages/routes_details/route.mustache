@@ -1,17 +1,6 @@
-<div class="tile is-child box">
-  <h3 class="mb-4">dienstregeling</h3>
+<div class="tile is-child box is-flex-grow-0">
+  <h3 class="mb-4">informatie</h3>
 
-  <h5 class="mb-2">Lijn</h5>
-  <p>{{> feed/route_long}}</p>
-
-  <h5 class="mb-2">Modaliteit</h5>
-  <p>{{modalityName}} van <a target="_blank" href="{{agency.url}}">{{agency.name}}</a></p>
-
-  {{#notifications.length}}
-    <h5 class="mb-2">Meldingen</h5>
-
-    {{#notifications}}
-      {{> feed/notification}}
-    {{/notifications}}
-  {{/notifications.length}}
+  <p class="mb-0">{{> feed/route_long}}</p>
+  <p class="is-muted">{{#abbr}}{{modalityName}} van {{/abbr}}{{agency.name}}</p>
 </div>

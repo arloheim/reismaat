@@ -4,12 +4,22 @@
 
 {{#route}}
   <div class="tile is-ancestor">
-    <div class="tile is-7 is-parent">
-      {{> pages/routes_details/stops}}
-    </div>
+    <div class="tile is-vertical">
+      <div class="tile is-parent">
+        {{> pages/routes_details/title}}
+      </div>
 
-    <div class="tile is-5 is-parent">
-      {{> pages/routes_details/route}}
+      <div class="tile">
+        <div class="tile is-6 is-parent">
+          {{> pages/routes_details/stops}}
+        </div>
+
+        <div class="tile is-6 is-vertical is-parent">
+          {{> pages/routes_details/route}}
+          
+          {{> pages/routes_details/notifications}}
+        </div>
+      </div>
     </div>
   </div>
 {{/route}}

@@ -1,0 +1,13 @@
+<div class="tile is-child box">
+  <h3 class="mb-4">meldingen</h3>
+
+  {{#notifications.length}}
+    {{#notifications}}
+      {{> feed/notification}}
+    {{/notifications}}
+  {{/notifications.length}}
+
+  {{^notifications.length}}
+    <p>Er zijn geen meldingen voor deze lijn.</p>
+  {{/notifications.length}}
+</div>
