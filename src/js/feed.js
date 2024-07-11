@@ -218,7 +218,6 @@ class Route
       // Set the headsign of the stop
       if (stop.headsign !== undefined)
       {
-        console.log(this.id, stop.node.id, stop.headsign, stop.changedHeadsign);
         stop.changedHeadsign = index > 0 && !stop.last && stop.headsign != lastHeadsign;
         lastHeadsign = stop.headsign;
       }
