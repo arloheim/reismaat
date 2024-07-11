@@ -112,17 +112,12 @@ class Node
 
   // Return the routes that have a stop at the node
   get routes() {
-    return this._feed.getRoutesWithStopAtNode(this).map(r => ({route: r, stop: r.getStopAtNode(this)}));
+    return this._feed.getRoutesWithStopAtNode(this).flatMap(this._addStopToRoute.bind(this));
   }
 
   // Return the routes that have a stop at the node excluding non halting stops
   get routesExcludingNonHalts() {
-    return this._feed.getRoutesWithStopAtNode(this, true).map(r => ({route: r, stop: r.getStopAtNode(this)}));
-  }
-
-  // Return the agencies of the routes that have a stop at the node
-  get agencies() {
-    return [...new Set(this._feed.getRoutesWithStopAtNode(this).map(r => r.agency))];
+    return this._feed.getRoutesWithStopAtNode(this, true).flatMap(this._addStopToRoute.bind(this));
   }
 
   // Return the transfers that include the node
@@ -184,6 +179,11 @@ class Node
       .append($('<div class="is-flex is-flex-direction-column">')
         .append($('<span>').html(this.name))
         .append($('<span class="is-size-7 has-text-grey">').html(this.subtitle)));
+  }
+
+  // Add a stop to a route that stops at a node
+  _addStopToRoute(route) {
+    return route.getStopsAtNode(this).map(s => ({route: route._sliceBeginningAtSequence(s.sequence), stop: s, useStopHeadsign: true}));
   }
 }
 
@@ -274,9 +274,9 @@ class Route
     return this.stops.findIndex(s => s.sequence === sequence && (!excludeNonHalts || s.halts));
   }
 
-  // Return the stop of the route that halts at the specified node
-  getStopAtNode(node, excludeNonHalts = false) {
-    return this.stops.find(s => s.node.id === node.id && (!excludeNonHalts || s.halts));
+  // Return the stops of the route that halts at the specified node
+  getStopsAtNode(node, excludeNonHalts = false) {
+    return this.stops.filter(s => s.node.id === node.id && (!excludeNonHalts || s.halts));
   }
 
   // Return the index of the stop of the route that halts at the specified node
@@ -717,7 +717,7 @@ class Feed
 
   // Return the routes that have a stop at the specified node in the feed
   getRoutesWithStopAtNode(node, excludeNonHalts = false) {
-    return this.routes.filter(route => route.getStopAtNode(node, excludeNonHalts) !== undefined);
+    return this.routes.filter(route => route.getStopsAtNode(node, excludeNonHalts).length > 0);
   }
 
 

@@ -1015,7 +1015,7 @@ color = {background = "#cd87de", text = "#ffffff"}
 07 = {node = "art_vmt", time = 15, platform = "3"}
 08 = {node = "art_ost", time = 15, platform = "5"}
 09 = {node = "art_zhs", time = 15, platform = "1B"}
-10 = {node = "art_dmn", time = 15, platform = "2"}
+10 = {node = "art_dmn", time = 15, platform = "1"}
 11 = {node = "art_bbn", time = 15, platform = "1"}
 12 = {node = "art_mst", time = 15, platform = "4"}
 

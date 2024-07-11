@@ -53,7 +53,7 @@ $(function() {
   function collectPlannerData(match) {
     let from = feed.getNodeWithSlug(match.params?.f);
     let to = feed.getNodeWithSlug(match.params?.t);
-    let date = match.params?.d;
+    let date = match.params?.d ?? dayjs().format('YYYY-MM-DDTHH:mm');
 
     if (from === undefined || to === undefined)
       throw new NotFoundError(`Could not find nodes to plan between`);
