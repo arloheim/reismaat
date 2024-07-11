@@ -201,6 +201,19 @@ $(function() {
       $el.find('#datetime').val(dayjs().format('YYYY-MM-DDTHH:mm'));
     });
 
+    // Plan a trip when the nodes form is submitted
+    $el.find('form#nodes').on('submit', function(e) {
+      e.preventDefault();
+
+      let $node = $el.find('#node');
+
+      let nodeId = $node.attr('data-id');
+      let node = feed.getNode(nodeId);
+
+      if (node !== undefined)
+        router.navigateToPath(`/stations/${node.slug}`);
+    });
+
     // Event handler for when a node input changes
     $el.find('.node-input').on('focus input', _.debounce(function() {
       var $input = $(this);

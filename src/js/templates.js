@@ -26,7 +26,6 @@ const _templates = {
   'pages/routes_details/route': fs.readFileSync('src/templates/pages/routes_details/route.mustache', 'utf-8'),
   'pages/routes_details/stops': fs.readFileSync('src/templates/pages/routes_details/stops.mustache', 'utf-8'),
   'pages/nodes': fs.readFileSync('src/templates/pages/nodes.mustache', 'utf-8'),
-  'pages/nodes/title': fs.readFileSync('src/templates/pages/nodes/title.mustache', 'utf-8'),
   'pages/nodes_details': fs.readFileSync('src/templates/pages/nodes_details.mustache', 'utf-8'),
   'pages/nodes_details/title': fs.readFileSync('src/templates/pages/nodes_details/title.mustache', 'utf-8'),
   'pages/nodes_details/routes': fs.readFileSync('src/templates/pages/nodes_details/routes.mustache', 'utf-8'),
