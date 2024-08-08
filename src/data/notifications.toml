@@ -27,6 +27,11 @@ type = "disallowance"
 name = "Meenemen van flexpaarden is niet toegestaan"
 affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_nszw"]
 
+[no_tickets]
+type = "warning"
+name = "Op dit station bevinden zich geen ticketautomaten"
+affectedNodes = ["gdt_rem", "gdt_zon", "gdt_nbg", "gdt_wr", "gdt_zg", "gdt_ob"]
+
 
 # Storingen en werkzaamheden
 [nsb_s15_disrupted]
@@ -44,3 +49,11 @@ description = "Door werkzaamheden worden de treinstations Hoortmeer, Westhoornik
 period = "tot nader order"
 affectedNodes = ["nsb_hmr", "nsb_whk", "nsb_gvn"]
 affectedRoutes = ["nsb_s22_a", "nsb_s22_b"]
+
+[gdt_rt3_disrupted]
+type = "construction"
+name = "Roodekerken, Dorp - Bad Nierstein, Kuuroord"
+description = "Door werkzaamheden worden de tramhaltes Roodekerken Suikerfabriek, Roodekerken Slenterparcs Roodeven, Bad Nierstein Dorp, Bad Nierstein Johanneskliniek en Bad Nierstein Kuuroord niet bediend. Tram RT3 rijdt van Benrade tot Roodekerken Dorp v.v."
+period = "tot nader order"
+affectedNodes = ["gdt_suf", "gdt_brt", "gdt_slt", "gdt_bnd", "gdt_jkn", "gdt_bns"]
+affectedRoutes = ["gdt_3_a", "gdt_3_b"]

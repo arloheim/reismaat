@@ -228,6 +228,23 @@ gdt_bhk = {name = "Giedrecht, Boshoek", modality = "tram", city = "Giedrecht"}
 gdt_str = {name = "Giedrecht, Strand", modality = "tram", city = "Giedrecht"}
 gdt_bg = {name = "Giedrecht, Brug", modality = "tram", city = "Giedrecht"}
 gdt_zd = {name = "Giedrecht, Zuidstation", modality = "tram", city = "Giedrecht"}
+gdt_rem = {name = "Giedrecht, Remise", modality = "tram", city = "Giedrecht"}
+gdt_zon = {name = "Giedrecht, Zonneblom", modality = "tram", city = "Giedrecht"}
+gdt_nbg = {name = "Giedrecht, Nieuwebrug", modality = "tram", city = "Giedrecht"}
+gdt_wr = {name = "Giedrecht, Welkenraad", modality = "tram", city = "Giedrecht"}
+gdt_zg = {name = "Giedrecht, Zandgat", modality = "tram", city = "Giedrecht"}
+gdt_ob = {name = "Giedrecht, Oudeboom", modality = "tram", city = "Giedrecht"}
+gdt_brd = {name = "Benrade, Benrade", modality = "tram", city = "Benrade"}
+gdt_kut = {name = "Kijkuit, Kijkuit", modality = "tram", city = "Kijkuit"}
+gdt_ocd = {name = "Roodekerken, Orchideeënlaan", modality = "tram", city = "Roodekerken"}
+gdt_rdk = {name = "Roodekerken, Dorp", modality = "tram", city = "Roodekerken"}
+gdt_suf = {name = "Roodekerken, Suikerfabriek", modality = "tram", city = "Roodekerken"}
+gdt_brt = {name = "Roodekerken, Burcht", modality = "tram", city = "Roodekerken"}
+gdt_slt = {name = "Roodekerken, Slenterparcs Roodeven", modality = "tram", city = "Roodekerken"}
+gdt_bnd = {name = "Bad Nierstein, Dorp", modality = "tram", city = "Bad Nierstein"}
+gdt_jkn = {name = "Bad Nierstein, Johanneskliniek", modality = "tram", city = "Bad Nierstein"}
+gdt_bns = {name = "Bad Nierstein, Kuuroord", modality = "tram", city = "Bad Nierstein"}
+
 
 # Veerdiensten
 fer_str = {name = "Stachteren, Veerhaven", modality = "ferry", city = "Stachteren"}

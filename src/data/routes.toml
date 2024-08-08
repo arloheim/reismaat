@@ -1432,15 +1432,15 @@ color = {background = "#ff5555", text = "#ffffff"}
 
 
 # Tram Giedrecht
-[gdt_1a]
+[gdt_1_a]
 agency = "gvd"
 modality = "tram"
 name = "Tram 1A (Boshoek ⟶ Dinsdrecht)"
 headsign = "Dinsdrecht"
 abbr = "1A"
-color = {background = "#df3e23", text = "#ffffff"}
+color = {background = "#ff0000", text = "#ffffff"}
 
-[gdt_1a.stops]
+[gdt_1_a.stops]
 01 = {node = "gdt_bhk", time = 0, headsign = "Dinsdrecht via CS"}
 02 = {node = "gdt_str", time = 15, alightDirection = "left"}
 03 = {node = "gdt_bpl", time = 15, alightDirection = "right"}
@@ -1451,15 +1451,15 @@ color = {background = "#df3e23", text = "#ffffff"}
 08 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
 09 = {node = "gdt_ddr", time = 15, alightDirection = "left"}
 
-[gdt_1b]
+[gdt_1_b]
 agency = "gvd"
 modality = "tram"
 name = "Tram 1B (Dinsdrecht ⟶ Strand)"
 headsign = "Strand"
 abbr = "1B"
-color = {background = "#df3e23", text = "#ffffff"}
+color = {background = "#ff0000", text = "#ffffff"}
 
-[gdt_1b.stops]
+[gdt_1_b.stops]
 01 = {node = "gdt_ddr", time = 0, headsign = "Bergplein via CS"}
 02 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
 03 = {node = "gdt_zk", time = 15, alightDirection = "right"}
@@ -1469,15 +1469,15 @@ color = {background = "#df3e23", text = "#ffffff"}
 07 = {node = "gdt_bpl", time = 15, alightDirection = "right", headsign = "Strand via Boshoek"}
 08 = {node = "gdt_bhk", time = 15, alightDirection = "right"}
 
-[gdt_2a]
+[gdt_2_a]
 agency = "gvd"
 modality = "tram"
-name = "Tram 2A (Boshoek ⟶ Zuiderstation)"
-headsign = "Zuiderstation"
+name = "Tram 2A (Boshoek ⟶ Zuidstation)"
+headsign = "Zuidstation"
 abbr = "2A"
-color = {background = "#285cc4", text = "#ffffff"}
+color = {background = "#000080", text = "#ffffff"}
 
-[gdt_2a.stops]
+[gdt_2_a.stops]
 01 = {node = "gdt_bhk", time = 0, headsign = "Zuidstation via CS"}
 02 = {node = "gdt_str", time = 15, alightDirection = "left"}
 03 = {node = "gdt_bpl", time = 15, alightDirection = "right"}
@@ -1487,15 +1487,15 @@ color = {background = "#285cc4", text = "#ffffff"}
 07 = {node = "gdt_bg", time = 15, alightDirection = "left"}
 08 = {node = "gdt_zd", time = 15, alightDirection = "right"}
 
-[gdt_2b]
+[gdt_2_b]
 agency = "gvd"
 modality = "tram"
-name = "Tram 2B (Zuiderstation ⟶ Strand)"
+name = "Tram 2B (Zuidstation ⟶ Strand)"
 headsign = "Strand"
 abbr = "2B"
-color = {background = "#285cc4", text = "#ffffff"}
+color = {background = "#000080", text = "#ffffff"}
 
-[gdt_2b.stops]
+[gdt_2_b.stops]
 01 = {node = "gdt_zd", time = 0, headsign = "Bergplein via CS"}
 02 = {node = "gdt_bg", time = 15, alightDirection = "left"}
 03 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
@@ -1503,6 +1503,97 @@ color = {background = "#285cc4", text = "#ffffff"}
 05 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
 06 = {node = "gdt_bpl", time = 15, alightDirection = "right", headsign = "Strand via Boshoek"}
 07 = {node = "gdt_bhk", time = 15, alightDirection = "right"}
+
+[gdt_3_a]
+agency = "gvd"
+modality = "tram"
+name = "Regiotram 3A (Benrade ⟶ Bad Nierstein)"
+headsign = "Bad Nierstein"
+abbr = "RT3A"
+color = {background = "#ffa800", text = "#ffffff"}
+
+[gdt_3_a.stops]
+01 = {node = "gdt_brd", time = 0, headsign = "Bad Nierstein via CS"}
+02 = {node = "gdt_bpl", time = 15, alightDirection = "right"}
+03 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
+04 = {node = "gdt_cs", time = 15, alightDirection = "right", headsign = "Bad Nierstein"}
+05 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
+06 = {node = "gdt_zk", time = 15, alightDirection = "right"}
+07 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
+08 = {node = "gdt_ddr", time = 15, alightDirection = "right"}
+09 = {node = "gdt_kut", time = 45, alightDirection = "left"}
+10 = {node = "gdt_ocd", time = 60, alightDirection = "right"}
+11 = {node = "gdt_rdk", time = 15, alightDirection = "right"}
+12 = {node = "gdt_suf", time = 0, alightDirection = ""}
+13 = {node = "gdt_brt", time = 0, alightDirection = ""}
+14 = {node = "gdt_slt", time = 0, alightDirection = ""}
+15 = {node = "gdt_bnd", time = 0, alightDirection = ""}
+16 = {node = "gdt_jkn", time = 0, alightDirection = ""}
+17 = {node = "gdt_bns", time = 0, alightDirection = ""}
+
+[gdt_3_b]
+agency = "gvd"
+modality = "tram"
+name = "Regiotram 3B (Bad Nierstein ⟶ Benrade)"
+headsign = "Benrade"
+abbr = "RT3B"
+color = {background = "#ffa800", text = "#ffffff"}
+
+[gdt_3_b.stops]
+01 = {node = "gdt_bns", time = 0, alightDirection = "", headsign = "Benrade"}
+02 = {node = "gdt_jkn", time = 0, alightDirection = ""}
+03 = {node = "gdt_bnd", time = 0, alightDirection = ""}
+04 = {node = "gdt_slt", time = 0, alightDirection = ""}
+05 = {node = "gdt_brt", time = 0, alightDirection = ""}
+06 = {node = "gdt_suf", time = 0, alightDirection = ""}
+07 = {node = "gdt_rdk", time = 0, alightDirection = "left"}
+08 = {node = "gdt_ocd", time = 60, alightDirection = "left"}
+09 = {node = "gdt_kut", time = 45, alightDirection = "right"}
+10 = {node = "gdt_ddr", time = 15, alightDirection = "left", headsign = "Benrade via CS"}
+11 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
+12 = {node = "gdt_zk", time = 15, alightDirection = "right"}
+13 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
+14 = {node = "gdt_cs", time = 15, alightDirection = "right", headsign = "Benrade"}
+15 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
+16 = {node = "gdt_bpl", time = 15, alightDirection = "right"}
+17 = {node = "gdt_brd", time = 15, alightDirection = "left"}
+
+[gdt_4_a]
+agency = "gvd"
+modality = "tram"
+name = "Tram 4A (Oudeboom ⟶ Zuidstation)"
+headsign = "Zuidstation"
+abbr = "4A"
+color = {background = "#008000", text = "#ffffff"}
+
+[gdt_4_a.stops]
+01 = {node = "gdt_ob", time = 0}
+02 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
+03 = {node = "gdt_zg", time = 15, alightDirection = "left"}
+04 = {node = "gdt_wr", time = 15, alightDirection = "right"}
+05 = {node = "gdt_nbg", time = 15, alightDirection = "left"}
+06 = {node = "gdt_zon", time = 15, alightDirection = "right"}
+07 = {node = "gdt_rem", time = 15, alightDirection = "left"}
+08 = {node = "gdt_zd", time = 15, alightDirection = "right"}
+
+[gdt_4_b]
+agency = "gvd"
+modality = "tram"
+name = "Tram 4B (Zuidstation ⟶ Oudeboom)"
+headsign = "Oudeboom"
+abbr = "4B"
+color = {background = "#008000", text = "#ffffff"}
+
+[gdt_4_b.stops]
+01 = {node = "gdt_zd", time = 0}
+02 = {node = "gdt_rem", time = 15, alightDirection = "right"}
+03 = {node = "gdt_zon", time = 15, alightDirection = "left"}
+04 = {node = "gdt_nbg", time = 15, alightDirection = "left"}
+05 = {node = "gdt_wr", time = 15, alightDirection = "right"}
+06 = {node = "gdt_zg", time = 15, alightDirection = "left"}
+07 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
+08 = {node = "gdt_ob", time = 15, alightDirection = "left"}
+
 
 # Veerdiensten
 [fer_str_ng_oh]

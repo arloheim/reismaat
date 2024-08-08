@@ -2,19 +2,19 @@
 
 # Al-Qusur / Al-Qusur
 nsb_qs_arm_qsr = {between = "nsb_qs", and = "arm_qsr", time = 60}
-# Amsvorde Centraal / Centraal Station
+# Amsvorde Centraal / Amsvorde, Centraal Station
 nsb_av_avt_av = {between = "nsb_av", and = "avt_av", time = 120}
-# Amsvorde Iberië / Iberiëstation
+# Amsvorde Iberië / Amsvorde, Iberiëstation
 nsb_avi_avt_avi = {between = "nsb_avi", and = "avt_avi", time = 60}
-# Amsvorde Oost / Oosterstation
+# Amsvorde Oost / Amsvorde, Oosterstation
 nsb_avo_avt_avo = {between = "nsb_avo", and = "avt_avo", time = 60}
-# Amsvorde Venpoort / Venpoort
+# Amsvorde Venpoort / Amsvorde, Venpoort
 nsb_avv_avt_avv = {between = "nsb_avv", and = "avt_avv", time = 60}
-# Arloheim Campus / Campus
+# Arloheim Campus / Arloheim, Campus
 nsb_arc_arm_cps = {between = "nsb_arc", and = "arm_cps", time = 60}
 nsb_arc_art_cps = {between = "nsb_arc", and = "art_cps", time = 120}
 arm_cps_art_cps = {between = "arm_cps", and = "art_cps", time = 120}
-# Arloheim Forum / Forum (+ lift + hyperloop)
+# Arloheim Forum / Arloheim, Forum (+ lift + hyperloop)
 nsb_arfo_arm_for = {between = "nsb_arfo", and = "arm_for", time = 60}
 nsb_arfo_art_for = {between = "nsb_arfo", and = "art_for", time = 120}
 arm_for_art_for = {between = "arm_for", and = "art_for", time = 120}
@@ -25,27 +25,29 @@ nsb_arfo_hyp_arfo = {between = "nsb_arfo", and = "hyp_arfo", time = 300, direct 
 arm_arfo_hyp_arfo = {between = "arm_for", and = "hyp_arfo", time = 300, direct = false}
 art_for_hyp_arfo = {between = "art_for", and = "hyp_arfo", time = 360, direct = false}
 arl_for_hyp_arfo = {between = "arl_for", and = "hyp_arfo", time = 360, direct = false}
-# Arloheim Panderberg / Panderberg
+# Arloheim Panderberg / Arloheim Panderberg
 nsb_arp_arm_pdb = {between = "nsb_arp", and = "arm_pdb", time = 120}
-# Arloheim Centraal / Centraal Station
+# Arloheim Centraal / Arloheim, Centraal Station / Arloheim, Centraal Station - Luneriazijde
 nsb_ar_arm_cs = {between = "nsb_ar", and = "arm_cs", time = 60}
 nsb_ar_art_cs = {between = "nsb_ar", and = "art_cs", time = 120}
 nsb_ar_art_cslz = {between = "nsb_ar", and = "art_cslz", time = 120}
 arm_cs_art_cs = {between = "arm_cs", and = "art_cs", time = 60}
 arm_cs_art_cslz = {between = "arm_cs", and = "art_cslz", time = 120}
 art_cs_art_cslz = {between = "art_cs", and = "art_cslz", time = 120}
-# Dinsdrecht / Dinsdrecht
+# Dinsdrecht / Dinsdrecht, Dorp
 nsb_dd_gdt_ddr = {between = "nsb_dd", and = "gdt_ddr", time = 60}
 # Gaterade Haven (+ hyperloop)
 nsb_gth_hyp_gth = {between = "nsb_gth", and = "hyp_gth", time = 300, direct = false}
-# Giedrecht / Station CS
+# Giedrecht / Giedrecht, Station CS
 nsb_gd_gdt_cs = {between = "nsb_gd", and = "gdt_cs", time = 60}
-# Giedrecht Zuid / Zuidstation
+# Giedrecht Zuid / Giedrecht, Zuidstation
 nsb_gdz_gdt_zd = {between = "nsb_gdz", and = "gdt_zd", time = 60}
 # Lavijn / Lavijn
 nsb_lvn_arm_lvn = {between = "nsb_lvn", and = "arm_lvn", time = 120}
 # Nedelrand / Nedelrand
 nsb_ndr_arm_ndr = {between = "nsb_ndr", and = "arm_ndr", time = 60}
+# Roodekerken / Roodekerken, Dorp
+nsb_rdk_gdt_rdk = {between = "nsb_dd", and = "gdt_ddr", time = 60}
 # Slinger / Slinger
 nb_sg_arm_sg = {between = "nsb_sg", and = "arm_sg", time = 300}
 # Ulstheim / Ulstheim Station
