@@ -1507,9 +1507,9 @@ color = {background = "#000080", text = "#ffffff"}
 [gdt_3_a]
 agency = "gvd"
 modality = "tram"
-name = "Regiotram 3A (Benrade ⟶ Bad Nierstein)"
+name = "Tram 3A (Benrade ⟶ Bad Nierstein)"
 headsign = "Bad Nierstein"
-abbr = "RT3A"
+abbr = "3A"
 color = {background = "#ffa800", text = "#ffffff"}
 
 [gdt_3_a.stops]
@@ -1534,9 +1534,9 @@ color = {background = "#ffa800", text = "#ffffff"}
 [gdt_3_b]
 agency = "gvd"
 modality = "tram"
-name = "Regiotram 3B (Bad Nierstein ⟶ Benrade)"
+name = "Tram 3B (Bad Nierstein ⟶ Benrade)"
 headsign = "Benrade"
-abbr = "RT3B"
+abbr = "3B"
 color = {background = "#ffa800", text = "#ffffff"}
 
 [gdt_3_b.stops]

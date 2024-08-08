@@ -47,7 +47,7 @@ nsb_lvn_arm_lvn = {between = "nsb_lvn", and = "arm_lvn", time = 120}
 # Nedelrand / Nedelrand
 nsb_ndr_arm_ndr = {between = "nsb_ndr", and = "arm_ndr", time = 60}
 # Roodekerken / Roodekerken, Dorp
-nsb_rdk_gdt_rdk = {between = "nsb_dd", and = "gdt_ddr", time = 60}
+nsb_rdk_gdt_rdk = {between = "nsb_rdk", and = "gdt_rdk", time = 60}
 # Slinger / Slinger
 nb_sg_arm_sg = {between = "nsb_sg", and = "arm_sg", time = 300}
 # Ulstheim / Ulstheim Station
