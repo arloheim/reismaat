@@ -127,7 +127,7 @@ class Node
 
   // Return the direct transfers that include the node
   get directTransfers() {
-    return this._feed.getTransfersIncludingNode(this, true);
+    return this._feed.getDirectTransfersIncludingNode(this);
   }
 
   // Return the transfer nodes of the node
@@ -205,7 +205,7 @@ class Node
     return $('<a class="dropdown-item">')
       .attr('data-id', this.id)
       .append($('<div class="icon is-medium mr-2">')
-        .append($('<i class="fas fa-fw fa-xl">').addClass(`fa-${this.icon}`)))
+        .append($(renderIcon(this.icon, 'fa-fw fa-xl'))))
       .append($('<div class="is-flex is-flex-direction-column">')
         .append($('<span>').html(this.name))
         .append($('<span class="is-size-7 has-text-grey">').html(this.subtitle)));

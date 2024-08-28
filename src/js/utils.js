@@ -11,6 +11,8 @@ function sanitize(name) {
 function renderIcon(icon, classes) {
   if (icon === undefined)
     return null;
+  if (classes === undefined)
+    classes = "";
 
   let match = icon.match(/^(?:(fa[srb]|svg):)?(.*)$/);
 

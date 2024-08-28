@@ -1,14 +1,16 @@
 <div class="journey-cell is-node">
   <p>
-    <span {{#status}}class="is-{{.}}"{{/status}}>{{> feed/node_short_link}}</span>
+    <span class="icon-text">
+      <span {{#status}}class="is-{{.}}"{{/status}}>{{> feed/node_short_link}}</span>
 
-    {{#additional}}
-      <span class="is-additional-label">(extra stop)</span>
-    {{/additional}}
+      {{#additional}}
+        <span class="is-additional-label">(extra stop)</span>
+      {{/additional}}
 
-    {{#cancelled}}
-      <span class="is-cancelled-label">(vervalt)</span>
-    {{/cancelled}}
+      {{#cancelled}}
+        <span class="is-cancelled-label">(vervalt)</span>
+      {{/cancelled}}
+    </span>
   </p>
 
   {{#changedHeadsign}}

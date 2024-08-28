@@ -24,7 +24,7 @@
   <p>
     {{#legs}}
       {{#route}}
-        {{> feed/route_short}}
+        {{> feed/route_icon}}
 
         {{^last}}
           <span class="icon">
@@ -32,18 +32,6 @@
           </span>
         {{/last}}
       {{/route}}
-
-      {{#transfer}}
-        <span class="icon">
-          <i class="fa-solid fa-person-walking"></i>
-        </span>
-
-        {{^last}}
-          <span class="icon">
-            <i class="fa-solid fa-chevron-right"></i>
-          </span>
-        {{/last}}
-      {{/transfer}}
     {{/legs}}
   </p>
 </div>

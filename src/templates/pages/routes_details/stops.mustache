@@ -14,6 +14,10 @@
       {{#node}}
         {{> components/journey_cell_node}}
       {{/node}}
+        
+      {{#node.includedDirectTransferModalities}}
+        {{> components/journey_cell_modality}}
+      {{/node.includedDirectTransferModalities}}
 
       {{#platform}}
         {{> components/journey_cell_platform}}
@@ -35,6 +39,10 @@
       {{#node}}
         {{> components/journey_cell_node}}
       {{/node}}
+        
+      {{#node.includedDirectTransferModalities}}
+        {{> components/journey_cell_modality}}
+      {{/node.includedDirectTransferModalities}}
 
       {{#platform}}
         {{> components/journey_cell_platform}}
@@ -55,6 +63,10 @@
       {{#node}}
         {{> components/journey_cell_node}}
       {{/node}}
+        
+      {{#node.includedDirectTransferModalities}}
+        {{> components/journey_cell_modality}}
+      {{/node.includedDirectTransferModalities}}
 
       {{#platform}}
         {{> components/journey_cell_platform}}
