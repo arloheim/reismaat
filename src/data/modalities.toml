@@ -40,7 +40,7 @@ icon = 'ferry'
 name = 'Kabelspoor'
 nodeName = 'Kabelspoor'
 description = 'Railgebonden transportsysteem gebruikmakend van kabeltractie'
-icon = 'k'
+icon = 'svg:modality_cable_rail'
 
 [funicular]
 name = 'Funiculaire'
@@ -59,7 +59,7 @@ icon = 'elevator'
 name = 'Hyperloop'
 nodeName = 'Hyperloopstation'
 description = 'Transportsysteem voor langeafstandsvervoer gebruikmakend van een luchtdrukbuis'
-icon = 'bolt-lightning'
+icon = 'svg:modality_hyperloop'
 
 # Natransport
 [horse_rental]

@@ -49,7 +49,7 @@ icon = "svg:agency_stm"
 [danewolde]
 name = "Gemeente Danewolde"
 description = "kabelspoorwegen in Danewolde"
-icon = "flag"
+icon = "svg:agency_danewolde"
 
 
 # Veerdiensten
