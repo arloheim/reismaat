@@ -96,7 +96,7 @@ $(function() {
         return a.stop.platform.localeCompare(b.stop.platform, undefined, {numeric: true, sensitivity: 'base'});
     }
 
-    let allTransferNodes = node.transferNodes.filter(t => t.node.include);
+    let allTransferNodes = node.includedTransferNodes;
     let allOwnRoutes = mapRoutes(node.routes);
     let allTransferRoutes = allTransferNodes.map(t => ({node: t.node, routes: mapRoutes(t.node.routes)}));
 

@@ -43,6 +43,7 @@ const _templates = {
   // Components
   'components/journey_box_route': fs.readFileSync('src/templates/components/journey_box_route.mustache', 'utf-8'),
   'components/journey_box_transfer': fs.readFileSync('src/templates/components/journey_box_transfer.mustache', 'utf-8'),
+  'components/journey_cell_modality': fs.readFileSync('src/templates/components/journey_cell_modality.mustache', 'utf-8'),
   'components/journey_cell_node': fs.readFileSync('src/templates/components/journey_cell_node.mustache', 'utf-8'),
   'components/journey_cell_node_simple': fs.readFileSync('src/templates/components/journey_cell_node_simple.mustache', 'utf-8'),
   'components/journey_cell_platform': fs.readFileSync('src/templates/components/journey_cell_platform.mustache', 'utf-8'),

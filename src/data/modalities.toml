@@ -36,6 +36,12 @@ description = 'Korte- of langeafstandsvervoer per boot'
 icon = 'ferry'
 
 # Overige modaliteiten
+[cable_rail]
+name = 'Kabelspoor'
+nodeName = 'Kabelspoor'
+description = 'Railgebonden transportsysteem gebruikmakend van kabeltractie'
+icon = 'k'
+
 [funicular]
 name = 'Funiculaire'
 nodeName = 'Funiculaire'

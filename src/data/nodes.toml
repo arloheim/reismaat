@@ -240,11 +240,14 @@ gdt_ocd = {name = "Roodekerken, Orchideeënlaan", modality = "tram", city = "Roo
 gdt_rdk = {name = "Roodekerken, Dorp", modality = "tram", city = "Roodekerken"}
 gdt_suf = {name = "Roodekerken, Suikerfabriek", modality = "tram", city = "Roodekerken"}
 gdt_brt = {name = "Roodekerken, Burcht", modality = "tram", city = "Roodekerken"}
-gdt_slt = {name = "Roodekerken, Slenterparcs Roodeven", modality = "tram", city = "Roodekerken"}
+gdt_slt = {name = "Roodekerken, Slenterparcs Roodeberg", modality = "tram", city = "Roodekerken"}
 gdt_bnd = {name = "Bad Nierstein, Dorp", modality = "tram", city = "Bad Nierstein"}
 gdt_jkn = {name = "Bad Nierstein, Johanneskliniek", modality = "tram", city = "Bad Nierstein"}
 gdt_bns = {name = "Bad Nierstein, Kuuroord", modality = "tram", city = "Bad Nierstein"}
 
+# Funiculaires Danewolde
+dwf_edp = {name = "Danewolde, Edenplein", modality = "cable_rail", city = "Danewolde", include = false}
+dwf_ovw = {name = "Danewolde, Overwaer", modality = "cable_rail", city = "Danewolde", include = false}
 
 # Veerdiensten
 fer_str = {name = "Stachteren, Veerhaven", modality = "ferry", city = "Stachteren"}

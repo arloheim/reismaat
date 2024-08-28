@@ -46,6 +46,11 @@ abbr = "STM"
 description = "stadsvervoer in Schieren"
 icon = "svg:agency_stm"
 
+[danewolde]
+name = "Gemeente Danewolde"
+description = "kabelspoorwegen in Danewolde"
+icon = "flag"
+
 
 # Veerdiensten
 [fer_nos]

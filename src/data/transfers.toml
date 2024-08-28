@@ -34,6 +34,10 @@ nsb_ar_art_cslz = {between = "nsb_ar", and = "art_cslz", time = 120}
 arm_cs_art_cs = {between = "arm_cs", and = "art_cs", time = 60}
 arm_cs_art_cslz = {between = "arm_cs", and = "art_cslz", time = 120}
 art_cs_art_cslz = {between = "art_cs", and = "art_cslz", time = 120}
+# Danewolde (+ kabelspoor)
+nsb_dw_dwf_edp = {between = "nsb_dw", and = "dwf_edp", time = 60, direct = false}
+# Danewolde Overwaee (+ kabelspoor)
+nsb_dwo_dwf_ovw = {between = "nsb_dwo", and = "dwf_ovw", time = 60, direct = false}
 # Dinsdrecht / Dinsdrecht, Dorp
 nsb_dd_gdt_ddr = {between = "nsb_dd", and = "gdt_ddr", time = 60}
 # Gaterade Haven (+ hyperloop)

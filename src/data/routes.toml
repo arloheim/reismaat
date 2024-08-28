@@ -1595,6 +1595,30 @@ color = {background = "#008000", text = "#ffffff"}
 08 = {node = "gdt_ob", time = 15, alightDirection = "left"}
 
 
+# Kabelspoor Danewolde
+[dwf_edp_ovw_a]
+agency = "danewolde"
+modality = "cable_rail"
+name = "Kabelspoor (Edenplein ⟶ Overwaer)"
+headsign = "Overwaer"
+include = false
+
+[dwf_edp_ovw_a.stops]
+01 = {node = "dwf_edp", time = 0}
+02 = {node = "dwf_ovw", time = 15}
+
+[dwf_edp_ovw_b]
+agency = "danewolde"
+modality = "cable_rail"
+name = "Kabelspoor (Overwaer ⟶ Edenplein)"
+headsign = "Edenplein"
+include = false
+
+[dwf_edp_ovw_b.stops]
+01 = {node = "dwf_ovw", time = 0}
+02 = {node = "dwf_edp", time = 15}
+
+
 # Veerdiensten
 [fer_str_ng_oh]
 agency = "fer_nos"

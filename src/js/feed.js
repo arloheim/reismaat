@@ -135,9 +135,39 @@ class Node
     return this.transfers.map(t => ({transfer: t, node: t.getOppositeNode(this)}));
   }
 
+  // Return the transfer nodes that are included of the node
+  get includedTransferNodes() {
+    return this.transferNodes.filter(t => t.node.include);
+  }
+
   // Return the transfer nodes exluding separate transfers of the node
   get directTransferNodes() {
     return this.directTransfers.map(t => ({transfer: t, node: t.getOppositeNode(this)}));
+  }
+
+  // Return the transfer nodes that are included of the node
+  get includedDirectTransferNodes() {
+    return this.directTransferNodes.filter(t => t.node.include);
+  }
+
+  // Return the transfer modalities of the node
+  get transferModalities() {
+    return [...new Set(this.transferNodes.map(t => t.node.modality))];
+  }
+
+  // Return the transfer modalities that are included of the node
+  get includedTransferModalities() {
+    return [...new Set(this.includedTransferNodes.map(t => t.node.modality))];
+  }
+
+  // Return the transfer modalities exluding separate transfers of the node
+  get directTransferModalities() {
+    return [...new Set(this.directTransferNodes.map(t => t.node.modality))];
+  }
+
+  // Return the transfer modalities exluding separate transfers that are included of the node
+  get includedDirectTransferModalities() {
+    return [...new Set(this.includedDirectTransferNodes.map(t => t.node.modality))];
   }
 
   // Return the notifications that affect the node
