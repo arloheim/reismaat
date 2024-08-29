@@ -562,9 +562,9 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_pry", time = 45, platform = "2", alightDirection = "right"}
 06 = {node = "nsb_kdk", time = 60, platform = "1", alightDirection = "right"}
 07 = {node = "nsb_wl", time = 60, platform = "1", alightDirection = "right"}
-08 = {node = "nsb_hmr", time = 0, platform = "", status = "cancelled"}
-09 = {node = "nsb_whk", time = 0, platform = "", status = "cancelled"}
-10 = {node = "nsb_gvn", time = 0, platform = "", status = "cancelled"}
+08 = {node = "nsb_hmr", time = 105, platform = "1", alightDirection = "right"}
+09 = {node = "nsb_whk", time = 60, platform = "1", alightDirection = "right"}
+10 = {node = "nsb_gvn", time = 60, platform = "1", alightDirection = "left"}
 
 [nsb_s22_b]
 internalId = "S22_Arc"
@@ -576,10 +576,10 @@ abbr = "S22"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s22_b.stops]
-01 = {node = "nsb_gvn", time = 0, platform = "", status = "cancelled"}
-02 = {node = "nsb_whk", time = 0, platform = "", status = "cancelled"}
-03 = {node = "nsb_hmr", time = 0, platform = "", status = "cancelled"}
-04 = {node = "nsb_wl", time = 0, platform = "2", alightDirection = "right"}
+01 = {node = "nsb_gvn", time = 0, platform = "1", alightDirection = "right"}
+02 = {node = "nsb_whk", time = 60, platform = "2", alightDirection = "right"}
+03 = {node = "nsb_hmr", time = 60, platform = "2", alightDirection = "right"}
+04 = {node = "nsb_wl", time = 105, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_kdk", time = 60, platform = "1", alightDirection = "left"}
 06 = {node = "nsb_pry", time = 60, platform = "1", alightDirection = "right"}
 07 = {node = "nsb_afv", time = 45, platform = "1", alightDirection = "left"}

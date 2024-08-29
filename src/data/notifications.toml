@@ -41,11 +41,3 @@ description = "Door werkzaamheden wordt het treinstation Greneylant niet bediend
 period = "tot nader order"
 affectedNodes = ["nsb_gnl"]
 affectedRoutes = ["nsb_s15_a", "nsb_s15_b"]
-
-[nsb_s22_disrupted]
-type = "construction"
-name = "Woenslaken - 's-Groevenisse"
-description = "Door werkzaamheden worden de treinstations Hoortmeer, Westhoornik en 's-Groevenisse niet bediend. Trein S22 rijdt van Arloheim Campus tot Woenslaken v.v."
-period = "tot nader order"
-affectedNodes = ["nsb_hmr", "nsb_whk", "nsb_gvn"]
-affectedRoutes = ["nsb_s22_a", "nsb_s22_b"]
