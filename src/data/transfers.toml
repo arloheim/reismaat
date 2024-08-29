@@ -78,6 +78,8 @@ arm_hvk_arf_hvk = {between = "arm_hvk", and = "arf_hvk", time = 120, direct = fa
 arm_vhf_arm_mpl = {between = "arm_vhf", and = "arm_mpl", time = 60, direct = false}
 # Zuiderbank
 arm_zb_art_zb = {between = "arm_zb", and = "art_zb", time = 60}
+# Fort van Raduyn
+arm_rdn_art_rdn = {between = "arm_rdn", and = "art_rdn", time = 60}
 # Luchthaven
 arm_lhv_art_lhv = {between = "arm_lhv", and = "art_lhv", time = 60}
 # Oldenburg (+ funiculaire)
