@@ -4,11 +4,11 @@
       <span {{#stop.status}}class="is-{{.}}"{{/stop.status}}>{{> feed/route_long_link}}</span>
 
       {{#stop.additional}}
-        <span class="is-additional-label">(extra stop)</span>
+        <span class="is-additional-label ml-1">(extra stop)</span>
       {{/stop.additional}}
 
       {{#stop.cancelled}}
-        <span class="is-cancelled-label">(rijdt niet)</span>
+        <span class="is-cancelled-label ml-1">(rijdt niet)</span>
       {{/stop.cancelled}}
     </p>
   {{/route}}
