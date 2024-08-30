@@ -138,7 +138,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 01 = {node = "nsb_ar", time = 0, platform = "4"}
 02 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
 03 = {node = "nsb_arc", time = 30, platform = "6", alightDirection = "right"}
-04 = {node = "nsb_bkh", time = 225, platform = "4", alightDirection = "right"}
+04 = {node = "nsb_bkh", time = 225, platform = "10", alightDirection = "right"}
 05 = {node = "nsb_dw", time = 180, platform = "1", alightDirection = "left"}
 
 [nsb_d8_b]
@@ -152,7 +152,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d8_b.stops]
 01 = {node = "nsb_dw", time = 0, platform = "4"}
-02 = {node = "nsb_bkh", time = 180, platform = "3", alightDirection = "right"}
+02 = {node = "nsb_bkh", time = 180, platform = "9", alightDirection = "right"}
 03 = {node = "nsb_arc", time = 225, platform = "3", alightDirection = "right"}
 04 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
 05 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
@@ -335,7 +335,7 @@ abbr = "S15"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s15_a.stops]
-01 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
+01 = {node = "nsb_gnl", time = 45, platform = "2"}
 02 = {node = "nsb_lr", time = 0, platform = "3", alightDirection = "right"}
 03 = {node = "nsb_snn", time = 45, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_snz", time = 30, platform = "2", alightDirection = "right"}
@@ -371,7 +371,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 10 = {node = "nsb_snz", time = 60, platform = "1", alightDirection = "right"}
 11 = {node = "nsb_snn", time = 30, platform = "1", alightDirection = "right"}
 12 = {node = "nsb_lr", time = 45, platform = "1", alightDirection = "left"}
-13 = {node = "nsb_gnl", time = 0, platform = "", status = "cancelled"}
+13 = {node = "nsb_gnl", time = 45, platform = "2", alightDirection = "right"}
 
 [nsb_s16_a]
 internalId = "S16_Lvn"
@@ -510,7 +510,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_gbk", time = 30, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_gn", time = 45, platform = "1", alightDirection = "right"}
 07 = {node = "nsb_lvl", time = 30, platform = "1", alightDirection = "right"}
-08 = {node = "nsb_bkh", time = 30, platform = "4", alightDirection = "right"}
+08 = {node = "nsb_bkh", time = 30, platform = "10", alightDirection = "right"}
 09 = {node = "nsb_hak", time = 60, platform = "1", alightDirection = "left"}
 10 = {node = "nsb_vhz", time = 45, platform = "2", alightDirection = "left"}
 11 = {node = "nsb_bg", time = 60, platform = "1", alightDirection = "right"}
@@ -536,7 +536,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_bg", time = 30, platform = "2", alightDirection = "right"}
 06 = {node = "nsb_vhz", time = 60, platform = "5", alightDirection = "left"}
 07 = {node = "nsb_hak", time = 45, platform = "2", alightDirection = "left"}
-08 = {node = "nsb_bkh", time = 60, platform = "3", alightDirection = "right"}
+08 = {node = "nsb_bkh", time = 60, platform = "9", alightDirection = "right"}
 09 = {node = "nsb_lvl", time = 30, platform = "2", alightDirection = "right"}
 10 = {node = "nsb_gn", time = 30, platform = "2", alightDirection = "right"}
 11 = {node = "nsb_gbk", time = 45, platform = "2", alightDirection = "right"}
@@ -576,7 +576,7 @@ abbr = "S22"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s22_b.stops]
-01 = {node = "nsb_gvn", time = 0, platform = "1", alightDirection = "right"}
+01 = {node = "nsb_gvn", time = 0, platform = "1"}
 02 = {node = "nsb_whk", time = 60, platform = "2", alightDirection = "right"}
 03 = {node = "nsb_hmr", time = 60, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_wl", time = 105, platform = "2", alightDirection = "right"}
@@ -640,7 +640,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 09 = {node = "nsb_akh", time = 75, platform = "1", alightDirection = "right"}
 10 = {node = "nsb_gdz", time = 120, platform = "2", alightDirection = "right"}
 11 = {node = "nsb_gd", time = 30, platform = "4", alightDirection = "right"}
-12 = {node = "nsb_dd", time = 30, platform = "2", alightDirection = "right"}
+12 = {node = "nsb_dd", time = 30, platform = "3", alightDirection = "right"}
 13 = {node = "nsb_rdk", time = 105, platform = "1", alightDirection = "right"}
 14 = {node = "nsb_wl", time = 90, platform = "1", alightDirection = "right"}
 
@@ -656,7 +656,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 [nsb_s30_b.stops]
 01 = {node = "nsb_wl", time = 0, platform = "2"}
 02 = {node = "nsb_rdk", time = 90, platform = "1", alightDirection = "left"}
-03 = {node = "nsb_dd", time = 105, platform = "1", alightDirection = "right"}
+03 = {node = "nsb_dd", time = 105, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_gd", time = 30, platform = "1", alightDirection = "right"}
 05 = {node = "nsb_gdz", time = 30, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_akh", time = 120, platform = "1", alightDirection = "left"}
@@ -685,7 +685,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 04 = {node = "nsb_md", time = 30, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_vhz", time = 60, platform = "6", alightDirection = "right"}
 06 = {node = "nsb_hak", time = 45, platform = "2", alightDirection = "left"}
-07 = {node = "nsb_bkh", time = 60, platform = "15", alightDirection = "right"}
+07 = {node = "nsb_bkh", time = 60, platform = "5", alightDirection = "right"}
 
 [nsb_s31_b]
 internalId = "S31_Fm"
@@ -697,7 +697,7 @@ abbr = "S31"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s31_b.stops]
-01 = {node = "nsb_bkh", time = 0, platform = "15"}
+01 = {node = "nsb_bkh", time = 0, platform = "5"}
 02 = {node = "nsb_hak", time = 60, platform = "1", alightDirection = "left"}
 03 = {node = "nsb_vhz", time = 45, platform = "1", alightDirection = "right"}
 04 = {node = "nsb_md", time = 60, platform = "1", alightDirection = "right"}
@@ -1449,7 +1449,7 @@ color = {background = "#ff0000", text = "#ffffff"}
 06 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
 07 = {node = "gdt_zk", time = 15, alightDirection = "right"}
 08 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
-09 = {node = "gdt_ddr", time = 15, alightDirection = "left"}
+09 = {node = "gdt_dd", time = 15, alightDirection = "left"}
 
 [gdt_1_b]
 agency = "gvd"
@@ -1460,7 +1460,7 @@ abbr = "1B"
 color = {background = "#ff0000", text = "#ffffff"}
 
 [gdt_1_b.stops]
-01 = {node = "gdt_ddr", time = 0, headsign = "Bergplein via CS"}
+01 = {node = "gdt_dd", time = 0, headsign = "Bergplein via CS"}
 02 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
 03 = {node = "gdt_zk", time = 15, alightDirection = "right"}
 04 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
@@ -1520,16 +1520,16 @@ color = {background = "#ffa800", text = "#ffffff"}
 05 = {node = "gdt_nfl", time = 15, alightDirection = "right"}
 06 = {node = "gdt_zk", time = 15, alightDirection = "right"}
 07 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
-08 = {node = "gdt_ddr", time = 15, alightDirection = "right"}
-09 = {node = "gdt_kut", time = 45, alightDirection = "left"}
-10 = {node = "gdt_ocd", time = 60, alightDirection = "right"}
+08 = {node = "gdt_dd", time = 15, alightDirection = "right"}
+09 = {node = "gdt_kkt", time = 45, alightDirection = "left"}
+10 = {node = "gdt_rdko", time = 60, alightDirection = "right"}
 11 = {node = "gdt_rdk", time = 15, alightDirection = "right"}
-12 = {node = "gdt_suf", time = 0, alightDirection = ""}
-13 = {node = "gdt_brt", time = 0, alightDirection = ""}
-14 = {node = "gdt_slt", time = 0, alightDirection = ""}
-15 = {node = "gdt_bnd", time = 0, alightDirection = ""}
-16 = {node = "gdt_jkn", time = 0, alightDirection = ""}
-17 = {node = "gdt_bns", time = 0, alightDirection = ""}
+12 = {node = "gdt_suf", time = 0, alightDirection = "right"}
+13 = {node = "gdt_brt", time = 0, alightDirection = "right"}
+14 = {node = "gdt_slt", time = 0, alightDirection = "right"}
+15 = {node = "gdt_bnd", time = 0, alightDirection = "left", headsign = "Kuuroord"}
+16 = {node = "gdt_jkn", time = 0, alightDirection = "right"}
+17 = {node = "gdt_bns", time = 0, alightDirection = "left"}
 
 [gdt_3_b]
 agency = "gvd"
@@ -1540,16 +1540,16 @@ abbr = "3B"
 color = {background = "#ffa800", text = "#ffffff"}
 
 [gdt_3_b.stops]
-01 = {node = "gdt_bns", time = 0, alightDirection = "", headsign = "Benrade"}
-02 = {node = "gdt_jkn", time = 0, alightDirection = ""}
-03 = {node = "gdt_bnd", time = 0, alightDirection = ""}
-04 = {node = "gdt_slt", time = 0, alightDirection = ""}
-05 = {node = "gdt_brt", time = 0, alightDirection = ""}
-06 = {node = "gdt_suf", time = 0, alightDirection = ""}
+01 = {node = "gdt_bns", time = 0, headsign = "Benrade"}
+02 = {node = "gdt_jkn", time = 0, alightDirection = "right"}
+03 = {node = "gdt_bnd", time = 0, alightDirection = "left"}
+04 = {node = "gdt_slt", time = 0, alightDirection = "left"}
+05 = {node = "gdt_brt", time = 0, alightDirection = "right"}
+06 = {node = "gdt_suf", time = 0, alightDirection = "right"}
 07 = {node = "gdt_rdk", time = 0, alightDirection = "left"}
-08 = {node = "gdt_ocd", time = 60, alightDirection = "left"}
-09 = {node = "gdt_kut", time = 45, alightDirection = "right"}
-10 = {node = "gdt_ddr", time = 15, alightDirection = "left", headsign = "Benrade via CS"}
+08 = {node = "gdt_rdko", time = 60, alightDirection = "left"}
+09 = {node = "gdt_kkt", time = 45, alightDirection = "right"}
+10 = {node = "gdt_dd", time = 15, alightDirection = "left", headsign = "Benrade via CS"}
 11 = {node = "gdt_ndk", time = 15, alightDirection = "right"}
 12 = {node = "gdt_zk", time = 15, alightDirection = "right"}
 13 = {node = "gdt_nfl", time = 15, alightDirection = "right"}

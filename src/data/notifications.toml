@@ -31,13 +31,3 @@ affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_n
 type = "warning"
 name = "Op dit station bevinden zich geen ticketautomaten"
 affectedNodes = ["gdt_rem", "gdt_zon", "gdt_nbg", "gdt_wr", "gdt_zg", "gdt_ob"]
-
-
-# Storingen en werkzaamheden
-[nsb_s15_disrupted]
-type = "construction"
-name = "Landraaf - Greneylant"
-description = "Door werkzaamheden wordt het treinstation Greneylant niet bediend. Trein S15 rijdt van Ulstheim tot Landraaf v.v."
-period = "tot nader order"
-affectedNodes = ["nsb_gnl"]
-affectedRoutes = ["nsb_s15_a", "nsb_s15_b"]
