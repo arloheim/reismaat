@@ -143,7 +143,6 @@ art_hz = ["tickets_arlov", "service_arlov", "stairs", "waiting_room", "deli_shop
 art_mlw = ["tickets_arlov", "stairs"]
 art_lan = ["tickets_arlov"]
 art_cs = ["trains_long_distance_nsb_fu", "trains_long_distance_nsb_is", "tickets_nsb_fu", "tickets_nsb_is", "tickets_arlov", "service_nsb_fu", "service_nsb_is", "service_arlov", "sos_phone", "stairs", "toilet", "waiting_room", "fast_food_shop", "restaurant", "supermarket", "newsstand"]
-art_cslz = ["tickets_arlov"]
 art_lhv = ["airport", "tickets_arlov", "service_arlov", "post_office", "deli_shop", "fast_food_shop"]
 art_psw = ["tickets_arlov", "service_arlov", "stairs", "elevator", "coffee_shop"]
 art_nvh = ["tickets_arlov"]

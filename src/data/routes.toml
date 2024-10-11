@@ -1040,7 +1040,7 @@ color = {background = "#7137c8", text = "#ffffff"}
 10 = {node = "art_zb", time = 15, platform = "12"}
 11 = {node = "art_nvh", time = 15, platform = "2"}
 12 = {node = "art_psw", time = 15, platform = "3"}
-13 = {node = "art_cs", time = 30, platform = "13"}
+13 = {node = "art_cs", time = 30, platform = "22"}
 
 [art_839_b]
 agency = "arlov"
@@ -1051,7 +1051,7 @@ abbr = "839"
 color = {background = "#7137c8", text = "#ffffff"}
 
 [art_839_b.stops]
-01 = {node = "art_cs", time = 0, platform = "13", headsign = "Forum via Morgenster"}
+01 = {node = "art_cs", time = 0, platform = "22", headsign = "Forum via Morgenster"}
 02 = {node = "art_psw", time = 30, platform = "4"}
 03 = {node = "art_nvh", time = 15, platform = "1"}
 04 = {node = "art_zb", time = 15, platform = "11"}
@@ -1082,7 +1082,7 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 06 = {node = "art_hz", time = 15, platform = "12", headsign = "Luchthaven"}
 07 = {node = "art_mlw", time = 15, platform = "2"}
 08 = {node = "art_lan", time = 15, platform = "2"}
-09 = {node = "art_cslz", time = 30, platform = "22"}
+09 = {node = "art_cs", time = 30, platform = "21"}
 10 = {node = "art_lhv", time = 15, platform = "12"}
 
 [art_840_b]
@@ -1095,7 +1095,7 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 
 [art_840_b.stops]
 01 = {node = "art_lhv", time = 0, platform = "11", headsign = "Forum via Halenz"}
-02 = {node = "art_cslz", time = 15, platform = "21"}
+02 = {node = "art_cs", time = 15, platform = "23"}
 03 = {node = "art_lan", time = 30, platform = "1"}
 04 = {node = "art_mlw", time = 15, platform = "1"}
 05 = {node = "art_hz", time = 15, platform = "11", headsign = "Forum"}

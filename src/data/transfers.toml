@@ -30,10 +30,7 @@ nsb_arp_arm_pdb = {between = "nsb_arp", and = "arm_pdb", time = 120}
 # Arloheim Centraal / Arloheim, Centraal Station / Arloheim, Centraal Station - Luneriazijde
 nsb_ar_arm_cs = {between = "nsb_ar", and = "arm_cs", time = 60}
 nsb_ar_art_cs = {between = "nsb_ar", and = "art_cs", time = 120}
-nsb_ar_art_cslz = {between = "nsb_ar", and = "art_cslz", time = 120}
 arm_cs_art_cs = {between = "arm_cs", and = "art_cs", time = 60}
-arm_cs_art_cslz = {between = "arm_cs", and = "art_cslz", time = 120}
-art_cs_art_cslz = {between = "art_cs", and = "art_cslz", time = 120}
 # Danewolde (+ kabelspoor)
 nsb_dw_dwf_edp = {between = "nsb_dw", and = "dwf_edp", time = 60, direct = false}
 # Danewolde Overwaee (+ kabelspoor)
