@@ -23,6 +23,7 @@ service_gvd = {name = "Loket", icon = "svg:agency_gvd", color = "info", agency =
 service_stm = {name = "Loket", icon = "svg:agency_stm", color = "info", agency = "stm"}
 service_fer_nos = {name = "Loket", icon = "svg:agency_fer_nos", color = "info", agency = "fer_nos"}
 service_fer_smijn = {name = "Loket", icon = "svg:agency_fer_smijn", color = "info", agency = "fer_smijn"}
+luggage_lockers = {name = "Bagagekluizen", icon = "suitcase-rolling", color = "info"}
 sos_phone = {name = "Alarmzuil", icon = "bell", color = "info"}
 first_aid = {name = "EHBO-post", icon = "kit-medical", color = "info"}
 fire_extinguisher = {name = "Brandblusser", icon = "fire-extinguisher", color = "info"}
