@@ -244,6 +244,21 @@ gdt_bnd = {name = "Bad Nierstein, Dorp", modality = "tram", city = "Bad Nierstei
 gdt_jkn = {name = "Bad Nierstein, Johanneskliniek", modality = "tram", city = "Bad Nierstein"}
 gdt_bns = {name = "Bad Nierstein, Kuuroord", modality = "tram", city = "Bad Nierstein"}
 
+# Tram Gaterade
+gtt_hv = {name = "Gaterade, Haven", modality = "tram", city = "Gaterade"}
+gtt_oas = {name = "Gaterade, Oase", modality = "tram", city = "Gaterade"}
+gtt_ct = {name = "Gaterade, Centrum", modality = "tram", city = "Gaterade"}
+gtt_gtp = {name = "Gaterade, Poort", modality = "tram", city = "Gaterade"}
+gtt_bkhl = {name = "Berkenhoven, 't Loo", modality = "tram", city = "Berkenhoven"}
+gtt_bkh = {name = "Berkenhoven, Berkenhoven", modality = "tram", city = "Berkenhoven"}
+gtt_ovg = {name = "Gaterade, Overgat", modality = "tram", city = "Gaterade"}
+gtt_mr = {name = "Gaterade, Mirir", modality = "tram", city = "Gaterade"}
+gtt_kd = {name = "Gaterade, Kwelder", modality = "tram", city = "Gaterade"}
+gtt_tbh = {name = "Gaterade, Tabakshaven", modality = "tram", city = "Gaterade"}
+gtt_ps = {name = "Gaterade, Poelsteeg", modality = "tram", city = "Gaterade"}
+gtt_ba = {name = "Gaterade, Baai", modality = "tram", city = "Gaterade"}
+gtt_str = {name = "Gaterade, Strand", modality = "tram", city = "Gaterade"}
+
 # Funiculaires Danewolde
 dwf_edp = {name = "Danewolde, Edenplein", modality = "cable_rail", city = "Danewolde", include = false}
 dwf_ovw = {name = "Danewolde, Overwaer", modality = "cable_rail", city = "Danewolde", include = false}

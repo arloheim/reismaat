@@ -65,31 +65,31 @@ color = {background = "#4d1515", text = "#ffffff"}
 internalId = "D5_Mmz"
 agency = "nsb_cira"
 modality = "rail_direct"
-name = "D5 (Giedrecht ⟶ Malmen Zuid)"
-headsign = "Malmen Zuid"
+name = "D5 (Giedrecht ⟶ Malmen)"
+headsign = "Malmen"
 abbr = "D5"
 color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d5_a.stops]
 01 = {node = "nsb_gd", time = 0, platform = "2"}
-02 = {node = "nsb_dw", time = 315, platform = "5", alightDirection = "right"}
-03 = {node = "nsb_mm", time = 90, platform = "2", alightDirection = "right"}
-04 = {node = "nsb_mmz", time = 15, platform = "1", alightDirection = "left"}
+02 = {node = "nsb_md", time = 225, platform = "1", alightDirection = "left"}
+03 = {node = "nsb_dw", time = 90, platform = "1", alightDirection = "right"}
+04 = {node = "nsb_mm", time = 90, platform = "2", alightDirection = "right"}
 
 [nsb_d5_b]
 internalId = "D5_Gd"
 agency = "nsb_cira"
 modality = "rail_direct"
-name = "D5 (Malmen Zuid ⟶ Giedrecht)"
+name = "D5 (Malmen ⟶ Giedrecht)"
 headsign = "Giedrecht"
 abbr = "D5"
 color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d5_b.stops]
-01 = {node = "nsb_mmz", time = 0, platform = "1"}
-02 = {node = "nsb_mm", time = 15, platform = "1", alightDirection = "right"}
-03 = {node = "nsb_dw", time = 90, platform = "6", alightDirection = "right"}
-04 = {node = "nsb_gd", time = 315, platform = "2", alightDirection = "left"}
+01 = {node = "nsb_mm", time = 0, platform = "1"}
+02 = {node = "nsb_dw", time = 90, platform = "2", alightDirection = "right"}
+03 = {node = "nsb_md", time = 90, platform = "2", alightDirection = "left"}
+04 = {node = "nsb_gd", time = 225, platform = "2", alightDirection = "left"}
 
 [nsb_d7_a]
 internalId = "D7_Gdz"
@@ -142,7 +142,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 03 = {node = "nsb_arc", time = 30, platform = "6", alightDirection = "right"}
 04 = {node = "nsb_bw", time = 105, platform = "2", alightDirection = "left"}
 05 = {node = "nsb_bkh", time = 120, platform = "10", alightDirection = "right"}
-06 = {node = "nsb_dw", time = 180, platform = "1", alightDirection = "left"}
+06 = {node = "nsb_dw", time = 180, platform = "3", alightDirection = "left"}
 
 [nsb_d8_b]
 internalId = "D8_Ar"
@@ -154,7 +154,7 @@ abbr = "D8"
 color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d8_b.stops]
-01 = {node = "nsb_dw", time = 0, platform = "4"}
+01 = {node = "nsb_dw", time = 0, platform = "10"}
 02 = {node = "nsb_bkh", time = 180, platform = "9", alightDirection = "right"}
 03 = {node = "nsb_bw", time = 120, platform = "3", alightDirection = "left"}
 04 = {node = "nsb_arc", time = 105, platform = "3", alightDirection = "right"}
@@ -520,7 +520,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 09 = {node = "nsb_hak", time = 60, platform = "1", alightDirection = "left"}
 10 = {node = "nsb_vhz", time = 45, platform = "2", alightDirection = "left"}
 11 = {node = "nsb_bg", time = 60, platform = "1", alightDirection = "right"}
-12 = {node = "nsb_dw", time = 30, platform = "2", alightDirection = "right"}
+12 = {node = "nsb_dw", time = 30, platform = "6", alightDirection = "right"}
 13 = {node = "nsb_rhn", time = 45, platform = "1", alightDirection = "left"}
 14 = {node = "nsb_vgn", time = 60, platform = "1", alightDirection = "right"}
 15 = {node = "nsb_zms", time = 60, platform = "1", alightDirection = "left"}
@@ -538,7 +538,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 01 = {node = "nsb_zms", time = 0, platform = "4"}
 02 = {node = "nsb_vgn", time = 60, platform = "2", alightDirection = "right"}
 03 = {node = "nsb_rhn", time = 60, platform = "2", alightDirection = "left"}
-04 = {node = "nsb_dw", time = 45, platform = "3", alightDirection = "right"}
+04 = {node = "nsb_dw", time = 45, platform = "7", alightDirection = "right"}
 05 = {node = "nsb_bg", time = 30, platform = "2", alightDirection = "right"}
 06 = {node = "nsb_vhz", time = 60, platform = "5", alightDirection = "left"}
 07 = {node = "nsb_hak", time = 45, platform = "2", alightDirection = "left"}
@@ -638,7 +638,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 01 = {node = "nsb_mmz", time = 0, platform = "2"}
 02 = {node = "nsb_mm", time = 15, platform = "2", alightDirection = "right"}
 03 = {node = "nsb_hk", time = 45, platform = "3", alightDirection = "right"}
-04 = {node = "nsb_dw", time = 60, platform = "6", alightDirection = "right"}
+04 = {node = "nsb_dw", time = 60, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_dwo", time = 15, platform = "2", alightDirection = "right"}
 06 = {node = "nsb_aur", time = 30, platform = "2", alightDirection = "right"}
 07 = {node = "nsb_rks", time = 30, platform = "2", alightDirection = "right"}
@@ -670,7 +670,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 08 = {node = "nsb_rks", time = 30, platform = "1", alightDirection = "right"}
 09 = {node = "nsb_aur", time = 30, platform = "1", alightDirection = "right"}
 10 = {node = "nsb_dwo", time = 30, platform = "1", alightDirection = "right"}
-11 = {node = "nsb_dw", time = 15, platform = "5", alightDirection = "right"}
+11 = {node = "nsb_dw", time = 15, platform = "1", alightDirection = "right"}
 12 = {node = "nsb_hk", time = 60, platform = "1", alightDirection = "right"}
 13 = {node = "nsb_mm", time = 45, platform = "1", alightDirection = "right"}
 14 = {node = "nsb_mmz", time = 15, platform = "2", alightDirection = "left"}
@@ -1599,6 +1599,78 @@ color = {background = "#008000", text = "#ffffff"}
 06 = {node = "gdt_zg", time = 15, alightDirection = "left"}
 07 = {node = "gdt_zwp", time = 15, alightDirection = "right"}
 08 = {node = "gdt_ob", time = 15, alightDirection = "left"}
+
+
+# Tram Gaterade
+[gtt_sb1_a]
+agency = "sbgt"
+modality = "tram"
+name = "SB1 (Haven ⟶ Berkenhoven)"
+headsign = "Berkenhoven"
+abbr = "SB1"
+color = {background = "#5555ff", text = "#ffffff"}
+
+[gtt_sb1_a.stops]
+01 = {node = "gtt_hv", time = 0}
+02 = {node = "gtt_oas", time = 15, alightDirection = "right"}
+03 = {node = "gtt_ct", time = 15, alightDirection = "right"}
+04 = {node = "gtt_gtp", time = 15, alightDirection = "right"}
+05 = {node = "gtt_bkhl", time = 45, alightDirection = "right"}
+06 = {node = "gtt_bkh", time = 15, alightDirection = "right"}
+
+[gtt_sb1_b]
+agency = "sbgt"
+modality = "tram"
+name = "SB1 (Berkenhoven ⟶ Haven)"
+headsign = "Haven"
+abbr = "SB1"
+color = {background = "#5555ff", text = "#ffffff"}
+
+[gtt_sb1_b.stops]
+01 = {node = "gtt_bkh", time = 0}
+02 = {node = "gtt_bkhl", time = 15, alightDirection = "right"}
+03 = {node = "gtt_gtp", time = 45, alightDirection = "right"}
+04 = {node = "gtt_oas", time = 15, alightDirection = "right"}
+05 = {node = "gtt_ct", time = 15, alightDirection = "right"}
+06 = {node = "gtt_hv", time = 15, alightDirection = "left"}
+
+[gtt_sb2_a]
+agency = "sbgt"
+modality = "tram"
+name = "SB2 (Overgat ⟶ Poort)"
+headsign = "Poort"
+abbr = "SB2"
+color = {background = "#5555ff", text = "#ffffff"}
+
+[gtt_sb2_a.stops]
+01 = {node = "gtt_ovg", time = 0}
+02 = {node = "gtt_mr", time = 15, alightDirection = "right"}
+03 = {node = "gtt_ct", time = 15, alightDirection = "right"}
+04 = {node = "gtt_kd", time = 15, alightDirection = "right"}
+05 = {node = "gtt_tbh", time = 45, alightDirection = "right"}
+06 = {node = "gtt_ps", time = 15, alightDirection = "right"}
+07 = {node = "gtt_ba", time = 0, status = "cancelled"}
+08 = {node = "gtt_str", time = 0, status = "cancelled"}
+09 = {node = "gtt_gtp", time = 0, status = "cancelled"}
+
+[gtt_sb2_b]
+agency = "sbgt"
+modality = "tram"
+name = "SB2 (Poort ⟶ Overgat)"
+headsign = "Overgat"
+abbr = "SB2"
+color = {background = "#5555ff", text = "#ffffff"}
+
+[gtt_sb2_b.stops]
+01 = {node = "gtt_gtp", time = 0, status = "cancelled"}
+02 = {node = "gtt_str", time = 0, status = "cancelled"}
+03 = {node = "gtt_ba", time = 0, status = "cancelled"}
+04 = {node = "gtt_ps", time = 0}
+05 = {node = "gtt_tbh", time = 15, alightDirection = "right"}
+06 = {node = "gtt_kd", time = 15, alightDirection = "left"}
+07 = {node = "gtt_ct", time = 15, alightDirection = "left"}
+08 = {node = "gtt_mr", time = 15, alightDirection = "left"}
+09 = {node = "gtt_ovg", time = 15, alightDirection = "left"}
 
 
 # Kabelspoor Danewolde

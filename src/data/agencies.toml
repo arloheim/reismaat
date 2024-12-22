@@ -40,6 +40,11 @@ description = "stadsvervoer in Giedrecht"
 url = "https://arloheim.nl/wiki/Giedrechtse_Vervoersdienst"
 icon = "svg:agency_gvd"
 
+[sbgt]
+name = "Stadsbaan Gaterade"
+description = "stadsvervoer in Gaterade"
+icon = "train-tram"
+
 [stm]
 name = "STM | CTS"
 abbr = "STM"
