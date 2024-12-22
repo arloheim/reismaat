@@ -33,7 +33,7 @@
     "minisearch": "^6.1.0",
     "mustache": "^4.2.0",
     "navigo": "^8.11.1",
-    "node-sass": "^9.0.0",
+    "sass": "~1.80.6",
     "toml": "^3.0.0",
     "underscore": "^1.13.6",
     "vinyl-buffer": "^1.0.1",
