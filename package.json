@@ -1,8 +1,8 @@
 {
   "name": "reismaat",
   "version": "1.0.0",
-  "description": "",
-  "author": "Danae Dekker",
+  "description": "Reis op maat met jouw maat op reis",
+  "author": "Danae Dekker <hello@danaedekker.com>",
   "constributors": [
     "Danae Dekker",
     "Sjors Bes"
@@ -13,10 +13,9 @@
     "type": "git",
     "url": "https://github.com/danae/reismaat.git"
   },
+  "homepage": "https://reismaat.arloheim.nl/",
   "scripts": {
-    "build": "gulp build",
-    "postinstall": "gulp build",
-    "update": "git pull && npm install"
+    "build": "gulp build"
   },
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
