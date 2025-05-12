@@ -141,7 +141,7 @@ color = {background = "#4d1515", text = "#ffffff"}
 02 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
 03 = {node = "nsb_arc", time = 30, platform = "6", alightDirection = "right"}
 04 = {node = "nsb_bw", time = 105, platform = "2", alightDirection = "left"}
-05 = {node = "nsb_bkh", time = 120, platform = "10", alightDirection = "right"}
+05 = {node = "nsb_bkh", time = 120, platform = "4", alightDirection = "right"}
 06 = {node = "nsb_dw", time = 180, platform = "3", alightDirection = "left"}
 
 [nsb_d8_b]
@@ -154,8 +154,8 @@ abbr = "D8"
 color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d8_b.stops]
-01 = {node = "nsb_dw", time = 0, platform = "10"}
-02 = {node = "nsb_bkh", time = 180, platform = "9", alightDirection = "right"}
+01 = {node = "nsb_dw", time = 0, platform = "6"}
+02 = {node = "nsb_bkh", time = 180, platform = "3", alightDirection = "right"}
 03 = {node = "nsb_bw", time = 120, platform = "3", alightDirection = "left"}
 04 = {node = "nsb_arc", time = 105, platform = "3", alightDirection = "right"}
 05 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
@@ -516,11 +516,11 @@ color = {background = "#2b7749", text = "#ffffff"}
 05 = {node = "nsb_gbk", time = 30, platform = "1", alightDirection = "right"}
 06 = {node = "nsb_gn", time = 45, platform = "1", alightDirection = "right"}
 07 = {node = "nsb_lvl", time = 30, platform = "1", alightDirection = "right"}
-08 = {node = "nsb_bkh", time = 30, platform = "10", alightDirection = "right"}
+08 = {node = "nsb_bkh", time = 30, platform = "4", alightDirection = "right"}
 09 = {node = "nsb_hak", time = 60, platform = "1", alightDirection = "left"}
 10 = {node = "nsb_vhz", time = 45, platform = "2", alightDirection = "left"}
 11 = {node = "nsb_bg", time = 60, platform = "1", alightDirection = "right"}
-12 = {node = "nsb_dw", time = 30, platform = "6", alightDirection = "right"}
+12 = {node = "nsb_dw", time = 30, platform = "4", alightDirection = "right"}
 13 = {node = "nsb_rhn", time = 45, platform = "1", alightDirection = "left"}
 14 = {node = "nsb_vgn", time = 60, platform = "1", alightDirection = "right"}
 15 = {node = "nsb_zms", time = 60, platform = "1", alightDirection = "left"}
@@ -538,11 +538,11 @@ color = {background = "#2b7749", text = "#ffffff"}
 01 = {node = "nsb_zms", time = 0, platform = "4"}
 02 = {node = "nsb_vgn", time = 60, platform = "2", alightDirection = "right"}
 03 = {node = "nsb_rhn", time = 60, platform = "2", alightDirection = "left"}
-04 = {node = "nsb_dw", time = 45, platform = "7", alightDirection = "right"}
+04 = {node = "nsb_dw", time = 45, platform = "5", alightDirection = "right"}
 05 = {node = "nsb_bg", time = 30, platform = "2", alightDirection = "right"}
 06 = {node = "nsb_vhz", time = 60, platform = "5", alightDirection = "left"}
 07 = {node = "nsb_hak", time = 45, platform = "2", alightDirection = "left"}
-08 = {node = "nsb_bkh", time = 60, platform = "9", alightDirection = "right"}
+08 = {node = "nsb_bkh", time = 60, platform = "3", alightDirection = "right"}
 09 = {node = "nsb_lvl", time = 30, platform = "2", alightDirection = "right"}
 10 = {node = "nsb_gn", time = 30, platform = "2", alightDirection = "right"}
 11 = {node = "nsb_gbk", time = 45, platform = "2", alightDirection = "right"}
@@ -691,7 +691,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 04 = {node = "nsb_md", time = 30, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_vhz", time = 60, platform = "6", alightDirection = "right"}
 06 = {node = "nsb_hak", time = 45, platform = "2", alightDirection = "left"}
-07 = {node = "nsb_bkh", time = 60, platform = "5", alightDirection = "right"}
+07 = {node = "nsb_bkh", time = 60, platform = "25", alightDirection = "right"}
 
 [nsb_s31_b]
 internalId = "S31_Fm"
@@ -703,7 +703,7 @@ abbr = "S31"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s31_b.stops]
-01 = {node = "nsb_bkh", time = 0, platform = "5"}
+01 = {node = "nsb_bkh", time = 0, platform = "25"}
 02 = {node = "nsb_hak", time = 60, platform = "1", alightDirection = "left"}
 03 = {node = "nsb_vhz", time = 45, platform = "1", alightDirection = "right"}
 04 = {node = "nsb_md", time = 60, platform = "1", alightDirection = "right"}
