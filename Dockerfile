@@ -17,5 +17,7 @@ COPY --from=0 /app/index.html ./
 COPY --from=0 /app/dist ./dist/
 COPY --from=0 /app/assets ./assets/
 
+COPY --from=0 /app/.nginx /etc/nginx/conf.d/
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
