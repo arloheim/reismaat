@@ -21,10 +21,10 @@ arm_for_art_for = {between = "arm_for", and = "art_for", time = 120}
 nsb_arfo_arl_for = {between = "nsb_arfo", and = "arl_for", time = 240, direct = false}
 arm_arfo_arl_for = {between = "arm_for", and = "arl_for", time = 240, direct = false}
 art_for_arl_for = {between = "art_for", and = "arl_for", time = 120, direct = false}
-nsb_arfo_hyp_arfo = {between = "nsb_arfo", and = "hyp_arfo", time = 300, direct = false}
-arm_arfo_hyp_arfo = {between = "arm_for", and = "hyp_arfo", time = 300, direct = false}
-art_for_hyp_arfo = {between = "art_for", and = "hyp_arfo", time = 360, direct = false}
-arl_for_hyp_arfo = {between = "arl_for", and = "hyp_arfo", time = 360, direct = false}
+nsb_arfo_hyp_arfo = {between = "nsb_arfo", and = "hyp_arfo", time = 180, direct = false}
+arm_arfo_hyp_arfo = {between = "arm_for", and = "hyp_arfo", time = 180, direct = false}
+art_for_hyp_arfo = {between = "art_for", and = "hyp_arfo", time = 240, direct = false}
+arl_for_hyp_arfo = {between = "arl_for", and = "hyp_arfo", time = 240, direct = false}
 # Arloheim Panderberg / Arloheim Panderberg
 nsb_arp_arm_pdb = {between = "nsb_arp", and = "arm_pdb", time = 120}
 # Arloheim Centraal / Arloheim, Centraal Station / Arloheim, Centraal Station - Luneriazijde
@@ -43,8 +43,8 @@ nsb_dd_gdt_dd = {between = "nsb_dd", and = "gdt_dd", time = 60}
 nsb_gt_gtt_ct = {between = "nsb_gt", and = "gtt_ct", time = 60}
 # Gaterade Haven / Gaterade, Haven (+ hyperloop)
 nsb_gth_gtt_hv = {between = "nsb_gth", and = "gtt_hv", time = 120}
-nsb_gth_hyp_gth = {between = "nsb_gth", and = "hyp_gth", time = 300, direct = false}
-gtt_hv_hyp_gth = {between = "gtt_hv", and = "hyp_gth", time = 180, direct = false}
+nsb_gth_hyp_gth = {between = "nsb_gth", and = "hyp_gth", time = 180, direct = false}
+gtt_hv_hyp_gth = {between = "gtt_hv", and = "hyp_gth", time = 120, direct = false}
 # Gaterade Poort / Gaterade, Poort
 nsb_gtp_gtt_gtp = {between = "nsb_gtp", and = "gtt_gtp", time = 60}
 # Giedrecht / Giedrecht, Station CS

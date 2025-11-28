@@ -643,7 +643,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 06 = {node = "nsb_aur", time = 30, platform = "2", alightDirection = "right"}
 07 = {node = "nsb_rks", time = 30, platform = "2", alightDirection = "right"}
 08 = {node = "nsb_md", time = 30, platform = "2", alightDirection = "right"}
-09 = {node = "nsb_akh", time = 75, platform = "1", alightDirection = "right"}
+09 = {node = "nsb_akh", time = 75, platform = "2", alightDirection = "left"}
 10 = {node = "nsb_gdz", time = 120, platform = "2", alightDirection = "right"}
 11 = {node = "nsb_gd", time = 30, platform = "4", alightDirection = "right"}
 12 = {node = "nsb_dd", time = 30, platform = "3", alightDirection = "right"}
@@ -665,7 +665,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 03 = {node = "nsb_dd", time = 105, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_gd", time = 30, platform = "1", alightDirection = "right"}
 05 = {node = "nsb_gdz", time = 30, platform = "1", alightDirection = "right"}
-06 = {node = "nsb_akh", time = 120, platform = "1", alightDirection = "left"}
+06 = {node = "nsb_akh", time = 120, platform = "1", alightDirection = "right"}
 07 = {node = "nsb_md", time = 75, platform = "1", alightDirection = "right"}
 08 = {node = "nsb_rks", time = 30, platform = "1", alightDirection = "right"}
 09 = {node = "nsb_aur", time = 30, platform = "1", alightDirection = "right"}
@@ -1649,9 +1649,8 @@ color = {background = "#5555ff", text = "#ffffff"}
 04 = {node = "gtt_kd", time = 15, alightDirection = "right"}
 05 = {node = "gtt_tbh", time = 45, alightDirection = "right"}
 06 = {node = "gtt_ps", time = 15, alightDirection = "right"}
-07 = {node = "gtt_ba", time = 0, status = "cancelled"}
-08 = {node = "gtt_str", time = 0, status = "cancelled"}
-09 = {node = "gtt_gtp", time = 0, status = "cancelled"}
+07 = {node = "gtt_str", time = 30, alightDirection = "right"}
+08 = {node = "gtt_gtp", time = 30, alightDirection = "right"}
 
 [gtt_sb2_b]
 agency = "sbgt"
@@ -1662,15 +1661,14 @@ abbr = "SB2"
 color = {background = "#5555ff", text = "#ffffff"}
 
 [gtt_sb2_b.stops]
-01 = {node = "gtt_gtp", time = 0, status = "cancelled"}
-02 = {node = "gtt_str", time = 0, status = "cancelled"}
-03 = {node = "gtt_ba", time = 0, status = "cancelled"}
-04 = {node = "gtt_ps", time = 0}
-05 = {node = "gtt_tbh", time = 15, alightDirection = "right"}
-06 = {node = "gtt_kd", time = 15, alightDirection = "left"}
-07 = {node = "gtt_ct", time = 15, alightDirection = "left"}
-08 = {node = "gtt_mr", time = 15, alightDirection = "left"}
-09 = {node = "gtt_ovg", time = 15, alightDirection = "left"}
+01 = {node = "gtt_gtp", time = 0}
+02 = {node = "gtt_str", time = 30, alightDirection = "right"}
+03 = {node = "gtt_ps", time = 30, alightDirection = "right"}
+04 = {node = "gtt_tbh", time = 15, alightDirection = "right"}
+05 = {node = "gtt_kd", time = 15, alightDirection = "left"}
+06 = {node = "gtt_ct", time = 15, alightDirection = "left"}
+07 = {node = "gtt_mr", time = 15, alightDirection = "left"}
+08 = {node = "gtt_ovg", time = 15, alightDirection = "left"}
 
 
 # Kabelspoor Danewolde

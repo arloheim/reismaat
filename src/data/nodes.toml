@@ -3,7 +3,7 @@ nsb_afv = {name = "De Afval", code = "afv", modality = "rail", city = "De Afval"
 nsb_db = {name = "Al-Diyar Al-Bayda", code = "db", modality = "rail", city = "Al-Diyar Al-Bayda", x = 754, y = 4}
 nsb_qs = {name = "Al-Qusur", code = "qs", modality = "rail", city = "Al-Qusur", x = 294, y = 283}
 nsb_wh = {name = "Al-Waha", code = "wh", modality = "rail", city = "Al-Waha", x = 525, y = 222}
-nsb_akh = {name = "Alkenholt", code = "akh", modality = "rail", city = "Alkenholt", x = -1493, y = 2278}
+nsb_akh = {name = "Alken", code = "akh", modality = "rail", city = "Alken", x = -1493, y = 2278}
 nsb_alt = {name = "Altione", code = "alt", modality = "rail", city = "Altione", x = 2835, y = 1354}
 nsb_av = {name = "Amsvorde Centraal", code = "av", slug = "amsvorde-centraal", modality = "rail", city = "Amsvorde", x = 1299, y = 109}
 nsb_avi = {name = "Amsvorde Iberië", code = "avi", modality = "rail", city = "Amsvorde", x = 1140, y = 93}
@@ -256,7 +256,6 @@ gtt_mr = {name = "Gaterade, Mirir", modality = "tram", city = "Gaterade"}
 gtt_kd = {name = "Gaterade, Kwelder", modality = "tram", city = "Gaterade"}
 gtt_tbh = {name = "Gaterade, Tabakshaven", modality = "tram", city = "Gaterade"}
 gtt_ps = {name = "Gaterade, Poelsteeg", modality = "tram", city = "Gaterade"}
-gtt_ba = {name = "Gaterade, Baai", modality = "tram", city = "Gaterade"}
 gtt_str = {name = "Gaterade, Strand", modality = "tram", city = "Gaterade"}
 
 # Funiculaires Danewolde
