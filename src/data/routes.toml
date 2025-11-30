@@ -241,7 +241,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 07 = {node = "nsb_av", time = 30, platform = "2", alightDirection = "right"}
 08 = {node = "nsb_avi", time = 30, platform = "1", alightDirection = "right"}
 09 = {node = "nsb_db", time = 45, platform = "2", alightDirection = "right"}
-10 = {node = "nsb_wh", time = 60, platform = "1"}
+10 = {node = "nsb_wh", time = 60, platform = "1", alightDirection = "right"}
 11 = {node = "nsb_qs", time = 45, platform = "2", alightDirection = "right"}
 12 = {node = "nsb_ar", time = 30, platform = "2", alightDirection = "right"}
 
@@ -341,10 +341,10 @@ abbr = "S15"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s15_a.stops]
-01 = {node = "nsb_gnl", time = 45, platform = "2"}
-02 = {node = "nsb_lr", time = 0, platform = "3", alightDirection = "right"}
-03 = {node = "nsb_snn", time = 45, platform = "2", alightDirection = "right"}
-04 = {node = "nsb_snz", time = 30, platform = "2", alightDirection = "right"}
+01 = {node = "nsb_gnl", time = 0, platform = "2"}
+02 = {node = "nsb_lr", time = 45, platform = "3", alightDirection = "right"}
+03 = {node = "nsb_sni", time = 30, platform = "2", alightDirection = "right"}
+04 = {node = "nsb_sn", time = 45, platform = "3", alightDirection = "left"}
 05 = {node = "nsb_vd", time = 60, platform = "1", alightDirection = "left"}
 06 = {node = "nsb_vt", time = 75, platform = "2", alightDirection = "right"}
 07 = {node = "nsb_avv", time = 30, platform = "2", alightDirection = "right"}
@@ -374,8 +374,8 @@ color = {background = "#2b7749", text = "#ffffff"}
 07 = {node = "nsb_avv", time = 30, platform = "3", alightDirection = "right"}
 08 = {node = "nsb_vt", time = 30, platform = "1", alightDirection = "right"}
 09 = {node = "nsb_vd", time = 75, platform = "1", alightDirection = "right"}
-10 = {node = "nsb_snz", time = 60, platform = "1", alightDirection = "right"}
-11 = {node = "nsb_snn", time = 30, platform = "1", alightDirection = "right"}
+10 = {node = "nsb_sn", time = 30, platform = "1", alightDirection = "left"}
+11 = {node = "nsb_sni", time = 60, platform = "1", alightDirection = "right"}
 12 = {node = "nsb_lr", time = 45, platform = "1", alightDirection = "left"}
 13 = {node = "nsb_gnl", time = 45, platform = "2", alightDirection = "right"}
 
@@ -643,7 +643,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 06 = {node = "nsb_aur", time = 30, platform = "2", alightDirection = "right"}
 07 = {node = "nsb_rks", time = 30, platform = "2", alightDirection = "right"}
 08 = {node = "nsb_md", time = 30, platform = "2", alightDirection = "right"}
-09 = {node = "nsb_akh", time = 75, platform = "2", alightDirection = "left"}
+09 = {node = "nsb_ak", time = 75, platform = "2", alightDirection = "left"}
 10 = {node = "nsb_gdz", time = 120, platform = "2", alightDirection = "right"}
 11 = {node = "nsb_gd", time = 30, platform = "4", alightDirection = "right"}
 12 = {node = "nsb_dd", time = 30, platform = "3", alightDirection = "right"}
@@ -665,7 +665,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 03 = {node = "nsb_dd", time = 105, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_gd", time = 30, platform = "1", alightDirection = "right"}
 05 = {node = "nsb_gdz", time = 30, platform = "1", alightDirection = "right"}
-06 = {node = "nsb_akh", time = 120, platform = "1", alightDirection = "right"}
+06 = {node = "nsb_ak", time = 120, platform = "1", alightDirection = "right"}
 07 = {node = "nsb_md", time = 75, platform = "1", alightDirection = "right"}
 08 = {node = "nsb_rks", time = 30, platform = "1", alightDirection = "right"}
 09 = {node = "nsb_aur", time = 30, platform = "1", alightDirection = "right"}
@@ -723,13 +723,13 @@ color = {background = "#ff2a2a", text = "#ffffff"}
 
 [arm_a_a.stops]
 01 = {node = "arm_nsw", time = 0, platform = "1", headsign = "Al-Qusur via Forum"}
-02 = {node = "arm_wss", time = 15, platform = "2"}
-03 = {node = "arm_wdk", time = 30, platform = "2"}
-04 = {node = "arm_for", time = 30, platform = "10", headsign = "Al-Qusur via Nieuwedal"}
-05 = {node = "arm_nwd", time = 15, platform = "4", headsign = "Al-Qusur"}
-06 = {node = "arm_trc", time = 15, platform = "2"}
-07 = {node = "arm_psw", time = 15, platform = "2"}
-08 = {node = "arm_qsr", time = 15, platform = "12"}
+02 = {node = "arm_wss", time = 15, platform = "2", alightDirection = "right"}
+03 = {node = "arm_wdk", time = 30, platform = "2", alightDirection = "right"}
+04 = {node = "arm_for", time = 30, platform = "10", alightDirection = "right", headsign = "Al-Qusur via Nieuwedal"}
+05 = {node = "arm_nwd", time = 15, platform = "4", alightDirection = "right", headsign = "Al-Qusur"}
+06 = {node = "arm_trc", time = 15, platform = "2", alightDirection = "right"}
+07 = {node = "arm_psw", time = 15, platform = "2", alightDirection = "right"}
+08 = {node = "arm_qsr", time = 15, platform = "12", alightDirection = "right"}
 
 [arm_a_b]
 agency = "arlov"
@@ -741,13 +741,13 @@ color = {background = "#ff2a2a", text = "#ffffff"}
 
 [arm_a_b.stops]
 01 = {node = "arm_qsr", time = 0, platform = "12", headsign = "Nedersalwey via Nieuwedal"}
-02 = {node = "arm_psw", time = 15, platform = "1"}
-03 = {node = "arm_trc", time = 15, platform = "1"}
-04 = {node = "arm_nwd", time = 15, platform = "3", headsign = "Nedersalwey via Forum"}
-05 = {node = "arm_for", time = 15, platform = "9", headsign = "Nedersalwey"}
-06 = {node = "arm_wdk", time = 30, platform = "1"}
-07 = {node = "arm_wss", time = 30, platform = "1"}
-08 = {node = "arm_nsw", time = 15, platform = "1"}
+02 = {node = "arm_psw", time = 15, platform = "1", alightDirection = "right"}
+03 = {node = "arm_trc", time = 15, platform = "1", alightDirection = "right"}
+04 = {node = "arm_nwd", time = 15, platform = "3", alightDirection = "right", headsign = "Nedersalwey via Forum"}
+05 = {node = "arm_for", time = 15, platform = "9", alightDirection = "right", headsign = "Nedersalwey"}
+06 = {node = "arm_wdk", time = 30, platform = "1", alightDirection = "right"}
+07 = {node = "arm_wss", time = 30, platform = "1", alightDirection = "right"}
+08 = {node = "arm_nsw", time = 15, platform = "1", alightDirection = "left"}
 
 [arm_b_a]
 agency = "arlov"
@@ -759,17 +759,17 @@ color = {background = "#0066ff", text = "#ffffff"}
 
 [arm_b_a.stops]
 01 = {node = "arm_ng", time = 0, platform = "2", headsign = "Fort van Raduyn via Elfshaven"}
-02 = {node = "arm_ngd", time = 15, platform = "2"}
-03 = {node = "arm_ehv", time = 45, platform = "2", headsign = "Fort van Raduyn via Halenz"}
-04 = {node = "arm_wbg", time = 15, platform = "2"}
-05 = {node = "arm_hz", time = 30, platform = "3", headsign = "Fort van Raduyn via Nieuwedal"}
-06 = {node = "arm_pdb", time = 30, platform = "6"}
-07 = {node = "arm_nwd", time = 15, platform = "2", headsign = "Fort van Raduyn"}
-08 = {node = "arm_hvk", time = 15, platform = "3"}
-09 = {node = "arm_vhf", time = 15, platform = "2"}
-10 = {node = "arm_zb", time = 30, platform = "2"}
-11 = {node = "arm_knz", time = 15, platform = "2"}
-12 = {node = "arm_rdn", time = 15, platform = "1"}
+02 = {node = "arm_ngd", time = 15, platform = "2", alightDirection = "right"}
+03 = {node = "arm_ehv", time = 45, platform = "2", alightDirection = "right", headsign = "Fort van Raduyn via Halenz"}
+04 = {node = "arm_wbg", time = 15, platform = "2", alightDirection = "right"}
+05 = {node = "arm_hz", time = 30, platform = "3", alightDirection = "left", headsign = "Fort van Raduyn via Nieuwedal"}
+06 = {node = "arm_pdb", time = 30, platform = "6", alightDirection = "right"}
+07 = {node = "arm_nwd", time = 15, platform = "2", alightDirection = "right", headsign = "Fort van Raduyn"}
+08 = {node = "arm_hvk", time = 15, platform = "2", alightDirection = "left"}
+09 = {node = "arm_vhf", time = 15, platform = "2", alightDirection = "left"}
+10 = {node = "arm_zb", time = 30, platform = "2", alightDirection = "right"}
+11 = {node = "arm_knz", time = 15, platform = "2", alightDirection = "right"}
+12 = {node = "arm_rdn", time = 15, platform = "1", alightDirection = "left"}
 
 [arm_b_b]
 agency = "arlov"
@@ -781,17 +781,17 @@ color = {background = "#0066ff", text = "#ffffff"}
 
 [arm_b_b.stops]
 01 = {node = "arm_rdn", time = 0, platform = "1", headsign = "Negenaar via Nieuwedal"}
-02 = {node = "arm_knz", time = 15, platform = "1"}
-03 = {node = "arm_zb", time = 15, platform = "1"}
-04 = {node = "arm_vhf", time = 30, platform = "1"}
-05 = {node = "arm_hvk", time = 15, platform = "1"}
-06 = {node = "arm_nwd", time = 15, platform = "1", headsign = "Negenaar via Halenz"}
-07 = {node = "arm_pdb", time = 15, platform = "5"}
-08 = {node = "arm_hz", time = 30, platform = "2", headsign = "Negenaar via Elfshaven"}
-09 = {node = "arm_wbg", time = 30, platform = "1"}
-10 = {node = "arm_ehv", time = 15, platform = "1", headsign = "Negenaar"}
-11 = {node = "arm_ngd", time = 45, platform = "3"}
-12 = {node = "arm_ng", time = 15, platform = "3"}
+02 = {node = "arm_knz", time = 15, platform = "1", alightDirection = "right"}
+03 = {node = "arm_zb", time = 15, platform = "1", alightDirection = "right"}
+04 = {node = "arm_vhf", time = 30, platform = "1", alightDirection = "left"}
+05 = {node = "arm_hvk", time = 15, platform = "1", alightDirection = "left"}
+06 = {node = "arm_nwd", time = 15, platform = "1", alightDirection = "right", headsign = "Negenaar via Halenz"}
+07 = {node = "arm_pdb", time = 15, platform = "5", alightDirection = "right"}
+08 = {node = "arm_hz", time = 30, platform = "2", alightDirection = "left", headsign = "Negenaar via Elfshaven"}
+09 = {node = "arm_wbg", time = 30, platform = "1", alightDirection = "right"}
+10 = {node = "arm_ehv", time = 15, platform = "1", alightDirection = "right", headsign = "Negenaar"}
+11 = {node = "arm_ngd", time = 45, platform = "3", alightDirection = "right"}
+12 = {node = "arm_ng", time = 15, platform = "3", alightDirection = "right"}
 
 [arm_c_a]
 agency = "arlov"
@@ -803,15 +803,15 @@ color = {background = "#2ad4ff", text = "#ffffff"}
 
 [arm_c_a.stops]
 01 = {node = "arm_lhv", time = 0, platform = "1", headsign = "Steyn via Halenz"}
-02 = {node = "arm_vgh", time = 15, platform = "1"}
-03 = {node = "arm_hz", time = 15, platform = "3", headsign = "Steyn via Nieuwedal"}
-04 = {node = "arm_pdb", time = 30, platform = "6"}
-05 = {node = "arm_nwd", time = 15, platform = "2", headsign = "Steyn"}
-06 = {node = "arm_hvk", time = 15, platform = "2"}
-07 = {node = "arm_odb", time = 15, platform = "2"}
-08 = {node = "arm_ahm", time = 30, platform = "1"}
-09 = {node = "arm_ost", time = 15, platform = "3"}
-10 = {node = "arm_stn", time = 15, platform = "3"}
+02 = {node = "arm_vgh", time = 15, platform = "1", alightDirection = "right"}
+03 = {node = "arm_hz", time = 15, platform = "3", alightDirection = "left", headsign = "Steyn via Nieuwedal"}
+04 = {node = "arm_pdb", time = 30, platform = "6", alightDirection = "right"}
+05 = {node = "arm_nwd", time = 15, platform = "2", alightDirection = "right", headsign = "Steyn"}
+06 = {node = "arm_hvk", time = 15, platform = "2", alightDirection = "left"}
+07 = {node = "arm_odb", time = 15, platform = "2", alightDirection = "right"}
+08 = {node = "arm_ahm", time = 30, platform = "1", alightDirection = "right"}
+09 = {node = "arm_ost", time = 15, platform = "3", alightDirection = "right"}
+10 = {node = "arm_stn", time = 15, platform = "3", alightDirection = "right"}
 
 [arm_c_b]
 agency = "arlov"
@@ -823,15 +823,15 @@ color = {background = "#2ad4ff", text = "#ffffff"}
 
 [arm_c_b.stops]
 01 = {node = "arm_stn", time = 0, platform = "1", headsign = "Luchthaven via Nieuwedal"}
-02 = {node = "arm_ost", time = 15, platform = "4"}
-03 = {node = "arm_ahm", time = 15, platform = "2"}
-04 = {node = "arm_odb", time = 30, platform = "1"}
-05 = {node = "arm_hvk", time = 15, platform = "1"}
-06 = {node = "arm_nwd", time = 15, platform = "1", headsign = "Luchthaven via Halenz"}
-07 = {node = "arm_pdb", time = 15, platform = "5"}
-08 = {node = "arm_hz", time = 30, platform = "1", headsign = "Luchthaven"}
-09 = {node = "arm_vgh", time = 15, platform = "2"}
-10 = {node = "arm_lhv", time = 15, platform = "2"}
+02 = {node = "arm_ost", time = 15, platform = "4", alightDirection = "right"}
+03 = {node = "arm_ahm", time = 15, platform = "2", alightDirection = "right"}
+04 = {node = "arm_odb", time = 30, platform = "1", alightDirection = "right"}
+05 = {node = "arm_hvk", time = 15, platform = "1", alightDirection = "left"}
+06 = {node = "arm_nwd", time = 15, platform = "1", alightDirection = "right", headsign = "Luchthaven via Halenz"}
+07 = {node = "arm_pdb", time = 15, platform = "5", alightDirection = "right"}
+08 = {node = "arm_hz", time = 30, platform = "1", alightDirection = "right", headsign = "Luchthaven"}
+09 = {node = "arm_vgh", time = 15, platform = "2", alightDirection = "right"}
+10 = {node = "arm_lhv", time = 15, platform = "2", alightDirection = "right"}
 
 [arm_d_a]
 agency = "arlov"
@@ -843,17 +843,17 @@ color = {background = "#5fd38d", text = "#ffffff"}
 
 [arm_d_a.stops]
 01 = {node = "arm_ng", time = 0, platform = "1", headsign = "Steyn via Campus"}
-02 = {node = "arm_ngd", time = 15, platform = "1"}
-03 = {node = "arm_bkc", time = 30, platform = "1"}
-04 = {node = "arm_bkv", time = 15, platform = "1"}
-05 = {node = "arm_cps", time = 30, platform = "9", headsign = "Steyn via Forum"}
-06 = {node = "arm_pss", time = 30, platform = "1"}
-07 = {node = "arm_for", time = 15, platform = "7", headsign = "Steyn"}
-08 = {node = "arm_ldw", time = 30, platform = "1"}
-09 = {node = "arm_atv", time = 30, platform = "1"}
-10 = {node = "arm_psz", time = 15, platform = "1"}
-11 = {node = "arm_ost", time = 15, platform = "1"}
-12 = {node = "arm_stn", time = 15, platform = "3"}
+02 = {node = "arm_ngd", time = 15, platform = "1", alightDirection = "left"}
+03 = {node = "arm_bkc", time = 30, platform = "1", alightDirection = "right"}
+04 = {node = "arm_bkv", time = 15, platform = "1", alightDirection = "right"}
+05 = {node = "arm_cps", time = 30, platform = "9", alightDirection = "right", headsign = "Steyn via Forum"}
+06 = {node = "arm_pss", time = 30, platform = "1", alightDirection = "right"}
+07 = {node = "arm_for", time = 15, platform = "7", alightDirection = "right", headsign = "Steyn"}
+08 = {node = "arm_ldw", time = 30, platform = "1", alightDirection = "left"}
+09 = {node = "arm_atv", time = 30, platform = "1", alightDirection = "left"}
+10 = {node = "arm_psz", time = 15, platform = "1", alightDirection = "right"}
+11 = {node = "arm_ost", time = 15, platform = "1", alightDirection = "right"}
+12 = {node = "arm_stn", time = 15, platform = "3", alightDirection = "right"}
 
 [arm_d_b]
 agency = "arlov"
@@ -865,17 +865,17 @@ color = {background = "#5fd38d", text = "#ffffff"}
 
 [arm_d_b.stops]
 01 = {node = "arm_stn", time = 0, platform = "2", headsign = "Negenaar via Forum"}
-02 = {node = "arm_ost", time = 15, platform = "2"}
-03 = {node = "arm_psz", time = 15, platform = "2"}
-04 = {node = "arm_atv", time = 15, platform = "2"}
-05 = {node = "arm_ldw", time = 30, platform = "2"}
-06 = {node = "arm_for", time = 30, platform = "8", headsign = "Negenaar via Campus"}
-07 = {node = "arm_pss", time = 15, platform = "2"}
-08 = {node = "arm_cps", time = 30, platform = "10", headsign = "Negenaar"}
-09 = {node = "arm_bkv", time = 30, platform = "2"}
-10 = {node = "arm_bkc", time = 15, platform = "2"}
-11 = {node = "arm_ngd", time = 30, platform = "3"}
-12 = {node = "arm_ng", time = 15, platform = "3"}
+02 = {node = "arm_ost", time = 15, platform = "2", alightDirection = "right"}
+03 = {node = "arm_psz", time = 15, platform = "2", alightDirection = "right"}
+04 = {node = "arm_atv", time = 15, platform = "2", alightDirection = "left"}
+05 = {node = "arm_ldw", time = 30, platform = "2", alightDirection = "left"}
+06 = {node = "arm_for", time = 30, platform = "8", alightDirection = "right", headsign = "Negenaar via Campus"}
+07 = {node = "arm_pss", time = 15, platform = "2", alightDirection = "right"}
+08 = {node = "arm_cps", time = 30, platform = "10", alightDirection = "right", headsign = "Negenaar"}
+09 = {node = "arm_bkv", time = 30, platform = "2", alightDirection = "right"}
+10 = {node = "arm_bkc", time = 15, platform = "2", alightDirection = "right"}
+11 = {node = "arm_ngd", time = 30, platform = "3", alightDirection = "right"}
+12 = {node = "arm_ng", time = 15, platform = "3", alightDirection = "right"}
 
 [arm_e_a]
 agency = "arlov"
@@ -887,17 +887,17 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 
 [arm_e_a.stops]
 01 = {node = "arm_lvn", time = 0, platform = "1", headsign = "Nedelrand via Elfshaven"}
-02 = {node = "arm_uhc", time = 15, platform = "1"}
-03 = {node = "arm_uhs", time = 15, platform = "11"}
-04 = {node = "arm_uhh", time = 15, platform = "1"}
-05 = {node = "arm_ehv", time = 75, platform = "11", headsign = "Nedelrand"}
-06 = {node = "arm_dbm", time = 15, platform = "1"}
-07 = {node = "arm_bkc", time = 15, platform = "3"}
-08 = {node = "arm_sta", time = 15, platform = "1"}
-09 = {node = "arm_mdz", time = 15, platform = "1"}
-10 = {node = "arm_sgb", time = 15, platform = "1"}
-11 = {node = "arm_sg", time = 15, platform = "1"}
-12 = {node = "arm_ndr", time = 45, platform = "5"}
+02 = {node = "arm_uhc", time = 15, platform = "1", alightDirection = "left"}
+03 = {node = "arm_uhs", time = 15, platform = "11", alightDirection = "left"}
+04 = {node = "arm_uhh", time = 15, platform = "1", alightDirection = "left"}
+05 = {node = "arm_ehv", time = 75, platform = "11", alightDirection = "left", headsign = "Nedelrand"}
+06 = {node = "arm_dbm", time = 15, platform = "1", alightDirection = "left"}
+07 = {node = "arm_bkc", time = 15, platform = "3", alightDirection = "left"}
+08 = {node = "arm_sta", time = 15, platform = "1", alightDirection = "left"}
+09 = {node = "arm_mdz", time = 15, platform = "1", alightDirection = "left"}
+10 = {node = "arm_sgb", time = 15, platform = "1", alightDirection = "right"}
+11 = {node = "arm_sg", time = 15, platform = "1", alightDirection = "right"}
+12 = {node = "arm_ndr", time = 45, platform = "5", alightDirection = "right"}
 
 [arm_e_b]
 agency = "arlov"
@@ -909,17 +909,17 @@ color = {background = "#ff7f2a", text = "#ffffff"}
 
 [arm_e_b.stops]
 01 = {node = "arm_ndr", time = 0, platform = "4", headsign = "Lavijn via Elfshaven"}
-02 = {node = "arm_sg", time = 45, platform = "2"}
-03 = {node = "arm_sgb", time = 15, platform = "2"}
-04 = {node = "arm_mdz", time = 15, platform = "2"}
-05 = {node = "arm_sta", time = 15, platform = "2"}
-06 = {node = "arm_bkc", time = 15, platform = "4"}
-07 = {node = "arm_dbm", time = 15, platform = "2"}
-08 = {node = "arm_ehv", time = 15, platform = "12", headsign = "Lavijn"}
-09 = {node = "arm_uhh", time = 75, platform = "2"}
-10 = {node = "arm_uhs", time = 15, platform = "12"}
-11 = {node = "arm_uhc", time = 15, platform = "2"}
-12 = {node = "arm_lvn", time = 15, platform = "2"}
+02 = {node = "arm_sg", time = 45, platform = "2", alightDirection = "right"}
+03 = {node = "arm_sgb", time = 15, platform = "2", alightDirection = "right"}
+04 = {node = "arm_mdz", time = 15, platform = "2", alightDirection = "left"}
+05 = {node = "arm_sta", time = 15, platform = "2", alightDirection = "left"}
+06 = {node = "arm_bkc", time = 15, platform = "4", alightDirection = "left"}
+07 = {node = "arm_dbm", time = 15, platform = "2", alightDirection = "left"}
+08 = {node = "arm_ehv", time = 15, platform = "12", alightDirection = "left", headsign = "Lavijn"}
+09 = {node = "arm_uhh", time = 75, platform = "2", alightDirection = "left"}
+10 = {node = "arm_uhs", time = 15, platform = "12", alightDirection = "left"}
+11 = {node = "arm_uhc", time = 15, platform = "2", alightDirection = "left"}
+12 = {node = "arm_lvn", time = 15, platform = "2", alightDirection = "right"}
 
 [arm_f_a]
 agency = "arlov"
@@ -931,15 +931,15 @@ color = {background = "#ffd918", text = "#000000"}
 
 [arm_f_a.stops]
 01 = {node = "arm_cps", time = 0, platform = "8", headsign = "Steyn via Halenz"}
-02 = {node = "arm_hz", time = 30, platform = "14", headsign = "Steyn via Centraal Station"}
-03 = {node = "arm_vgh", time = 15, platform = "4"}
-04 = {node = "arm_lhv", time = 15, platform = "4"}
-05 = {node = "arm_cs", time = 30, platform = "12", headsign = "Steyn via Morgenster"}
-06 = {node = "arm_trc", time = 15, platform = "4"}
-07 = {node = "arm_mpl", time = 30, platform = "2"}
-08 = {node = "arm_mst", time = 15, platform = "6", headsign = "Steyn"}
-09 = {node = "arm_sdg", time = 15, platform = "2"}
-10 = {node = "arm_stn", time = 30, platform = "13"}
+02 = {node = "arm_hz", time = 30, platform = "14", alightDirection = "left", headsign = "Steyn via Centraal Station"}
+03 = {node = "arm_vgh", time = 15, platform = "4", alightDirection = "right"}
+04 = {node = "arm_lhv", time = 15, platform = "4", alightDirection = "right"}
+05 = {node = "arm_cs", time = 30, platform = "12", alightDirection = "left", headsign = "Steyn via Morgenster"}
+06 = {node = "arm_trc", time = 15, platform = "4", alightDirection = "right"}
+07 = {node = "arm_mpl", time = 30, platform = "2", alightDirection = "right"}
+08 = {node = "arm_mst", time = 15, platform = "6", alightDirection = "right", headsign = "Steyn"}
+09 = {node = "arm_sdg", time = 15, platform = "2", alightDirection = "right"}
+10 = {node = "arm_stn", time = 30, platform = "13", alightDirection = "left"}
 
 [arm_f_b]
 agency = "arlov"
@@ -951,15 +951,15 @@ color = {background = "#ffd918", text = "#000000"}
 
 [arm_f_b.stops]
 01 = {node = "arm_stn", time = 0, platform = "13", headsign = "Campus via Morgenster"}
-02 = {node = "arm_sdg", time = 30, platform = "1"}
-03 = {node = "arm_mst", time = 15, platform = "5", headsign = "Campus via Centraal Station"}
-04 = {node = "arm_mpl", time = 15, platform = "1"}
-05 = {node = "arm_trc", time = 30, platform = "3"}
-06 = {node = "arm_cs", time = 15, platform = "11", headsign = "Campus via Halenz"}
-07 = {node = "arm_lhv", time = 30, platform = "3"}
-08 = {node = "arm_vgh", time = 15, platform = "3"}
-09 = {node = "arm_hz", time = 15, platform = "13", headsign = "Campus"}
-10 = {node = "arm_cps", time = 30, platform = "7"}
+02 = {node = "arm_sdg", time = 30, platform = "1", alightDirection = "right"}
+03 = {node = "arm_mst", time = 15, platform = "5", alightDirection = "right", headsign = "Campus via Centraal Station"}
+04 = {node = "arm_mpl", time = 15, platform = "1", alightDirection = "right"}
+05 = {node = "arm_trc", time = 30, platform = "3", alightDirection = "right"}
+06 = {node = "arm_cs", time = 15, platform = "11", alightDirection = "left", headsign = "Campus via Halenz"}
+07 = {node = "arm_lhv", time = 30, platform = "3", alightDirection = "right"}
+08 = {node = "arm_vgh", time = 15, platform = "3", alightDirection = "right"}
+09 = {node = "arm_hz", time = 15, platform = "13", alightDirection = "left", headsign = "Campus"}
+10 = {node = "arm_cps", time = 30, platform = "7", alightDirection = "right"}
 
 
 # Tram Arloheim

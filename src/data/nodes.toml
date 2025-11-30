@@ -3,7 +3,7 @@ nsb_afv = {name = "De Afval", code = "afv", modality = "rail", city = "De Afval"
 nsb_db = {name = "Al-Diyar Al-Bayda", code = "db", modality = "rail", city = "Al-Diyar Al-Bayda", x = 754, y = 4}
 nsb_qs = {name = "Al-Qusur", code = "qs", modality = "rail", city = "Al-Qusur", x = 294, y = 283}
 nsb_wh = {name = "Al-Waha", code = "wh", modality = "rail", city = "Al-Waha", x = 525, y = 222}
-nsb_akh = {name = "Alken", code = "akh", modality = "rail", city = "Alken", x = -1493, y = 2278}
+nsb_ak = {name = "Alken", code = "ak", modality = "rail", city = "Alken", x = -1493, y = 2278}
 nsb_alt = {name = "Altione", code = "alt", modality = "rail", city = "Altione", x = 2835, y = 1354}
 nsb_av = {name = "Amsvorde Centraal", code = "av", slug = "amsvorde-centraal", modality = "rail", city = "Amsvorde", x = 1299, y = 109}
 nsb_avi = {name = "Amsvorde Iberië", code = "avi", modality = "rail", city = "Amsvorde", x = 1140, y = 93}
@@ -52,8 +52,8 @@ nsb_rhn = {name = "Rhaan", code = "rhn", modality = "rail", city = "Danewolde", 
 nsb_rdk = {name = "Roodekerken", code = "rdk", modality = "rail", city = "Roodekerken", x = -2171, y = 1120}
 nsb_rks = {name = "Roodkastel", code = "rks", modality = "rail", city = "Roodkastel", x = -1360, y = 2729}
 nsb_sb = {name = "Sabbiane", code = "sb", modality = "rail", city = "Sabbiane", x = 1775, y = 66}
-nsb_snn = {name = "Schieren", code = "snn", modality = "rail", city = "Schieren", x = 2111, y = -940}
-nsb_snz = {name = "Schieren Zuid", code = "snz", modality = "rail", city = "Schieren", x = 2111, y = -724}
+nsb_sn = {name = "Schieren", code = "sn", modality = "rail", city = "Schieren", x = 2111, y = -940}
+nsb_sni = {name = "Schieren Italiaanderwijk", code = "sni", modality = "rail", city = "Schieren", x = 2111, y = -724}
 nsb_sg = {name = "Slinger", code = "sg", modality = "rail", city = "Slinger", x = -959, y = -193}
 nsb_str = {name = "Stachteren", code = "str", modality = "rail", city = "Stachteren", x = -577, y = -905}
 nsb_sti = {name = "Storia Infinita", code = "sti", modality = "rail", city = "Storia Infinita", x = 3615, y = -311}
