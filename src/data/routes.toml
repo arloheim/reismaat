@@ -1,10 +1,10 @@
 # Trein (D-treinen)
 [nsb_d1_a]
-internalId = "D1_Av"
+internalId = "D1_Sn"
 agency = "nsb_fu"
 modality = "rail_direct"
-name = "D1 (Arloheim Campus ⟶ Amsvorde Centraal)"
-headsign = "Amsvorde Centraal"
+name = "D1 (Arloheim Campus ⟶ Schieren)"
+headsign = "Schieren"
 abbr = "D1"
 color = {background = "#4d1515", text = "#ffffff"}
 
@@ -12,22 +12,24 @@ color = {background = "#4d1515", text = "#ffffff"}
 01 = {node = "nsb_arc", time = 0, platform = "3"}
 02 = {node = "nsb_arfo", time = 30, platform = "6", alightDirection = "right"}
 03 = {node = "nsb_ar", time = 45, platform = "3", alightDirection = "left"}
-04 = {node = "nsb_av", time = 180, platform = "6", alightDirection = "left"}
+04 = {node = "nsb_av", time = 180, platform = "8", alightDirection = "left"}
+05 = {node = "nsb_sn", time = 225, platform = "2", alightDirection = "left"}
 
 [nsb_d1_b]
 internalId = "D1_Arc"
 agency = "nsb_fu"
 modality = "rail_direct"
-name = "D1 (Amsvorde Centraal ⟶ Arloheim Campus)"
+name = "D1 (Schieren ⟶ Arloheim Campus)"
 headsign = "Arloheim Campus"
 abbr = "D1"
 color = {background = "#4d1515", text = "#ffffff"}
 
 [nsb_d1_b.stops]
-01 = {node = "nsb_av", time = 0, platform = "6", alightDirection = "right"}
-02 = {node = "nsb_ar", time = 180, platform = "6", alightDirection = "left"}
-03 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
-04 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
+01 = {node = "nsb_sn", time = 0, platform = "2"}
+02 = {node = "nsb_av", time = 225, platform = "3", alightDirection = "right"}
+03 = {node = "nsb_ar", time = 180, platform = "6", alightDirection = "left"}
+04 = {node = "nsb_arfo", time = 45, platform = "1", alightDirection = "right"}
+05 = {node = "nsb_arc", time = 30, platform = "3", alightDirection = "left"}
 
 [nsb_d2_a]
 internalId = "D2_Oh"
@@ -214,7 +216,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 03 = {node = "nsb_wh", time = 45, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_db", time = 60, platform = "1", alightDirection = "right"}
 05 = {node = "nsb_avi", time = 45, platform = "2", alightDirection = "right"}
-06 = {node = "nsb_av", time = 30, platform = "3", alightDirection = "right"}
+06 = {node = "nsb_av", time = 30, platform = "8", alightDirection = "right"}
 07 = {node = "nsb_avo", time = 30, platform = "2", alightDirection = "right"}
 08 = {node = "nsb_avv", time = 30, platform = "3", alightDirection = "right"}
 09 = {node = "nsb_vt", time = 30, platform = "1", alightDirection = "right"}
@@ -305,7 +307,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 06 = {node = "nsb_wh", time = 45, platform = "1", alightDirection = "right"}
 07 = {node = "nsb_db", time = 60, platform = "1", alightDirection = "right"}
 08 = {node = "nsb_avi", time = 45, platform = "2", alightDirection = "right"}
-09 = {node = "nsb_av", time = 30, platform = "7", alightDirection = "right"}
+09 = {node = "nsb_av", time = 30, platform = "9", alightDirection = "right"}
 10 = {node = "nsb_avo", time = 30, platform = "2", alightDirection = "right"}
 11 = {node = "nsb_avv", time = 30, platform = "1", alightDirection = "right"}
 
@@ -369,7 +371,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 02 = {node = "nsb_uhz", time = 15, platform = "1", alightDirection = "right"}
 03 = {node = "nsb_db", time = 75, platform = "1", alightDirection = "right"}
 04 = {node = "nsb_avi", time = 45, platform = "2", alightDirection = "right"}
-05 = {node = "nsb_av", time = 30, platform = "7", alightDirection = "right"}
+05 = {node = "nsb_av", time = 30, platform = "9", alightDirection = "right"}
 06 = {node = "nsb_avo", time = 30, platform = "2", alightDirection = "right"}
 07 = {node = "nsb_avv", time = 30, platform = "3", alightDirection = "right"}
 08 = {node = "nsb_vt", time = 30, platform = "1", alightDirection = "right"}
@@ -383,25 +385,23 @@ color = {background = "#2b7749", text = "#ffffff"}
 internalId = "S16_Lvn"
 agency = "nsb_fu"
 modality = "rail_local"
-name = "S16 (Amsvorde Venpoort ⟶ Lavijn)"
+name = "S16 (Amsvorde Central ⟶ Lavijn)"
 headsign = "Lavijn"
 abbr = "S16"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s16_a.stops]
-01 = {node = "nsb_avv", time = 0, platform = "1"}
-02 = {node = "nsb_avo", time = 30, platform = "1", alightDirection = "right"}
-03 = {node = "nsb_av", time = 30, platform = "2", alightDirection = "right"}
-04 = {node = "nsb_avi", time = 30, platform = "1", alightDirection = "right"}
-05 = {node = "nsb_db", time = 45, platform = "3", alightDirection = "right"}
-06 = {node = "nsb_lvn", time = 45, platform = "1", alightDirection = "left"}
+01 = {node = "nsb_av", time = 30, platform = "21"}
+02 = {node = "nsb_avi", time = 30, platform = "1", alightDirection = "right"}
+03 = {node = "nsb_db", time = 45, platform = "3", alightDirection = "right"}
+04 = {node = "nsb_lvn", time = 45, platform = "1", alightDirection = "left"}
 
 [nsb_s16_b]
 internalId = "S16_Avv"
 agency = "nsb_fu"
 modality = "rail_local"
-name = "S16 (Lavijn ⟶ Amsvorde Venpoort)"
-headsign = "Amsvorde Venpoort"
+name = "S16 (Lavijn ⟶ Amsvorde Centraal)"
+headsign = "Amsvorde Centraal"
 abbr = "S16"
 color = {background = "#2b7749", text = "#ffffff"}
 
@@ -409,9 +409,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 01 = {node = "nsb_lvn", time = 0, platform = "1"}
 02 = {node = "nsb_db", time = 45, platform = "3", alightDirection = "right"}
 03 = {node = "nsb_avi", time = 45, platform = "2", alightDirection = "right"}
-04 = {node = "nsb_av", time = 30, platform = "7", alightDirection = "right"}
-05 = {node = "nsb_avo", time = 30, platform = "2", alightDirection = "right"}
-06 = {node = "nsb_avv", time = 30, platform = "1", alightDirection = "right"}
+04 = {node = "nsb_av", time = 30, platform = "21", alightDirection = "right"}
 
 [nsb_s17_a]
 internalId = "S17_Fta"
@@ -423,7 +421,7 @@ abbr = "S17"
 color = {background = "#2b7749", text = "#ffffff"}
 
 [nsb_s17_a.stops]
-01 = {node = "nsb_av", time = 0, platform = "3"}
+01 = {node = "nsb_av", time = 0, platform = "7"}
 02 = {node = "nsb_avo", time = 30, platform = "2", alightDirection = "right"}
 03 = {node = "nsb_avv", time = 30, platform = "3", alightDirection = "right"}
 04 = {node = "nsb_vt", time = 30, platform = "1", alightDirection = "right"}
@@ -453,7 +451,7 @@ color = {background = "#2b7749", text = "#ffffff"}
 07 = {node = "nsb_vt", time = 60, platform = "2", alightDirection = "right"}
 08 = {node = "nsb_avv", time = 30, platform = "2", alightDirection = "right"}
 09 = {node = "nsb_avo", time = 30, platform = "1", alightDirection = "right"}
-10 = {node = "nsb_av", time = 30, platform = "2", alightDirection = "right"}
+10 = {node = "nsb_av", time = 30, platform = "7", alightDirection = "right"}
 
 [nsb_s20_a]
 internalId = "S20_Gth"
