@@ -348,10 +348,10 @@ color = {background = "#2b7749", text = "#ffffff"}
 03 = {node = "nsb_sni", time = 30, platform = "2", alightDirection = "right"}
 04 = {node = "nsb_sn", time = 45, platform = "3", alightDirection = "left"}
 05 = {node = "nsb_vd", time = 60, platform = "1", alightDirection = "left"}
-06 = {node = "nsb_vt", time = 75, platform = "2", alightDirection = "right"}
-07 = {node = "nsb_avv", time = 30, platform = "2", alightDirection = "right"}
-08 = {node = "nsb_avo", time = 30, platform = "1", alightDirection = "right"}
-09 = {node = "nsb_av", time = 30, platform = "2", alightDirection = "right"}
+06 = {node = "nsb_vt", time = 90, platform = "2", alightDirection = "right"}
+07 = {node = "nsb_avv", time = 45, platform = "2", alightDirection = "right"}
+08 = {node = "nsb_avo", time = 45, platform = "1", alightDirection = "right"}
+09 = {node = "nsb_av", time = 45, platform = "2", alightDirection = "right"}
 10 = {node = "nsb_avi", time = 30, platform = "1", alightDirection = "right"}
 11 = {node = "nsb_db", time = 45, platform = "2", alightDirection = "right"}
 12 = {node = "nsb_uhz", time = 75, platform = "2", alightDirection = "right"}
@@ -372,12 +372,12 @@ color = {background = "#2b7749", text = "#ffffff"}
 03 = {node = "nsb_db", time = 75, platform = "1", alightDirection = "right"}
 04 = {node = "nsb_avi", time = 45, platform = "2", alightDirection = "right"}
 05 = {node = "nsb_av", time = 30, platform = "9", alightDirection = "right"}
-06 = {node = "nsb_avo", time = 30, platform = "2", alightDirection = "right"}
-07 = {node = "nsb_avv", time = 30, platform = "3", alightDirection = "right"}
-08 = {node = "nsb_vt", time = 30, platform = "1", alightDirection = "right"}
-09 = {node = "nsb_vd", time = 75, platform = "1", alightDirection = "right"}
-10 = {node = "nsb_sn", time = 30, platform = "1", alightDirection = "left"}
-11 = {node = "nsb_sni", time = 60, platform = "1", alightDirection = "right"}
+06 = {node = "nsb_avo", time = 45, platform = "2", alightDirection = "right"}
+07 = {node = "nsb_avv", time = 45, platform = "3", alightDirection = "right"}
+08 = {node = "nsb_vt", time = 45, platform = "1", alightDirection = "right"}
+09 = {node = "nsb_vd", time = 90, platform = "1", alightDirection = "right"}
+10 = {node = "nsb_sn", time = 60, platform = "1", alightDirection = "left"}
+11 = {node = "nsb_sni", time = 30, platform = "1", alightDirection = "right"}
 12 = {node = "nsb_lr", time = 45, platform = "1", alightDirection = "left"}
 13 = {node = "nsb_gnl", time = 45, platform = "2", alightDirection = "right"}
 

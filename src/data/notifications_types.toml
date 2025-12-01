@@ -1,5 +1,6 @@
 # Informatieve meldingen
 info = {icon = "circle-info", color = "info", include = false}
+info_restaurant = {icon = "utensils", color = "info", include = false}
 disallowance = {icon = "ban", color = "info", include = false}
 warning = {icon = "circle-exclamation", color = "warning", include = false}
 

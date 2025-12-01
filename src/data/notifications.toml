@@ -20,12 +20,17 @@ affectedRoutes = ["hyp_a", "hyp_b"]
 [second_class_only]
 type = "info"
 name = "Louter tweede klas"
-affectedRoutes = ["nsb_s23_a", "nsb_s23_b"]
+affectedRoutes = ["nsb_s16_a", "nsb_s16_b", "nsb_s23_a", "nsb_s23_b"]
+
+[restaurant_on_board]
+type = "info_restaurant"
+name = "Deze rit is voorzien van een bistro aan boord"
+affectedRoutes = ["nsb_d1_a", "nsb_d1_b", "nsb_d2_a", "nsb_d2_b", "nsb_d7_a", "nsb_d7_b", "nsb_d8_a", "nsb_d8_b", "nsb_d9_a", "nsb_d9_b"]
 
 [no_horses_allowed]
 type = "disallowance"
 name = "Meenemen van flexpaarden is niet toegestaan"
-affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_nszw_nszo", "fer_nszo_nszw"]
+affectedRoutes = ["fer_str_ng_oh", "fer_oh_ng_str", "fer_oh_uh", "fer_uh_oh", "fer_nszw_nszo", "fer_nszo_nszw"]
 
 [no_tickets]
 type = "warning"
