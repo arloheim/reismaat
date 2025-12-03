@@ -41,7 +41,6 @@ nsb_lvl = {name = "Laagvliet", code = "lvl", modality = "rail", city = "Laagvlie
 nsb_lr = {name = "Landraaf", code = "lr", modality = "rail", city = "Landraaf", x = 2111, y = -1224}
 nsb_lvn = {name = "Lavijn", code = "lvn", modality = "rail", city = "Lavijn", x = 803, y = -279}
 nsb_mm = {name = "Malmen", code = "mm", modality = "rail", city = "Malmen", x = -322, y = 3175}
-nsb_mmz = {name = "Malmen Zuid", code = "mmz", modality = "rail", city = "Malmen", x = -33, y = 3289}
 nsb_mso = {name = "Masarino", code = "mso", modality = "rail", city = "Masarino", x = 1850, y = 662}
 nsb_md = {name = "Meede", code = "md", modality = "rail", city = "Roodkastel", x = -1360, y = 2948}
 nsb_ndr = {name = "Nedelrand", code = "ndr", modality = "rail", city = "Nedelrand", x = -892, y = 59}
